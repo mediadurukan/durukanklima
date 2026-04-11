@@ -1,0 +1,42 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Content {
+  id   Int    @id @default(1)
+  data Json
+}
+
+model Lead {
+  id   Int    @id @default(1)
+  data Json
+}
+
+model Blog {
+  id   Int    @id @default(1)
+  data Json
+}
+
+model Settings {
+  id   Int    @id @default(1)
+  data Json
+}
+
+model Technician {
+  id   Int    @id @default(1)
+  data Json
+}
+
+model Appointment {
+  id   Int    @id @default(1)
+  data Json
+}
+
+model Reminder {
+  id   Int    @id @default(1)
+  data Json
+}

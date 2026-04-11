@@ -22,3 +22,5 @@ logs/
 karpathy-llm-wiki-rehberi.pdf
 
 .vercel
+
+/generated/prisma
