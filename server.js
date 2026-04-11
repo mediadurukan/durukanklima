@@ -6,6 +6,10 @@ const PDFDocument = require('pdfkit');
 const axios = require('axios');
 const supabase = require('./supabase');
 
+// DEBUG: log env vars (remove in production)
+console.log('SUPABASE_URL:', process.env.SUPABASE_URL ? 'SET' : 'NOT SET');
+console.log('SUPABASE_SERVICE_KEY:', process.env.SUPABASE_SERVICE_KEY ? 'SET' : 'NOT SET');
+
 const app = express();
 app.use(express.json());
 
