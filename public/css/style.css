@@ -90,6 +90,19 @@ img { max-width: 100%; }
 
 .nav-links a:hover { background: var(--bg); color: var(--primary); }
 
+.nav-calc-btn {
+  background: linear-gradient(135deg, var(--primary), var(--accent)) !important;
+  color: white !important;
+  font-weight: 600 !important;
+  padding: 8px 16px !important;
+  border-radius: 20px !important;
+}
+
+.nav-calc-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
 .nav-phone {
   display: flex;
   align-items: center;
