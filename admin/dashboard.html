@@ -915,11 +915,15 @@ async function saveSection(section, data) {
     const res = await fetch(`/api/content/${section}`, {
       method: 'PUT', headers: headers(), body: JSON.stringify(data)
     });
-    if (!res.ok) throw new Error();
+    const text = await res.text();
+    if (!res.ok) {
+      console.error('Save failed:', res.status, text);
+      throw new Error(text || res.statusText);
+    }
     showToast('Kaydedildi!');
     contentData[section] = data;
-  } catch {
-    showToast('Kayıt başarısız', 'error');
+  } catch (e) {
+    showToast('Kayıt başarısız: ' + (e.message || ''), 'error');
   }
 }
 
