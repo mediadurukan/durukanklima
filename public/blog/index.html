@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog | Durukan Klima – Tarsus Klima & Beyaz Eşya İpuçları</title>
+  <meta name="description" content="Klima bakımı, beyaz eşya tamiri ve enerji tasarrufu hakkında uzman rehberleri. Durukan Klima Blog." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://durukanklima.com/blog" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Durukan Klima Blog",
+    "description": "Klima ve beyaz eşya bakımı hakkında uzman rehberleri",
+    "url": "https://durukanklima.com/blog",
+    "publisher": { "@type": "Organization", "name": "Durukan Klima" }
+  }
+  </script>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container">
+    <a href="/" class="logo"><div class="logo-icon">❄️</div><span>Durukan Klima</span></a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="/#hizmetler">Hizmetler</a></li>
+      <li><a href="/#markalar">Markalar</a></li>
+      <li><a href="/blog" style="color:var(--primary);">Blog</a></li>
+      <li><a href="/#iletisim">İletişim</a></li>
+    </ul>
+    <div class="nav-phone">
+      <a href="#" id="nav-call" class="btn btn-primary">📞 Ara</a>
+    </div>
+    <div class="hamburger" onclick="document.getElementById('nav-links').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- Blog Hero -->
+<section style="background:linear-gradient(135deg,#0f3a5c,#1a6fa8,#00b4d8);color:white;padding:60px 0 48px;">
+  <div class="container">
+    <div class="hero-badge">📚 Uzman İçerikler</div>
+    <h1 style="font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;margin:12px 0;">Klima & Beyaz Eşya Blog</h1>
+    <p style="opacity:0.85;font-size:1.05rem;">Bakım ipuçları, arıza çözümleri ve enerji tasarrufu rehberleri</p>
+  </div>
+</section>
+
+<!-- Filtreler -->
+<section style="background:white;border-bottom:1px solid var(--border);padding:16px 0;position:sticky;top:68px;z-index:50;">
+  <div class="container">
+    <div id="category-filters" style="display:flex;gap:8px;flex-wrap:wrap;"></div>
+  </div>
+</section>
+
+<!-- Blog Listesi -->
+<section style="padding:60px 0;background:var(--bg);">
+  <div class="container">
+    <div id="blog-grid" class="services-grid"></div>
+    <div id="no-posts" style="text-align:center;display:none;color:var(--text-light);padding:60px 0;">
+      <div style="font-size:3rem;margin-bottom:12px;">📝</div>
+      <p>Bu kategoride henüz yazı yok.</p>
+    </div>
+    <div id="load-more-wrap" style="text-align:center;margin-top:32px;display:none;">
+      <button class="btn btn-outline" onclick="loadMore()">Daha Fazla Göster</button>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section style="padding:60px 0;background:linear-gradient(135deg,#0f3a5c,#1a6fa8);">
+  <div class="container" style="text-align:center;color:white;">
+    <h2 style="font-size:1.8rem;font-weight:800;margin-bottom:12px;">Arızanız mı var?</h2>
+    <p style="opacity:0.85;margin-bottom:24px;">Uzman ekibimiz Tarsus ve çevresinde aynı gün servis veriyor.</p>
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+      <a href="#" id="cta-call" class="btn" style="background:white;color:#1a6fa8;padding:14px 28px;">📞 Hemen Ara</a>
+      <a href="/#servis-talebi" class="btn btn-whatsapp" style="padding:14px 28px;">📋 Servis Talebi</a>
+    </div>
+  </div>
+</section>
+
+<footer style="background:#0f1e2e;color:rgba(255,255,255,0.6);padding:24px 0;text-align:center;">
+  <div class="container">
+    <p style="font-size:0.85rem;">© <span id="year"></span> Durukan Klima. Tüm hakları saklıdır. | <a href="/" style="color:#4a9fd4;">Ana Sayfa</a></p>
+  </div>
+</footer>
+
+<div class="floating-buttons">
+  <a href="#" id="float-wp" class="float-btn float-wp">💬</a>
+  <a href="#" id="float-phone" class="float-btn float-phone">📞</a>
+</div>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+let allPosts = [], activeCategory = 'all', offset = 0;
+const LIMIT = 9;
+
+async function init() {
+  try {
+    const [blogRes, contentRes] = await Promise.all([
+      fetch('/api/blog?limit=100').then(r => r.json()),
+      fetch('/api/content').then(r => r.json()),
+    ]);
+    allPosts = blogRes.posts || [];
+    renderFilters();
+    renderPosts();
+
+    const tel = `tel:${(contentRes.contact?.phone || '').replace(/\s/g,'')}`;
+    const wp  = `https://wa.me/${contentRes.contact?.whatsapp || ''}`;
+    document.getElementById('nav-call').href = tel;
+    document.getElementById('cta-call').href = tel;
+    document.getElementById('float-wp').href = wp;
+    document.getElementById('float-phone').href = tel;
+  } catch(e) { console.error(e); }
+}
+
+function renderFilters() {
+  const cats = ['all', ...new Set(allPosts.map(p => p.category).filter(Boolean))];
+  const el = document.getElementById('category-filters');
+  el.innerHTML = cats.map(c => `
+    <button onclick="filterCategory('${c}')"
+      style="padding:7px 16px;border-radius:50px;border:1.5px solid ${c===activeCategory?'var(--primary)':'var(--border)'};
+             background:${c===activeCategory?'var(--primary)':'white'};
+             color:${c===activeCategory?'white':'var(--text)'};
+             font-size:0.85rem;font-weight:600;cursor:pointer;font-family:inherit;transition:all 0.2s;">
+      ${c === 'all' ? '📋 Tümü' : c}
+    </button>`).join('');
+}
+
+function filterCategory(cat) {
+  activeCategory = cat;
+  offset = 0;
+  renderFilters();
+  renderPosts();
+}
+
+function filtered() {
+  return activeCategory === 'all' ? allPosts : allPosts.filter(p => p.category === activeCategory);
+}
+
+function renderPosts() {
+  const posts = filtered();
+  const el = document.getElementById('blog-grid');
+  if (!posts.length) {
+    el.innerHTML = '';
+    document.getElementById('no-posts').style.display = 'block';
+    document.getElementById('load-more-wrap').style.display = 'none';
+    return;
+  }
+  document.getElementById('no-posts').style.display = 'none';
+  const slice = posts.slice(0, LIMIT);
+  el.innerHTML = slice.map(p => blogCard(p)).join('');
+  document.getElementById('load-more-wrap').style.display = posts.length > LIMIT ? 'block' : 'none';
+  offset = slice.length;
+}
+
+function loadMore() {
+  const posts = filtered().slice(offset, offset + LIMIT);
+  document.getElementById('blog-grid').insertAdjacentHTML('beforeend', posts.map(blogCard).join(''));
+  offset += posts.length;
+  if (offset >= filtered().length) document.getElementById('load-more-wrap').style.display = 'none';
+}
+
+function blogCard(p) {
+  return `
+    <a href="/blog/${p.slug}" class="blog-card" style="text-decoration:none;">
+      <div class="blog-card-img">${icon(p.category)}</div>
+      <div class="blog-card-body">
+        <span class="blog-category">${p.category || 'Blog'}</span>
+        <h3>${p.title}</h3>
+        <p>${p.excerpt}</p>
+        <div class="blog-card-footer">
+          <span>${fmt(p.publishedAt)}</span>
+          <span class="blog-read-more">Devamını oku →</span>
+        </div>
+      </div>
+    </a>`;
+}
+
+function icon(cat) {
+  return { 'Klima Bakımı':'❄️','Beyaz Eşya':'🫧','Enerji':'⚡','İpuçları':'💡' }[cat] || '📝';
+}
+
+function fmt(iso) {
+  if (!iso) return '';
+  return new Date(iso).toLocaleDateString('tr-TR', { day:'numeric', month:'long', year:'numeric' });
+}
+
+init();
+</script>
+</body>
+</html>

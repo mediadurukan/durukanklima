@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title id="post-title">Blog Yazısı | Durukan Klima</title>
+  <meta name="description" id="post-desc" content="" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" id="post-canonical" href="" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" id="og-title" content="" />
+  <meta property="og:description" id="og-desc" content="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <script type="application/ld+json" id="schema-article">{}</script>
+  <style>
+    .post-hero { background: linear-gradient(135deg,#0f3a5c,#1a6fa8,#00b4d8); color:white; padding:60px 0 48px; }
+    .post-meta { display:flex; gap:16px; flex-wrap:wrap; opacity:0.8; font-size:0.88rem; margin-top:12px; }
+    .post-content { max-width:760px; margin:0 auto; padding:48px 20px; }
+    .post-content h2 { font-size:1.4rem; font-weight:800; margin:32px 0 12px; color:#1e293b; }
+    .post-content h3 { font-size:1.1rem; font-weight:700; margin:24px 0 8px; color:#1e293b; }
+    .post-content p  { line-height:1.8; margin-bottom:16px; color:#374151; font-size:0.98rem; }
+    .post-content ul, .post-content ol { padding-left:20px; margin-bottom:16px; }
+    .post-content li { line-height:1.8; color:#374151; font-size:0.97rem; }
+    .post-content strong { color:#1e293b; }
+    .post-tags { display:flex; gap:8px; flex-wrap:wrap; margin-top:24px; }
+    .post-tag { background:#f0f7ff; color:#1a6fa8; padding:4px 12px; border-radius:50px; font-size:0.8rem; font-weight:600; }
+    .share-bar { display:flex; gap:10px; align-items:center; margin-top:28px; padding-top:24px; border-top:1px solid #e2e8f0; }
+    .share-btn { padding:8px 16px; border-radius:8px; font-size:0.85rem; font-weight:600; cursor:pointer; border:none; font-family:inherit; }
+    .related-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:20px; }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container">
+    <a href="/" class="logo"><div class="logo-icon">❄️</div><span>Durukan Klima</span></a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="/#hizmetler">Hizmetler</a></li>
+      <li><a href="/blog" style="color:var(--primary);">Blog</a></li>
+      <li><a href="/#iletisim">İletişim</a></li>
+    </ul>
+    <div class="nav-phone"><a href="#" id="nav-call" class="btn btn-primary">📞 Ara</a></div>
+    <div class="hamburger" onclick="document.getElementById('nav-links').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- Breadcrumb -->
+<div style="background:var(--bg);border-bottom:1px solid var(--border);padding:12px 0;">
+  <div class="container" style="font-size:0.85rem;color:var(--text-light);">
+    <a href="/" style="color:var(--primary);">Ana Sayfa</a> › <a href="/blog" style="color:var(--primary);">Blog</a> › <span id="breadcrumb-title">Yazı</span>
+  </div>
+</div>
+
+<!-- Post Hero -->
+<section class="post-hero">
+  <div class="container">
+    <span class="hero-badge" id="post-category">Blog</span>
+    <h1 id="post-heading" style="font-size:clamp(1.6rem,4vw,2.4rem);font-weight:800;margin:14px 0 0;line-height:1.25;"></h1>
+    <div class="post-meta">
+      <span id="post-author">✍️ Durukan Klima</span>
+      <span id="post-date">📅</span>
+      <span id="post-read-time">⏱️</span>
+    </div>
+  </div>
+</section>
+
+<!-- İçerik -->
+<div class="post-content">
+  <div id="post-body" style="min-height:200px;"></div>
+
+  <div class="post-tags" id="post-tags"></div>
+
+  <!-- Paylaş -->
+  <div class="share-bar">
+    <span style="font-weight:600;font-size:0.9rem;">Paylaş:</span>
+    <button class="share-btn" style="background:#25d366;color:white;" onclick="shareWP()">💬 WhatsApp</button>
+    <button class="share-btn" style="background:#f0f7ff;color:var(--primary);border:1px solid var(--border);" onclick="copyLink()">🔗 Link Kopyala</button>
+    <span id="copy-msg" style="font-size:0.82rem;color:var(--success);display:none;">✅ Kopyalandı!</span>
+  </div>
+
+  <!-- CTA kutusu -->
+  <div style="background:linear-gradient(135deg,#1a6fa8,#00b4d8);color:white;border-radius:16px;padding:28px;margin-top:36px;text-align:center;">
+    <h3 style="font-size:1.2rem;margin-bottom:8px;">Profesyonel Yardım Lazım mı?</h3>
+    <p style="opacity:0.88;margin-bottom:18px;font-size:0.92rem;">Durukan Klima olarak Tarsus ve çevresinde aynı gün servis veriyoruz.</p>
+    <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;">
+      <a href="#" id="cta-call" class="btn" style="background:white;color:#1a6fa8;padding:12px 22px;">📞 Hemen Ara</a>
+      <a href="/#servis-talebi" class="btn btn-whatsapp" style="padding:12px 22px;">📋 Servis Talebi</a>
+    </div>
+  </div>
+</div>
+
+<!-- İlgili Yazılar -->
+<section style="background:var(--bg);padding:48px 0;">
+  <div class="container">
+    <div class="section-header" style="margin-bottom:28px;">
+      <h2>İlgili Yazılar</h2>
+    </div>
+    <div class="related-grid" id="related-grid"></div>
+  </div>
+</section>
+
+<footer style="background:#0f1e2e;color:rgba(255,255,255,0.6);padding:24px 0;text-align:center;">
+  <div class="container">
+    <p style="font-size:0.85rem;">© <span id="year"></span> Durukan Klima | <a href="/blog" style="color:#4a9fd4;">Blog</a> | <a href="/" style="color:#4a9fd4;">Ana Sayfa</a></p>
+  </div>
+</footer>
+
+<div class="floating-buttons">
+  <a href="#" id="float-wp" class="float-btn float-wp">💬</a>
+  <a href="#" id="float-phone" class="float-btn float-phone">📞</a>
+</div>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+const slug = location.pathname.split('/').pop();
+
+async function init() {
+  const [postRes, blogRes, contentRes] = await Promise.allSettled([
+    fetch(`/api/blog/${slug}`).then(r => { if(!r.ok) throw new Error('404'); return r.json(); }),
+    fetch('/api/blog?limit=4').then(r => r.json()),
+    fetch('/api/content').then(r => r.json()),
+  ]);
+
+  if (postRes.status === 'rejected') {
+    document.getElementById('post-body').innerHTML = '<p style="color:#dc2626;">Yazı bulunamadı. <a href="/blog">Blog\'a dön</a></p>';
+    return;
+  }
+
+  const post = postRes.value;
+  applyPost(post);
+
+  if (blogRes.status === 'fulfilled') {
+    const related = blogRes.value.posts.filter(p => p.slug !== slug).slice(0, 3);
+    renderRelated(related);
+  }
+
+  if (contentRes.status === 'fulfilled') {
+    const c = contentRes.value.contact || {};
+    const tel = `tel:${(c.phone||'').replace(/\s/g,'')}`;
+    const wp  = `https://wa.me/${c.whatsapp||''}`;
+    ['nav-call','cta-call','float-phone'].forEach(id => { const e = document.getElementById(id); if(e) e.href = tel; });
+    ['float-wp'].forEach(id => { const e = document.getElementById(id); if(e) e.href = wp; });
+  }
+}
+
+function applyPost(p) {
+  // Head
+  document.getElementById('post-title').textContent = (p.seo?.metaTitle || p.title) + ' | Durukan Klima';
+  document.getElementById('post-desc').content = p.seo?.metaDescription || p.excerpt;
+  document.getElementById('post-canonical').href = `https://durukanklima.com/blog/${p.slug}`;
+  document.getElementById('og-title').content = p.title;
+  document.getElementById('og-desc').content = p.excerpt;
+
+  // Breadcrumb
+  document.getElementById('breadcrumb-title').textContent = p.title;
+
+  // Hero
+  document.getElementById('post-category').textContent = p.category || 'Blog';
+  document.getElementById('post-heading').textContent = p.title;
+  document.getElementById('post-author').textContent = `✍️ ${p.author || 'Durukan Klima'}`;
+  document.getElementById('post-date').textContent = `📅 ${fmt(p.publishedAt)}`;
+
+  const wordCount = (p.content || '').split(' ').length;
+  const readTime = Math.ceil(wordCount / 200);
+  document.getElementById('post-read-time').textContent = `⏱️ ${readTime} dk okuma`;
+
+  // İçerik (markdown → HTML)
+  document.getElementById('post-body').innerHTML = mdToHtml(p.content || '');
+
+  // Etiketler
+  if (p.tags?.length) {
+    document.getElementById('post-tags').innerHTML = p.tags.map(t => `<span class="post-tag">#${t}</span>`).join('');
+  }
+
+  // Schema Article
+  document.getElementById('schema-article').textContent = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": p.title,
+    "description": p.excerpt,
+    "datePublished": p.publishedAt,
+    "dateModified": p.updatedAt,
+    "author": { "@type": "Organization", "name": p.author || "Durukan Klima" },
+    "publisher": { "@type": "Organization", "name": "Durukan Klima" },
+    "keywords": (p.tags || []).join(', ')
+  });
+}
+
+function renderRelated(posts) {
+  const el = document.getElementById('related-grid');
+  if (!posts.length) { el.closest('section').style.display = 'none'; return; }
+  el.innerHTML = posts.map(p => `
+    <a href="/blog/${p.slug}" class="blog-card" style="text-decoration:none;">
+      <div class="blog-card-img">${icon(p.category)}</div>
+      <div class="blog-card-body">
+        <span class="blog-category">${p.category || 'Blog'}</span>
+        <h3>${p.title}</h3>
+        <p>${p.excerpt}</p>
+        <div class="blog-card-footer"><span>${fmt(p.publishedAt)}</span><span class="blog-read-more">Oku →</span></div>
+      </div>
+    </a>`).join('');
+}
+
+// Basit Markdown → HTML dönüştürücü
+function mdToHtml(md) {
+  return md
+    .replace(/^## (.+)$/gm, '<h2>$1</h2>')
+    .replace(/^### (.+)$/gm, '<h3>$1</h3>')
+    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+    .replace(/\*(.+?)\*/g, '<em>$1</em>')
+    .replace(/^- (.+)$/gm, '<li>$1</li>')
+    .replace(/(<li>.*<\/li>)/gs, '<ul>$1</ul>')
+    .replace(/\n\n/g, '</p><p>')
+    .replace(/^([^<\n].+)$/gm, '<p>$1</p>')
+    .replace(/<p><\/p>/g, '')
+    .replace(/<p>(<h[23]>)/g, '$1')
+    .replace(/(<\/h[23]>)<\/p>/g, '$1');
+}
+
+function shareWP() {
+  window.open(`https://wa.me/?text=${encodeURIComponent(document.title + ' ' + location.href)}`);
+}
+function copyLink() {
+  navigator.clipboard.writeText(location.href);
+  const m = document.getElementById('copy-msg');
+  m.style.display = 'inline';
+  setTimeout(() => m.style.display = 'none', 2000);
+}
+
+function icon(cat) { return {'Klima Bakımı':'❄️','Beyaz Eşya':'🫧','Enerji':'⚡'}[cat]||'📝'; }
+function fmt(iso) { if(!iso) return ''; return new Date(iso).toLocaleDateString('tr-TR',{day:'numeric',month:'long',year:'numeric'}); }
+
+init();
+</script>
+</body>
+</html>

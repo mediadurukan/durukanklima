@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 80" width="160" height="80">
+  <rect width="160" height="80" fill="white"/>
+  <!-- G harfi stilize -->
+  <circle cx="35" cy="40" r="22" fill="none" stroke="#009E60" stroke-width="6"/>
+  <rect x="35" y="35" width="20" height="6" fill="#009E60"/>
+  <text x="105" y="52" font-family="Arial Black, Arial" font-weight="900" font-size="30" fill="#009E60" text-anchor="middle">GREE</text>
+</svg>

@@ -1,0 +1,23 @@
+node_modules/
+.env
+.env.local
+
+# Claude Code ayarları
+.claude/
+
+# Projeyle alakasız klasörler
+Agent-dosyaları/
+Agentic Workflows/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Log
+*.log
+logs/
+
+# PDF ve geçici
+*.tmp
+karpathy-llm-wiki-rehberi.pdf
+

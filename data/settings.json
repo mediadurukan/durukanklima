@@ -1,0 +1,68 @@
+{
+  "analytics": {
+    "googleAnalyticsId": "",
+    "googleTagManagerId": ""
+  },
+  "seo": {
+    "siteTitle": "Durukan Klima - Adana Klima & Kombi Servisi",
+    "siteDescription": "Adana Çukurova ve Seyhan'da uzman klima ve kombi teknik servisi. Aynı gün servis, orijinal parça garantisi.",
+    "keywords": "adana klima servisi, çukurova klima servisi, seyhan klima tamiri, adana kombi servisi, klima bakımı adana",
+    "ogImage": "",
+    "canonicalUrl": "https://durukanklima.com",
+    "locale": "tr_TR"
+  },
+  "geo": {
+    "latitude": "37.0000",
+    "longitude": "35.3213",
+    "city": "Çukurova",
+    "region": "Adana",
+    "country": "TR",
+    "postalCode": "01330",
+    "serviceRadius": "40"
+  },
+  "notifications": {
+    "emailEnabled": false,
+    "emailTo": "",
+    "emailFrom": "",
+    "smtpHost": "",
+    "smtpPort": "587",
+    "smtpUser": "",
+    "smtpPass": ""
+  },
+  "sms": {
+    "provider": "netgsm",
+    "enabled": false,
+    "netgsmUser": "",
+    "netgsmPass": "",
+    "netgsmHeader": "DURUKAN",
+    "sendToCustomer": true,
+    "sendToOwner": true,
+    "ownerPhone": ""
+  },
+  "whatsapp": {
+    "autoReply": false,
+    "welcomeMessage": "Merhaba! Durukan Klima'ya hoş geldiniz. Size nasıl yardımcı olabiliriz?",
+    "offHoursMessage": "Mesai saatlerimiz dışındasınız. En kısa sürede size döneceğiz."
+  },
+  "features": {
+    "floatingPhone": { "title": "Sabit Telefon Butonu", "enabled": true },
+    "floatingWhatsapp": { "title": "Sabit WhatsApp Butonu", "enabled": true },
+    "navPhone": { "title": "Navbar Telefon Butonu", "enabled": true },
+    "heroCallBtn": { "title": "Hero Ara Butonu", "enabled": true },
+    "whatsappButtons": { "title": "WhatsApp Butonları (Genel)", "enabled": true }
+  },
+  "pages": {
+    "/": { "title": "Ana Sayfa", "enabled": true },
+    "/fiyatlar": { "title": "Fiyat Listesi", "enabled": true },
+    "/teklif": { "title": "Teklif Hesaplayıcı", "enabled": true },
+    "/takip": { "title": "Servis Takip", "enabled": true },
+    "/blog": { "title": "Blog", "enabled": true },
+    "/cukurova-klima-servisi": { "title": "Çukurova Klima Servisi", "enabled": true },
+    "/seyhan-klima-servisi": { "title": "Seyhan Klima Servisi", "enabled": true },
+    "/saricam-klima-servisi": { "title": "Sarıçam Klima Servisi", "enabled": true },
+    "/yuregir-klima-servisi": { "title": "Yüreğir Klima Servisi", "enabled": true },
+    "/kozan-klima-servisi": { "title": "Kozan Klima Servisi", "enabled": true },
+    "/ceyhan-klima-servisi": { "title": "Ceyhan Klima Servisi", "enabled": true },
+    "/imamoglu-klima-servisi": { "title": "İmamoğlu Klima Servisi", "enabled": true }
+  }
+}

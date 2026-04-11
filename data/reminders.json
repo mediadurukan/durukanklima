@@ -1,0 +1,13 @@
+[
+  {
+    "id": 1775904683320,
+    "leadId": 1775904683318,
+    "name": "Test M��teri",
+    "phone": "05301234567",
+    "service": "Klima Bak�m�",
+    "note": "Klima Bak�m� bakım hatırlatıcısı",
+    "remindAt": "2026-10-11",
+    "sent": false,
+    "createdAt": "2026-04-11T10:51:23.319Z"
+  }
+]

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sayfa Bulunamadı | Durukan Klima</title>
+  <meta name="robots" content="noindex" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <style>
+    .err-wrap { min-height:80vh; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:40px 20px; }
+    .err-icon { font-size:5rem; margin-bottom:16px; }
+    .err-code { font-size:5rem; font-weight:800; color:var(--primary); line-height:1; margin-bottom:8px; }
+    .err-title { font-size:1.5rem; font-weight:700; margin-bottom:12px; }
+    .err-desc { color:var(--text-light); max-width:440px; margin:0 auto 32px; line-height:1.6; }
+    .err-actions { display:flex; gap:14px; flex-wrap:wrap; justify-content:center; }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container">
+    <a href="/" class="logo"><div class="logo-icon">❄️</div><span>Durukan Klima</span></a>
+  </div>
+</nav>
+
+<div class="err-wrap">
+  <div class="err-icon">🚧</div>
+  <div class="err-code">404</div>
+  <div class="err-title">Bu sayfa şu an aktif değil</div>
+  <p class="err-desc">Aradığınız sayfa geçici olarak devre dışı bırakılmış ya da kaldırılmış olabilir.</p>
+  <div class="err-actions">
+    <a href="/" class="btn btn-primary">🏠 Ana Sayfaya Dön</a>
+    <a href="#" id="wp-btn" class="btn btn-whatsapp">💬 WhatsApp ile Ulaş</a>
+  </div>
+</div>
+
+<script>
+fetch('/api/content').then(r=>r.json()).then(d=>{
+  const c = d.contact || {};
+  const wp = `https://wa.me/${c.whatsapp}?text=${encodeURIComponent('Merhaba, Durukan Klima\'ya ulaşmak istiyorum.')}`;
+  document.getElementById('wp-btn').href = wp;
+}).catch(()=>{});
+</script>
+</body>
+</html>

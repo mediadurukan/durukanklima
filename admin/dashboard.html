@@ -1,0 +1,1903 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Paneli – Durukan Klima</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --primary: #1a6fa8; --primary-dark: #135a8a; --accent: #00b4d8;
+      --bg: #f1f5f9; --white: #fff; --text: #1e293b; --text-light: #64748b;
+      --border: #e2e8f0; --sidebar: #0f1e2e; --sidebar-w: 260px;
+      --success: #16a34a; --danger: #dc2626;
+    }
+    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); display: flex; min-height: 100vh; }
+
+    /* SIDEBAR */
+    .sidebar {
+      width: var(--sidebar-w); background: var(--sidebar); color: rgba(255,255,255,0.85);
+      display: flex; flex-direction: column; position: fixed; top: 0; left: 0; height: 100vh; z-index: 100; overflow-y: auto;
+    }
+    .sidebar-header {
+      padding: 24px 20px; border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .sidebar-logo { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1.05rem; color: white; margin-bottom: 4px; }
+    .sidebar-logo .icon { width: 36px; height: 36px; background: linear-gradient(135deg, var(--primary), var(--accent)); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; }
+    .sidebar-sub { font-size: 0.75rem; opacity: 0.5; }
+
+    .sidebar-nav { flex: 1; padding: 16px 12px; }
+    .nav-section-label { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; opacity: 0.4; padding: 12px 8px 6px; }
+    .nav-item {
+      display: flex; align-items: center; gap: 10px; padding: 10px 12px; border-radius: 8px;
+      cursor: pointer; font-size: 0.88rem; font-weight: 500; transition: all 0.2s; margin-bottom: 2px;
+    }
+    .nav-item:hover { background: rgba(255,255,255,0.07); }
+    .nav-item.active { background: var(--primary); color: white; }
+    .nav-item .nav-icon { font-size: 1rem; width: 20px; text-align: center; }
+
+    .sidebar-footer { padding: 16px 12px; border-top: 1px solid rgba(255,255,255,0.08); }
+    .sidebar-footer a {
+      display: flex; align-items: center; gap: 8px; padding: 9px 12px; border-radius: 8px;
+      font-size: 0.85rem; color: rgba(255,255,255,0.7); transition: all 0.2s; text-decoration: none;
+    }
+    .sidebar-footer a:hover { background: rgba(255,255,255,0.07); color: white; }
+
+    /* MAIN */
+    .main { margin-left: var(--sidebar-w); flex: 1; display: flex; flex-direction: column; min-height: 100vh; }
+
+    .topbar {
+      background: white; border-bottom: 1px solid var(--border); padding: 0 28px; height: 64px;
+      display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 50;
+    }
+    .topbar h2 { font-size: 1rem; font-weight: 700; color: var(--text); }
+    .topbar-right { display: flex; align-items: center; gap: 12px; }
+
+    .badge-live {
+      background: #dcfce7; color: var(--success); font-size: 0.75rem; font-weight: 700;
+      padding: 4px 10px; border-radius: 50px; display: flex; align-items: center; gap: 5px;
+    }
+    .badge-live::before { content: ''; width: 6px; height: 6px; background: var(--success); border-radius: 50%; }
+
+    .btn-logout {
+      background: none; border: 1px solid var(--border); border-radius: 8px; padding: 7px 14px;
+      font-size: 0.82rem; font-weight: 600; cursor: pointer; color: var(--text-light); transition: all 0.2s; font-family: inherit;
+    }
+    .btn-logout:hover { background: #fef2f2; border-color: #fecaca; color: var(--danger); }
+
+    .content { padding: 28px; flex: 1; }
+
+    /* PANELS */
+    .panel { display: none; }
+    .panel.active { display: block; }
+
+    .panel-title { font-size: 1.3rem; font-weight: 800; margin-bottom: 6px; }
+    .panel-desc { color: var(--text-light); font-size: 0.88rem; margin-bottom: 24px; }
+
+    /* CARDS */
+    .card {
+      background: white; border-radius: 14px; border: 1px solid var(--border);
+      padding: 24px; margin-bottom: 20px;
+    }
+    .card-title { font-size: 0.95rem; font-weight: 700; margin-bottom: 18px; color: var(--text); display: flex; align-items: center; gap: 8px; }
+
+    /* FORM */
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-group { margin-bottom: 16px; }
+    .form-group label { display: block; font-size: 0.82rem; font-weight: 600; color: #374151; margin-bottom: 6px; }
+    .form-group input, .form-group textarea, .form-group select {
+      width: 100%; padding: 10px 14px; border: 1.5px solid var(--border); border-radius: 8px;
+      font-size: 0.9rem; font-family: inherit; outline: none; transition: border-color 0.2s; background: white;
+    }
+    .form-group input:focus, .form-group textarea:focus { border-color: var(--primary); }
+    .form-group textarea { resize: vertical; min-height: 80px; }
+    .form-hint { font-size: 0.75rem; color: var(--text-light); margin-top: 4px; }
+
+    .btn-save {
+      background: var(--primary); color: white; border: none; border-radius: 8px;
+      padding: 10px 22px; font-size: 0.9rem; font-weight: 700; cursor: pointer;
+      transition: all 0.2s; font-family: inherit; display: inline-flex; align-items: center; gap: 8px;
+    }
+    .btn-save:hover { background: var(--primary-dark); transform: translateY(-1px); }
+    .btn-save:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+
+    .btn-danger {
+      background: #fef2f2; color: var(--danger); border: 1px solid #fecaca;
+      border-radius: 6px; padding: 6px 12px; font-size: 0.78rem; font-weight: 600;
+      cursor: pointer; font-family: inherit; transition: all 0.2s;
+    }
+    .btn-danger:hover { background: var(--danger); color: white; }
+
+    .btn-add {
+      background: #f0f7ff; color: var(--primary); border: 1.5px dashed var(--primary);
+      border-radius: 8px; padding: 10px 18px; font-size: 0.85rem; font-weight: 600;
+      cursor: pointer; font-family: inherit; transition: all 0.2s; width: 100%; margin-top: 8px;
+    }
+    .btn-add:hover { background: var(--primary); color: white; }
+
+    /* TOAST */
+    .toast {
+      position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%) translateY(80px);
+      background: #1e293b; color: white; padding: 12px 22px; border-radius: 10px;
+      font-size: 0.88rem; font-weight: 600; z-index: 9999; transition: transform 0.35s ease;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .toast.show { transform: translateX(-50%) translateY(0); }
+    .toast.success { background: var(--success); }
+    .toast.error { background: var(--danger); }
+
+    /* LIST ITEMS */
+    .list-item {
+      display: flex; align-items: flex-start; gap: 12px; padding: 14px;
+      background: var(--bg); border-radius: 10px; margin-bottom: 10px;
+    }
+    .list-item-body { flex: 1; }
+    .list-item-body input, .list-item-body textarea {
+      width: 100%; padding: 7px 10px; border: 1.5px solid var(--border);
+      border-radius: 6px; font-size: 0.87rem; font-family: inherit; outline: none; background: white;
+    }
+    .list-item-body input:focus, .list-item-body textarea:focus { border-color: var(--primary); }
+
+    /* STATS */
+    .stats-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 24px; }
+    .stat-card { background: white; border-radius: 12px; padding: 20px; border: 1px solid var(--border); text-align: center; }
+    .stat-card .val { font-size: 2rem; font-weight: 800; color: var(--primary); }
+    .stat-card .lbl { font-size: 0.82rem; color: var(--text-light); margin-top: 4px; }
+
+    /* PREVIEW LINK */
+    .preview-btn {
+      display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px;
+      background: #f0f7ff; color: var(--primary); border-radius: 8px; font-size: 0.85rem;
+      font-weight: 600; text-decoration: none; transition: all 0.2s; border: 1px solid var(--border);
+    }
+    .preview-btn:hover { background: var(--primary); color: white; }
+
+    .lead-filter-btn {
+      padding: 7px 14px; border-radius: 50px; border: 1.5px solid var(--border);
+      background: white; color: var(--text); font-size: 0.82rem; font-weight: 600;
+      cursor: pointer; font-family: inherit; transition: all 0.2s;
+    }
+    .lead-filter-btn.active { background: var(--primary); color: white; border-color: var(--primary); }
+    .lead-filter-btn:hover { border-color: var(--primary); color: var(--primary); }
+    .lead-filter-btn.active:hover { color: white; }
+
+    @media (max-width: 768px) {
+      .sidebar { transform: translateX(-100%); transition: transform 0.3s; }
+      .sidebar.open { transform: translateX(0); }
+      .main { margin-left: 0; }
+      .form-row { grid-template-columns: 1fr; }
+      .stats-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- SIDEBAR -->
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-header">
+    <div class="sidebar-logo"><div class="icon">❄️</div> Durukan Klima</div>
+    <div class="sidebar-sub">Admin Paneli</div>
+  </div>
+  <nav class="sidebar-nav">
+    <div class="nav-section-label">Genel</div>
+    <div class="nav-item active" onclick="showPanel('panel-genel')">
+      <span class="nav-icon">🏢</span> Firma Bilgileri
+    </div>
+    <div class="nav-item" onclick="showPanel('panel-iletisim')">
+      <span class="nav-icon">📞</span> İletişim
+    </div>
+    <div class="nav-item" onclick="showPanel('panel-hero')">
+      <span class="nav-icon">🖼️</span> Ana Sayfa (Hero)
+    </div>
+
+    <div class="nav-section-label">Müşteri</div>
+    <div class="nav-item" onclick="showPanel('panel-talepler')">
+      <span class="nav-icon">📋</span> Servis Talepleri <span id="badge-new" style="background:#ef4444;color:white;font-size:0.7rem;padding:2px 7px;border-radius:50px;margin-left:auto;display:none;"></span>
+    </div>
+
+    <div class="nav-section-label">İçerik</div>
+    <div class="nav-item" onclick="showPanel('panel-blog')">
+      <span class="nav-icon">📝</span> Blog Yazıları
+    </div>
+    <div class="nav-item" onclick="showPanel('panel-hizmetler')">
+      <span class="nav-icon">🔧</span> Hizmetler
+    </div>
+    <div class="nav-item" onclick="showPanel('panel-markalar')">
+      <span class="nav-icon">🏷️</span> Markalar
+    </div>
+    <div class="nav-item" onclick="showPanel('panel-neden')">
+      <span class="nav-icon">✅</span> Neden Biz?
+    </div>
+    <div class="nav-item" onclick="showPanel('panel-bolge')">
+      <span class="nav-icon">📍</span> Hizmet Bölgesi
+    </div>
+    <div class="nav-item" onclick="showPanel('panel-yorumlar')">
+      <span class="nav-icon">⭐</span> Yorumlar
+    </div>
+    <div class="nav-item" onclick="showPanel('panel-sss')">
+      <span class="nav-icon">❓</span> SSS (Sık Sorulan)
+    </div>
+  </nav>
+    <div class="nav-section-label">Operasyon</div>
+    <div class="nav-item" onclick="showPanel('panel-takvim')">
+      <span class="nav-icon">📅</span> Teknisyen Takvimi
+    </div>
+    <div class="nav-item" onclick="showPanel('panel-hatirlatici')">
+      <span class="nav-icon">🔔</span> Hatırlatıcılar <span id="reminder-badge" style="background:#ef4444;color:#fff;border-radius:10px;padding:1px 7px;font-size:11px;margin-left:4px;display:none;"></span>
+    </div>
+    <div class="nav-section-label">Sistem</div>
+    <div class="nav-item" onclick="showPanel('panel-sayfalar')">
+      <span class="nav-icon">🔘</span> Sayfa Yönetimi
+    </div>
+    <div class="nav-item" onclick="showPanel('panel-ayarlar')">
+      <span class="nav-icon">⚙️</span> Ayarlar & SEO
+    </div>
+  </div>
+  <div class="sidebar-footer">
+    <a href="/" target="_blank">🌐 Siteyi Görüntüle</a>
+    <a href="/blog" target="_blank">📝 Blogu Görüntüle</a>
+    <a href="#" onclick="logout()">🚪 Çıkış Yap</a>
+  </div>
+</aside>
+
+<!-- MAIN -->
+<div class="main">
+  <header class="topbar">
+    <h2 id="topbar-title">Firma Bilgileri</h2>
+    <div class="topbar-right">
+      <div class="badge-live">Canlı</div>
+      <a href="/" target="_blank" class="preview-btn">🌐 Siteyi Aç</a>
+      <button class="btn-logout" onclick="logout()">Çıkış</button>
+    </div>
+  </header>
+
+  <div class="content">
+
+    <!-- PANEL: SERVİS TALEPLERİ -->
+    <div class="panel" id="panel-talepler">
+      <div class="panel-title">📋 Servis Talepleri</div>
+      <div class="panel-desc">Siteden gelen müşteri servis taleplerini buradan yönetebilirsiniz.</div>
+
+      <div class="stats-row" id="lead-stats-row">
+        <div class="stat-card"><div class="val" id="stat-new">0</div><div class="lbl">🔴 Yeni</div></div>
+        <div class="stat-card"><div class="val" id="stat-contacted">0</div><div class="lbl">🟡 İletişim Kuruldu</div></div>
+        <div class="stat-card"><div class="val" id="stat-completed">0</div><div class="lbl">🟢 Tamamlandı</div></div>
+      </div>
+
+      <!-- Filtreler -->
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px;">
+        <button class="lead-filter-btn active" onclick="filterLeads('all',this)">Tümü</button>
+        <button class="lead-filter-btn" onclick="filterLeads('new',this)">🔴 Yeni</button>
+        <button class="lead-filter-btn" onclick="filterLeads('contacted',this)">🟡 İletişim Kuruldu</button>
+        <button class="lead-filter-btn" onclick="filterLeads('completed',this)">🟢 Tamamlandı</button>
+        <button class="lead-filter-btn" onclick="filterLeads('cancelled',this)">⚫ İptal</button>
+      </div>
+
+      <div id="leads-list"></div>
+    </div>
+
+    <!-- PANEL: BLOG -->
+    <div class="panel" id="panel-blog">
+      <div class="panel-title">📝 Blog Yazıları</div>
+      <div class="panel-desc">Blog yazılarını ekleyin, düzenleyin veya yayından kaldırın.</div>
+      <div style="display:flex;justify-content:flex-end;margin-bottom:16px;">
+        <button class="btn-save" onclick="showBlogEditor(null)">+ Yeni Yazı</button>
+      </div>
+      <div id="blog-admin-list"></div>
+
+      <!-- Blog Editörü (modal benzeri) -->
+      <div id="blog-editor" style="display:none;" class="card">
+        <div class="card-title" id="blog-editor-title">📝 Yeni Yazı</div>
+        <div class="form-group">
+          <label>Başlık</label>
+          <input type="text" id="be-title" placeholder="Yazı başlığı..." oninput="updateBeSlug()" />
+        </div>
+        <div class="form-group">
+          <label>Kategori</label>
+          <input type="text" id="be-category" placeholder="Klima Bakımı, Beyaz Eşya, vs." />
+        </div>
+        <div class="form-group">
+          <label>Etiketler <span style="font-weight:400;color:#64748b">(virgülle ayırın)</span></label>
+          <input type="text" id="be-tags" placeholder="klima bakımı, tarsus, enerji tasarrufu" />
+        </div>
+        <div class="form-group">
+          <label>Özet</label>
+          <textarea id="be-excerpt" rows="2" placeholder="Kısa özet (liste sayfasında görünür)..."></textarea>
+        </div>
+        <div class="form-group">
+          <label>İçerik <span style="font-weight:400;color:#64748b">(Markdown destekli: ## Başlık, **kalın**, - liste)</span></label>
+          <textarea id="be-content" rows="14" placeholder="## Giriş&#10;İçeriğinizi buraya yazın...&#10;&#10;## Bölüm&#10;..."></textarea>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+          <div class="form-group">
+            <label>SEO Başlığı</label>
+            <input type="text" id="be-seo-title" placeholder="Anahtar kelime içeren başlık..." />
+          </div>
+          <div class="form-group">
+            <label>SEO Açıklaması</label>
+            <input type="text" id="be-seo-desc" placeholder="160 karaktere kadar..." />
+          </div>
+        </div>
+        <div class="form-group" style="display:flex;align-items:center;gap:10px;">
+          <input type="checkbox" id="be-published" style="width:auto;" />
+          <label for="be-published" style="margin:0;">Yayınla (işaretli değilse taslak olarak kaydedilir)</label>
+        </div>
+        <div style="display:flex;gap:10px;margin-top:8px;">
+          <button class="btn-save" onclick="saveBlogPost()">💾 Kaydet</button>
+          <button onclick="cancelBlogEditor()" style="background:none;border:1px solid var(--border);border-radius:8px;padding:10px 18px;cursor:pointer;font-family:inherit;font-size:0.88rem;">İptal</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- PANEL: SAYFA YÖNETİMİ -->
+    <div class="panel" id="panel-sayfalar">
+      <div class="panel-title">🔘 Sayfa Yönetimi</div>
+      <div class="panel-desc">Sitenizdeki sayfaları açıp kapatabilirsiniz. Kapalı sayfalar ziyaretçilere 404 gösterir.</div>
+      <div class="card" style="padding:24px;margin-bottom:20px;">
+        <div style="font-weight:700;font-size:1rem;margin-bottom:16px;">📞 Telefon & İletişim Butonları</div>
+        <div id="features-list" style="display:flex;flex-direction:column;gap:14px;">
+          <div style="color:#94a3b8;text-align:center;padding:20px;">Yükleniyor...</div>
+        </div>
+      </div>
+      <div class="card" style="padding:24px;">
+        <div style="font-weight:700;font-size:1rem;margin-bottom:16px;">🌐 Sayfalar</div>
+        <div id="pages-list" style="display:flex;flex-direction:column;gap:14px;">
+          <div style="color:#94a3b8;text-align:center;padding:20px;">Yükleniyor...</div>
+        </div>
+        <div style="margin-top:24px;padding-top:18px;border-top:1px solid var(--border);">
+          <button class="btn btn-primary" onclick="savePageSettings()" style="width:100%;">💾 Değişiklikleri Kaydet</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- PANEL: AYARLAR -->
+    <div class="panel" id="panel-ayarlar">
+      <div class="panel-title">⚙️ Ayarlar & SEO</div>
+      <div class="panel-desc">Site ayarları, SEO, Google Analytics ve GEO konum bilgileri.</div>
+
+      <div class="card">
+        <div class="card-title">🔍 SEO Ayarları</div>
+        <div class="form-group">
+          <label>Site Başlığı (Title Tag)</label>
+          <input type="text" id="seo-title" placeholder="Durukan Klima | Tarsus Klima & Beyaz Eşya Servisi" />
+        </div>
+        <div class="form-group">
+          <label>Meta Açıklama</label>
+          <textarea id="seo-desc" rows="2" placeholder="Arama motoru sonuçlarında görünen açıklama (max 160 karakter)..."></textarea>
+        </div>
+        <div class="form-group">
+          <label>Anahtar Kelimeler</label>
+          <input type="text" id="seo-keywords" placeholder="tarsus klima servisi, mersin klima, beyaz eşya tamiri..." />
+        </div>
+        <div class="form-group">
+          <label>Canonical URL</label>
+          <input type="text" id="seo-canonical" placeholder="https://durukanklima.com" />
+        </div>
+        <button class="btn-save" onclick="saveSeoSettings()">💾 SEO Ayarlarını Kaydet</button>
+      </div>
+
+      <div class="card">
+        <div class="card-title">📍 GEO Konum (Yerel SEO)</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+          <div class="form-group">
+            <label>Enlem (Latitude)</label>
+            <input type="text" id="geo-lat" placeholder="36.9175" />
+          </div>
+          <div class="form-group">
+            <label>Boylam (Longitude)</label>
+            <input type="text" id="geo-lng" placeholder="34.8957" />
+          </div>
+          <div class="form-group">
+            <label>Şehir</label>
+            <input type="text" id="geo-city" placeholder="Tarsus" />
+          </div>
+          <div class="form-group">
+            <label>İl</label>
+            <input type="text" id="geo-region" placeholder="Mersin" />
+          </div>
+          <div class="form-group">
+            <label>Posta Kodu</label>
+            <input type="text" id="geo-postal" placeholder="33400" />
+          </div>
+          <div class="form-group">
+            <label>Hizmet Yarıçapı (km)</label>
+            <input type="text" id="geo-radius" placeholder="30" />
+          </div>
+        </div>
+        <button class="btn-save" onclick="saveGeoSettings()">💾 GEO Ayarlarını Kaydet</button>
+      </div>
+
+      <div class="card">
+        <div class="card-title">📊 Google Analytics & Tag Manager</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+          <div class="form-group">
+            <label>Google Analytics ID</label>
+            <input type="text" id="ga-id" placeholder="G-XXXXXXXXXX" />
+            <div style="font-size:0.75rem;color:#64748b;margin-top:4px;">Google Analytics 4 Ölçüm ID'si</div>
+          </div>
+          <div class="form-group">
+            <label>Google Tag Manager ID</label>
+            <input type="text" id="gtm-id" placeholder="GTM-XXXXXXX" />
+          </div>
+        </div>
+        <button class="btn-save" onclick="saveAnalyticsSettings()">💾 Analytics Kaydet</button>
+      </div>
+
+      <div class="card">
+        <div class="card-title">📱 SMS Bildirimleri (Netgsm)</div>
+        <div class="form-group" style="margin-bottom:12px;">
+          <label style="display:flex;align-items:center;gap:10px;cursor:pointer;">
+            <input type="checkbox" id="sms-enabled" style="width:auto;" />
+            SMS bildirimlerini etkinleştir
+          </label>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+          <div class="form-group"><label>Netgsm Kullanıcı Adı</label><input type="text" id="sms-user" placeholder="05XXXXXXXXX" /></div>
+          <div class="form-group"><label>Netgsm Şifresi</label><input type="password" id="sms-pass" placeholder="••••••••" /></div>
+          <div class="form-group"><label>SMS Başlığı (Header)</label><input type="text" id="sms-header" placeholder="DURUKAN" maxlength="11" /></div>
+          <div class="form-group"><label>Bildirim Alacak Telefon</label><input type="tel" id="sms-owner" placeholder="05XXXXXXXXX" /></div>
+        </div>
+        <div class="form-group" style="margin-top:8px;">
+          <label style="display:flex;align-items:center;gap:10px;cursor:pointer;">
+            <input type="checkbox" id="sms-to-customer" style="width:auto;" />
+            Müşteriye otomatik SMS gönder (talep alındı bildirimi)
+          </label>
+        </div>
+        <div class="form-group">
+          <label style="display:flex;align-items:center;gap:10px;cursor:pointer;">
+            <input type="checkbox" id="sms-to-owner" style="width:auto;" />
+            Size yeni talep SMS'i gönder
+          </label>
+        </div>
+        <div style="background:#fffbeb;border:1px solid #fcd34d;border-radius:8px;padding:12px;font-size:12px;color:#92400e;margin-bottom:14px;">
+          ⚠️ SMS göndermek için <strong>netgsm.com.tr</strong> üzerinde hesap ve bakiye gereklidir.
+        </div>
+        <button class="btn-save" onclick="saveSmsSettings()">💾 SMS Ayarlarını Kaydet</button>
+      </div>
+
+      <div class="card">
+        <div class="card-title">📋 Hızlı Bağlantılar</div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;">
+          <a href="/teklif" target="_blank" style="padding:8px 16px;background:#f0f7ff;border:1px solid #3b82f6;color:#3b82f6;border-radius:8px;font-size:13px;font-weight:600;">🧮 Teklif Hesaplayıcı</a>
+          <a href="/takip" target="_blank" style="padding:8px 16px;background:#f0f7ff;border:1px solid #3b82f6;color:#3b82f6;border-radius:8px;font-size:13px;font-weight:600;">🔍 Servis Takip</a>
+          <a href="/fiyatlar" target="_blank" style="padding:8px 16px;background:#f0f7ff;border:1px solid #3b82f6;color:#3b82f6;border-radius:8px;font-size:13px;font-weight:600;">💰 Fiyat Listesi</a>
+          <a href="/sitemap.xml" target="_blank" style="padding:8px 16px;background:#f0fdf4;border:1px solid #10b981;color:#10b981;border-radius:8px;font-size:13px;font-weight:600;">🗺️ Sitemap.xml</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- PANEL: GENEL -->
+    <div class="panel active" id="panel-genel">
+      <div class="panel-title">🏢 Firma Bilgileri</div>
+      <div class="panel-desc">Sitenin genelinde görünen firma adı ve sloganı buradan güncelleyebilirsiniz.</div>
+      <div class="card">
+        <div class="card-title">📝 Temel Bilgiler</div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Firma Adı</label>
+            <input type="text" id="company-name" placeholder="Durukan Klima" />
+          </div>
+          <div class="form-group">
+            <label>Kısa Ad</label>
+            <input type="text" id="company-shortName" placeholder="Durukan Klima" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Slogan</label>
+          <input type="text" id="company-slogan" placeholder="Uzman Klima & Beyaz Eşya Servisi" />
+        </div>
+        <div class="form-group">
+          <label>Açıklama</label>
+          <textarea id="company-description" placeholder="Kısa firma açıklaması..."></textarea>
+        </div>
+        <button class="btn-save" onclick="saveSection('company', getCompany())">💾 Kaydet</button>
+      </div>
+    </div>
+
+    <!-- PANEL: İLETİŞİM -->
+    <div class="panel" id="panel-iletisim">
+      <div class="panel-title">📞 İletişim Bilgileri</div>
+      <div class="panel-desc">Telefon, WhatsApp, adres ve çalışma saatlerini buradan güncelleyin.</div>
+      <div class="card">
+        <div class="card-title">📱 İletişim</div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Telefon</label>
+            <input type="text" id="contact-phone" placeholder="0530 000 00 00" />
+          </div>
+          <div class="form-group">
+            <label>WhatsApp Numarası <span style="font-weight:400;color:#64748b">(ülke kodu dahil, boşluksuz)</span></label>
+            <input type="text" id="contact-whatsapp" placeholder="905300000000" />
+            <div class="form-hint">Örnek: 905301234567</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Adres</label>
+          <textarea id="contact-address" rows="2" placeholder="Mahalle, Sokak, No, İlçe/İl"></textarea>
+        </div>
+        <div class="form-group">
+          <label>Google Maps Embed URL <span style="font-weight:400;color:#64748b">(isteğe bağlı)</span></label>
+          <input type="text" id="contact-mapUrl" placeholder="https://maps.google.com/maps?..." />
+          <div class="form-hint">Google Maps'ten "Paylaş > Haritayı göm > HTML" kısmındaki src URL'ini yapıştırın.</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">🕐 Çalışma Saatleri</div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Hafta İçi (Pzt–Cuma)</label>
+            <input type="text" id="hours-weekdays" placeholder="08:00 - 19:00" />
+          </div>
+          <div class="form-group">
+            <label>Cumartesi</label>
+            <input type="text" id="hours-saturday" placeholder="08:00 - 17:00" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Pazar</label>
+            <input type="text" id="hours-sunday" placeholder="Kapalı" />
+          </div>
+          <div class="form-group">
+            <label>Acil Servis Notu</label>
+            <input type="text" id="hours-emergency" placeholder="WhatsApp ile acil ulaşım..." />
+          </div>
+        </div>
+        <button class="btn-save" onclick="saveContact()">💾 İletişimi Kaydet</button>
+      </div>
+    </div>
+
+    <!-- PANEL: HERO -->
+    <div class="panel" id="panel-hero">
+      <div class="panel-title">🖼️ Ana Sayfa (Hero)</div>
+      <div class="panel-desc">Sitenin üst kısmındaki başlık, alt başlık ve istatistikleri düzenleyin.</div>
+      <div class="card">
+        <div class="card-title">📋 Başlıklar</div>
+        <div class="form-group">
+          <label>Ana Başlık</label>
+          <input type="text" id="hero-title" placeholder="Klima & Beyaz Eşya Servis Uzmanınız" />
+        </div>
+        <div class="form-group">
+          <label>Alt Başlık</label>
+          <input type="text" id="hero-subtitle" placeholder="Her Arızaya Hızlı Çözüm..." />
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">📊 İstatistikler</div>
+        <div id="stats-list"></div>
+        <button class="btn-save" style="margin-top:8px;" onclick="saveSection('hero', getHero())">💾 Kaydet</button>
+      </div>
+    </div>
+
+    <!-- PANEL: HİZMETLER -->
+    <div class="panel" id="panel-hizmetler">
+      <div class="panel-title">🔧 Hizmetler</div>
+      <div class="panel-desc">Sunduğunuz hizmetleri ekleyip düzenleyebilirsiniz.</div>
+      <div id="services-list"></div>
+      <button class="btn-add" onclick="addService()">+ Yeni Hizmet Ekle</button>
+      <br><br>
+      <button class="btn-save" onclick="saveServices()">💾 Hizmetleri Kaydet</button>
+    </div>
+
+    <!-- PANEL: MARKALAR -->
+    <div class="panel" id="panel-markalar">
+      <div class="panel-title">🏷️ Markalar</div>
+      <div class="panel-desc">Servis verdiğiniz marka listesini yönetin.</div>
+      <div class="card">
+        <div class="card-title">Marka Listesi</div>
+        <div id="brands-list"></div>
+        <button class="btn-add" onclick="addBrand()">+ Yeni Marka Ekle</button>
+      </div>
+      <button class="btn-save" onclick="saveBrands()">💾 Markaları Kaydet</button>
+    </div>
+
+    <!-- PANEL: NEDEN BİZ -->
+    <div class="panel" id="panel-neden">
+      <div class="panel-title">✅ Neden Biz?</div>
+      <div class="panel-desc">Öne çıkan özelliklerinizi düzenleyin.</div>
+      <div id="whyus-list"></div>
+      <button class="btn-add" onclick="addWhyUs()">+ Yeni Madde Ekle</button>
+      <br><br>
+      <button class="btn-save" onclick="saveWhyUs()">💾 Kaydet</button>
+    </div>
+
+    <!-- PANEL: BÖLGE -->
+    <div class="panel" id="panel-bolge">
+      <div class="panel-title">📍 Hizmet Bölgesi</div>
+      <div class="panel-desc">Hizmet verdiğiniz Adana ilçelerini düzenleyin.</div>
+      <div class="card">
+        <div class="form-group">
+          <label>Merkez İlçe</label>
+          <input type="text" id="area-center" placeholder="Adana Çukurova" />
+        </div>
+        <div class="form-group">
+          <label>Servis Günleri</label>
+          <input type="text" id="area-villageDays" placeholder="Her gün" />
+        </div>
+        <div class="card-title" style="margin-top:12px;">Hizmet Verilen İlçeler</div>
+        <div id="villages-list"></div>
+        <button class="btn-add" onclick="addVillage()">+ İlçe Ekle</button>
+      </div>
+      <button class="btn-save" onclick="saveArea()">💾 Kaydet</button>
+    </div>
+
+    <!-- PANEL: YORUMLAR -->
+    <div class="panel" id="panel-yorumlar">
+      <div class="panel-title">⭐ Müşteri Yorumları</div>
+      <div class="panel-desc">500 müşteri yorumunu arayın, filtreleyin ve yönetin.</div>
+
+      <!-- Toolbar -->
+      <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:16px;">
+        <input type="text" id="review-search" placeholder="🔍 İsme göre ara…" oninput="reviewPage=1;renderAdminReviews()" style="flex:1;min-width:180px;padding:8px 12px;border:1px solid #ddd;border-radius:8px;" />
+        <select id="review-filter-service" onchange="reviewPage=1;renderAdminReviews()" style="padding:8px 12px;border:1px solid #ddd;border-radius:8px;">
+          <option value="">Tüm Hizmetler</option>
+          <option value="Klima">Klima</option>
+          <option value="Kombi">Kombi</option>
+        </select>
+        <button class="btn-add" onclick="openAddReviewModal()" style="margin:0;">+ Yeni Yorum</button>
+        <button onclick="generateReviews()" style="padding:8px 14px;background:#8b5cf6;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:13px;">🔄 500 Yorum Üret</button>
+      </div>
+
+      <!-- Stats bar -->
+      <div id="review-stats" style="font-size:13px;color:#666;margin-bottom:12px;"></div>
+
+      <!-- Table -->
+      <div style="overflow-x:auto;">
+        <table id="reviews-table" style="width:100%;border-collapse:collapse;font-size:13px;">
+          <thead>
+            <tr style="background:#f1f5f9;text-align:left;">
+              <th style="padding:10px 12px;border-bottom:1px solid #e2e8f0;">#</th>
+              <th style="padding:10px 12px;border-bottom:1px solid #e2e8f0;">Ad Soyad</th>
+              <th style="padding:10px 12px;border-bottom:1px solid #e2e8f0;">Hizmet</th>
+              <th style="padding:10px 12px;border-bottom:1px solid #e2e8f0;">Puan</th>
+              <th style="padding:10px 12px;border-bottom:1px solid #e2e8f0;">Yorum (önizleme)</th>
+              <th style="padding:10px 12px;border-bottom:1px solid #e2e8f0;">İşlem</th>
+            </tr>
+          </thead>
+          <tbody id="reviews-tbody"></tbody>
+        </table>
+      </div>
+
+      <!-- Pagination -->
+      <div id="review-pagination" style="display:flex;gap:6px;flex-wrap:wrap;margin-top:16px;align-items:center;"></div>
+    </div>
+
+    <!-- ADD/EDIT REVIEW MODAL -->
+    <div id="review-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:9999;align-items:center;justify-content:center;">
+      <div style="background:#fff;border-radius:12px;padding:28px;width:480px;max-width:95vw;max-height:90vh;overflow-y:auto;">
+        <div style="font-size:17px;font-weight:700;margin-bottom:18px;" id="review-modal-title">Yorum Ekle</div>
+        <input type="hidden" id="review-modal-idx" value="-1" />
+        <div class="form-group" style="margin-bottom:12px;">
+          <label>Ad Soyad</label>
+          <input type="text" id="rm-name" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:6px;" />
+        </div>
+        <div class="form-group" style="margin-bottom:12px;">
+          <label>Hizmet</label>
+          <select id="rm-service" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:6px;">
+            <option>Klima Bakımı</option><option>Klima Montajı</option><option>Klima Arızası</option>
+            <option>Klima Gaz Dolumu</option><option>Klima Temizliği</option><option>Klima Demontajı</option>
+            <option>Kombi Bakımı</option><option>Kombi Arızası</option><option>Kombi Montajı</option><option>Kombi Gaz Ayarı</option>
+          </select>
+        </div>
+        <div class="form-group" style="margin-bottom:12px;">
+          <label>Puan</label>
+          <select id="rm-rating" style="padding:8px;border:1px solid #ddd;border-radius:6px;">
+            <option value="5">⭐⭐⭐⭐⭐ (5)</option>
+            <option value="4">⭐⭐⭐⭐ (4)</option>
+            <option value="3">⭐⭐⭐ (3)</option>
+          </select>
+        </div>
+        <div class="form-group" style="margin-bottom:18px;">
+          <label>Yorum Metni</label>
+          <textarea id="rm-text" rows="4" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:6px;resize:vertical;"></textarea>
+        </div>
+        <div style="display:flex;gap:10px;justify-content:flex-end;">
+          <button onclick="closeReviewModal()" style="padding:8px 18px;border:1px solid #ddd;background:#fff;border-radius:8px;cursor:pointer;">İptal</button>
+          <button onclick="saveReviewModal()" class="btn-save" style="margin:0;">💾 Kaydet</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- PANEL: SSS -->
+    <div class="panel" id="panel-sss">
+      <div class="panel-title">❓ Sık Sorulan Sorular</div>
+      <div class="panel-desc">SSS bölümünü yönetin.</div>
+      <div id="faq-list"></div>
+      <button class="btn-add" onclick="addFaq()">+ Soru Ekle</button>
+      <br><br>
+      <button class="btn-save" onclick="saveFaq()">💾 Kaydet</button>
+    </div>
+
+    <!-- PANEL: TAKVİM -->
+    <div class="panel" id="panel-takvim">
+      <div class="panel-title">📅 Teknisyen Takvimi</div>
+      <div class="panel-desc">Günlük randevuları ve teknisyen atamalarını yönetin.</div>
+
+      <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:20px;">
+        <input type="date" id="cal-date" style="padding:9px 14px;border:1.5px solid #ddd;border-radius:8px;font-size:14px;" />
+        <button onclick="loadCalendar()" style="padding:9px 18px;background:var(--primary,#1a6fa8);color:#fff;border:none;border-radius:8px;cursor:pointer;">📅 Göster</button>
+        <button onclick="openApptModal()" style="padding:9px 18px;background:#10b981;color:#fff;border:none;border-radius:8px;cursor:pointer;">+ Randevu Ekle</button>
+      </div>
+
+      <!-- Teknisyen Listesi -->
+      <div class="card" style="margin-bottom:20px;">
+        <div class="card-title">👨‍🔧 Teknisyenler</div>
+        <div id="tech-list" style="display:flex;flex-direction:column;gap:10px;margin-top:12px;"></div>
+        <button class="btn-add" onclick="openTechModal()" style="margin-top:12px;">+ Teknisyen Ekle</button>
+      </div>
+
+      <!-- Günlük Randevular -->
+      <div class="card">
+        <div class="card-title" id="cal-title">Randevular</div>
+        <div id="cal-appointments" style="margin-top:12px;"></div>
+      </div>
+    </div>
+
+    <!-- PANEL: HATIRLATICLAR -->
+    <div class="panel" id="panel-hatirlatici">
+      <div class="panel-title">🔔 Bakım Hatırlatıcıları</div>
+      <div class="panel-desc">Müşterilere otomatik veya manuel bakım hatırlatması gönderin.</div>
+
+      <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:16px;">
+        <select id="rem-filter" onchange="loadReminders()" style="padding:8px 12px;border:1px solid #ddd;border-radius:8px;">
+          <option value="due">⚠️ Zamanı Gelmiş</option>
+          <option value="upcoming">📅 Yaklaşan</option>
+          <option value="sent">✅ Gönderilmiş</option>
+          <option value="">Tümü</option>
+        </select>
+        <button onclick="openReminderModal()" style="padding:8px 16px;background:#10b981;color:#fff;border:none;border-radius:8px;cursor:pointer;">+ Manuel Hatırlatıcı</button>
+      </div>
+
+      <div id="reminder-stats" style="font-size:13px;color:#666;margin-bottom:12px;"></div>
+      <div id="reminder-list"></div>
+    </div>
+
+  </div>
+</div>
+
+<!-- RANDEVU MODAL -->
+<div id="appt-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:9999;align-items:center;justify-content:center;">
+  <div style="background:#fff;border-radius:12px;padding:28px;width:460px;max-width:95vw;max-height:90vh;overflow-y:auto;">
+    <div style="font-size:17px;font-weight:700;margin-bottom:18px;">📅 Randevu Oluştur</div>
+    <input type="hidden" id="appt-modal-id" value="" />
+    <div class="form-group" style="margin-bottom:12px;">
+      <label>Tarih</label><input type="date" id="am-date" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:6px;" />
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px;">
+      <div class="form-group"><label>Saat</label><input type="time" id="am-time" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:6px;" /></div>
+      <div class="form-group"><label>Teknisyen</label>
+        <select id="am-tech" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:6px;"><option value="">Seçin...</option></select>
+      </div>
+    </div>
+    <div class="form-group" style="margin-bottom:12px;">
+      <label>Müşteri Adı</label><input type="text" id="am-name" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:6px;" />
+    </div>
+    <div class="form-group" style="margin-bottom:12px;">
+      <label>Telefon</label><input type="tel" id="am-phone" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:6px;" />
+    </div>
+    <div class="form-group" style="margin-bottom:12px;">
+      <label>Hizmet</label>
+      <select id="am-service" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:6px;">
+        <option>Klima Bakımı</option><option>Klima Montajı</option><option>Klima Arızası</option>
+        <option>Klima Gaz Dolumu</option><option>Kombi Servisi</option><option>Diğer</option>
+      </select>
+    </div>
+    <div class="form-group" style="margin-bottom:12px;">
+      <label>Adres</label><input type="text" id="am-address" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:6px;" />
+    </div>
+    <div class="form-group" style="margin-bottom:18px;">
+      <label>Not</label><textarea id="am-note" rows="2" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:6px;"></textarea>
+    </div>
+    <div style="display:flex;gap:10px;justify-content:flex-end;">
+      <button onclick="document.getElementById('appt-modal').style.display='none'" style="padding:8px 18px;border:1px solid #ddd;background:#fff;border-radius:8px;cursor:pointer;">İptal</button>
+      <button onclick="saveAppt()" class="btn-save" style="margin:0;">💾 Kaydet</button>
+    </div>
+  </div>
+</div>
+
+<!-- TEKNİSYEN MODAL -->
+<div id="tech-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:9999;align-items:center;justify-content:center;">
+  <div style="background:#fff;border-radius:12px;padding:28px;width:400px;max-width:95vw;">
+    <div style="font-size:17px;font-weight:700;margin-bottom:18px;" id="tech-modal-title">Teknisyen Ekle</div>
+    <input type="hidden" id="tm-id" value="" />
+    <div class="form-group" style="margin-bottom:12px;"><label>Ad Soyad</label><input type="text" id="tm-name" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:6px;" /></div>
+    <div class="form-group" style="margin-bottom:12px;"><label>Telefon</label><input type="tel" id="tm-phone" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:6px;" /></div>
+    <div class="form-group" style="margin-bottom:18px;"><label>Renk (takvimde)</label><input type="color" id="tm-color" value="#3b82f6" style="width:60px;height:36px;border:1px solid #ddd;border-radius:6px;cursor:pointer;" /></div>
+    <div style="display:flex;gap:10px;justify-content:flex-end;">
+      <button onclick="document.getElementById('tech-modal').style.display='none'" style="padding:8px 18px;border:1px solid #ddd;background:#fff;border-radius:8px;cursor:pointer;">İptal</button>
+      <button onclick="saveTech()" class="btn-save" style="margin:0;">💾 Kaydet</button>
+    </div>
+  </div>
+</div>
+
+<!-- HATIRLATICI MODAL -->
+<div id="reminder-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:9999;align-items:center;justify-content:center;">
+  <div style="background:#fff;border-radius:12px;padding:28px;width:420px;max-width:95vw;">
+    <div style="font-size:17px;font-weight:700;margin-bottom:18px;">🔔 Hatırlatıcı Ekle</div>
+    <div class="form-group" style="margin-bottom:12px;"><label>Müşteri Adı</label><input type="text" id="rm2-name" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:6px;" /></div>
+    <div class="form-group" style="margin-bottom:12px;"><label>Telefon</label><input type="tel" id="rm2-phone" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:6px;" /></div>
+    <div class="form-group" style="margin-bottom:12px;"><label>Hizmet</label><input type="text" id="rm2-service" placeholder="Klima Bakımı" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:6px;" /></div>
+    <div class="form-group" style="margin-bottom:12px;"><label>Hatırlatma Tarihi</label><input type="date" id="rm2-date" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:6px;" /></div>
+    <div class="form-group" style="margin-bottom:18px;"><label>Not</label><textarea id="rm2-note" rows="2" style="width:100%;padding:8px;border:1px solid #ddd;border-radius:6px;"></textarea></div>
+    <div style="display:flex;gap:10px;justify-content:flex-end;">
+      <button onclick="document.getElementById('reminder-modal').style.display='none'" style="padding:8px 18px;border:1px solid #ddd;background:#fff;border-radius:8px;cursor:pointer;">İptal</button>
+      <button onclick="saveReminder()" class="btn-save" style="margin:0;">💾 Kaydet</button>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<script>
+let contentData = {};
+
+// AUTH CHECK
+const token = localStorage.getItem('admin_token');
+if (!token) window.location.href = '/admin';
+
+const headers = () => ({ 'Content-Type': 'application/json', 'Authorization': `Bearer ${token}` });
+
+// LOAD CONTENT
+async function loadContent() {
+  try {
+    const res = await fetch('/api/content');
+    if (!res.ok) throw new Error();
+    contentData = await res.json();
+    fillAll();
+  } catch {
+    showToast('İçerik yüklenemedi', 'error');
+  }
+}
+
+function fillAll() {
+  const d = contentData;
+
+  // Company
+  setVal('company-name', d.company?.name);
+  setVal('company-shortName', d.company?.shortName);
+  setVal('company-slogan', d.company?.slogan);
+  setVal('company-description', d.company?.description);
+
+  // Contact
+  setVal('contact-phone', d.contact?.phone);
+  setVal('contact-whatsapp', d.contact?.whatsapp);
+  setVal('contact-address', d.contact?.address);
+  setVal('contact-mapUrl', d.contact?.mapUrl);
+  setVal('hours-weekdays', d.contact?.hours?.weekdays);
+  setVal('hours-saturday', d.contact?.hours?.saturday);
+  setVal('hours-sunday', d.contact?.hours?.sunday);
+  setVal('hours-emergency', d.contact?.hours?.emergency);
+
+  // Hero
+  setVal('hero-title', d.hero?.title);
+  setVal('hero-subtitle', d.hero?.subtitle);
+  renderStats(d.hero?.stats || []);
+
+  // Lists
+  renderServices(d.services || []);
+  renderBrands(d.brands || []);
+  renderWhyUs(d.whyUs || []);
+  renderArea(d.serviceArea || {});
+  renderTestimonials(d.testimonials || []);
+  renderFaq(d.faq || []);
+}
+
+function setVal(id, val) {
+  const el = document.getElementById(id);
+  if (el && val !== undefined) el.value = val;
+}
+
+// PANEL NAVIGATION
+function showPanel(id) {
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  const clicked = event.currentTarget;
+  clicked.classList.add('active');
+  document.getElementById('topbar-title').textContent = clicked.textContent.trim();
+  // Panel için özel yükleyici
+  if (panelLoaders[id]) panelLoaders[id]();
+}
+
+// TOAST
+function showToast(msg, type = 'success') {
+  const t = document.getElementById('toast');
+  t.textContent = type === 'success' ? '✅ ' + msg : '❌ ' + msg;
+  t.className = `toast ${type} show`;
+  setTimeout(() => t.classList.remove('show'), 3000);
+}
+
+// API SAVE
+async function saveSection(section, data) {
+  try {
+    const res = await fetch(`/api/content/${section}`, {
+      method: 'PUT', headers: headers(), body: JSON.stringify(data)
+    });
+    if (!res.ok) throw new Error();
+    showToast('Kaydedildi!');
+    contentData[section] = data;
+  } catch {
+    showToast('Kayıt başarısız', 'error');
+  }
+}
+
+// GETTERS
+function getCompany() {
+  return {
+    name: document.getElementById('company-name').value,
+    shortName: document.getElementById('company-shortName').value,
+    slogan: document.getElementById('company-slogan').value,
+    description: document.getElementById('company-description').value
+  };
+}
+
+function getHero() {
+  return {
+    title: document.getElementById('hero-title').value,
+    subtitle: document.getElementById('hero-subtitle').value,
+    stats: getStats()
+  };
+}
+
+// STATS
+function renderStats(stats) {
+  const el = document.getElementById('stats-list');
+  el.innerHTML = stats.map((s, i) => `
+    <div class="list-item" id="stat-${i}">
+      <div class="list-item-body">
+        <div class="form-row">
+          <input type="text" value="${s.value}" placeholder="500+" oninput="updateStat(${i},'value',this.value)" />
+          <input type="text" value="${s.label}" placeholder="Mutlu Müşteri" oninput="updateStat(${i},'label',this.value)" />
+        </div>
+      </div>
+      <button class="btn-danger" onclick="removeStat(${i})">✕</button>
+    </div>
+  `).join('');
+}
+
+function updateStat(i, key, val) { contentData.hero.stats[i][key] = val; }
+function removeStat(i) { contentData.hero.stats.splice(i, 1); renderStats(contentData.hero.stats); }
+function getStats() { return contentData.hero?.stats || []; }
+
+// SERVICES
+function renderServices(services) {
+  const el = document.getElementById('services-list');
+  el.innerHTML = services.map((s, i) => `
+    <div class="card" id="svc-${i}">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+        <div class="card-title" style="margin:0;">Hizmet ${i+1}</div>
+        <button class="btn-danger" onclick="removeService(${i})">Sil</button>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>İkon (emoji)</label>
+          <input type="text" value="${s.icon||''}" oninput="updateService(${i},'icon',this.value)" />
+        </div>
+        <div class="form-group">
+          <label>Başlık</label>
+          <input type="text" value="${s.title||''}" oninput="updateService(${i},'title',this.value)" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Açıklama</label>
+        <textarea oninput="updateService(${i},'description',this.value)">${s.description||''}</textarea>
+      </div>
+    </div>
+  `).join('');
+}
+
+function updateService(i, key, val) { contentData.services[i][key] = val; }
+function removeService(i) { contentData.services.splice(i, 1); renderServices(contentData.services); }
+function addService() {
+  contentData.services.push({ id: Date.now(), icon: '🔧', title: 'Yeni Hizmet', description: '' });
+  renderServices(contentData.services);
+}
+function saveServices() { saveSection('services', contentData.services); }
+
+// BRANDS
+function renderBrands(brands) {
+  const el = document.getElementById('brands-list');
+  el.innerHTML = brands.map((b, i) => {
+    const brand = typeof b === 'object' ? b : { name: b, logo: '', url: '' };
+    return `
+    <div class="list-item" style="align-items:center;">
+      <div style="width:52px;height:52px;border-radius:10px;background:#f1f5f9;display:flex;align-items:center;justify-content:center;flex-shrink:0;overflow:hidden;">
+        ${brand.logo
+          ? `<img src="${brand.logo}" style="width:44px;height:44px;object-fit:contain;" onerror="this.parentElement.textContent='${(brand.name||'').slice(0,2).toUpperCase()}'" />`
+          : `<span style="font-weight:800;font-size:0.9rem;color:var(--primary);">${(brand.name||'').slice(0,2).toUpperCase()}</span>`}
+      </div>
+      <div class="list-item-body" style="display:grid;grid-template-columns:1fr 2fr;gap:8px;">
+        <input type="text" value="${brand.name||''}" placeholder="Marka adı" oninput="updateBrand(${i},'name',this.value)" />
+        <input type="text" value="${brand.logo||''}" placeholder="Logo URL (clearbit veya boş)" oninput="updateBrand(${i},'logo',this.value)" />
+      </div>
+      <button class="btn-danger" onclick="removeBrand(${i})">✕</button>
+    </div>`;
+  }).join('');
+}
+
+function updateBrand(i, key, val) {
+  if (typeof contentData.brands[i] === 'string') {
+    contentData.brands[i] = { name: contentData.brands[i], logo: '', url: '' };
+  }
+  contentData.brands[i][key] = val;
+}
+function removeBrand(i) { contentData.brands.splice(i, 1); renderBrands(contentData.brands); }
+function addBrand() {
+  contentData.brands.push({ name: 'Yeni Marka', logo: '', url: '' });
+  renderBrands(contentData.brands);
+}
+function saveBrands() { saveSection('brands', contentData.brands); }
+
+// WHY US
+function renderWhyUs(items) {
+  const el = document.getElementById('whyus-list');
+  el.innerHTML = items.map((w, i) => `
+    <div class="card">
+      <div style="display:flex;justify-content:space-between;margin-bottom:10px;">
+        <div class="card-title" style="margin:0;">Madde ${i+1}</div>
+        <button class="btn-danger" onclick="removeWhyUs(${i})">Sil</button>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>İkon</label>
+          <input type="text" value="${w.icon||''}" oninput="updateWhyUs(${i},'icon',this.value)" />
+        </div>
+        <div class="form-group">
+          <label>Başlık</label>
+          <input type="text" value="${w.title||''}" oninput="updateWhyUs(${i},'title',this.value)" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Açıklama</label>
+        <textarea oninput="updateWhyUs(${i},'description',this.value)">${w.description||''}</textarea>
+      </div>
+    </div>
+  `).join('');
+}
+
+function updateWhyUs(i, key, val) { contentData.whyUs[i][key] = val; }
+function removeWhyUs(i) { contentData.whyUs.splice(i, 1); renderWhyUs(contentData.whyUs); }
+function addWhyUs() { contentData.whyUs.push({ icon: '✅', title: 'Yeni Madde', description: '' }); renderWhyUs(contentData.whyUs); }
+function saveWhyUs() { saveSection('whyUs', contentData.whyUs); }
+
+// AREA
+function renderArea(area) {
+  setVal('area-center', area.center);
+  setVal('area-villageDays', area.villageDays);
+  const el = document.getElementById('villages-list');
+  const list = area.districts || area.villages || [];
+  el.innerHTML = list.map((v, i) => `
+    <div class="list-item">
+      <div class="list-item-body">
+        <input type="text" value="${v}" oninput="updateVillage(${i},this.value)" />
+      </div>
+      <button class="btn-danger" onclick="removeVillage(${i})">✕</button>
+    </div>
+  `).join('');
+}
+
+function getDistrictList() { return contentData.serviceArea.districts || contentData.serviceArea.villages || []; }
+function updateVillage(i, val) { (contentData.serviceArea.districts || contentData.serviceArea.villages)[i] = val; }
+function removeVillage(i) { getDistrictList().splice(i, 1); renderArea(contentData.serviceArea); }
+function addVillage() {
+  if (!contentData.serviceArea.districts) contentData.serviceArea.districts = getDistrictList();
+  contentData.serviceArea.districts.push('Yeni İlçe');
+  renderArea(contentData.serviceArea);
+}
+function saveArea() {
+  contentData.serviceArea.center = document.getElementById('area-center').value;
+  contentData.serviceArea.villageDays = document.getElementById('area-villageDays').value;
+  saveSection('serviceArea', contentData.serviceArea);
+}
+
+// TESTIMONIALS (500-review admin UI)
+const ADMIN_RPP = 20; // reviews per page in admin
+let reviewPage = 1;
+
+function renderTestimonials() { /* called from fillAll — no-op, panel loads on demand */ }
+
+function getFilteredReviews() {
+  const q = (document.getElementById('review-search')?.value || '').toLowerCase().trim();
+  const svc = document.getElementById('review-filter-service')?.value || '';
+  return (contentData.testimonials || []).filter(t => {
+    const nameOk = !q || (t.name || '').toLowerCase().includes(q);
+    const svcOk = !svc || (t.service || '').startsWith(svc);
+    return nameOk && svcOk;
+  });
+}
+
+function renderAdminReviews() {
+  const filtered = getFilteredReviews();
+  const total = filtered.length;
+  const pages = Math.ceil(total / ADMIN_RPP) || 1;
+  if (reviewPage > pages) reviewPage = pages;
+  const slice = filtered.slice((reviewPage-1)*ADMIN_RPP, reviewPage*ADMIN_RPP);
+
+  // Stats
+  const statsEl = document.getElementById('review-stats');
+  if (statsEl) {
+    const allT = contentData.testimonials || [];
+    const klima = allT.filter(t => !(t.service||'').startsWith('Kombi')).length;
+    const kombi = allT.filter(t => (t.service||'').startsWith('Kombi')).length;
+    statsEl.textContent = `Toplam: ${allT.length} yorum (Klima: ${klima} | Kombi: ${kombi}) — Filtreli: ${total}`;
+  }
+
+  // Table rows — find global index for edit/delete
+  const tbody = document.getElementById('reviews-tbody');
+  if (!tbody) return;
+  tbody.innerHTML = slice.map(t => {
+    const gi = (contentData.testimonials || []).indexOf(t);
+    const stars = '⭐'.repeat(t.rating || 5);
+    const preview = (t.text || '').slice(0, 60) + ((t.text||'').length > 60 ? '…' : '');
+    return `<tr style="border-bottom:1px solid #f1f5f9;">
+      <td style="padding:8px 12px;color:#999;">${gi+1}</td>
+      <td style="padding:8px 12px;font-weight:500;">${esc(t.name||'')}</td>
+      <td style="padding:8px 12px;"><span style="background:${(t.service||'').startsWith('Kombi')?'#fef3c7':'#e0f2fe'};padding:3px 8px;border-radius:20px;font-size:12px;">${esc(t.service||'')}</span></td>
+      <td style="padding:8px 12px;">${stars}</td>
+      <td style="padding:8px 12px;color:#555;">${esc(preview)}</td>
+      <td style="padding:8px 12px;white-space:nowrap;">
+        <button onclick="openEditReviewModal(${gi})" style="padding:4px 10px;border:1px solid #3b82f6;color:#3b82f6;background:#fff;border-radius:6px;cursor:pointer;margin-right:4px;">Düzenle</button>
+        <button onclick="deleteReview(${gi})" style="padding:4px 10px;border:1px solid #ef4444;color:#ef4444;background:#fff;border-radius:6px;cursor:pointer;">Sil</button>
+      </td>
+    </tr>`;
+  }).join('');
+
+  // Pagination
+  const pgEl = document.getElementById('review-pagination');
+  if (!pgEl) return;
+  pgEl.innerHTML = '';
+  const btn = (label, pg, disabled=false, active=false) => {
+    const b = document.createElement('button');
+    b.textContent = label;
+    b.disabled = disabled;
+    b.style.cssText = `padding:6px 12px;border-radius:6px;border:1px solid ${active?'#2563eb':'#ddd'};background:${active?'#2563eb':'#fff'};color:${active?'#fff':'#333'};cursor:${disabled?'default':'pointer'};font-size:13px;`;
+    if (!disabled) b.onclick = () => { reviewPage = pg; renderAdminReviews(); };
+    return b;
+  };
+  pgEl.appendChild(btn('‹ Önceki', reviewPage-1, reviewPage<=1));
+  for (let p=1; p<=pages; p++) {
+    if (pages > 10 && Math.abs(p-reviewPage) > 2 && p !== 1 && p !== pages) {
+      if (p === 2 || p === pages-1) { const d=document.createElement('span'); d.textContent='…'; d.style.padding='6px'; pgEl.appendChild(d); }
+      continue;
+    }
+    pgEl.appendChild(btn(p, p, false, p===reviewPage));
+  }
+  pgEl.appendChild(btn('Sonraki ›', reviewPage+1, reviewPage>=pages));
+  const info = document.createElement('span');
+  info.textContent = `Sayfa ${reviewPage}/${pages}`;
+  info.style.cssText = 'font-size:13px;color:#888;margin-left:8px;';
+  pgEl.appendChild(info);
+}
+
+function esc(s) { return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+
+function openAddReviewModal() {
+  document.getElementById('review-modal-title').textContent = 'Yeni Yorum Ekle';
+  document.getElementById('review-modal-idx').value = -1;
+  document.getElementById('rm-name').value = '';
+  document.getElementById('rm-service').value = 'Klima Bakımı';
+  document.getElementById('rm-rating').value = 5;
+  document.getElementById('rm-text').value = '';
+  document.getElementById('review-modal').style.display = 'flex';
+}
+
+function openEditReviewModal(i) {
+  const t = contentData.testimonials[i];
+  if (!t) return;
+  document.getElementById('review-modal-title').textContent = 'Yorumu Düzenle';
+  document.getElementById('review-modal-idx').value = i;
+  document.getElementById('rm-name').value = t.name || '';
+  document.getElementById('rm-service').value = t.service || 'Klima Bakımı';
+  document.getElementById('rm-rating').value = t.rating || 5;
+  document.getElementById('rm-text').value = t.text || '';
+  document.getElementById('review-modal').style.display = 'flex';
+}
+
+function closeReviewModal() { document.getElementById('review-modal').style.display = 'none'; }
+
+function saveReviewModal() {
+  const idx = parseInt(document.getElementById('review-modal-idx').value);
+  const obj = {
+    id: idx >= 0 ? (contentData.testimonials[idx].id || Date.now()) : Date.now(),
+    name: document.getElementById('rm-name').value.trim(),
+    service: document.getElementById('rm-service').value,
+    rating: parseInt(document.getElementById('rm-rating').value),
+    text: document.getElementById('rm-text').value.trim()
+  };
+  if (!obj.name || !obj.text) { showToast('Ad ve yorum metni zorunludur', 'error'); return; }
+  if (idx >= 0) { contentData.testimonials[idx] = obj; }
+  else { contentData.testimonials.unshift(obj); }
+  closeReviewModal();
+  saveSection('testimonials', contentData.testimonials).then(() => renderAdminReviews());
+}
+
+function deleteReview(i) {
+  if (!confirm('Bu yorumu silmek istiyor musunuz?')) return;
+  contentData.testimonials.splice(i, 1);
+  saveSection('testimonials', contentData.testimonials).then(() => renderAdminReviews());
+}
+
+async function generateReviews() {
+  if (!confirm('Mevcut 500 yorum silinip yeniden üretilecek. Devam edilsin mi?')) return;
+  try {
+    const res = await fetch('/api/generate-reviews', { method: 'POST', headers: headers() });
+    if (!res.ok) throw new Error();
+    const data = await res.json();
+    contentData.testimonials = data.testimonials;
+    reviewPage = 1;
+    renderAdminReviews();
+    showToast('500 yorum başarıyla üretildi ✅');
+  } catch {
+    showToast('Yorum üretme başarısız', 'error');
+  }
+}
+
+// FAQ
+function renderFaq(items) {
+  const el = document.getElementById('faq-list');
+  el.innerHTML = items.map((f, i) => `
+    <div class="card">
+      <div style="display:flex;justify-content:space-between;margin-bottom:10px;">
+        <div class="card-title" style="margin:0;">Soru ${i+1}</div>
+        <button class="btn-danger" onclick="removeFaq(${i})">Sil</button>
+      </div>
+      <div class="form-group">
+        <label>Soru</label>
+        <input type="text" value="${f.question||''}" oninput="updateFaq(${i},'question',this.value)" />
+      </div>
+      <div class="form-group">
+        <label>Cevap</label>
+        <textarea oninput="updateFaq(${i},'answer',this.value)">${f.answer||''}</textarea>
+      </div>
+    </div>
+  `).join('');
+}
+
+function updateFaq(i, key, val) { contentData.faq[i][key] = val; }
+function removeFaq(i) { contentData.faq.splice(i, 1); renderFaq(contentData.faq); }
+function addFaq() { contentData.faq.push({ id: Date.now(), question: '', answer: '' }); renderFaq(contentData.faq); }
+function saveFaq() { saveSection('faq', contentData.faq); }
+
+// CONTACT SAVE
+function saveContact() {
+  const contact = {
+    phone: document.getElementById('contact-phone').value,
+    whatsapp: document.getElementById('contact-whatsapp').value,
+    address: document.getElementById('contact-address').value,
+    mapUrl: document.getElementById('contact-mapUrl').value,
+    hours: {
+      weekdays: document.getElementById('hours-weekdays').value,
+      saturday: document.getElementById('hours-saturday').value,
+      sunday: document.getElementById('hours-sunday').value,
+      emergency: document.getElementById('hours-emergency').value
+    }
+  };
+  saveSection('contact', contact);
+}
+
+// LOGOUT
+function logout() {
+  localStorage.removeItem('admin_token');
+  window.location.href = '/admin';
+}
+
+// ═══════════════════════════════════════════
+// SERVİS TALEPLERİ
+// ═══════════════════════════════════════════
+let leadsData = [], leadsFilter = 'all';
+
+async function loadLeads() {
+  try {
+    const res = await fetch('/api/leads?limit=100', { headers: headers() });
+    const data = await res.json();
+    leadsData = data.leads || [];
+    const s = data.stats || {};
+    setText2('stat-new', s.new || 0);
+    setText2('stat-contacted', s.contacted || 0);
+    setText2('stat-completed', s.completed || 0);
+    if (s.new > 0) {
+      const b = document.getElementById('badge-new');
+      b.textContent = s.new;
+      b.style.display = 'inline';
+    }
+    renderLeads();
+  } catch { showToast('Talepler yüklenemedi', 'error'); }
+}
+
+function filterLeads(f, btn) {
+  leadsFilter = f;
+  document.querySelectorAll('.lead-filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderLeads();
+}
+
+function renderLeads() {
+  const list = leadsFilter === 'all' ? leadsData : leadsData.filter(l => l.status === leadsFilter);
+  const el = document.getElementById('leads-list');
+  if (!list.length) { el.innerHTML = '<div style="text-align:center;padding:40px;color:#64748b;">Talep bulunamadı.</div>'; return; }
+  el.innerHTML = list.map(l => `
+    <div class="card" style="margin-bottom:14px;border-left:4px solid ${statusColor(l.status)};">
+      <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-bottom:10px;">
+        <div>
+          <span style="font-weight:700;font-size:1rem;">${l.name}</span>
+          <span style="margin-left:12px;font-size:0.82rem;color:#64748b;">${fmt2(l.createdAt)}</span>
+        </div>
+        <div style="display:flex;gap:8px;align-items:center;">
+          <select onchange="updateLeadStatus(${l.id},this.value)" style="padding:5px 10px;border:1.5px solid var(--border);border-radius:6px;font-size:0.82rem;font-family:inherit;cursor:pointer;">
+            <option value="new" ${l.status==='new'?'selected':''}>🔴 Yeni</option>
+            <option value="contacted" ${l.status==='contacted'?'selected':''}>🟡 İletişim Kuruldu</option>
+            <option value="completed" ${l.status==='completed'?'selected':''}>🟢 Tamamlandı</option>
+            <option value="cancelled" ${l.status==='cancelled'?'selected':''}>⚫ İptal</option>
+          </select>
+          <a href="/api/leads/${l.id}/pdf" target="_blank" style="padding:5px 10px;border:1px solid #8b5cf6;color:#8b5cf6;background:#fff;border-radius:6px;font-size:0.82rem;text-decoration:none;font-weight:600;">📄 PDF</a>
+          <button class="btn-danger" onclick="deleteLead(${l.id})">Sil</button>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:8px;font-size:0.87rem;">
+        <div><strong>📞 Telefon:</strong> <a href="tel:${(l.phone||'').replace(/\s/g,'')}" style="color:var(--primary);">${l.phone}</a></div>
+        ${l.trackCode ? `<div><strong>🔍 Takip:</strong> <a href="/takip?kod=${l.trackCode}" target="_blank" style="color:var(--primary);">${l.trackCode}</a></div>` : ''}
+        ${l.service ? `<div><strong>🔧 Hizmet:</strong> ${l.service}</div>` : ''}
+        ${l.brand ? `<div><strong>🏷️ Marka:</strong> ${l.brand}</div>` : ''}
+        ${l.address ? `<div><strong>📍 Adres:</strong> ${l.address}</div>` : ''}
+      </div>
+      ${l.message ? `<div style="margin-top:10px;padding:10px;background:var(--bg);border-radius:8px;font-size:0.87rem;color:#374151;">💬 ${l.message}</div>` : ''}
+      <div style="margin-top:10px;">
+        <label style="font-size:0.82rem;font-weight:600;display:block;margin-bottom:4px;">📋 Not Ekle:</label>
+        <div style="display:flex;gap:8px;">
+          <input type="text" id="note-${l.id}" value="${l.notes||''}" placeholder="İç not..." style="flex:1;padding:7px 10px;border:1.5px solid var(--border);border-radius:6px;font-size:0.85rem;font-family:inherit;" />
+          <button class="btn-save" style="padding:7px 14px;font-size:0.82rem;" onclick="saveLeadNote(${l.id})">Kaydet</button>
+        </div>
+      </div>
+    </div>`).join('');
+}
+
+async function updateLeadStatus(id, status) {
+  try {
+    await fetch(`/api/leads/${id}`, { method:'PUT', headers:headers(), body:JSON.stringify({ status }) });
+    await loadLeads();
+    showToast('Durum güncellendi!');
+  } catch { showToast('Güncelleme başarısız', 'error'); }
+}
+
+async function deleteLead(id) {
+  if (!confirm('Bu talebi silmek istediğinizden emin misiniz?')) return;
+  await fetch(`/api/leads/${id}`, { method:'DELETE', headers:headers() });
+  await loadLeads();
+  showToast('Talep silindi.');
+}
+
+async function saveLeadNote(id) {
+  const notes = document.getElementById(`note-${id}`).value;
+  await fetch(`/api/leads/${id}`, { method:'PUT', headers:headers(), body:JSON.stringify({ notes }) });
+  showToast('Not kaydedildi!');
+}
+
+function statusColor(s) { return {new:'#ef4444',contacted:'#f59e0b',completed:'#16a34a',cancelled:'#6b7280'}[s]||'#e2e8f0'; }
+function fmt2(iso) { if(!iso) return ''; return new Date(iso).toLocaleDateString('tr-TR',{day:'numeric',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit'}); }
+function setText2(id, v) { const e = document.getElementById(id); if(e) e.textContent = v; }
+
+// ═══════════════════════════════════════════
+// BLOG YÖNETİMİ
+// ═══════════════════════════════════════════
+let blogPosts = [], editingPostId = null;
+
+async function loadBlog() {
+  try {
+    const res = await fetch('/api/blog/all', { headers: headers() });
+    blogPosts = await res.json();
+    renderBlogAdmin();
+  } catch { showToast('Blog yüklenemedi', 'error'); }
+}
+
+function renderBlogAdmin() {
+  const el = document.getElementById('blog-admin-list');
+  if (!blogPosts.length) { el.innerHTML = '<div style="text-align:center;padding:40px;color:#64748b;">Henüz blog yazısı yok. Yeni yazı ekleyin.</div>'; return; }
+  el.innerHTML = blogPosts.map(p => `
+    <div class="card" style="display:flex;align-items:center;gap:16px;padding:16px 20px;margin-bottom:12px;">
+      <div style="font-size:1.8rem;">${p.published?'📗':'📄'}</div>
+      <div style="flex:1;">
+        <div style="font-weight:700;font-size:0.95rem;">${p.title}</div>
+        <div style="font-size:0.8rem;color:#64748b;margin-top:3px;">
+          ${p.category||'—'} · ${p.published ? '🟢 Yayında' : '⚪ Taslak'} · ${fmt2(p.publishedAt||p.updatedAt)}
+        </div>
+      </div>
+      <div style="display:flex;gap:8px;">
+        ${p.published ? `<a href="/blog/${p.slug}" target="_blank" class="preview-btn" style="font-size:0.8rem;">🔗 Görüntüle</a>` : ''}
+        <button class="btn-save" style="padding:6px 14px;font-size:0.82rem;" onclick="showBlogEditor(${p.id})">✏️ Düzenle</button>
+        <button class="btn-danger" onclick="deleteBlogPost(${p.id})">Sil</button>
+      </div>
+    </div>`).join('');
+}
+
+function showBlogEditor(id) {
+  editingPostId = id;
+  const editor = document.getElementById('blog-editor');
+  editor.style.display = 'block';
+  editor.scrollIntoView({ behavior: 'smooth' });
+  document.getElementById('blog-editor-title').textContent = id ? '✏️ Yazıyı Düzenle' : '📝 Yeni Yazı';
+
+  if (id) {
+    const p = blogPosts.find(b => b.id === id);
+    if (!p) return;
+    setVal('be-title', p.title);
+    setVal('be-category', p.category);
+    setVal('be-tags', (p.tags||[]).join(', '));
+    setVal('be-excerpt', p.excerpt);
+    setVal('be-content', p.content);
+    setVal('be-seo-title', p.seo?.metaTitle);
+    setVal('be-seo-desc', p.seo?.metaDescription);
+    document.getElementById('be-published').checked = !!p.published;
+  } else {
+    ['be-title','be-category','be-tags','be-excerpt','be-content','be-seo-title','be-seo-desc'].forEach(id => setVal(id,''));
+    document.getElementById('be-published').checked = false;
+  }
+}
+
+function updateBeSlug() {
+  // Slug önizleme otomatik
+}
+
+function cancelBlogEditor() {
+  document.getElementById('blog-editor').style.display = 'none';
+  editingPostId = null;
+}
+
+async function saveBlogPost() {
+  const tags = document.getElementById('be-tags').value.split(',').map(t => t.trim()).filter(Boolean);
+  const data = {
+    title:     document.getElementById('be-title').value,
+    category:  document.getElementById('be-category').value,
+    tags,
+    excerpt:   document.getElementById('be-excerpt').value,
+    content:   document.getElementById('be-content').value,
+    published: document.getElementById('be-published').checked,
+    seo: {
+      metaTitle:       document.getElementById('be-seo-title').value,
+      metaDescription: document.getElementById('be-seo-desc').value,
+    }
+  };
+
+  try {
+    if (editingPostId) {
+      await fetch(`/api/blog/${editingPostId}`, { method:'PUT', headers:headers(), body:JSON.stringify(data) });
+    } else {
+      await fetch('/api/blog', { method:'POST', headers:headers(), body:JSON.stringify(data) });
+    }
+    cancelBlogEditor();
+    await loadBlog();
+    showToast('Blog yazısı kaydedildi!');
+  } catch { showToast('Kayıt başarısız', 'error'); }
+}
+
+async function deleteBlogPost(id) {
+  if (!confirm('Bu yazıyı silmek istediğinizden emin misiniz?')) return;
+  await fetch(`/api/blog/${id}`, { method:'DELETE', headers:headers() });
+  await loadBlog();
+  showToast('Yazı silindi.');
+}
+
+// ═══════════════════════════════════════════
+// AYARLAR & SEO
+// ═══════════════════════════════════════════
+async function loadSettings() {
+  try {
+    const res = await fetch('/api/settings/all', { headers: headers() });
+    const s = await res.json();
+    setVal('seo-title', s.seo?.siteTitle);
+    setVal('seo-desc', s.seo?.siteDescription);
+    setVal('seo-keywords', s.seo?.keywords);
+    setVal('seo-canonical', s.seo?.canonicalUrl);
+    setVal('geo-lat', s.geo?.latitude);
+    setVal('geo-lng', s.geo?.longitude);
+    setVal('geo-city', s.geo?.city);
+    setVal('geo-region', s.geo?.region);
+    setVal('geo-postal', s.geo?.postalCode);
+    setVal('geo-radius', s.geo?.serviceRadius);
+    setVal('ga-id', s.analytics?.googleAnalyticsId);
+    setVal('gtm-id', s.analytics?.googleTagManagerId);
+    // SMS
+    const sms = s.sms || {};
+    const en = document.getElementById('sms-enabled'); if (en) en.checked = !!sms.enabled;
+    setVal('sms-user', sms.netgsmUser);
+    setVal('sms-pass', sms.netgsmPass);
+    setVal('sms-header', sms.netgsmHeader || 'DURUKAN');
+    setVal('sms-owner', sms.ownerPhone);
+    const sc = document.getElementById('sms-to-customer'); if (sc) sc.checked = sms.sendToCustomer !== false;
+    const so = document.getElementById('sms-to-owner'); if (so) so.checked = !!sms.sendToOwner;
+  } catch { showToast('Ayarlar yüklenemedi', 'error'); }
+}
+
+async function saveSmsSettings() {
+  const sms = {
+    enabled: document.getElementById('sms-enabled').checked,
+    netgsmUser: document.getElementById('sms-user').value,
+    netgsmPass: document.getElementById('sms-pass').value,
+    netgsmHeader: document.getElementById('sms-header').value || 'DURUKAN',
+    ownerPhone: document.getElementById('sms-owner').value,
+    sendToCustomer: document.getElementById('sms-to-customer').checked,
+    sendToOwner: document.getElementById('sms-to-owner').checked,
+  };
+  await fetch('/api/settings', { method:'PUT', headers:headers(), body:JSON.stringify({ sms }) });
+  showToast('SMS ayarları kaydedildi!');
+}
+
+async function saveSeoSettings() {
+  const seo = {
+    siteTitle: document.getElementById('seo-title').value,
+    siteDescription: document.getElementById('seo-desc').value,
+    keywords: document.getElementById('seo-keywords').value,
+    canonicalUrl: document.getElementById('seo-canonical').value,
+  };
+  await fetch('/api/settings', { method:'PUT', headers:headers(), body:JSON.stringify({ seo }) });
+  showToast('SEO ayarları kaydedildi!');
+}
+
+async function saveGeoSettings() {
+  const geo = {
+    latitude: document.getElementById('geo-lat').value,
+    longitude: document.getElementById('geo-lng').value,
+    city: document.getElementById('geo-city').value,
+    region: document.getElementById('geo-region').value,
+    postalCode: document.getElementById('geo-postal').value,
+    serviceRadius: document.getElementById('geo-radius').value,
+  };
+  await fetch('/api/settings', { method:'PUT', headers:headers(), body:JSON.stringify({ geo }) });
+  showToast('GEO ayarları kaydedildi!');
+}
+
+async function saveAnalyticsSettings() {
+  const analytics = {
+    googleAnalyticsId: document.getElementById('ga-id').value,
+    googleTagManagerId: document.getElementById('gtm-id').value,
+  };
+  await fetch('/api/settings', { method:'PUT', headers:headers(), body:JSON.stringify({ analytics }) });
+  showToast('Analytics ayarları kaydedildi!');
+}
+
+// ═══════════════════════════════════════════
+// PANEL NAVİGASYON - GÜNCELLENDİ
+// ═══════════════════════════════════════════
+const panelLoaders = {
+  'panel-talepler':   loadLeads,
+  'panel-blog':       loadBlog,
+  'panel-ayarlar':    loadSettings,
+  'panel-yorumlar':   renderAdminReviews,
+  'panel-takvim':     () => { loadTechnicians(); loadCalendar(); },
+  'panel-hatirlatici': loadReminders,
+  'panel-sayfalar':   loadPageSettings,
+};
+
+// ═══════════════════════ TEKNİSYEN TAKVİMİ ═══════════════════════
+let techList = [];
+
+async function loadTechnicians() {
+  try {
+    techList = await fetch('/api/technicians', { headers: headers() }).then(r => r.json());
+    renderTechList();
+    // Randevu modalı seçeneğini doldur
+    const sel = document.getElementById('am-tech');
+    if (sel) {
+      sel.innerHTML = '<option value="">Seçin...</option>' + techList.map(t =>
+        `<option value="${t.id}" data-name="${t.name}">${t.name}</option>`).join('');
+    }
+  } catch { showToast('Teknisyenler yüklenemedi','error'); }
+}
+
+function renderTechList() {
+  const el = document.getElementById('tech-list');
+  if (!el) return;
+  if (!techList.length) { el.innerHTML = '<p style="color:#94a3b8;font-size:13px;">Henüz teknisyen eklenmedi.</p>'; return; }
+  el.innerHTML = techList.map(t => `
+    <div style="display:flex;align-items:center;gap:12px;padding:10px 14px;background:var(--bg,#f0f7ff);border-radius:10px;">
+      <div style="width:14px;height:14px;border-radius:50%;background:${t.color};flex-shrink:0;"></div>
+      <div style="flex:1;"><strong>${t.name}</strong> <span style="font-size:12px;color:#64748b;">— ${t.phone}</span></div>
+      <button onclick="openEditTech(${t.id})" style="padding:4px 10px;border:1px solid #3b82f6;color:#3b82f6;background:#fff;border-radius:6px;cursor:pointer;font-size:12px;">Düzenle</button>
+      <button onclick="deleteTech(${t.id})" style="padding:4px 10px;border:1px solid #ef4444;color:#ef4444;background:#fff;border-radius:6px;cursor:pointer;font-size:12px;">Sil</button>
+    </div>`).join('');
+}
+
+async function loadCalendar() {
+  const dateEl = document.getElementById('cal-date');
+  if (!dateEl.value) dateEl.value = new Date().toISOString().slice(0,10);
+  const date = dateEl.value;
+  document.getElementById('cal-title').textContent = `${date} Randevuları`;
+  try {
+    const list = await fetch(`/api/appointments?date=${date}`, { headers: headers() }).then(r => r.json());
+    const el = document.getElementById('cal-appointments');
+    if (!list.length) { el.innerHTML = '<p style="color:#94a3b8;font-size:13px;padding:12px 0;">Bu tarihte randevu yok.</p>'; return; }
+    el.innerHTML = list.map(a => {
+      const tech = techList.find(t => t.id === a.technicianId);
+      return `<div style="display:flex;gap:12px;padding:14px;border-left:4px solid ${tech?.color||'#94a3b8'};background:white;border-radius:0 10px 10px 0;margin-bottom:10px;box-shadow:0 1px 4px rgba(0,0,0,.06);">
+        <div style="min-width:52px;text-align:center;">
+          <div style="font-size:1.1rem;font-weight:700;color:var(--primary,#1a6fa8);">${a.time||'--:--'}</div>
+        </div>
+        <div style="flex:1;">
+          <div style="font-weight:600;">${a.customerName||'Müşteri'} <span style="font-size:12px;color:#64748b;">— ${a.service||'-'}</span></div>
+          <div style="font-size:12px;color:#64748b;margin-top:2px;">📍 ${a.address||'-'} &nbsp;|&nbsp; 📞 ${a.phone||'-'}</div>
+          ${a.note ? `<div style="font-size:12px;color:#94a3b8;margin-top:2px;">📝 ${a.note}</div>` : ''}
+          <div style="font-size:12px;color:${tech?.color||'#94a3b8'};margin-top:4px;font-weight:500;">👨‍🔧 ${tech?.name||a.technicianName||'-'}</div>
+        </div>
+        <button onclick="deleteAppt(${a.id})" style="padding:4px 8px;border:1px solid #ef4444;color:#ef4444;background:#fff;border-radius:6px;cursor:pointer;font-size:11px;align-self:flex-start;">Sil</button>
+      </div>`;
+    }).join('');
+  } catch { showToast('Randevular yüklenemedi','error'); }
+}
+
+function openApptModal(id='') {
+  document.getElementById('appt-modal-id').value = id;
+  const dateEl = document.getElementById('cal-date');
+  document.getElementById('am-date').value = dateEl.value || new Date().toISOString().slice(0,10);
+  document.getElementById('am-time').value = '';
+  document.getElementById('am-name').value = '';
+  document.getElementById('am-phone').value = '';
+  document.getElementById('am-address').value = '';
+  document.getElementById('am-note').value = '';
+  document.getElementById('appt-modal').style.display = 'flex';
+}
+
+async function saveAppt() {
+  const techSel = document.getElementById('am-tech');
+  const techId = +techSel.value;
+  const techName = techSel.options[techSel.selectedIndex]?.dataset.name || '';
+  const appt = {
+    date: document.getElementById('am-date').value,
+    time: document.getElementById('am-time').value,
+    technicianId: techId,
+    technicianName: techName,
+    customerName: document.getElementById('am-name').value,
+    phone: document.getElementById('am-phone').value,
+    service: document.getElementById('am-service').value,
+    address: document.getElementById('am-address').value,
+    note: document.getElementById('am-note').value,
+  };
+  try {
+    await fetch('/api/appointments', { method:'POST', headers:headers(), body:JSON.stringify(appt) });
+    document.getElementById('appt-modal').style.display = 'none';
+    loadCalendar();
+    showToast('Randevu oluşturuldu!');
+  } catch { showToast('Kayıt başarısız','error'); }
+}
+
+async function deleteAppt(id) {
+  if (!confirm('Randevu silinsin mi?')) return;
+  await fetch(`/api/appointments/${id}`, { method:'DELETE', headers:headers() });
+  loadCalendar();
+  showToast('Randevu silindi');
+}
+
+function openTechModal() {
+  document.getElementById('tm-id').value = '';
+  document.getElementById('tm-name').value = '';
+  document.getElementById('tm-phone').value = '';
+  document.getElementById('tm-color').value = '#3b82f6';
+  document.getElementById('tech-modal-title').textContent = 'Teknisyen Ekle';
+  document.getElementById('tech-modal').style.display = 'flex';
+}
+
+function openEditTech(id) {
+  const t = techList.find(x => x.id === id);
+  if (!t) return;
+  document.getElementById('tm-id').value = id;
+  document.getElementById('tm-name').value = t.name;
+  document.getElementById('tm-phone').value = t.phone;
+  document.getElementById('tm-color').value = t.color || '#3b82f6';
+  document.getElementById('tech-modal-title').textContent = 'Teknisyen Düzenle';
+  document.getElementById('tech-modal').style.display = 'flex';
+}
+
+async function saveTech() {
+  const id = document.getElementById('tm-id').value;
+  const data = { name: document.getElementById('tm-name').value, phone: document.getElementById('tm-phone').value, color: document.getElementById('tm-color').value };
+  if (!data.name) { showToast('Ad zorunludur','error'); return; }
+  try {
+    if (id) await fetch(`/api/technicians/${id}`, { method:'PUT', headers:headers(), body:JSON.stringify(data) });
+    else await fetch('/api/technicians', { method:'POST', headers:headers(), body:JSON.stringify(data) });
+    document.getElementById('tech-modal').style.display = 'none';
+    loadTechnicians();
+    showToast('Kaydedildi!');
+  } catch { showToast('Kayıt başarısız','error'); }
+}
+
+async function deleteTech(id) {
+  if (!confirm('Teknisyen silinsin mi?')) return;
+  await fetch(`/api/technicians/${id}`, { method:'DELETE', headers:headers() });
+  loadTechnicians();
+  showToast('Silindi');
+}
+
+// ═══════════════════════ HATIRLATICLAR ═══════════════════════
+async function loadReminders() {
+  const filter = document.getElementById('rem-filter')?.value || 'due';
+  try {
+    const d = await fetch(`/api/reminders?filter=${filter}`, { headers: headers() }).then(r => r.json());
+    const statsEl = document.getElementById('reminder-stats');
+    if (statsEl) statsEl.textContent = `Zamanı gelmiş: ${d.due} | Toplam gösterilen: ${d.total}`;
+    // Badge güncelle
+    const badge = document.getElementById('reminder-badge');
+    if (badge && d.due > 0) { badge.textContent = d.due; badge.style.display = 'inline'; }
+    const el = document.getElementById('reminder-list');
+    if (!el) return;
+    if (!d.reminders.length) { el.innerHTML = '<p style="color:#94a3b8;font-size:13px;padding:14px;">Bu kategoride hatırlatıcı yok.</p>'; return; }
+    el.innerHTML = d.reminders.map(r => `
+      <div style="display:flex;align-items:center;gap:12px;padding:14px;background:white;border-radius:10px;border:1px solid ${r.sent?'#d1fae5':'#fef3c7'};margin-bottom:10px;">
+        <div style="font-size:1.5rem;">${r.sent ? '✅' : '🔔'}</div>
+        <div style="flex:1;">
+          <div style="font-weight:600;">${r.name} <span style="font-size:12px;color:#64748b;">— ${r.phone}</span></div>
+          <div style="font-size:12px;color:#64748b;margin-top:2px;">${r.service||'-'} &nbsp;|&nbsp; 📅 ${r.remindAt}</div>
+          ${r.note ? `<div style="font-size:12px;color:#94a3b8;margin-top:2px;">📝 ${r.note}</div>` : ''}
+          ${r.sent ? `<div style="font-size:11px;color:#16a34a;margin-top:2px;">Gönderildi: ${r.sentAt?.slice(0,10)||'-'}</div>` : ''}
+        </div>
+        ${!r.sent ? `<button onclick="sendReminder(${r.id})" style="padding:6px 12px;background:#f59e0b;color:#fff;border:none;border-radius:8px;cursor:pointer;font-size:12px;font-weight:600;">📱 SMS Gönder</button>` : ''}
+        <button onclick="deleteReminder(${r.id})" style="padding:6px 8px;border:1px solid #ef4444;color:#ef4444;background:#fff;border-radius:8px;cursor:pointer;font-size:11px;">Sil</button>
+      </div>`).join('');
+  } catch { showToast('Hatırlatıcılar yüklenemedi','error'); }
+}
+
+function openReminderModal() {
+  document.getElementById('rm2-name').value = '';
+  document.getElementById('rm2-phone').value = '';
+  document.getElementById('rm2-service').value = '';
+  document.getElementById('rm2-note').value = '';
+  // 6 ay sonrası
+  const d = new Date(); d.setMonth(d.getMonth()+6);
+  document.getElementById('rm2-date').value = d.toISOString().slice(0,10);
+  document.getElementById('reminder-modal').style.display = 'flex';
+}
+
+async function saveReminder() {
+  const data = {
+    name: document.getElementById('rm2-name').value.trim(),
+    phone: document.getElementById('rm2-phone').value.trim(),
+    service: document.getElementById('rm2-service').value.trim(),
+    remindAt: document.getElementById('rm2-date').value,
+    note: document.getElementById('rm2-note').value.trim(),
+  };
+  if (!data.name || !data.phone) { showToast('Ad ve telefon zorunludur','error'); return; }
+  try {
+    await fetch('/api/reminders', { method:'POST', headers:headers(), body:JSON.stringify(data) });
+    document.getElementById('reminder-modal').style.display = 'none';
+    loadReminders();
+    showToast('Hatırlatıcı eklendi!');
+  } catch { showToast('Kayıt başarısız','error'); }
+}
+
+async function sendReminder(id) {
+  if (!confirm('SMS gönderilsin mi? (Netgsm API gerektirir)')) return;
+  try {
+    const r = await fetch(`/api/reminders/${id}/send`, { method:'POST', headers:headers() });
+    const d = await r.json();
+    if (d.success) { showToast('SMS gönderildi ✅'); loadReminders(); }
+    else showToast(d.error || 'Gönderilemedi','error');
+  } catch { showToast('Gönderim başarısız','error'); }
+}
+
+async function deleteReminder(id) {
+  if (!confirm('Hatırlatıcı silinsin mi?')) return;
+  await fetch(`/api/reminders/${id}`, { method:'DELETE', headers:headers() });
+  loadReminders();
+  showToast('Silindi');
+}
+
+// ═══════════════════════ SAYFA YÖNETİMİ ═══════════════════════
+let pageSettingsData = {};
+let featureSettingsData = {};
+
+async function loadPageSettings() {
+  try {
+    const s = await fetch('/api/settings/all', { headers: headers() }).then(r => r.json());
+    pageSettingsData = s.pages || {};
+    featureSettingsData = s.features || {};
+    renderPageSettings();
+    renderFeatureSettings();
+  } catch (e) { showToast('Sayfa ayarları yüklenemedi', 'error'); }
+}
+
+function renderPageSettings() {
+  const container = document.getElementById('pages-list');
+  if (!container) return;
+  const pageLabels = {
+    '/': '🏠 Ana Sayfa',
+    '/fiyatlar': '💰 Fiyat Listesi',
+    '/teklif': '🧮 Teklif Hesaplayıcı',
+    '/takip': '🔍 Servis Takip',
+    '/blog': '📝 Blog',
+    '/cukurova-klima-servisi': '📍 Çukurova Klima Servisi',
+    '/seyhan-klima-servisi': '📍 Seyhan Klima Servisi',
+    '/saricam-klima-servisi': '📍 Sarıçam Klima Servisi',
+    '/yuregir-klima-servisi': '📍 Yüreğir Klima Servisi',
+    '/kozan-klima-servisi': '📍 Kozan Klima Servisi',
+    '/ceyhan-klima-servisi': '📍 Ceyhan Klima Servisi',
+    '/imamoglu-klima-servisi': '📍 İmamoğlu Klima Servisi',
+  };
+  container.innerHTML = Object.entries(pageLabels).map(([route, label]) => {
+    const conf = pageSettingsData[route] || { enabled: true };
+    const enabled = conf.enabled !== false;
+    const isHome = route === '/';
+    return `<div style="display:flex;align-items:center;justify-content:space-between;padding:14px 16px;background:var(--bg);border-radius:10px;border:1.5px solid ${enabled ? 'var(--primary)' : 'var(--border)'};">
+      <div>
+        <div style="font-weight:600;font-size:.95rem;">${label}</div>
+        <div style="font-size:.78rem;color:var(--text-light);margin-top:2px;">${route}</div>
+      </div>
+      <label style="display:flex;align-items:center;gap:10px;cursor:${isHome ? 'not-allowed' : 'pointer'};">
+        ${!enabled ? '<span style="font-size:.75rem;color:#ef4444;font-weight:600;">Kapalı</span>' : '<span style="font-size:.75rem;color:#22c55e;font-weight:600;">Açık</span>'}
+        <div style="position:relative;width:42px;height:24px;">
+          <input type="checkbox" id="page-toggle-${route.replace(/\//g,'_').replace(/-/g,'_')}" ${enabled ? 'checked' : ''} ${isHome ? 'disabled' : ''}
+            onchange="togglePage('${route}', this.checked)"
+            style="opacity:0;position:absolute;width:100%;height:100%;cursor:${isHome ? 'not-allowed' : 'pointer'};z-index:2;">
+          <div style="position:absolute;top:0;left:0;width:42px;height:24px;border-radius:12px;background:${enabled ? 'var(--primary)' : '#cbd5e1'};transition:background .2s;"></div>
+          <div style="position:absolute;top:3px;left:${enabled ? '21px' : '3px'};width:18px;height:18px;border-radius:50%;background:white;transition:left .2s;box-shadow:0 1px 3px rgba(0,0,0,.3);"></div>
+        </div>
+      </label>
+    </div>`;
+  }).join('');
+}
+
+function togglePage(route, enabled) {
+  if (!pageSettingsData[route]) pageSettingsData[route] = { title: route, enabled: true };
+  pageSettingsData[route].enabled = enabled;
+  renderPageSettings();
+}
+
+function renderFeatureSettings() {
+  const container = document.getElementById('features-list');
+  if (!container) return;
+  const featureLabels = {
+    floatingPhone:    { icon: '📞', label: 'Sabit Telefon Butonu', desc: 'Ekranın köşesindeki sabit ara butonu' },
+    floatingWhatsapp: { icon: '💬', label: 'Sabit WhatsApp Butonu', desc: 'Ekranın köşesindeki sabit WhatsApp butonu' },
+    navPhone:         { icon: '📱', label: 'Navbar Telefon Butonu', desc: 'Üst menüdeki "Ara" butonu' },
+    heroCallBtn:      { icon: '☎️', label: 'Hero "Hemen Ara" Butonu', desc: 'Ana sayfanın üst bölümündeki ara butonu' },
+    whatsappButtons:  { icon: '🟢', label: 'WhatsApp Butonları (Genel)', desc: 'Sayfa içindeki tüm WhatsApp butonları' },
+  };
+  container.innerHTML = Object.entries(featureLabels).map(([key, info]) => {
+    const conf = featureSettingsData[key] || { enabled: true };
+    const enabled = conf.enabled !== false;
+    return `<div style="display:flex;align-items:center;justify-content:space-between;padding:14px 16px;background:var(--bg);border-radius:10px;border:1.5px solid ${enabled ? 'var(--primary)' : 'var(--border)'};">
+      <div>
+        <div style="font-weight:600;font-size:.95rem;">${info.icon} ${info.label}</div>
+        <div style="font-size:.78rem;color:var(--text-light);margin-top:2px;">${info.desc}</div>
+      </div>
+      <label style="display:flex;align-items:center;gap:10px;cursor:pointer;">
+        ${!enabled ? '<span style="font-size:.75rem;color:#ef4444;font-weight:600;">Kapalı</span>' : '<span style="font-size:.75rem;color:#22c55e;font-weight:600;">Açık</span>'}
+        <div style="position:relative;width:42px;height:24px;">
+          <input type="checkbox" ${enabled ? 'checked' : ''}
+            onchange="toggleFeature('${key}', this.checked)"
+            style="opacity:0;position:absolute;width:100%;height:100%;cursor:pointer;z-index:2;">
+          <div style="position:absolute;top:0;left:0;width:42px;height:24px;border-radius:12px;background:${enabled ? 'var(--primary)' : '#cbd5e1'};transition:background .2s;"></div>
+          <div style="position:absolute;top:3px;left:${enabled ? '21px' : '3px'};width:18px;height:18px;border-radius:50%;background:white;transition:left .2s;box-shadow:0 1px 3px rgba(0,0,0,.3);"></div>
+        </div>
+      </label>
+    </div>`;
+  }).join('');
+}
+
+function toggleFeature(key, enabled) {
+  if (!featureSettingsData[key]) featureSettingsData[key] = { enabled: true };
+  featureSettingsData[key].enabled = enabled;
+  renderFeatureSettings();
+}
+
+async function savePageSettings() {
+  try {
+    await fetch('/api/settings', {
+      method: 'PUT',
+      headers: { ...headers(), 'Content-Type': 'application/json' },
+      body: JSON.stringify({ pages: pageSettingsData, features: featureSettingsData })
+    });
+    showToast('Ayarlar kaydedildi ✅');
+  } catch (e) { showToast('Kaydedilemedi', 'error'); }
+}
+
+// ═══════════════════════ INIT ═══════════════════════
+// INIT
+loadContent();
+// Sayfa yüklenince talepleri ve hatırlatıcı badge'ini yükle
+loadLeads();
+fetch('/api/reminders?filter=due', { headers: headers() }).then(r => r.json()).then(d => {
+  const badge = document.getElementById('reminder-badge');
+  if (badge && d.due > 0) { badge.textContent = d.due; badge.style.display = 'inline'; }
+}).catch(() => {});
+</script>
+</body>
+</html>

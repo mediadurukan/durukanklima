@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ücretsiz Klima & Kombi Teklif Hesaplayıcı | Durukan Klima Adana</title>
+  <meta name="description" content="Adana'da klima montajı, bakımı veya kombi servisi için anında fiyat tahmini alın. Ücretsiz hesaplayıcı." />
+  <link rel="canonical" href="https://durukanklima.com/teklif" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <style>
+    .calc-hero { background: linear-gradient(135deg,#0f3a5c,#1a6fa8); color:white; padding:60px 0 40px; text-align:center; }
+    .calc-hero h1 { font-size:2rem; font-weight:800; margin-bottom:10px; }
+    .calc-hero p { opacity:.9; max-width:520px; margin:0 auto; }
+    .calc-wrapper { max-width:780px; margin:40px auto; padding:0 20px 60px; }
+    .calc-card { background:white; border-radius:16px; box-shadow:0 4px 32px rgba(26,111,168,.12); overflow:hidden; }
+    .calc-step { display:none; padding:32px; }
+    .calc-step.active { display:block; animation:fadeUp .3s ease; }
+    @keyframes fadeUp { from{opacity:0;transform:translateY(10px)} to{opacity:1;transform:translateY(0)} }
+    .step-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:24px; }
+    .step-num { font-size:.8rem; color:var(--text-light); font-weight:600; }
+    .step-title { font-size:1.3rem; font-weight:700; color:var(--primary); }
+    .options-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:12px; margin-bottom:24px; }
+    .opt-card { border:2px solid var(--border); border-radius:12px; padding:18px 12px; text-align:center; cursor:pointer; transition:.2s; }
+    .opt-card:hover { border-color:var(--primary); background:#f0f7ff; }
+    .opt-card.selected { border-color:var(--primary); background:var(--primary); color:white; }
+    .opt-card .opt-icon { font-size:2rem; margin-bottom:8px; }
+    .opt-card .opt-label { font-size:.9rem; font-weight:600; }
+    .opt-card .opt-sub { font-size:.75rem; opacity:.7; margin-top:2px; }
+    .range-wrap { margin-bottom:24px; }
+    .range-wrap label { display:flex; justify-content:space-between; font-weight:600; margin-bottom:8px; }
+    .range-wrap input[type=range] { width:100%; accent-color:var(--primary); }
+    .range-ticks { display:flex; justify-content:space-between; font-size:.75rem; color:var(--text-light); margin-top:4px; }
+    .calc-nav { display:flex; justify-content:space-between; margin-top:24px; }
+    .btn-prev { background:var(--bg); color:var(--text); border:none; padding:12px 24px; border-radius:10px; cursor:pointer; font-size:.95rem; font-weight:600; }
+    .btn-next { background:var(--primary); color:white; border:none; padding:12px 28px; border-radius:10px; cursor:pointer; font-size:.95rem; font-weight:600; }
+    .btn-next:disabled { opacity:.5; cursor:default; }
+    .progress-bar { height:4px; background:var(--border); }
+    .progress-fill { height:4px; background:var(--primary); transition:.4s ease; }
+    .result-box { background:linear-gradient(135deg,#f0f7ff,#e0f2fe); border-radius:14px; padding:28px; margin-bottom:24px; text-align:center; }
+    .result-range { font-size:2.2rem; font-weight:800; color:var(--primary); margin:10px 0; }
+    .result-note { font-size:.85rem; color:var(--text-light); }
+    .result-items { display:flex; flex-direction:column; gap:8px; margin:20px 0; }
+    .result-item { display:flex; justify-content:space-between; padding:10px 14px; background:white; border-radius:8px; font-size:.9rem; }
+    .result-item span:last-child { font-weight:600; color:var(--primary); }
+    .form-row-2 { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+    @media(max-width:600px){ .form-row-2{grid-template-columns:1fr;} }
+    input,select,textarea { width:100%; padding:11px 14px; border:1.5px solid var(--border); border-radius:10px; font-size:.95rem; outline:none; font-family:inherit; }
+    input:focus,select:focus { border-color:var(--primary); }
+    label.field-label { display:block; font-weight:600; font-size:.85rem; margin-bottom:5px; color:var(--text); }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container">
+    <a href="/" class="logo"><div class="logo-icon">❄️</div><span>Durukan Klima</span></a>
+    <ul class="nav-links">
+      <li><a href="/#hizmetler">Hizmetler</a></li>
+      <li><a href="/fiyatlar">Fiyatlar</a></li>
+      <li><a href="/teklif" style="color:var(--primary);font-weight:600;">Teklif Al</a></li>
+      <li><a href="/takip">Takip</a></li>
+      <li><a href="/#iletisim">İletişim</a></li>
+    </ul>
+    <div class="nav-phone">
+      <a href="#" id="nav-call" class="btn btn-primary">📞 <span id="nav-phone">Ara</span></a>
+    </div>
+  </div>
+</nav>
+
+<div class="calc-hero">
+  <div class="container">
+    <div class="hero-badge" style="display:inline-block;background:rgba(255,255,255,.2);padding:5px 16px;border-radius:30px;font-size:.85rem;margin-bottom:14px;">🧮 Ücretsiz Hesaplayıcı</div>
+    <h1>Anında Fiyat Tahmini Alın</h1>
+    <p>4 adımda klima veya kombi servis maliyetinizi öğrenin. Randevu oluşturun, aynı gün hizmet alın.</p>
+  </div>
+</div>
+
+<div class="calc-wrapper">
+  <div class="calc-card">
+    <div class="progress-bar"><div class="progress-fill" id="prog" style="width:25%"></div></div>
+
+    <!-- ADIM 1: Hizmet Türü -->
+    <div class="calc-step active" id="step-1">
+      <div class="step-header">
+        <span class="step-num">Adım 1 / 4</span>
+        <span class="step-title">Ne hizmeti istiyorsunuz?</span>
+      </div>
+      <div class="options-grid">
+        <div class="opt-card" onclick="pick('service','Klima Bakımı',this)"><div class="opt-icon">🔧</div><div class="opt-label">Klima Bakımı</div><div class="opt-sub">Yıllık bakım</div></div>
+        <div class="opt-card" onclick="pick('service','Klima Montajı',this)"><div class="opt-icon">🔩</div><div class="opt-label">Klima Montajı</div><div class="opt-sub">Yeni kurulum</div></div>
+        <div class="opt-card" onclick="pick('service','Klima Arızası',this)"><div class="opt-icon">⚠️</div><div class="opt-label">Klima Arızası</div><div class="opt-sub">Tamir</div></div>
+        <div class="opt-card" onclick="pick('service','Klima Gaz Dolumu',this)"><div class="opt-icon">💨</div><div class="opt-label">Gaz Dolumu</div><div class="opt-sub">R410A / R22</div></div>
+        <div class="opt-card" onclick="pick('service','Klima Temizliği',this)"><div class="opt-icon">🧹</div><div class="opt-label">Klima Temizliği</div><div class="opt-sub">Derin yıkama</div></div>
+        <div class="opt-card" onclick="pick('service','Kombi Servisi',this)"><div class="opt-icon">🔥</div><div class="opt-label">Kombi Servisi</div><div class="opt-sub">Bakım / arıza</div></div>
+        <div class="opt-card" onclick="pick('service','Klima Demontajı',this)"><div class="opt-icon">🔄</div><div class="opt-label">Demontaj</div><div class="opt-sub">Söküm</div></div>
+        <div class="opt-card" onclick="pick('service','Diğer',this)"><div class="opt-icon">❓</div><div class="opt-label">Diğer</div><div class="opt-sub">Açıklayın</div></div>
+      </div>
+      <div class="calc-nav"><div></div><button class="btn-next" id="next1" onclick="goStep(2)" disabled>Devam →</button></div>
+    </div>
+
+    <!-- ADIM 2: Cihaz Detayı -->
+    <div class="calc-step" id="step-2">
+      <div class="step-header">
+        <span class="step-num">Adım 2 / 4</span>
+        <span class="step-title">Cihaz bilgileri</span>
+      </div>
+      <div class="options-grid" id="brand-opts">
+        <div class="opt-card" onclick="pick('brand','Arçelik',this)"><div class="opt-icon">🏷️</div><div class="opt-label">Arçelik</div></div>
+        <div class="opt-card" onclick="pick('brand','Beko',this)"><div class="opt-icon">🏷️</div><div class="opt-label">Beko</div></div>
+        <div class="opt-card" onclick="pick('brand','Samsung',this)"><div class="opt-icon">🏷️</div><div class="opt-label">Samsung</div></div>
+        <div class="opt-card" onclick="pick('brand','LG',this)"><div class="opt-icon">🏷️</div><div class="opt-label">LG</div></div>
+        <div class="opt-card" onclick="pick('brand','Daikin',this)"><div class="opt-icon">🏷️</div><div class="opt-label">Daikin</div></div>
+        <div class="opt-card" onclick="pick('brand','Mitsubishi',this)"><div class="opt-icon">🏷️</div><div class="opt-label">Mitsubishi</div></div>
+        <div class="opt-card" onclick="pick('brand','Bosch',this)"><div class="opt-icon">🏷️</div><div class="opt-label">Bosch</div></div>
+        <div class="opt-card" onclick="pick('brand','Diğer',this)"><div class="opt-icon">🏷️</div><div class="opt-label">Diğer</div></div>
+      </div>
+      <div class="range-wrap" id="btu-wrap">
+        <label><span>BTU / Kapasite</span><span id="btu-val">9.000 BTU</span></label>
+        <input type="range" id="btu-range" min="0" max="5" value="0" oninput="updateBtu(this.value)" />
+        <div class="range-ticks"><span>9K</span><span>12K</span><span>18K</span><span>24K</span><span>30K</span><span>36K+</span></div>
+      </div>
+      <div class="calc-nav">
+        <button class="btn-prev" onclick="goStep(1)">← Geri</button>
+        <button class="btn-next" id="next2" onclick="goStep(3)" disabled>Devam →</button>
+      </div>
+    </div>
+
+    <!-- ADIM 3: Konum & Ek Bilgi -->
+    <div class="calc-step" id="step-3">
+      <div class="step-header">
+        <span class="step-num">Adım 3 / 4</span>
+        <span class="step-title">Konum & detay</span>
+      </div>
+      <div class="options-grid">
+        <div class="opt-card" onclick="pick('district','Çukurova',this)"><div class="opt-icon">📍</div><div class="opt-label">Çukurova</div></div>
+        <div class="opt-card" onclick="pick('district','Seyhan',this)"><div class="opt-icon">📍</div><div class="opt-label">Seyhan</div></div>
+        <div class="opt-card" onclick="pick('district','Sarıçam',this)"><div class="opt-icon">📍</div><div class="opt-label">Sarıçam</div></div>
+        <div class="opt-card" onclick="pick('district','Yüreğir',this)"><div class="opt-icon">📍</div><div class="opt-label">Yüreğir</div></div>
+        <div class="opt-card" onclick="pick('district','Kozan',this)"><div class="opt-icon">📍</div><div class="opt-label">Kozan</div></div>
+        <div class="opt-card" onclick="pick('district','Diğer',this)"><div class="opt-icon">📍</div><div class="opt-label">Diğer</div></div>
+      </div>
+      <div style="margin-bottom:16px;">
+        <label class="field-label">Kat / Alan (opsiyonel)</label>
+        <div style="display:flex;gap:10px;">
+          <select id="floor-sel" style="flex:1" oninput="calcPrice()">
+            <option value="1">Zemin / 1. kat</option>
+            <option value="2">2–4. kat</option>
+            <option value="3">5+ kat (vinç gerekebilir)</option>
+          </select>
+          <select id="room-sel" style="flex:1" oninput="calcPrice()">
+            <option value="1">1 oda</option>
+            <option value="2">2 oda</option>
+            <option value="3">3+ oda</option>
+          </select>
+        </div>
+      </div>
+      <div class="calc-nav">
+        <button class="btn-prev" onclick="goStep(2)">← Geri</button>
+        <button class="btn-next" id="next3" onclick="goStep(4)" disabled>Hesapla →</button>
+      </div>
+    </div>
+
+    <!-- ADIM 4: Sonuç & İletişim -->
+    <div class="calc-step" id="step-4">
+      <div class="step-header">
+        <span class="step-num">Adım 4 / 4</span>
+        <span class="step-title">Fiyat Tahmininiz</span>
+      </div>
+      <div class="result-box">
+        <div style="font-size:.9rem;color:#64748b;">Tahmini Maliyet Aralığı</div>
+        <div class="result-range" id="result-range">₺800 – ₺1.200</div>
+        <div class="result-note">* Kesin fiyat yerinde muayene sonrası belirlenir. Yedek parça ayrıca hesaplanır.</div>
+      </div>
+      <div class="result-items" id="result-items"></div>
+      <p style="font-weight:600;margin-bottom:14px;">Teklif onaylamak veya randevu almak için bilgilerinizi bırakın:</p>
+      <div class="form-row-2" style="margin-bottom:12px;">
+        <div><label class="field-label">Ad Soyad *</label><input type="text" id="c-name" placeholder="Ahmet Yılmaz" /></div>
+        <div><label class="field-label">Telefon *</label><input type="tel" id="c-phone" placeholder="0530 000 00 00" /></div>
+      </div>
+      <div style="display:flex;gap:12px;margin-top:16px;flex-wrap:wrap;">
+        <button class="btn-next" style="flex:1" onclick="submitQuote()">📋 Teklif & Randevu Al</button>
+        <button id="wp-btn" class="btn btn-whatsapp" style="flex:1;border:none;cursor:pointer;" onclick="sendWp()">💬 WhatsApp'tan Gönder</button>
+      </div>
+      <div id="quote-result" style="margin-top:14px;text-align:center;font-weight:600;"></div>
+      <div class="calc-nav" style="margin-top:8px;"><button class="btn-prev" onclick="goStep(1);resetCalc()">🔄 Yeni Hesaplama</button><div></div></div>
+    </div>
+  </div>
+
+  <!-- SSS -->
+  <div style="margin-top:40px;">
+    <h2 style="font-size:1.3rem;font-weight:700;color:var(--primary);margin-bottom:16px;">Sık Sorulan Sorular</h2>
+    <div class="faq-item" id="fq0"><button class="faq-question" onclick="tf(0)">Fiyat tahmini kesin mi? <span class="faq-arrow">▼</span></button><div class="faq-answer">Hayır, bu bir tahmin aralığıdır. Kesin fiyat yerinde muayene sonrası belirlenir ve işlem başlamadan önce onayınız alınır.</div></div>
+    <div class="faq-item" id="fq1"><button class="faq-question" onclick="tf(1)">Muayene ücreti var mı? <span class="faq-arrow">▼</span></button><div class="faq-answer">Evet, arıza tespiti için 200–400 ₺ muayene ücreti alınır. Onarım yapılması durumunda bu ücret toplam faturadan düşülür.</div></div>
+    <div class="faq-item" id="fq2"><button class="faq-question" onclick="tf(2)">Ne kadar sürede gelirsiniz? <span class="faq-arrow">▼</span></button><div class="faq-answer">Adana Çukurova ve Seyhan için genellikle 2–4 saat içinde, sabah çağrılarına öğleden önce geliyoruz.</div></div>
+  </div>
+</div>
+
+<div class="floating-buttons">
+  <a href="#" id="float-wp" class="float-btn float-wp">💬</a>
+  <a href="#" id="float-phone" class="float-btn float-phone">📞</a>
+</div>
+
+<script>
+const picks = { service:'', brand:'', district:'' };
+let btuIdx = 0;
+const btuLabels = ['9.000 BTU','12.000 BTU','18.000 BTU','24.000 BTU','30.000 BTU','36.000+ BTU'];
+let wpNum = '', phone = '';
+
+// Fiyat matrisi
+const priceMatrix = {
+  'Klima Bakımı':    [500,800,900,1000,1100,1300],
+  'Klima Montajı':   [1200,1400,1600,1900,2200,2600],
+  'Klima Arızası':   [400,500,600,700,800,900],
+  'Klima Gaz Dolumu':[700,800,900,1100,1300,1500],
+  'Klima Temizliği': [600,700,800,900,1000,1100],
+  'Klima Demontajı': [400,450,500,550,600,650],
+  'Kombi Servisi':   [600,700,800,900,1000,1100],
+  'Diğer':           [500,600,700,800,900,1000],
+};
+
+function pick(key, val, el) {
+  picks[key] = val;
+  el.closest('.options-grid').querySelectorAll('.opt-card').forEach(c => c.classList.remove('selected'));
+  el.classList.add('selected');
+  if (key==='service') document.getElementById('next1').disabled = false;
+  if (key==='brand')   document.getElementById('next2').disabled = false;
+  if (key==='district'){ document.getElementById('next3').disabled = false; calcPrice(); }
+}
+
+function updateBtu(v) {
+  btuIdx = +v;
+  document.getElementById('btu-val').textContent = btuLabels[btuIdx];
+  calcPrice();
+}
+
+function calcPrice() {
+  const base = priceMatrix[picks.service] || priceMatrix['Diğer'];
+  let low = base[btuIdx] || base[0];
+  let high = Math.round(low * 1.55);
+  // Kat eklentisi
+  const fl = +document.getElementById('floor-sel')?.value || 1;
+  if (fl === 3) { low += 300; high += 500; }
+  // Oda sayısı
+  const rm = +document.getElementById('room-sel')?.value || 1;
+  low = low * rm; high = high * rm;
+
+  document.getElementById('result-range').textContent = `₺${low.toLocaleString('tr-TR')} – ₺${high.toLocaleString('tr-TR')}`;
+  const items = [
+    ['Hizmet', picks.service || '-'],
+    ['Marka', picks.brand || '-'],
+    ['Kapasite', btuLabels[btuIdx]],
+    ['İlçe', picks.district || '-'],
+  ];
+  document.getElementById('result-items').innerHTML = items.map(([l,v]) =>
+    `<div class="result-item"><span>${l}</span><span>${v}</span></div>`).join('');
+}
+
+function goStep(n) {
+  document.querySelectorAll('.calc-step').forEach(s => s.classList.remove('active'));
+  document.getElementById(`step-${n}`).classList.add('active');
+  document.getElementById('prog').style.width = (n/4*100) + '%';
+  if (n===4) calcPrice();
+}
+
+function resetCalc() {
+  Object.keys(picks).forEach(k => picks[k]='');
+  btuIdx = 0;
+  document.querySelectorAll('.opt-card').forEach(c => c.classList.remove('selected'));
+  document.getElementById('next1').disabled = true;
+  document.getElementById('next2').disabled = true;
+  document.getElementById('next3').disabled = true;
+  document.getElementById('quote-result').textContent = '';
+}
+
+async function submitQuote() {
+  const name = document.getElementById('c-name').value.trim();
+  const ph = document.getElementById('c-phone').value.trim();
+  if (!name || ph.length < 10) { document.getElementById('quote-result').innerHTML = '<span style="color:#ef4444">Ad ve telefon zorunludur.</span>'; return; }
+  const resultRange = document.getElementById('result-range').textContent;
+  try {
+    const r = await fetch('/api/leads', {
+      method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({ name, phone:ph, service:picks.service, brand:picks.brand, address:picks.district, message:`Teklif Hesaplayıcı — Kapasite: ${btuLabels[btuIdx]}, Tahmini: ${resultRange}`, source:'teklif-hesaplayici' })
+    });
+    const d = await r.json();
+    document.getElementById('quote-result').innerHTML = `<span style="color:#16a34a">✅ Talebiniz alındı! Takip kodu: <strong>${d.trackCode}</strong><br><a href="/takip?kod=${d.trackCode}" style="color:var(--primary)">Talebinizi takip edin →</a></span>`;
+  } catch { document.getElementById('quote-result').innerHTML = '<span style="color:#ef4444">Bir hata oluştu. Lütfen telefon ile arayın.</span>'; }
+}
+
+function sendWp() {
+  const name = document.getElementById('c-name').value.trim();
+  const ph = document.getElementById('c-phone').value.trim();
+  const msg = `Merhaba, teklif almak istiyorum.\nHizmet: ${picks.service}\nMarka: ${picks.brand}\nKapasite: ${btuLabels[btuIdx]}\nİlçe: ${picks.district}\nTahmini: ${document.getElementById('result-range')?.textContent}\nAd: ${name}\nTel: ${ph}`;
+  if (wpNum) window.open(`https://wa.me/${wpNum}?text=${encodeURIComponent(msg)}`, '_blank');
+}
+
+function tf(i) {
+  const el = document.getElementById(`fq${i}`);
+  const open = el.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(e => e.classList.remove('open'));
+  if (!open) el.classList.add('open');
+}
+
+async function loadContact() {
+  try {
+    const d = await fetch('/api/content').then(r => r.json());
+    const c = d.contact || {};
+    const tel = `tel:${(c.phone||'').replace(/\s/g,'')}`;
+    const wp = `https://wa.me/${c.whatsapp}`;
+    wpNum = c.whatsapp || '';
+    ['nav-call','float-phone'].forEach(id => { const e=document.getElementById(id); if(e) e.href=tel; });
+    const ph = document.getElementById('nav-phone'); if(ph) ph.textContent = c.phone||'Ara';
+    const fw = document.getElementById('float-wp'); if(fw) fw.href = wp;
+  } catch {}
+}
+loadContact();
+</script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 80" width="240" height="80">
+  <rect width="240" height="80" fill="white"/>
+  <!-- Üç elmas (Mitsubishi sembolü) -->
+  <polygon points="40,15 55,40 25,40" fill="#E60012"/>
+  <polygon points="55,40 70,65 40,65" fill="#E60012"/>
+  <polygon points="25,40 40,65 10,65" fill="#E60012"/>
+  <text x="135" y="35" font-family="Arial, sans-serif" font-weight="700" font-size="13" fill="#333" text-anchor="middle">MITSUBISHI</text>
+  <text x="135" y="55" font-family="Arial, sans-serif" font-weight="700" font-size="13" fill="#333" text-anchor="middle">ELECTRIC</text>
+</svg>

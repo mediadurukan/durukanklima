@@ -1,0 +1,3774 @@
+{
+  "company": {
+    "name": "Durukan Klima",
+    "shortName": "Durukan Klima",
+    "slogan": "Uzman Klima & Beyaz Eşya Servisi",
+    "description": "Adana Çukurova ve Seyhan'da güvenilir klima ve kombi teknik servisi"
+  },
+  "hero": {
+    "title": "Klima & Beyaz Eşya Servis Uzmanınız",
+    "subtitle": "Her Arızaya Hızlı Çözüm, Her Markaya Uzman Servis",
+    "stats": [
+      {
+        "value": "500+",
+        "label": "Mutlu Müşteri"
+      },
+      {
+        "value": "10",
+        "label": "Yıl Deneyim"
+      },
+      {
+        "value": "%100",
+        "label": "Orijinal Parça"
+      }
+    ]
+  },
+  "contact": {
+    "phone": "0530 000 00 00",
+    "whatsapp": "905300000000",
+    "address": "Çukurova / Adana",
+    "mapUrl": "",
+    "hours": {
+      "weekdays": "08:00 - 19:00",
+      "saturday": "08:00 - 17:00",
+      "sunday": "Kapalı",
+      "emergency": "Hafta içi 19:00 - 21:00 arası WhatsApp ile ulaşabilirsiniz"
+    }
+  },
+  "services": [
+    {
+      "id": 1,
+      "icon": "❄️",
+      "title": "Klima Servisi",
+      "description": "Klima bakımı, kurulumu, arıza tespiti ve gaz dolumu hizmetleri. Tüm marka ve modellerde uzman teknik servis.",
+      "details": [
+        "Yıllık bakım",
+        "Montaj & demontaj",
+        "Gaz dolumu",
+        "Arıza tespiti"
+      ]
+    },
+    {
+      "id": 2,
+      "icon": "🫧",
+      "title": "Çamaşır & Bulaşık Makinesi",
+      "description": "Çamaşır makinesi ve bulaşık makinesi arızalarında hızlı ve garantili onarım hizmeti.",
+      "details": [
+        "Pompa değişimi",
+        "Kapı contası",
+        "Elektronik kart",
+        "Motor onarımı"
+      ]
+    },
+    {
+      "id": 3,
+      "icon": "🧊",
+      "title": "Buzdolabı & Derin Dondurucu",
+      "description": "Buzdolabı ve derin dondurucu arızalarında yerinde teknik servis hizmeti.",
+      "details": [
+        "Gaz dolumu",
+        "Termostat değişimi",
+        "Kompresör onarımı",
+        "Kapı contası"
+      ]
+    },
+    {
+      "id": 4,
+      "icon": "🔧",
+      "title": "Orijinal Yedek Parça",
+      "description": "%100 orijinal yedek parça garantisi ile tüm marka beyaz eşya yedek parça satışı.",
+      "details": [
+        "Orijinal parça garantisi",
+        "Tüm markalar",
+        "Hızlı temin",
+        "Uygun fiyat"
+      ]
+    }
+  ],
+  "brands": [
+    {
+      "name": "Arçelik",
+      "logo": "/images/brands/arcelik.png",
+      "url": ""
+    },
+    {
+      "name": "Beko",
+      "logo": "/images/brands/beko.png",
+      "url": ""
+    },
+    {
+      "name": "Altus",
+      "logo": "/images/brands/altus.png",
+      "url": ""
+    },
+    {
+      "name": "Vestel",
+      "logo": "/images/brands/vestel.png",
+      "url": ""
+    },
+    {
+      "name": "Samsung",
+      "logo": "/images/brands/samsung.png",
+      "url": ""
+    },
+    {
+      "name": "LG",
+      "logo": "/images/brands/lg.png",
+      "url": ""
+    },
+    {
+      "name": "Bosch",
+      "logo": "/images/brands/bosch.png",
+      "url": ""
+    },
+    {
+      "name": "Siemens",
+      "logo": "/images/brands/siemens.png",
+      "url": ""
+    },
+    {
+      "name": "Profilo",
+      "logo": "/images/brands/profilo.png",
+      "url": ""
+    },
+    {
+      "name": "SEG",
+      "logo": "/images/brands/seg.png",
+      "url": ""
+    },
+    {
+      "name": "Uğur",
+      "logo": "/images/brands/ugur.png",
+      "url": ""
+    },
+    {
+      "name": "Daikin",
+      "logo": "/images/brands/daikin.svg",
+      "url": ""
+    },
+    {
+      "name": "Mitsubishi",
+      "logo": "/images/brands/mitsubishi.svg",
+      "url": ""
+    },
+    {
+      "name": "Toshiba",
+      "logo": "/images/brands/toshiba.svg",
+      "url": ""
+    },
+    {
+      "name": "Fujitsu",
+      "logo": "/images/brands/fujitsu.svg",
+      "url": ""
+    },
+    {
+      "name": "Carrier",
+      "logo": "/images/brands/carrier.svg",
+      "url": ""
+    },
+    {
+      "name": "Panasonic",
+      "logo": "/images/brands/panasonic.svg",
+      "url": ""
+    },
+    {
+      "name": "Grundig",
+      "logo": "/images/brands/grundig.svg",
+      "url": ""
+    },
+    {
+      "name": "TCL",
+      "logo": "/images/brands/tcl.svg",
+      "url": ""
+    },
+    {
+      "name": "Haier",
+      "logo": "/images/brands/haier.svg",
+      "url": ""
+    },
+    {
+      "name": "Gree",
+      "logo": "/images/brands/gree.svg",
+      "url": ""
+    }
+  ],
+  "whyUs": [
+    {
+      "icon": "⚡",
+      "title": "Hızlı Müdahale",
+      "description": "Aynı gün servis garantisi ile arızanızı hızla çözüyoruz."
+    },
+    {
+      "icon": "🛡️",
+      "title": "Orijinal Parça",
+      "description": "Yalnızca orijinal yedek parça kullanarak kalıcı çözümler sunuyoruz."
+    },
+    {
+      "icon": "👨‍🔧",
+      "title": "Uzman Ekip",
+      "description": "Deneyimli ve sertifikalı teknisyenlerimizle güvenli hizmet."
+    },
+    {
+      "icon": "💰",
+      "title": "Şeffaf Fiyat",
+      "description": "Sürpriz maliyet yok. İşlem öncesi net fiyat bilgilendirmesi."
+    },
+    {
+      "icon": "🚗",
+      "title": "Köy Servisi",
+      "description": "Salı ve Cuma günleri çevre köylere de servis veriyoruz."
+    },
+    {
+      "icon": "✅",
+      "title": "İşçilik Garantisi",
+      "description": "Tüm onarımlarımızda işçilik garantisi sunuyoruz."
+    },
+    {
+      "icon": "📞",
+      "title": "7/24 Destek",
+      "description": "Acil durumlar için WhatsApp hattımız gece gündüz açık, mesajınıza hızla dönüyoruz."
+    },
+    {
+      "icon": "🏠",
+      "title": "Yerinde Servis",
+      "description": "Evinizden çıkmadan, taşıma stresi yaşamadan kapınıza gelerek arızayı çözüyoruz."
+    }
+  ],
+  "serviceArea": {
+    "center": "Adana Çukurova",
+    "districts": [
+      "Çukurova",
+      "Seyhan",
+      "Sarıçam",
+      "Yüreğir",
+      "Kozan",
+      "Ceyhan",
+      "İmamoğlu"
+    ],
+    "villageDays": "Her gün"
+  },
+  "testimonials": [
+    {
+      "id": 1,
+      "name": "Fatih U.",
+      "rating": 5,
+      "text": "Kombi montajını çok hızlı ve temiz yaptılar. Takdir ettim doğrusu.",
+      "service": "Kombi Gaz Ayarı"
+    },
+    {
+      "id": 2,
+      "name": "Orhan Z.",
+      "rating": 5,
+      "text": "Kombi montajını çok hızlı ve temiz yaptılar. Takdir ettim doğrusu.",
+      "service": "Kombi Montajı"
+    },
+    {
+      "id": 3,
+      "name": "Gamze Ğ.",
+      "rating": 5,
+      "text": "Kombi gaz ayarı çok önemliymış, farkı hemen anladım. Teşekkürler.",
+      "service": "Kombi Montajı"
+    },
+    {
+      "id": 4,
+      "name": "Gamze N.",
+      "rating": 5,
+      "text": "Kombi arızasında diğer servisler erteliyordu, burası aynı gün geldi.",
+      "service": "Kombi Gaz Ayarı"
+    },
+    {
+      "id": 5,
+      "name": "Burak T.",
+      "rating": 5,
+      "text": "Kombi bakımından sonra doğalgaz faturam %20 düştü. Süper!",
+      "service": "Kombi Gaz Ayarı"
+    },
+    {
+      "id": 6,
+      "name": "Onur B.",
+      "rating": 5,
+      "text": "Klima temizliğini çok özenle yaptılar. Ev tertemiz kaldı.",
+      "service": "Klima Gaz Dolumu"
+    },
+    {
+      "id": 7,
+      "name": "Caner G.",
+      "rating": 5,
+      "text": "Ekip çok nazik ve saygılı. Evi tertemiz bıraktılar.",
+      "service": "Klima Arızası"
+    },
+    {
+      "id": 8,
+      "name": "Tuncay O.",
+      "rating": 5,
+      "text": "Profesyonel ekip, işini bilen ustalar. Bir daha sorunum olursa yine arayacağım.",
+      "service": "Klima Gaz Dolumu"
+    },
+    {
+      "id": 9,
+      "name": "Derya K.",
+      "rating": 5,
+      "text": "Klima arızasında iki farklı yerden teklif aldım, burası hem ucuz hem kaliteliydi.",
+      "service": "Klima Demontajı"
+    },
+    {
+      "id": 10,
+      "name": "Pınar E.",
+      "rating": 5,
+      "text": "Montaj çok hızlı bitti. İçeriye hiçbir iz bırakmadılar, helal olsun.",
+      "service": "Klima Bakımı"
+    },
+    {
+      "id": 11,
+      "name": "Reyhan A.",
+      "rating": 5,
+      "text": "Kombimizin ısı eşanjörü temizlendi, verim arttı gözle görülür şekilde.",
+      "service": "Kombi Montajı"
+    },
+    {
+      "id": 12,
+      "name": "İbrahim G.",
+      "rating": 5,
+      "text": "Klima arızasında hemen geldiler. Orijinal parça kullandılar, sorun kalmadı.",
+      "service": "Klima Montajı"
+    },
+    {
+      "id": 13,
+      "name": "Zeliha S.",
+      "rating": 5,
+      "text": "Kombim arızalandı, kış ortasında mahsur kaldık. Aynı gün geldiler, ısındık.",
+      "service": "Kombi Bakımı"
+    },
+    {
+      "id": 14,
+      "name": "Selim O.",
+      "rating": 5,
+      "text": "Klima gaz dolumunda çok dürüst davrandılar, ne kadar dolduklarını gösterdiler.",
+      "service": "Klima Arızası"
+    },
+    {
+      "id": 15,
+      "name": "Mehmet K.",
+      "rating": 5,
+      "text": "Orijinal parça kullanmaları çok güven verici. Teşekkürler.",
+      "service": "Kombi Gaz Ayarı"
+    },
+    {
+      "id": 16,
+      "name": "Zeynep K.",
+      "rating": 5,
+      "text": "Kombi montajını zamanında ve sorunsuz tamamladılar.",
+      "service": "Kombi Montajı"
+    },
+    {
+      "id": 17,
+      "name": "Caner T.",
+      "rating": 5,
+      "text": "Yıllık bakım anlaşması yaptık, çok memnunuz. Öneririm.",
+      "service": "Kombi Montajı"
+    },
+    {
+      "id": 18,
+      "name": "Orhan N.",
+      "rating": 5,
+      "text": "Servis çok hızlı geldi. Bekletmediler, sorunumu aynı gün çözdüler.",
+      "service": "Klima Bakımı"
+    },
+    {
+      "id": 19,
+      "name": "Mehmet I.",
+      "rating": 5,
+      "text": "Ekip çok temiz çalışıyor. Geldikleri gibi gidiyorlar, iz bırakmıyorlar.",
+      "service": "Kombi Arızası"
+    },
+    {
+      "id": 20,
+      "name": "Mehmet Ö.",
+      "rating": 5,
+      "text": "Klimam çalışmıyordu. Kart arızasıydı, orijinal parça taktılar, tamam oldu.",
+      "service": "Klima Gaz Dolumu"
+    },
+    {
+      "id": 21,
+      "name": "Hüseyin Y.",
+      "rating": 5,
+      "text": "Klima bakımını düzenli yaptırıyorum, hep aynı kalite hizmet alıyorum.",
+      "service": "Klima Arızası"
+    },
+    {
+      "id": 22,
+      "name": "Tuğba M.",
+      "rating": 5,
+      "text": "Klima gaz dolumunda çok dürüst davrandılar, ne kadar dolduklarını gösterdiler.",
+      "service": "Klima Montajı"
+    },
+    {
+      "id": 23,
+      "name": "Kemal G.",
+      "rating": 5,
+      "text": "Kombimden ses geliyordu, ustalar baktı, hava aldı. Temizledi, sorun bitti.",
+      "service": "Kombi Arızası"
+    },
+    {
+      "id": 24,
+      "name": "Furkan T.",
+      "rating": 5,
+      "text": "Gaz dolumu için aradım, aynı gün geldiler. Fiyat da gayet uygundu.",
+      "service": "Klima Montajı"
+    },
+    {
+      "id": 25,
+      "name": "Gökhan Ş.",
+      "rating": 5,
+      "text": "Ustalar çok bilgili, neyin neden bozulduğunu açıklayarak anlattılar.",
+      "service": "Kombi Montajı"
+    },
+    {
+      "id": 26,
+      "name": "Levent L.",
+      "rating": 5,
+      "text": "Klimam sesler çıkarıyordu, ustalar geldi sorunu buldu ve halletti. Teşekkürler.",
+      "service": "Klima Temizliği"
+    },
+    {
+      "id": 27,
+      "name": "Merve Ğ.",
+      "rating": 5,
+      "text": "Profesyonel ekip, işini bilen ustalar. Bir daha sorunum olursa yine arayacağım.",
+      "service": "Klima Montajı"
+    },
+    {
+      "id": 28,
+      "name": "Cenk V.",
+      "rating": 5,
+      "text": "Klima temizliğini çok özenle yaptılar. Ev tertemiz kaldı.",
+      "service": "Klima Demontajı"
+    },
+    {
+      "id": 29,
+      "name": "Yusuf F.",
+      "rating": 5,
+      "text": "Klimam soğutmuyordu, aynı gün geldiler ve sorunu hızlıca çözdüler. Çok memnun kaldım.",
+      "service": "Klima Gaz Dolumu"
+    },
+    {
+      "id": 30,
+      "name": "Ali I.",
+      "rating": 5,
+      "text": "Fiyatları çok uygun ve işleri kaliteli. Memnun kaldım.",
+      "service": "Klima Arızası"
+    },
+    {
+      "id": 31,
+      "name": "Ömer Ş.",
+      "rating": 5,
+      "text": "Profesyonel ekip, işini bilen ustalar. Bir daha sorunum olursa yine arayacağım.",
+      "service": "Klima Bakımı"
+    },
+    {
+      "id": 32,
+      "name": "Filiz Ş.",
+      "rating": 5,
+      "text": "Çok hızlı ve güler yüzlü hizmet. Kesinlikle tavsiye ederim.",
+      "service": "Klima Arızası"
+    },
+    {
+      "id": 33,
+      "name": "Fatih H.",
+      "rating": 5,
+      "text": "Kombimiz ateşleme yapmıyordu. Arızayı buldu, parça değişti, sorun bitti.",
+      "service": "Kombi Bakımı"
+    },
+    {
+      "id": 34,
+      "name": "Neslihan L.",
+      "rating": 5,
+      "text": "Kombimizin ısı eşanjörü temizlendi, verim arttı gözle görülür şekilde.",
+      "service": "Kombi Gaz Ayarı"
+    },
+    {
+      "id": 35,
+      "name": "Kemal N.",
+      "rating": 5,
+      "text": "Profesyonel ekip, işini bilen ustalar. Bir daha sorunum olursa yine arayacağım.",
+      "service": "Klima Bakımı"
+    },
+    {
+      "id": 36,
+      "name": "Fatma C.",
+      "rating": 5,
+      "text": "Montaj çok hızlı bitti. İçeriye hiçbir iz bırakmadılar, helal olsun.",
+      "service": "Klima Montajı"
+    },
+    {
+      "id": 37,
+      "name": "Doğan N.",
+      "rating": 5,
+      "text": "Klima montajını çok profesyonelce yaptılar. Temiz ve düzgün iş çıkardılar.",
+      "service": "Klima Bakımı"
+    },
+    {
+      "id": 38,
+      "name": "Arif E.",
+      "rating": 5,
+      "text": "Yıllık bakım anlaşması yaptık, çok memnunuz. Öneririm.",
+      "service": "Kombi Arızası"
+    },
+    {
+      "id": 39,
+      "name": "Kaan Ü.",
+      "rating": 5,
+      "text": "Annemin evindeki klimayı tamir ettirdim. Çok hızlı ve kaliteli iş.",
+      "service": "Klima Temizliği"
+    },
+    {
+      "id": 40,
+      "name": "Bahar V.",
+      "rating": 5,
+      "text": "Kombi revizyonu mükemmel oldu. Sanki yeni kombim var gibi.",
+      "service": "Kombi Bakımı"
+    },
+    {
+      "id": 41,
+      "name": "Sevgi C.",
+      "rating": 5,
+      "text": "Acil kombi arızasında bile gece gelmekten çekinmediler.",
+      "service": "Kombi Bakımı"
+    },
+    {
+      "id": 42,
+      "name": "Volkan Ç.",
+      "rating": 5,
+      "text": "Yeni aldığım klimanın montajını yaptırdım. Çok şık ve düzgün kurulum.",
+      "service": "Klima Demontajı"
+    },
+    {
+      "id": 43,
+      "name": "Sevgi A.",
+      "rating": 5,
+      "text": "Kombi bakımını her yıl yaptırıyorum, her seferinde aynı özen ve kalite.",
+      "service": "Kombi Arızası"
+    },
+    {
+      "id": 44,
+      "name": "Emine V.",
+      "rating": 5,
+      "text": "Fiyatları çok uygun ve işleri kaliteli. Memnun kaldım.",
+      "service": "Klima Gaz Dolumu"
+    },
+    {
+      "id": 45,
+      "name": "Selman Ş.",
+      "rating": 5,
+      "text": "Gaz dolumu için aradım, aynı gün geldiler. Fiyat da gayet uygundu.",
+      "service": "Klima Gaz Dolumu"
+    },
+    {
+      "id": 46,
+      "name": "Kadir U.",
+      "rating": 5,
+      "text": "Kombi revizyonu mükemmel oldu. Sanki yeni kombim var gibi.",
+      "service": "Kombi Bakımı"
+    },
+    {
+      "id": 47,
+      "name": "Kaan E.",
+      "rating": 5,
+      "text": "Ekip çok nazik ve saygılı. Evi tertemiz bıraktılar.",
+      "service": "Klima Temizliği"
+    },
+    {
+      "id": 48,
+      "name": "Enes F.",
+      "rating": 5,
+      "text": "Klimadan su damlıyordu, ustalar bakı, drain hattını temizledi, sorun bitti.",
+      "service": "Klima Montajı"
+    },
+    {
+      "id": 49,
+      "name": "Büşra S.",
+      "rating": 5,
+      "text": "Ekip çok temiz çalışıyor. Geldikleri gibi gidiyorlar, iz bırakmıyorlar.",
+      "service": "Kombi Arızası"
+    },
+    {
+      "id": 50,
+      "name": "Leyla H.",
+      "rating": 5,
+      "text": "Klima gaz dolumunda çok dürüst davrandılar, ne kadar dolduklarını gösterdiler.",
+      "service": "Klima Bakımı"
+    },
+    {
+      "id": 51,
+      "name": "Hüseyin M.",
+      "rating": 5,
+      "text": "Ustalar çok bilgili, neyin neden bozulduğunu açıklayarak anlattılar.",
+      "service": "Kombi Bakımı"
+    },
+    {
+      "id": 52,
+      "name": "Barış K.",
+      "rating": 5,
+      "text": "Klimam sesler çıkarıyordu, ustalar geldi sorunu buldu ve halletti. Teşekkürler.",
+      "service": "Klima Arızası"
+    },
+    {
+      "id": 53,
+      "name": "Leyla F.",
+      "rating": 5,
+      "text": "Klima montajını çok profesyonelce yaptılar. Temiz ve düzgün iş çıkardılar.",
+      "service": "Klima Demontajı"
+    },
+    {
+      "id": 54,
+      "name": "Taner N.",
+      "rating": 5,
+      "text": "Klimam soğutmuyordu, aynı gün geldiler ve sorunu hızlıca çözdüler. Çok memnun kaldım.",
+      "service": "Klima Montajı"
+    },
+    {
+      "id": 55,
+      "name": "Orhan Ü.",
+      "rating": 5,
+      "text": "Sesli çalışıyordu klimam, bakımda fan motoru değişti, şimdi sessiz.",
+      "service": "Klima Arızası"
+    },
+    {
+      "id": 56,
+      "name": "Ferhat Ş.",
+      "rating": 5,
+      "text": "Klima arızasında iki farklı yerden teklif aldım, burası hem ucuz hem kaliteliydi.",
+      "service": "Klima Arızası"
+    },
+    {
+      "id": 57,
+      "name": "Hatice Y.",
+      "rating": 5,
+      "text": "Çok hızlı ve güler yüzlü hizmet. Kesinlikle tavsiye ederim.",
+      "service": "Klima Demontajı"
+    },
+    {
+      "id": 58,
+      "name": "Leyla G.",
+      "rating": 5,
+      "text": "Servis çok hızlı geldi. Bekletmediler, sorunumu aynı gün çözdüler.",
+      "service": "Klima Montajı"
+    },
+    {
+      "id": 59,
+      "name": "Mehmet R.",
+      "rating": 5,
+      "text": "Klima arızasında iki farklı yerden teklif aldım, burası hem ucuz hem kaliteliydi.",
+      "service": "Klima Gaz Dolumu"
+    },
+    {
+      "id": 60,
+      "name": "Ferhat C.",
+      "rating": 5,
+      "text": "Klima gaz dolumunda çok dürüst davrandılar, ne kadar dolduklarını gösterdiler.",
+      "service": "Klima Bakımı"
+    },
+    {
+      "id": 61,
+      "name": "İbrahim Y.",
+      "rating": 5,
+      "text": "Kombi bakım fiyatı çok uygun. Hizmet kalitesi de mükemmel.",
+      "service": "Kombi Gaz Ayarı"
+    },
+    {
+      "id": 62,
+      "name": "Serkan A.",
+      "rating": 5,
+      "text": "Kombimiz ateşleme yapmıyordu. Arızayı buldu, parça değişti, sorun bitti.",
+      "service": "Kombi Gaz Ayarı"
+    },
+    {
+      "id": 63,
+      "name": "Ercan B.",
+      "rating": 5,
+      "text": "Kombimden ses geliyordu, ustalar baktı, hava aldı. Temizledi, sorun bitti.",
+      "service": "Kombi Montajı"
+    },
+    {
+      "id": 64,
+      "name": "Yusuf C.",
+      "rating": 5,
+      "text": "Klimam kaçırıyordu, kompresör değişti, şimdi sorunsuz çalışıyor.",
+      "service": "Klima Gaz Dolumu"
+    },
+    {
+      "id": 65,
+      "name": "Mehmet O.",
+      "rating": 5,
+      "text": "Kombim arızalandı, kış ortasında mahsur kaldık. Aynı gün geldiler, ısındık.",
+      "service": "Kombi Arızası"
+    },
+    {
+      "id": 66,
+      "name": "Mustafa J.",
+      "rating": 5,
+      "text": "Servis çok hızlı geldi. Bekletmediler, sorunumu aynı gün çözdüler.",
+      "service": "Klima Temizliği"
+    },
+    {
+      "id": 67,
+      "name": "Yusuf A.",
+      "rating": 5,
+      "text": "Kombimden ses geliyordu, ustalar baktı, hava aldı. Temizledi, sorun bitti.",
+      "service": "Kombi Montajı"
+    },
+    {
+      "id": 68,
+      "name": "Dilek Ü.",
+      "rating": 5,
+      "text": "Ekip çok temiz çalışıyor. Geldikleri gibi gidiyorlar, iz bırakmıyorlar.",
+      "service": "Kombi Montajı"
+    },
+    {
+      "id": 69,
+      "name": "Fatma Z.",
+      "rating": 5,
+      "text": "Orijinal parça kullanmaları çok güven verici. Teşekkürler.",
+      "service": "Kombi Arızası"
+    },
+    {
+      "id": 70,
+      "name": "Tuncay V.",
+      "rating": 5,
+      "text": "Acil kombi arızasında bile gece gelmekten çekinmediler.",
+      "service": "Kombi Gaz Ayarı"
+    },
+    {
+      "id": 71,
+      "name": "Suat H.",
+      "rating": 5,
+      "text": "Fiyatları çok uygun ve işleri kaliteli. Memnun kaldım.",
+      "service": "Klima Gaz Dolumu"
+    },
+    {
+      "id": 72,
+      "name": "Yusuf T.",
+      "rating": 5,
+      "text": "Yıllık bakım anlaşması yaptık, çok memnunuz. Öneririm.",
+      "service": "Kombi Bakımı"
+    },
+    {
+      "id": 73,
+      "name": "Selman B.",
+      "rating": 5,
+      "text": "Servis çok hızlı geldi. Bekletmediler, sorunumu aynı gün çözdüler.",
+      "service": "Klima Demontajı"
+    },
+    {
+      "id": 74,
+      "name": "Okan I.",
+      "rating": 5,
+      "text": "Klimadan su damlıyordu, ustalar bakı, drain hattını temizledi, sorun bitti.",
+      "service": "Klima Montajı"
+    },
+    {
+      "id": 75,
+      "name": "Reyhan A.",
+      "rating": 5,
+      "text": "Fiyatları çok uygun ve işleri kaliteli. Memnun kaldım.",
+      "service": "Klima Demontajı"
+    },
+    {
+      "id": 76,
+      "name": "Selman N.",
+      "rating": 5,
+      "text": "Ekip çok temiz çalışıyor. Geldikleri gibi gidiyorlar, iz bırakmıyorlar.",
+      "service": "Kombi Bakımı"
+    },
+    {
+      "id": 77,
+      "name": "Şule Ş.",
+      "rating": 5,
+      "text": "Montaj çok hızlı bitti. İçeriye hiçbir iz bırakmadılar, helal olsun.",
+      "service": "Klima Temizliği"
+    },
+    {
+      "id": 78,
+      "name": "Kemal U.",
+      "rating": 5,
+      "text": "Fiyatları çok uygun ve işleri kaliteli. Memnun kaldım.",
+      "service": "Klima Gaz Dolumu"
+    },
+    {
+      "id": 79,
+      "name": "Gül C.",
+      "rating": 5,
+      "text": "Ekip çok temiz çalışıyor. Geldikleri gibi gidiyorlar, iz bırakmıyorlar.",
+      "service": "Kombi Montajı"
+    },
+    {
+      "id": 80,
+      "name": "Büşra M.",
+      "rating": 5,
+      "text": "Çok hızlı ve güler yüzlü hizmet. Kesinlikle tavsiye ederim.",
+      "service": "Klima Arızası"
+    },
+    {
+      "id": 81,
+      "name": "Reyhan Ş.",
+      "rating": 5,
+      "text": "Klima hiç soğutmuyordu, gaz dolumu yapıldı, şimdi buz gibi soğutuyor.",
+      "service": "Klima Gaz Dolumu"
+    },
+    {
+      "id": 82,
+      "name": "Hülya D.",
+      "rating": 5,
+      "text": "Klimam sesler çıkarıyordu, ustalar geldi sorunu buldu ve halletti. Teşekkürler.",
+      "service": "Klima Demontajı"
+    },
+    {
+      "id": 83,
+      "name": "Miray Ç.",
+      "rating": 5,
+      "text": "Kombi bakımını her yıl yaptırıyorum, her seferinde aynı özen ve kalite.",
+      "service": "Kombi Montajı"
+    },
+    {
+      "id": 84,
+      "name": "Seda Y.",
+      "rating": 5,
+      "text": "Annemin evindeki klimayı tamir ettirdim. Çok hızlı ve kaliteli iş.",
+      "service": "Klima Temizliği"
+    },
+    {
+      "id": 85,
+      "name": "Taner Ü.",
+      "rating": 5,
+      "text": "Klimadan su damlıyordu, ustalar bakı, drain hattını temizledi, sorun bitti.",
+      "service": "Klima Gaz Dolumu"
+    },
+    {
+      "id": 86,
+      "name": "Cenk Ü.",
+      "rating": 5,
+      "text": "Klima hiç soğutmuyordu, gaz dolumu yapıldı, şimdi buz gibi soğutuyor.",
+      "service": "Klima Temizliği"
+    },
+    {
+      "id": 87,
+      "name": "Selim U.",
+      "rating": 5,
+      "text": "Klimam sesler çıkarıyordu, ustalar geldi sorunu buldu ve halletti. Teşekkürler.",
+      "service": "Klima Arızası"
+    },
+    {
+      "id": 88,
+      "name": "Emine Ğ.",
+      "rating": 5,
+      "text": "Kombimden ses geliyordu, ustalar baktı, hava aldı. Temizledi, sorun bitti.",
+      "service": "Kombi Gaz Ayarı"
+    },
+    {
+      "id": 89,
+      "name": "Cem F.",
+      "rating": 5,
+      "text": "Klima filtrelerini temizlediler, elektrik faturam düştü. Harika!",
+      "service": "Klima Temizliği"
+    },
+    {
+      "id": 90,
+      "name": "Bahar R.",
+      "rating": 5,
+      "text": "Klimadan su damlıyordu, ustalar bakı, drain hattını temizledi, sorun bitti.",
+      "service": "Klima Arızası"
+    },
+    {
+      "id": 91,
+      "name": "Bora C.",
+      "rating": 5,
+      "text": "Kombi bakımından sonra doğalgaz faturam %20 düştü. Süper!",
+      "service": "Kombi Gaz Ayarı"
+    },
+    {
+      "id": 92,
+      "name": "Kadir H.",
+      "rating": 5,
+      "text": "Ekip çok temiz çalışıyor. Geldikleri gibi gidiyorlar, iz bırakmıyorlar.",
+      "service": "Kombi Gaz Ayarı"
+    },
+    {
+      "id": 93,
+      "name": "Halil I.",
+      "rating": 5,
+      "text": "Kombi montajını zamanında ve sorunsuz tamamladılar.",
+      "service": "Kombi Arızası"
+    },
+    {
+      "id": 94,
+      "name": "Suat Y.",
+      "rating": 5,
+      "text": "Servis çok hızlı geldi. Bekletmediler, sorunumu aynı gün çözdüler.",
+      "service": "Klima Gaz Dolumu"
+    },
+    {
+      "id": 95,
+      "name": "Mehmet G.",
+      "rating": 5,
+      "text": "Kombi montajını çok hızlı ve temiz yaptılar. Takdir ettim doğrusu.",
+      "service": "Kombi Montajı"
+    },
+    {
+      "id": 96,
+      "name": "Emine I.",
+      "rating": 5,
+      "text": "Kombimiz su kaybediyordu. Usta geldi sızdıran yeri buldu ve kapattı.",
+      "service": "Kombi Bakımı"
+    },
+    {
+      "id": 97,
+      "name": "İlknur Y.",
+      "rating": 5,
+      "text": "Kombi bakımını her yıl yaptırıyorum, her seferinde aynı özen ve kalite.",
+      "service": "Kombi Bakımı"
+    },
+    {
+      "id": 98,
+      "name": "Furkan Z.",
+      "rating": 5,
+      "text": "Yaz ortasında klimam bozuldu, acil geldiler. Çok şükür o gün çözdüler.",
+      "service": "Klima Demontajı"
+    },
+    {
+      "id": 99,
+      "name": "Alper S.",
+      "rating": 5,
+      "text": "Yıllık bakım anlaşması yaptık, çok memnunuz. Öneririm.",
+      "service": "Kombi Montajı"
+    },
+    {
+      "id": 100,
+      "name": "Hüseyin S.",
+      "rating": 5,
+      "text": "Gaz dolumu için aradım, aynı gün geldiler. Fiyat da gayet uygundu.",
+      "service": "Klima Montajı"
+    },
+    {
+      "id": 101,
+      "name": "Emre B.",
+      "rating": 5,
+      "text": "Ustalar çok bilgili, neyin neden bozulduğunu açıklayarak anlattılar.",
+      "service": "Kombi Montajı"
+    },
+    {
+      "id": 102,
+      "name": "Kaan A.",
+      "rating": 5,
+      "text": "Klimam sesler çıkarıyordu, ustalar geldi sorunu buldu ve halletti. Teşekkürler.",
+      "service": "Klima Gaz Dolumu"
+    },
+    {
+      "id": 103,
+      "name": "Seda F.",
+      "rating": 5,
+      "text": "Klima hiç soğutmuyordu, gaz dolumu yapıldı, şimdi buz gibi soğutuyor.",
+      "service": "Klima Montajı"
+    },
+    {
+      "id": 104,
+      "name": "Cem Ö.",
+      "rating": 5,
+      "text": "Klima temizliğini çok özenle yaptılar. Ev tertemiz kaldı.",
+      "service": "Klima Temizliği"
+    },
+    {
+      "id": 105,
+      "name": "Uğur T.",
+      "rating": 5,
+      "text": "Kombi gaz ayarı çok önemliymış, farkı hemen anladım. Teşekkürler.",
+      "service": "Kombi Montajı"
+    },
+    {
+      "id": 106,
+      "name": "Selman Y.",
+      "rating": 5,
+      "text": "Kombimizin ısı eşanjörü temizlendi, verim arttı gözle görülür şekilde.",
+      "service": "Kombi Arızası"
+    },
+    {
+      "id": 107,
+      "name": "Uğur D.",
+      "rating": 5,
+      "text": "Kombim arızalandı, kış ortasında mahsur kaldık. Aynı gün geldiler, ısındık.",
+      "service": "Kombi Bakımı"
+    },
+    {
+      "id": 108,
+      "name": "Orhan R.",
+      "rating": 5,
+      "text": "Sesli çalışıyordu klimam, bakımda fan motoru değişti, şimdi sessiz.",
+      "service": "Klima Demontajı"
+    },
+    {
+      "id": 109,
+      "name": "Şule N.",
+      "rating": 5,
+      "text": "Kombim arızalandı, kış ortasında mahsur kaldık. Aynı gün geldiler, ısındık.",
+      "service": "Kombi Arızası"
+    },
+    {
+      "id": 110,
+      "name": "Gamze P.",
+      "rating": 5,
+      "text": "Klimam sesler çıkarıyordu, ustalar geldi sorunu buldu ve halletti. Teşekkürler.",
+      "service": "Klima Temizliği"
+    },
+    {
+      "id": 111,
+      "name": "Emine K.",
+      "rating": 5,
+      "text": "Kombi bakım fiyatı çok uygun. Hizmet kalitesi de mükemmel.",
+      "service": "Kombi Arızası"
+    },
+    {
+      "id": 112,
+      "name": "Seda L.",
+      "rating": 5,
+      "text": "Klima hiç soğutmuyordu, gaz dolumu yapıldı, şimdi buz gibi soğutuyor.",
+      "service": "Klima Montajı"
+    },
+    {
+      "id": 113,
+      "name": "Nihal U.",
+      "rating": 5,
+      "text": "Ekip çok temiz çalışıyor. Geldikleri gibi gidiyorlar, iz bırakmıyorlar.",
+      "service": "Kombi Bakımı"
+    },
+    {
+      "id": 114,
+      "name": "Canan B.",
+      "rating": 5,
+      "text": "Klimam soğutmuyordu, aynı gün geldiler ve sorunu hızlıca çözdüler. Çok memnun kaldım.",
+      "service": "Klima Demontajı"
+    },
+    {
+      "id": 115,
+      "name": "Hüseyin M.",
+      "rating": 5,
+      "text": "Yaz ortasında klimam bozuldu, acil geldiler. Çok şükür o gün çözdüler.",
+      "service": "Klima Arızası"
+    },
+    {
+      "id": 116,
+      "name": "Sevgi Ş.",
+      "rating": 5,
+      "text": "Klima temizliğini çok özenle yaptılar. Ev tertemiz kaldı.",
+      "service": "Klima Demontajı"
+    },
+    {
+      "id": 117,
+      "name": "Enes J.",
+      "rating": 5,
+      "text": "Kombi bakımını her yıl yaptırıyorum, her seferinde aynı özen ve kalite.",
+      "service": "Kombi Bakımı"
+    },
+    {
+      "id": 118,
+      "name": "Selim O.",
+      "rating": 5,
+      "text": "Kombi montajını zamanında ve sorunsuz tamamladılar.",
+      "service": "Kombi Gaz Ayarı"
+    },
+    {
+      "id": 119,
+      "name": "Kadir E.",
+      "rating": 5,
+      "text": "Montaj çok hızlı bitti. İçeriye hiçbir iz bırakmadılar, helal olsun.",
+      "service": "Klima Temizliği"
+    },
+    {
+      "id": 120,
+      "name": "Yasemin Y.",
+      "rating": 5,
+      "text": "Klima hiç soğutmuyordu, gaz dolumu yapıldı, şimdi buz gibi soğutuyor.",
+      "service": "Klima Gaz Dolumu"
+    },
+    {
+      "id": 121,
+      "name": "Yasemin J.",
+      "rating": 5,
+      "text": "Kombi gaz ayarı çok önemliymış, farkı hemen anladım. Teşekkürler.",
+      "service": "Kombi Gaz Ayarı"
+    },
+    {
+      "id": 122,
+      "name": "Zeynep K.",
+      "rating": 5,
+      "text": "Montaj çok hızlı bitti. İçeriye hiçbir iz bırakmadılar, helal olsun.",
+      "service": "Klima Demontajı"
+    },
+    {
+      "id": 123,
+      "name": "Filiz D.",
+      "rating": 5,
+      "text": "Kombi arızasında diğer servisler erteliyordu, burası aynı gün geldi.",
+      "service": "Kombi Bakımı"
+    },
+    {
+      "id": 124,
+      "name": "Filiz Ö.",
+      "rating": 5,
+      "text": "Klima hiç soğutmuyordu, gaz dolumu yapıldı, şimdi buz gibi soğutuyor.",
+      "service": "Klima Arızası"
+    },
+    {
+      "id": 125,
+      "name": "Erdal M.",
+      "rating": 5,
+      "text": "Kombimizin ısı eşanjörü temizlendi, verim arttı gözle görülür şekilde.",
+      "service": "Kombi Gaz Ayarı"
+    },
+    {
+      "id": 126,
+      "name": "Hülya S.",
+      "rating": 5,
+      "text": "Ekip çok nazik ve saygılı. Evi tertemiz bıraktılar.",
+      "service": "Klima Temizliği"
+    },
+    {
+      "id": 127,
+      "name": "Burak Z.",
+      "rating": 5,
+      "text": "Gaz dolumu için aradım, aynı gün geldiler. Fiyat da gayet uygundu.",
+      "service": "Klima Bakımı"
+    },
+    {
+      "id": 128,
+      "name": "Kemal P.",
+      "rating": 5,
+      "text": "Klima gaz dolumunda çok dürüst davrandılar, ne kadar dolduklarını gösterdiler.",
+      "service": "Klima Bakımı"
+    },
+    {
+      "id": 129,
+      "name": "Ercan T.",
+      "rating": 5,
+      "text": "Kombi revizyonu mükemmel oldu. Sanki yeni kombim var gibi.",
+      "service": "Kombi Arızası"
+    },
+    {
+      "id": 130,
+      "name": "Sedat N.",
+      "rating": 5,
+      "text": "Klimadan su damlıyordu, ustalar bakı, drain hattını temizledi, sorun bitti.",
+      "service": "Klima Temizliği"
+    },
+    {
+      "id": 131,
+      "name": "Barış I.",
+      "rating": 5,
+      "text": "Klima temizliğini çok özenle yaptılar. Ev tertemiz kaldı.",
+      "service": "Klima Demontajı"
+    },
+    {
+      "id": 132,
+      "name": "Gül R.",
+      "rating": 5,
+      "text": "Klima gaz dolumunda çok dürüst davrandılar, ne kadar dolduklarını gösterdiler.",
+      "service": "Klima Bakımı"
+    },
+    {
+      "id": 133,
+      "name": "Ercan Ö.",
+      "rating": 5,
+      "text": "Ekip çok temiz çalışıyor. Geldikleri gibi gidiyorlar, iz bırakmıyorlar.",
+      "service": "Kombi Montajı"
+    },
+    {
+      "id": 134,
+      "name": "Büşra J.",
+      "rating": 5,
+      "text": "Klima arızasında iki farklı yerden teklif aldım, burası hem ucuz hem kaliteliydi.",
+      "service": "Klima Temizliği"
+    },
+    {
+      "id": 135,
+      "name": "Ramazan T.",
+      "rating": 5,
+      "text": "Klima montajını çok profesyonelce yaptılar. Temiz ve düzgün iş çıkardılar.",
+      "service": "Klima Gaz Dolumu"
+    },
+    {
+      "id": 136,
+      "name": "Neslihan J.",
+      "rating": 5,
+      "text": "Kombi gaz ayarı çok önemliymış, farkı hemen anladım. Teşekkürler.",
+      "service": "Kombi Arızası"
+    },
+    {
+      "id": 137,
+      "name": "Ramazan P.",
+      "rating": 5,
+      "text": "Montaj çok hızlı bitti. İçeriye hiçbir iz bırakmadılar, helal olsun.",
+      "service": "Klima Demontajı"
+    },
+    {
+      "id": 138,
+      "name": "Selim J.",
+      "rating": 5,
+      "text": "Çok hızlı ve güler yüzlü hizmet. Kesinlikle tavsiye ederim.",
+      "service": "Klima Arızası"
+    },
+    {
+      "id": 139,
+      "name": "Kemal A.",
+      "rating": 5,
+      "text": "Çok hızlı ve güler yüzlü hizmet. Kesinlikle tavsiye ederim.",
+      "service": "Klima Gaz Dolumu"
+    },
+    {
+      "id": 140,
+      "name": "Seda B.",
+      "rating": 5,
+      "text": "Kombim çok iyi çalışıyor artık. Bir dahaki bakımda da buraya başvuracağım.",
+      "service": "Kombi Arızası"
+    },
+    {
+      "id": 141,
+      "name": "Cem J.",
+      "rating": 5,
+      "text": "Klimam kaçırıyordu, kompresör değişti, şimdi sorunsuz çalışıyor.",
+      "service": "Klima Bakımı"
+    },
+    {
+      "id": 142,
+      "name": "Canan Ç.",
+      "rating": 5,
+      "text": "Orijinal parça kullanmaları çok güven verici. Teşekkürler.",
+      "service": "Kombi Gaz Ayarı"
+    },
+    {
+      "id": 143,
+      "name": "Merve Z.",
+      "rating": 5,
+      "text": "Kombimizin ısı eşanjörü temizlendi, verim arttı gözle görülür şekilde.",
+      "service": "Kombi Montajı"
+    },
+    {
+      "id": 144,
+      "name": "Şule I.",
+      "rating": 5,
+      "text": "Ekip çok nazik ve saygılı. Evi tertemiz bıraktılar.",
+      "service": "Klima Arızası"
+    },
+    {
+      "id": 145,
+      "name": "Emre U.",
+      "rating": 5,
+      "text": "Klima filtrelerini temizlediler, elektrik faturam düştü. Harika!",
+      "service": "Klima Temizliği"
+    },
+    {
+      "id": 146,
+      "name": "İsmail L.",
+      "rating": 5,
+      "text": "Kombi montajını zamanında ve sorunsuz tamamladılar.",
+      "service": "Kombi Montajı"
+    },
+    {
+      "id": 147,
+      "name": "Barış Ç.",
+      "rating": 5,
+      "text": "Klima temizliğini çok özenle yaptılar. Ev tertemiz kaldı.",
+      "service": "Klima Gaz Dolumu"
+    },
+    {
+      "id": 148,
+      "name": "Kadir U.",
+      "rating": 5,
+      "text": "Kombi arızasında diğer servisler erteliyordu, burası aynı gün geldi.",
+      "service": "Kombi Montajı"
+    },
+    {
+      "id": 149,
+      "name": "İlknur J.",
+      "rating": 5,
+      "text": "Klima hiç soğutmuyordu, gaz dolumu yapıldı, şimdi buz gibi soğutuyor.",
+      "service": "Klima Montajı"
+    },
+    {
+      "id": 150,
+      "name": "Ömer J.",
+      "rating": 5,
+      "text": "Kombi bakımını her yıl yaptırıyorum, her seferinde aynı özen ve kalite.",
+      "service": "Kombi Gaz Ayarı"
+    },
+    {
+      "id": 151,
+      "name": "Melek R.",
+      "rating": 5,
+      "text": "Kombi bakım fiyatı çok uygun. Hizmet kalitesi de mükemmel.",
+      "service": "Kombi Bakımı"
+    },
+    {
+      "id": 152,
+      "name": "Kadir O.",
+      "rating": 5,
+      "text": "Klima temizliğini çok özenle yaptılar. Ev tertemiz kaldı.",
+      "service": "Klima Temizliği"
+    },
+    {
+      "id": 153,
+      "name": "Kemal A.",
+      "rating": 5,
+      "text": "Profesyonel ekip, işini bilen ustalar. Bir daha sorunum olursa yine arayacağım.",
+      "service": "Klima Temizliği"
+    },
+    {
+      "id": 154,
+      "name": "Kadir Ç.",
+      "rating": 5,
+      "text": "Klima montajını çok profesyonelce yaptılar. Temiz ve düzgün iş çıkardılar.",
+      "service": "Klima Gaz Dolumu"
+    },
+    {
+      "id": 155,
+      "name": "Gülay Ö.",
+      "rating": 5,
+      "text": "Kombi bakım fiyatı çok uygun. Hizmet kalitesi de mükemmel.",
+      "service": "Kombi Gaz Ayarı"
+    },
+    {
+      "id": 156,
+      "name": "Suat B.",
+      "rating": 5,
+      "text": "Kombi revizyonu mükemmel oldu. Sanki yeni kombim var gibi.",
+      "service": "Kombi Arızası"
+    },
+    {
+      "id": 157,
+      "name": "Hande Ü.",
+      "rating": 5,
+      "text": "Sesli çalışıyordu klimam, bakımda fan motoru değişti, şimdi sessiz.",
+      "service": "Klima Demontajı"
+    },
+    {
+      "id": 158,
+      "name": "Mustafa J.",
+      "rating": 5,
+      "text": "Klima arızasında iki farklı yerden teklif aldım, burası hem ucuz hem kaliteliydi.",
+      "service": "Klima Demontajı"
+    },
+    {
+      "id": 159,
+      "name": "Ali L.",
+      "rating": 5,
+      "text": "Gaz dolumu için aradım, aynı gün geldiler. Fiyat da gayet uygundu.",
+      "service": "Klima Montajı"
+    },
+    {
+      "id": 160,
+      "name": "Reyhan C.",
+      "rating": 5,
+      "text": "Klima arızasında iki farklı yerden teklif aldım, burası hem ucuz hem kaliteliydi.",
+      "service": "Klima Gaz Dolumu"
+    },
+    {
+      "id": 161,
+      "name": "Gökhan C.",
+      "rating": 5,
+      "text": "Annemin evindeki klimayı tamir ettirdim. Çok hızlı ve kaliteli iş.",
+      "service": "Klima Arızası"
+    },
+    {
+      "id": 162,
+      "name": "İbrahim Ü.",
+      "rating": 5,
+      "text": "Annemin evindeki klimayı tamir ettirdim. Çok hızlı ve kaliteli iş.",
+      "service": "Klima Arızası"
+    },
+    {
+      "id": 163,
+      "name": "Taner V.",
+      "rating": 5,
+      "text": "Klima filtrelerini temizlediler, elektrik faturam düştü. Harika!",
+      "service": "Klima Arızası"
+    },
+    {
+      "id": 164,
+      "name": "Leyla I.",
+      "rating": 5,
+      "text": "Profesyonel ekip, işini bilen ustalar. Bir daha sorunum olursa yine arayacağım.",
+      "service": "Klima Gaz Dolumu"
+    },
+    {
+      "id": 165,
+      "name": "Burak V.",
+      "rating": 5,
+      "text": "Ekip çok temiz çalışıyor. Geldikleri gibi gidiyorlar, iz bırakmıyorlar.",
+      "service": "Kombi Arızası"
+    },
+    {
+      "id": 166,
+      "name": "İsmail Ö.",
+      "rating": 5,
+      "text": "Kombi gaz ayarı çok önemliymış, farkı hemen anladım. Teşekkürler.",
+      "service": "Kombi Gaz Ayarı"
+    },
+    {
+      "id": 167,
+      "name": "Dilek R.",
+      "rating": 5,
+      "text": "Klima montajını çok profesyonelce yaptılar. Temiz ve düzgün iş çıkardılar.",
+      "service": "Klima Gaz Dolumu"
+    },
+    {
+      "id": 168,
+      "name": "Pınar S.",
+      "rating": 5,
+      "text": "Yeni aldığım klimanın montajını yaptırdım. Çok şık ve düzgün kurulum.",
+      "service": "Klima Gaz Dolumu"
+    },
+    {
+      "id": 169,
+      "name": "Bora N.",
+      "rating": 5,
+      "text": "Kombi arızasında diğer servisler erteliyordu, burası aynı gün geldi.",
+      "service": "Kombi Bakımı"
+    },
+    {
+      "id": 170,
+      "name": "İlknur C.",
+      "rating": 5,
+      "text": "Klima kurulumu için aradım. Zamanında geldiler, işi sağlam yaptılar.",
+      "service": "Klima Montajı"
+    },
+    {
+      "id": 171,
+      "name": "Ahmet G.",
+      "rating": 5,
+      "text": "Kombi gaz ayarı çok önemliymış, farkı hemen anladım. Teşekkürler.",
+      "service": "Kombi Arızası"
+    },
+    {
+      "id": 172,
+      "name": "Sedat L.",
+      "rating": 5,
+      "text": "Profesyonel ekip, işini bilen ustalar. Bir daha sorunum olursa yine arayacağım.",
+      "service": "Klima Bakımı"
+    },
+    {
+      "id": 173,
+      "name": "Tarık K.",
+      "rating": 5,
+      "text": "Acil kombi arızasında bile gece gelmekten çekinmediler.",
+      "service": "Kombi Bakımı"
+    },
+    {
+      "id": 174,
+      "name": "Zeynep Ü.",
+      "rating": 5,
+      "text": "Yıllık bakım anlaşması yaptık, çok memnunuz. Öneririm.",
+      "service": "Kombi Gaz Ayarı"
+    },
+    {
+      "id": 175,
+      "name": "Onur E.",
+      "rating": 5,
+      "text": "Yıllık bakım anlaşması yaptık, çok memnunuz. Öneririm.",
+      "service": "Kombi Arızası"
+    },
+    {
+      "id": 176,
+      "name": "Burak R.",
+      "rating": 5,
+      "text": "Klima arızasında iki farklı yerden teklif aldım, burası hem ucuz hem kaliteliydi.",
+      "service": "Klima Bakımı"
+    },
+    {
+      "id": 177,
+      "name": "Yusuf Ç.",
+      "rating": 5,
+      "text": "Ekip çok temiz çalışıyor. Geldikleri gibi gidiyorlar, iz bırakmıyorlar.",
+      "service": "Kombi Gaz Ayarı"
+    },
+    {
+      "id": 178,
+      "name": "Fatih Ğ.",
+      "rating": 5,
+      "text": "Kombimizin ısı eşanjörü temizlendi, verim arttı gözle görülür şekilde.",
+      "service": "Kombi Gaz Ayarı"
+    },
+    {
+      "id": 179,
+      "name": "Kadir P.",
+      "rating": 5,
+      "text": "Gaz dolumu için aradım, aynı gün geldiler. Fiyat da gayet uygundu.",
+      "service": "Klima Gaz Dolumu"
+    },
+    {
+      "id": 180,
+      "name": "Gülay A.",
+      "rating": 5,
+      "text": "Klimam kaçırıyordu, kompresör değişti, şimdi sorunsuz çalışıyor.",
+      "service": "Klima Bakımı"
+    },
+    {
+      "id": 181,
+      "name": "Ayşe S.",
+      "rating": 5,
+      "text": "Kombi montajını zamanında ve sorunsuz tamamladılar.",
+      "service": "Kombi Arızası"
+    },
+    {
+      "id": 182,
+      "name": "Selim Ş.",
+      "rating": 5,
+      "text": "Klimam çalışmıyordu. Kart arızasıydı, orijinal parça taktılar, tamam oldu.",
+      "service": "Klima Arızası"
+    },
+    {
+      "id": 183,
+      "name": "Ferhat Ö.",
+      "rating": 5,
+      "text": "Profesyonel ekip, işini bilen ustalar. Bir daha sorunum olursa yine arayacağım.",
+      "service": "Klima Arızası"
+    },
+    {
+      "id": 184,
+      "name": "Gamze P.",
+      "rating": 5,
+      "text": "Kombi revizyonu mükemmel oldu. Sanki yeni kombim var gibi.",
+      "service": "Kombi Gaz Ayarı"
+    },
+    {
+      "id": 185,
+      "name": "Aslı Ç.",
+      "rating": 5,
+      "text": "Yeni aldığım klimanın montajını yaptırdım. Çok şık ve düzgün kurulum.",
+      "service": "Klima Bakımı"
+    },
+    {
+      "id": 186,
+      "name": "Caner N.",
+      "rating": 5,
+      "text": "Yıllık bakım anlaşması yaptık, çok memnunuz. Öneririm.",
+      "service": "Kombi Bakımı"
+    },
+    {
+      "id": 187,
+      "name": "Fatma D.",
+      "rating": 5,
+      "text": "Ekip çok temiz çalışıyor. Geldikleri gibi gidiyorlar, iz bırakmıyorlar.",
+      "service": "Kombi Bakımı"
+    },
+    {
+      "id": 188,
+      "name": "Zeliha O.",
+      "rating": 5,
+      "text": "Klima kurulumu için aradım. Zamanında geldiler, işi sağlam yaptılar.",
+      "service": "Klima Bakımı"
+    },
+    {
+      "id": 189,
+      "name": "Zeynep D.",
+      "rating": 5,
+      "text": "Annemin evindeki klimayı tamir ettirdim. Çok hızlı ve kaliteli iş.",
+      "service": "Klima Arızası"
+    },
+    {
+      "id": 190,
+      "name": "Nurcan Ç.",
+      "rating": 5,
+      "text": "Klima filtrelerini temizlediler, elektrik faturam düştü. Harika!",
+      "service": "Klima Arızası"
+    },
+    {
+      "id": 191,
+      "name": "Şule H.",
+      "rating": 5,
+      "text": "Kombimiz ateşleme yapmıyordu. Arızayı buldu, parça değişti, sorun bitti.",
+      "service": "Kombi Arızası"
+    },
+    {
+      "id": 192,
+      "name": "Sevinç L.",
+      "rating": 5,
+      "text": "Yaz ortasında klimam bozuldu, acil geldiler. Çok şükür o gün çözdüler.",
+      "service": "Klima Montajı"
+    },
+    {
+      "id": 193,
+      "name": "Ayşe Ö.",
+      "rating": 5,
+      "text": "Kombi montajını zamanında ve sorunsuz tamamladılar.",
+      "service": "Kombi Bakımı"
+    },
+    {
+      "id": 194,
+      "name": "Cenk T.",
+      "rating": 5,
+      "text": "Yeni aldığım klimanın montajını yaptırdım. Çok şık ve düzgün kurulum.",
+      "service": "Klima Temizliği"
+    },
+    {
+      "id": 195,
+      "name": "Burak N.",
+      "rating": 5,
+      "text": "Kombi montajını çok hızlı ve temiz yaptılar. Takdir ettim doğrusu.",
+      "service": "Kombi Arızası"
+    },
+    {
+      "id": 196,
+      "name": "Zeynep Z.",
+      "rating": 5,
+      "text": "Klima filtrelerini temizlediler, elektrik faturam düştü. Harika!",
+      "service": "Klima Demontajı"
+    },
+    {
+      "id": 197,
+      "name": "Gökhan D.",
+      "rating": 5,
+      "text": "Klimam çalışmıyordu. Kart arızasıydı, orijinal parça taktılar, tamam oldu.",
+      "service": "Klima Demontajı"
+    },
+    {
+      "id": 198,
+      "name": "Seda A.",
+      "rating": 5,
+      "text": "Klimadan su damlıyordu, ustalar bakı, drain hattını temizledi, sorun bitti.",
+      "service": "Klima Temizliği"
+    },
+    {
+      "id": 199,
+      "name": "Ercan H.",
+      "rating": 5,
+      "text": "Profesyonel ekip, işini bilen ustalar. Bir daha sorunum olursa yine arayacağım.",
+      "service": "Klima Demontajı"
+    },
+    {
+      "id": 200,
+      "name": "Ferhat E.",
+      "rating": 5,
+      "text": "Montaj çok hızlı bitti. İçeriye hiçbir iz bırakmadılar, helal olsun.",
+      "service": "Klima Gaz Dolumu"
+    },
+    {
+      "id": 201,
+      "name": "Pınar J.",
+      "rating": 5,
+      "text": "Fiyatları çok uygun ve işleri kaliteli. Memnun kaldım.",
+      "service": "Klima Temizliği"
+    },
+    {
+      "id": 202,
+      "name": "Hasan S.",
+      "rating": 5,
+      "text": "Kombimizin ısı eşanjörü temizlendi, verim arttı gözle görülür şekilde.",
+      "service": "Kombi Bakımı"
+    },
+    {
+      "id": 203,
+      "name": "Emine G.",
+      "rating": 5,
+      "text": "Klima kurulumu için aradım. Zamanında geldiler, işi sağlam yaptılar.",
+      "service": "Klima Bakımı"
+    },
+    {
+      "id": 204,
+      "name": "Selim F.",
+      "rating": 5,
+      "text": "Profesyonel ekip, işini bilen ustalar. Bir daha sorunum olursa yine arayacağım.",
+      "service": "Klima Gaz Dolumu"
+    },
+    {
+      "id": 205,
+      "name": "Filiz Ö.",
+      "rating": 5,
+      "text": "Kombi bakımından sonra doğalgaz faturam %20 düştü. Süper!",
+      "service": "Kombi Bakımı"
+    },
+    {
+      "id": 206,
+      "name": "Nihal O.",
+      "rating": 5,
+      "text": "Yaz ortasında klimam bozuldu, acil geldiler. Çok şükür o gün çözdüler.",
+      "service": "Klima Montajı"
+    },
+    {
+      "id": 207,
+      "name": "Nurcan Ç.",
+      "rating": 5,
+      "text": "Klimam soğutmuyordu, aynı gün geldiler ve sorunu hızlıca çözdüler. Çok memnun kaldım.",
+      "service": "Klima Montajı"
+    },
+    {
+      "id": 208,
+      "name": "Seda R.",
+      "rating": 5,
+      "text": "Ustalar çok bilgili, neyin neden bozulduğunu açıklayarak anlattılar.",
+      "service": "Kombi Arızası"
+    },
+    {
+      "id": 209,
+      "name": "İsmail C.",
+      "rating": 5,
+      "text": "Klimam çalışmıyordu. Kart arızasıydı, orijinal parça taktılar, tamam oldu.",
+      "service": "Klima Demontajı"
+    },
+    {
+      "id": 210,
+      "name": "Zeliha E.",
+      "rating": 5,
+      "text": "Servis çok hızlı geldi. Bekletmediler, sorunumu aynı gün çözdüler.",
+      "service": "Klima Temizliği"
+    },
+    {
+      "id": 211,
+      "name": "Aslı H.",
+      "rating": 5,
+      "text": "Klima hiç soğutmuyordu, gaz dolumu yapıldı, şimdi buz gibi soğutuyor.",
+      "service": "Klima Arızası"
+    },
+    {
+      "id": 212,
+      "name": "Onur L.",
+      "rating": 5,
+      "text": "Montaj çok hızlı bitti. İçeriye hiçbir iz bırakmadılar, helal olsun.",
+      "service": "Klima Gaz Dolumu"
+    },
+    {
+      "id": 213,
+      "name": "Taner I.",
+      "rating": 5,
+      "text": "Klima arızasında iki farklı yerden teklif aldım, burası hem ucuz hem kaliteliydi.",
+      "service": "Klima Gaz Dolumu"
+    },
+    {
+      "id": 214,
+      "name": "Kübra V.",
+      "rating": 5,
+      "text": "Klima gaz dolumunda çok dürüst davrandılar, ne kadar dolduklarını gösterdiler.",
+      "service": "Klima Gaz Dolumu"
+    },
+    {
+      "id": 215,
+      "name": "Yasin Ü.",
+      "rating": 5,
+      "text": "Klimam çalışmıyordu. Kart arızasıydı, orijinal parça taktılar, tamam oldu.",
+      "service": "Klima Bakımı"
+    },
+    {
+      "id": 216,
+      "name": "Gökhan I.",
+      "rating": 5,
+      "text": "Kombimiz su kaybediyordu. Usta geldi sızdıran yeri buldu ve kapattı.",
+      "service": "Kombi Bakımı"
+    },
+    {
+      "id": 217,
+      "name": "Alper U.",
+      "rating": 5,
+      "text": "Sesli çalışıyordu klimam, bakımda fan motoru değişti, şimdi sessiz.",
+      "service": "Klima Montajı"
+    },
+    {
+      "id": 218,
+      "name": "Aslı O.",
+      "rating": 5,
+      "text": "Acil kombi arızasında bile gece gelmekten çekinmediler.",
+      "service": "Kombi Arızası"
+    },
+    {
+      "id": 219,
+      "name": "Melek D.",
+      "rating": 5,
+      "text": "Klimam soğutmuyordu, aynı gün geldiler ve sorunu hızlıca çözdüler. Çok memnun kaldım.",
+      "service": "Klima Demontajı"
+    },
+    {
+      "id": 220,
+      "name": "Zeynep K.",
+      "rating": 5,
+      "text": "Klimam soğutmuyordu, aynı gün geldiler ve sorunu hızlıca çözdüler. Çok memnun kaldım.",
+      "service": "Klima Arızası"
+    },
+    {
+      "id": 221,
+      "name": "Zeynep F.",
+      "rating": 5,
+      "text": "Kış başında kombi bakımı yaptırdım, sezonu sorunsuz geçirdim.",
+      "service": "Kombi Montajı"
+    },
+    {
+      "id": 222,
+      "name": "Cem Ç.",
+      "rating": 5,
+      "text": "Yıllık bakım anlaşması yaptık, çok memnunuz. Öneririm.",
+      "service": "Kombi Montajı"
+    },
+    {
+      "id": 223,
+      "name": "Zeynep I.",
+      "rating": 5,
+      "text": "Kombi bakımını her yıl yaptırıyorum, her seferinde aynı özen ve kalite.",
+      "service": "Kombi Montajı"
+    },
+    {
+      "id": 224,
+      "name": "Mustafa S.",
+      "rating": 5,
+      "text": "Montaj çok hızlı bitti. İçeriye hiçbir iz bırakmadılar, helal olsun.",
+      "service": "Klima Montajı"
+    },
+    {
+      "id": 225,
+      "name": "Ramazan O.",
+      "rating": 5,
+      "text": "Yıllık bakım anlaşması yaptık, çok memnunuz. Öneririm.",
+      "service": "Kombi Montajı"
+    },
+    {
+      "id": 226,
+      "name": "Mustafa T.",
+      "rating": 5,
+      "text": "Kombi montajını zamanında ve sorunsuz tamamladılar.",
+      "service": "Kombi Montajı"
+    },
+    {
+      "id": 227,
+      "name": "Canan B.",
+      "rating": 5,
+      "text": "Kombi montajını çok hızlı ve temiz yaptılar. Takdir ettim doğrusu.",
+      "service": "Kombi Bakımı"
+    },
+    {
+      "id": 228,
+      "name": "Gökhan Ş.",
+      "rating": 5,
+      "text": "Çok hızlı ve güler yüzlü hizmet. Kesinlikle tavsiye ederim.",
+      "service": "Klima Demontajı"
+    },
+    {
+      "id": 229,
+      "name": "Miray J.",
+      "rating": 5,
+      "text": "Kombi arızasında diğer servisler erteliyordu, burası aynı gün geldi.",
+      "service": "Kombi Montajı"
+    },
+    {
+      "id": 230,
+      "name": "Şule Ö.",
+      "rating": 5,
+      "text": "Profesyonel ekip, işini bilen ustalar. Bir daha sorunum olursa yine arayacağım.",
+      "service": "Klima Temizliği"
+    },
+    {
+      "id": 231,
+      "name": "Ferhat I.",
+      "rating": 5,
+      "text": "Kombi revizyonu mükemmel oldu. Sanki yeni kombim var gibi.",
+      "service": "Kombi Bakımı"
+    },
+    {
+      "id": 232,
+      "name": "Suat F.",
+      "rating": 5,
+      "text": "Klimam soğutmuyordu, aynı gün geldiler ve sorunu hızlıca çözdüler. Çok memnun kaldım.",
+      "service": "Klima Bakımı"
+    },
+    {
+      "id": 233,
+      "name": "Volkan Y.",
+      "rating": 5,
+      "text": "Klima gaz dolumunda çok dürüst davrandılar, ne kadar dolduklarını gösterdiler.",
+      "service": "Klima Arızası"
+    },
+    {
+      "id": 234,
+      "name": "Okan F.",
+      "rating": 5,
+      "text": "Klimadan su damlıyordu, ustalar bakı, drain hattını temizledi, sorun bitti.",
+      "service": "Klima Montajı"
+    },
+    {
+      "id": 235,
+      "name": "Elif E.",
+      "rating": 5,
+      "text": "Klimam soğutmuyordu, aynı gün geldiler ve sorunu hızlıca çözdüler. Çok memnun kaldım.",
+      "service": "Klima Bakımı"
+    },
+    {
+      "id": 236,
+      "name": "Dilek Z.",
+      "rating": 5,
+      "text": "Orijinal parça kullanmaları çok güven verici. Teşekkürler.",
+      "service": "Kombi Bakımı"
+    },
+    {
+      "id": 237,
+      "name": "Barış H.",
+      "rating": 5,
+      "text": "Çok hızlı ve güler yüzlü hizmet. Kesinlikle tavsiye ederim.",
+      "service": "Klima Temizliği"
+    },
+    {
+      "id": 238,
+      "name": "Tuğba U.",
+      "rating": 5,
+      "text": "Klima montajını çok profesyonelce yaptılar. Temiz ve düzgün iş çıkardılar.",
+      "service": "Klima Bakımı"
+    },
+    {
+      "id": 239,
+      "name": "Nihal O.",
+      "rating": 5,
+      "text": "Klima kurulumu için aradım. Zamanında geldiler, işi sağlam yaptılar.",
+      "service": "Klima Temizliği"
+    },
+    {
+      "id": 240,
+      "name": "Dilek Z.",
+      "rating": 5,
+      "text": "Ekip çok temiz çalışıyor. Geldikleri gibi gidiyorlar, iz bırakmıyorlar.",
+      "service": "Kombi Gaz Ayarı"
+    },
+    {
+      "id": 241,
+      "name": "Sevgi T.",
+      "rating": 5,
+      "text": "Kombi bakımını her yıl yaptırıyorum, her seferinde aynı özen ve kalite.",
+      "service": "Kombi Arızası"
+    },
+    {
+      "id": 242,
+      "name": "Doğan Ç.",
+      "rating": 5,
+      "text": "Kombimizin ısı eşanjörü temizlendi, verim arttı gözle görülür şekilde.",
+      "service": "Kombi Montajı"
+    },
+    {
+      "id": 243,
+      "name": "Taner Ç.",
+      "rating": 5,
+      "text": "Montaj çok hızlı bitti. İçeriye hiçbir iz bırakmadılar, helal olsun.",
+      "service": "Klima Gaz Dolumu"
+    },
+    {
+      "id": 244,
+      "name": "Onur H.",
+      "rating": 5,
+      "text": "Kombi bakımından sonra doğalgaz faturam %20 düştü. Süper!",
+      "service": "Kombi Gaz Ayarı"
+    },
+    {
+      "id": 245,
+      "name": "Suat E.",
+      "rating": 5,
+      "text": "Ekip çok nazik ve saygılı. Evi tertemiz bıraktılar.",
+      "service": "Klima Demontajı"
+    },
+    {
+      "id": 246,
+      "name": "Mustafa O.",
+      "rating": 5,
+      "text": "Servis çok hızlı geldi. Bekletmediler, sorunumu aynı gün çözdüler.",
+      "service": "Klima Montajı"
+    },
+    {
+      "id": 247,
+      "name": "Levent R.",
+      "rating": 5,
+      "text": "Annemin evindeki klimayı tamir ettirdim. Çok hızlı ve kaliteli iş.",
+      "service": "Klima Demontajı"
+    },
+    {
+      "id": 248,
+      "name": "Sinan T.",
+      "rating": 5,
+      "text": "Klima temizliğini çok özenle yaptılar. Ev tertemiz kaldı.",
+      "service": "Klima Demontajı"
+    },
+    {
+      "id": 249,
+      "name": "Esra R.",
+      "rating": 5,
+      "text": "Kombimden ses geliyordu, ustalar baktı, hava aldı. Temizledi, sorun bitti.",
+      "service": "Kombi Arızası"
+    },
+    {
+      "id": 250,
+      "name": "Mehmet P.",
+      "rating": 5,
+      "text": "Kombi montajını çok hızlı ve temiz yaptılar. Takdir ettim doğrusu.",
+      "service": "Kombi Montajı"
+    },
+    {
+      "id": 251,
+      "name": "Bora B.",
+      "rating": 5,
+      "text": "Çok hızlı ve güler yüzlü hizmet. Kesinlikle tavsiye ederim.",
+      "service": "Klima Montajı"
+    },
+    {
+      "id": 252,
+      "name": "Fatma H.",
+      "rating": 5,
+      "text": "Sesli çalışıyordu klimam, bakımda fan motoru değişti, şimdi sessiz.",
+      "service": "Klima Demontajı"
+    },
+    {
+      "id": 253,
+      "name": "Gökhan E.",
+      "rating": 5,
+      "text": "Yeni aldığım klimanın montajını yaptırdım. Çok şık ve düzgün kurulum.",
+      "service": "Klima Temizliği"
+    },
+    {
+      "id": 254,
+      "name": "Gökhan K.",
+      "rating": 5,
+      "text": "Klima gaz dolumunda çok dürüst davrandılar, ne kadar dolduklarını gösterdiler.",
+      "service": "Klima Demontajı"
+    },
+    {
+      "id": 255,
+      "name": "Volkan Y.",
+      "rating": 5,
+      "text": "Klimam sesler çıkarıyordu, ustalar geldi sorunu buldu ve halletti. Teşekkürler.",
+      "service": "Klima Montajı"
+    },
+    {
+      "id": 256,
+      "name": "Hatice Ü.",
+      "rating": 5,
+      "text": "Montaj çok hızlı bitti. İçeriye hiçbir iz bırakmadılar, helal olsun.",
+      "service": "Klima Montajı"
+    },
+    {
+      "id": 257,
+      "name": "Ahmet U.",
+      "rating": 5,
+      "text": "Yaz ortasında klimam bozuldu, acil geldiler. Çok şükür o gün çözdüler.",
+      "service": "Klima Temizliği"
+    },
+    {
+      "id": 258,
+      "name": "Orhan Z.",
+      "rating": 5,
+      "text": "Kombi montajını çok hızlı ve temiz yaptılar. Takdir ettim doğrusu.",
+      "service": "Kombi Arızası"
+    },
+    {
+      "id": 259,
+      "name": "Kaan Y.",
+      "rating": 5,
+      "text": "Klimam kaçırıyordu, kompresör değişti, şimdi sorunsuz çalışıyor.",
+      "service": "Klima Temizliği"
+    },
+    {
+      "id": 260,
+      "name": "Cenk N.",
+      "rating": 5,
+      "text": "Kombi arızasında diğer servisler erteliyordu, burası aynı gün geldi.",
+      "service": "Kombi Bakımı"
+    },
+    {
+      "id": 261,
+      "name": "Bora P.",
+      "rating": 5,
+      "text": "Ekip çok nazik ve saygılı. Evi tertemiz bıraktılar.",
+      "service": "Klima Bakımı"
+    },
+    {
+      "id": 262,
+      "name": "Sinan T.",
+      "rating": 5,
+      "text": "Servis çok hızlı geldi. Bekletmediler, sorunumu aynı gün çözdüler.",
+      "service": "Klima Gaz Dolumu"
+    },
+    {
+      "id": 263,
+      "name": "Zeliha E.",
+      "rating": 5,
+      "text": "Ekip çok temiz çalışıyor. Geldikleri gibi gidiyorlar, iz bırakmıyorlar.",
+      "service": "Kombi Montajı"
+    },
+    {
+      "id": 264,
+      "name": "Hatice H.",
+      "rating": 5,
+      "text": "Fiyatları çok uygun ve işleri kaliteli. Memnun kaldım.",
+      "service": "Klima Montajı"
+    },
+    {
+      "id": 265,
+      "name": "Ercan S.",
+      "rating": 5,
+      "text": "Kombimizin ısı eşanjörü temizlendi, verim arttı gözle görülür şekilde.",
+      "service": "Kombi Montajı"
+    },
+    {
+      "id": 266,
+      "name": "Seda Y.",
+      "rating": 5,
+      "text": "Acil kombi arızasında bile gece gelmekten çekinmediler.",
+      "service": "Kombi Bakımı"
+    },
+    {
+      "id": 267,
+      "name": "Nurcan P.",
+      "rating": 5,
+      "text": "Servis çok hızlı geldi. Bekletmediler, sorunumu aynı gün çözdüler.",
+      "service": "Klima Gaz Dolumu"
+    },
+    {
+      "id": 268,
+      "name": "Ercan M.",
+      "rating": 5,
+      "text": "Kombimizin ısı eşanjörü temizlendi, verim arttı gözle görülür şekilde.",
+      "service": "Kombi Arızası"
+    },
+    {
+      "id": 269,
+      "name": "Esra U.",
+      "rating": 5,
+      "text": "Kombi revizyonu mükemmel oldu. Sanki yeni kombim var gibi.",
+      "service": "Kombi Arızası"
+    },
+    {
+      "id": 270,
+      "name": "Bora Z.",
+      "rating": 5,
+      "text": "Klima filtrelerini temizlediler, elektrik faturam düştü. Harika!",
+      "service": "Klima Gaz Dolumu"
+    },
+    {
+      "id": 271,
+      "name": "İbrahim B.",
+      "rating": 5,
+      "text": "Profesyonel ekip, işini bilen ustalar. Bir daha sorunum olursa yine arayacağım.",
+      "service": "Klima Bakımı"
+    },
+    {
+      "id": 272,
+      "name": "Selim U.",
+      "rating": 5,
+      "text": "Çok hızlı ve güler yüzlü hizmet. Kesinlikle tavsiye ederim.",
+      "service": "Klima Arızası"
+    },
+    {
+      "id": 273,
+      "name": "Serkan M.",
+      "rating": 5,
+      "text": "Klima bakımını düzenli yaptırıyorum, hep aynı kalite hizmet alıyorum.",
+      "service": "Klima Demontajı"
+    },
+    {
+      "id": 274,
+      "name": "Yasemin O.",
+      "rating": 5,
+      "text": "Klima montajını çok profesyonelce yaptılar. Temiz ve düzgün iş çıkardılar.",
+      "service": "Klima Arızası"
+    },
+    {
+      "id": 275,
+      "name": "Tarık Z.",
+      "rating": 5,
+      "text": "Kombimden ses geliyordu, ustalar baktı, hava aldı. Temizledi, sorun bitti.",
+      "service": "Kombi Gaz Ayarı"
+    },
+    {
+      "id": 276,
+      "name": "Serkan A.",
+      "rating": 5,
+      "text": "Klimam soğutmuyordu, aynı gün geldiler ve sorunu hızlıca çözdüler. Çok memnun kaldım.",
+      "service": "Klima Gaz Dolumu"
+    },
+    {
+      "id": 277,
+      "name": "Ferhat Ü.",
+      "rating": 5,
+      "text": "Klima hiç soğutmuyordu, gaz dolumu yapıldı, şimdi buz gibi soğutuyor.",
+      "service": "Klima Montajı"
+    },
+    {
+      "id": 278,
+      "name": "Canan V.",
+      "rating": 5,
+      "text": "Kombim çok iyi çalışıyor artık. Bir dahaki bakımda da buraya başvuracağım.",
+      "service": "Kombi Gaz Ayarı"
+    },
+    {
+      "id": 279,
+      "name": "Ferhat Ğ.",
+      "rating": 5,
+      "text": "Klima temizliğini çok özenle yaptılar. Ev tertemiz kaldı.",
+      "service": "Klima Bakımı"
+    },
+    {
+      "id": 280,
+      "name": "Serkan Ğ.",
+      "rating": 5,
+      "text": "Klima bakımını düzenli yaptırıyorum, hep aynı kalite hizmet alıyorum.",
+      "service": "Klima Temizliği"
+    },
+    {
+      "id": 281,
+      "name": "Ramazan Y.",
+      "rating": 5,
+      "text": "Gaz dolumu için aradım, aynı gün geldiler. Fiyat da gayet uygundu.",
+      "service": "Klima Bakımı"
+    },
+    {
+      "id": 282,
+      "name": "Gülay H.",
+      "rating": 5,
+      "text": "Kombim arızalandı, kış ortasında mahsur kaldık. Aynı gün geldiler, ısındık.",
+      "service": "Kombi Bakımı"
+    },
+    {
+      "id": 283,
+      "name": "Leyla T.",
+      "rating": 5,
+      "text": "Kombi gaz ayarı çok önemliymış, farkı hemen anladım. Teşekkürler.",
+      "service": "Kombi Bakımı"
+    },
+    {
+      "id": 284,
+      "name": "Fatih R.",
+      "rating": 5,
+      "text": "Kombi gaz ayarı çok önemliymış, farkı hemen anladım. Teşekkürler.",
+      "service": "Kombi Montajı"
+    },
+    {
+      "id": 285,
+      "name": "Canan V.",
+      "rating": 5,
+      "text": "Yeni aldığım klimanın montajını yaptırdım. Çok şık ve düzgün kurulum.",
+      "service": "Klima Demontajı"
+    },
+    {
+      "id": 286,
+      "name": "Cem P.",
+      "rating": 5,
+      "text": "Klima hiç soğutmuyordu, gaz dolumu yapıldı, şimdi buz gibi soğutuyor.",
+      "service": "Klima Montajı"
+    },
+    {
+      "id": 287,
+      "name": "Gökhan Y.",
+      "rating": 5,
+      "text": "Kombimiz ateşleme yapmıyordu. Arızayı buldu, parça değişti, sorun bitti.",
+      "service": "Kombi Gaz Ayarı"
+    },
+    {
+      "id": 288,
+      "name": "İsmail Ü.",
+      "rating": 5,
+      "text": "Kombi bakımından sonra doğalgaz faturam %20 düştü. Süper!",
+      "service": "Kombi Arızası"
+    },
+    {
+      "id": 289,
+      "name": "Derya M.",
+      "rating": 5,
+      "text": "Klimam soğutmuyordu, aynı gün geldiler ve sorunu hızlıca çözdüler. Çok memnun kaldım.",
+      "service": "Klima Demontajı"
+    },
+    {
+      "id": 290,
+      "name": "Zeliha Ğ.",
+      "rating": 5,
+      "text": "Klima arızasında iki farklı yerden teklif aldım, burası hem ucuz hem kaliteliydi.",
+      "service": "Klima Demontajı"
+    },
+    {
+      "id": 291,
+      "name": "Tolga Ç.",
+      "rating": 5,
+      "text": "Kombi montajını çok hızlı ve temiz yaptılar. Takdir ettim doğrusu.",
+      "service": "Kombi Bakımı"
+    },
+    {
+      "id": 292,
+      "name": "Onur U.",
+      "rating": 5,
+      "text": "Servis çok hızlı geldi. Bekletmediler, sorunumu aynı gün çözdüler.",
+      "service": "Klima Temizliği"
+    },
+    {
+      "id": 293,
+      "name": "Elif Ğ.",
+      "rating": 5,
+      "text": "Yaz ortasında klimam bozuldu, acil geldiler. Çok şükür o gün çözdüler.",
+      "service": "Klima Demontajı"
+    },
+    {
+      "id": 294,
+      "name": "Murat C.",
+      "rating": 5,
+      "text": "Klima gaz dolumunda çok dürüst davrandılar, ne kadar dolduklarını gösterdiler.",
+      "service": "Klima Gaz Dolumu"
+    },
+    {
+      "id": 295,
+      "name": "Kübra U.",
+      "rating": 5,
+      "text": "Klima filtrelerini temizlediler, elektrik faturam düştü. Harika!",
+      "service": "Klima Demontajı"
+    },
+    {
+      "id": 296,
+      "name": "Ferhat C.",
+      "rating": 5,
+      "text": "Klima temizliğini çok özenle yaptılar. Ev tertemiz kaldı.",
+      "service": "Klima Arızası"
+    },
+    {
+      "id": 297,
+      "name": "Tarık Z.",
+      "rating": 5,
+      "text": "Kombi bakımını her yıl yaptırıyorum, her seferinde aynı özen ve kalite.",
+      "service": "Kombi Bakımı"
+    },
+    {
+      "id": 298,
+      "name": "Caner K.",
+      "rating": 5,
+      "text": "Orijinal parça kullanmaları çok güven verici. Teşekkürler.",
+      "service": "Kombi Arızası"
+    },
+    {
+      "id": 299,
+      "name": "Alper A.",
+      "rating": 5,
+      "text": "Orijinal parça kullanmaları çok güven verici. Teşekkürler.",
+      "service": "Kombi Montajı"
+    },
+    {
+      "id": 300,
+      "name": "Hatice D.",
+      "rating": 5,
+      "text": "Kombi revizyonu mükemmel oldu. Sanki yeni kombim var gibi.",
+      "service": "Kombi Montajı"
+    },
+    {
+      "id": 301,
+      "name": "Hülya N.",
+      "rating": 5,
+      "text": "Annemin evindeki klimayı tamir ettirdim. Çok hızlı ve kaliteli iş.",
+      "service": "Klima Arızası"
+    },
+    {
+      "id": 302,
+      "name": "Elif E.",
+      "rating": 5,
+      "text": "Fiyatları çok uygun ve işleri kaliteli. Memnun kaldım.",
+      "service": "Klima Temizliği"
+    },
+    {
+      "id": 303,
+      "name": "Sevinç Z.",
+      "rating": 5,
+      "text": "Kombi gaz ayarı çok önemliymış, farkı hemen anladım. Teşekkürler.",
+      "service": "Kombi Gaz Ayarı"
+    },
+    {
+      "id": 304,
+      "name": "Hatice D.",
+      "rating": 5,
+      "text": "Klimam çalışmıyordu. Kart arızasıydı, orijinal parça taktılar, tamam oldu.",
+      "service": "Klima Bakımı"
+    },
+    {
+      "id": 305,
+      "name": "Fatih K.",
+      "rating": 5,
+      "text": "Sesli çalışıyordu klimam, bakımda fan motoru değişti, şimdi sessiz.",
+      "service": "Klima Arızası"
+    },
+    {
+      "id": 306,
+      "name": "Onur V.",
+      "rating": 5,
+      "text": "Kombi bakımından sonra doğalgaz faturam %20 düştü. Süper!",
+      "service": "Kombi Arızası"
+    },
+    {
+      "id": 307,
+      "name": "Gamze Ç.",
+      "rating": 5,
+      "text": "Klima gaz dolumunda çok dürüst davrandılar, ne kadar dolduklarını gösterdiler.",
+      "service": "Klima Bakımı"
+    },
+    {
+      "id": 308,
+      "name": "Orhan A.",
+      "rating": 5,
+      "text": "Kombim çok iyi çalışıyor artık. Bir dahaki bakımda da buraya başvuracağım.",
+      "service": "Kombi Gaz Ayarı"
+    },
+    {
+      "id": 309,
+      "name": "Sedat I.",
+      "rating": 5,
+      "text": "Kombi revizyonu mükemmel oldu. Sanki yeni kombim var gibi.",
+      "service": "Kombi Bakımı"
+    },
+    {
+      "id": 310,
+      "name": "Tuncay S.",
+      "rating": 5,
+      "text": "Klima arızasında hemen geldiler. Orijinal parça kullandılar, sorun kalmadı.",
+      "service": "Klima Montajı"
+    },
+    {
+      "id": 311,
+      "name": "Melek Ü.",
+      "rating": 5,
+      "text": "Profesyonel ekip, işini bilen ustalar. Bir daha sorunum olursa yine arayacağım.",
+      "service": "Klima Arızası"
+    },
+    {
+      "id": 312,
+      "name": "Tarık K.",
+      "rating": 5,
+      "text": "Kombi gaz ayarı çok önemliymış, farkı hemen anladım. Teşekkürler.",
+      "service": "Kombi Arızası"
+    },
+    {
+      "id": 313,
+      "name": "Sevgi T.",
+      "rating": 5,
+      "text": "Klimam sesler çıkarıyordu, ustalar geldi sorunu buldu ve halletti. Teşekkürler.",
+      "service": "Klima Demontajı"
+    },
+    {
+      "id": 314,
+      "name": "Sevgi S.",
+      "rating": 5,
+      "text": "Klimam kaçırıyordu, kompresör değişti, şimdi sorunsuz çalışıyor.",
+      "service": "Klima Bakımı"
+    },
+    {
+      "id": 315,
+      "name": "Barış K.",
+      "rating": 5,
+      "text": "Kış başında kombi bakımı yaptırdım, sezonu sorunsuz geçirdim.",
+      "service": "Kombi Gaz Ayarı"
+    },
+    {
+      "id": 316,
+      "name": "Sevgi J.",
+      "rating": 5,
+      "text": "Klima arızasında hemen geldiler. Orijinal parça kullandılar, sorun kalmadı.",
+      "service": "Klima Gaz Dolumu"
+    },
+    {
+      "id": 317,
+      "name": "Kadir Ö.",
+      "rating": 5,
+      "text": "Klima arızasında hemen geldiler. Orijinal parça kullandılar, sorun kalmadı.",
+      "service": "Klima Montajı"
+    },
+    {
+      "id": 318,
+      "name": "Bahar Ü.",
+      "rating": 5,
+      "text": "Klimam kaçırıyordu, kompresör değişti, şimdi sorunsuz çalışıyor.",
+      "service": "Klima Arızası"
+    },
+    {
+      "id": 319,
+      "name": "Tuncay D.",
+      "rating": 5,
+      "text": "Kombim çok iyi çalışıyor artık. Bir dahaki bakımda da buraya başvuracağım.",
+      "service": "Kombi Arızası"
+    },
+    {
+      "id": 320,
+      "name": "Tülay I.",
+      "rating": 5,
+      "text": "Klima temizliğini çok özenle yaptılar. Ev tertemiz kaldı.",
+      "service": "Klima Bakımı"
+    },
+    {
+      "id": 321,
+      "name": "Fatih U.",
+      "rating": 5,
+      "text": "Annemin evindeki klimayı tamir ettirdim. Çok hızlı ve kaliteli iş.",
+      "service": "Klima Demontajı"
+    },
+    {
+      "id": 322,
+      "name": "Emre G.",
+      "rating": 5,
+      "text": "Servis çok hızlı geldi. Bekletmediler, sorunumu aynı gün çözdüler.",
+      "service": "Klima Demontajı"
+    },
+    {
+      "id": 323,
+      "name": "Emine A.",
+      "rating": 5,
+      "text": "Profesyonel ekip, işini bilen ustalar. Bir daha sorunum olursa yine arayacağım.",
+      "service": "Klima Bakımı"
+    },
+    {
+      "id": 324,
+      "name": "Elif F.",
+      "rating": 5,
+      "text": "Klimam soğutmuyordu, aynı gün geldiler ve sorunu hızlıca çözdüler. Çok memnun kaldım.",
+      "service": "Klima Bakımı"
+    },
+    {
+      "id": 325,
+      "name": "Hasan R.",
+      "rating": 5,
+      "text": "Klima filtrelerini temizlediler, elektrik faturam düştü. Harika!",
+      "service": "Klima Gaz Dolumu"
+    },
+    {
+      "id": 326,
+      "name": "Sevgi I.",
+      "rating": 5,
+      "text": "Montaj çok hızlı bitti. İçeriye hiçbir iz bırakmadılar, helal olsun.",
+      "service": "Klima Demontajı"
+    },
+    {
+      "id": 327,
+      "name": "Levent Y.",
+      "rating": 5,
+      "text": "Klimam çalışmıyordu. Kart arızasıydı, orijinal parça taktılar, tamam oldu.",
+      "service": "Klima Bakımı"
+    },
+    {
+      "id": 328,
+      "name": "Canan N.",
+      "rating": 5,
+      "text": "Klimam soğutmuyordu, aynı gün geldiler ve sorunu hızlıca çözdüler. Çok memnun kaldım.",
+      "service": "Klima Temizliği"
+    },
+    {
+      "id": 329,
+      "name": "Nihal Ş.",
+      "rating": 5,
+      "text": "Fiyatları çok uygun ve işleri kaliteli. Memnun kaldım.",
+      "service": "Klima Arızası"
+    },
+    {
+      "id": 330,
+      "name": "Tolga V.",
+      "rating": 5,
+      "text": "Klimam kaçırıyordu, kompresör değişti, şimdi sorunsuz çalışıyor.",
+      "service": "Klima Bakımı"
+    },
+    {
+      "id": 331,
+      "name": "Dilek Z.",
+      "rating": 5,
+      "text": "Klimam kaçırıyordu, kompresör değişti, şimdi sorunsuz çalışıyor.",
+      "service": "Klima Montajı"
+    },
+    {
+      "id": 332,
+      "name": "İlknur B.",
+      "rating": 5,
+      "text": "Yeni aldığım klimanın montajını yaptırdım. Çok şık ve düzgün kurulum.",
+      "service": "Klima Demontajı"
+    },
+    {
+      "id": 333,
+      "name": "Hande L.",
+      "rating": 5,
+      "text": "Klima bakımını düzenli yaptırıyorum, hep aynı kalite hizmet alıyorum.",
+      "service": "Klima Bakımı"
+    },
+    {
+      "id": 334,
+      "name": "Doğan A.",
+      "rating": 5,
+      "text": "Klima kurulumu için aradım. Zamanında geldiler, işi sağlam yaptılar.",
+      "service": "Klima Gaz Dolumu"
+    },
+    {
+      "id": 335,
+      "name": "Emre Ç.",
+      "rating": 5,
+      "text": "Kombi montajını zamanında ve sorunsuz tamamladılar.",
+      "service": "Kombi Bakımı"
+    },
+    {
+      "id": 336,
+      "name": "Bora O.",
+      "rating": 5,
+      "text": "Fiyatları çok uygun ve işleri kaliteli. Memnun kaldım.",
+      "service": "Klima Temizliği"
+    },
+    {
+      "id": 337,
+      "name": "Emre T.",
+      "rating": 5,
+      "text": "Orijinal parça kullanmaları çok güven verici. Teşekkürler.",
+      "service": "Kombi Gaz Ayarı"
+    },
+    {
+      "id": 338,
+      "name": "Arif Z.",
+      "rating": 5,
+      "text": "Yıllık bakım anlaşması yaptık, çok memnunuz. Öneririm.",
+      "service": "Kombi Gaz Ayarı"
+    },
+    {
+      "id": 339,
+      "name": "Cem E.",
+      "rating": 5,
+      "text": "Acil kombi arızasında bile gece gelmekten çekinmediler.",
+      "service": "Kombi Montajı"
+    },
+    {
+      "id": 340,
+      "name": "Derya T.",
+      "rating": 5,
+      "text": "Kombi montajını çok hızlı ve temiz yaptılar. Takdir ettim doğrusu.",
+      "service": "Kombi Arızası"
+    },
+    {
+      "id": 341,
+      "name": "Hülya G.",
+      "rating": 5,
+      "text": "Kombi gaz ayarı çok önemliymış, farkı hemen anladım. Teşekkürler.",
+      "service": "Kombi Bakımı"
+    },
+    {
+      "id": 342,
+      "name": "Serkan Ğ.",
+      "rating": 5,
+      "text": "Klima filtrelerini temizlediler, elektrik faturam düştü. Harika!",
+      "service": "Klima Montajı"
+    },
+    {
+      "id": 343,
+      "name": "İlknur D.",
+      "rating": 5,
+      "text": "Yeni aldığım klimanın montajını yaptırdım. Çok şık ve düzgün kurulum.",
+      "service": "Klima Gaz Dolumu"
+    },
+    {
+      "id": 344,
+      "name": "Furkan Ş.",
+      "rating": 5,
+      "text": "Montaj çok hızlı bitti. İçeriye hiçbir iz bırakmadılar, helal olsun.",
+      "service": "Klima Arızası"
+    },
+    {
+      "id": 345,
+      "name": "Enes Ö.",
+      "rating": 5,
+      "text": "Klima montajını çok profesyonelce yaptılar. Temiz ve düzgün iş çıkardılar.",
+      "service": "Klima Demontajı"
+    },
+    {
+      "id": 346,
+      "name": "Bahar M.",
+      "rating": 5,
+      "text": "Ustalar çok bilgili, neyin neden bozulduğunu açıklayarak anlattılar.",
+      "service": "Kombi Bakımı"
+    },
+    {
+      "id": 347,
+      "name": "Şule Ö.",
+      "rating": 5,
+      "text": "Ustalar çok bilgili, neyin neden bozulduğunu açıklayarak anlattılar.",
+      "service": "Kombi Montajı"
+    },
+    {
+      "id": 348,
+      "name": "Caner V.",
+      "rating": 5,
+      "text": "Fiyatları çok uygun ve işleri kaliteli. Memnun kaldım.",
+      "service": "Klima Demontajı"
+    },
+    {
+      "id": 349,
+      "name": "Suat H.",
+      "rating": 5,
+      "text": "Ekip çok nazik ve saygılı. Evi tertemiz bıraktılar.",
+      "service": "Klima Arızası"
+    },
+    {
+      "id": 350,
+      "name": "Tuğba I.",
+      "rating": 5,
+      "text": "Kombi revizyonu mükemmel oldu. Sanki yeni kombim var gibi.",
+      "service": "Kombi Arızası"
+    },
+    {
+      "id": 351,
+      "name": "Onur H.",
+      "rating": 5,
+      "text": "Ekip çok nazik ve saygılı. Evi tertemiz bıraktılar.",
+      "service": "Klima Demontajı"
+    },
+    {
+      "id": 352,
+      "name": "Hatice Ü.",
+      "rating": 5,
+      "text": "Kombimizin ısı eşanjörü temizlendi, verim arttı gözle görülür şekilde.",
+      "service": "Kombi Bakımı"
+    },
+    {
+      "id": 353,
+      "name": "Sinan K.",
+      "rating": 5,
+      "text": "Çok hızlı ve güler yüzlü hizmet. Kesinlikle tavsiye ederim.",
+      "service": "Klima Bakımı"
+    },
+    {
+      "id": 354,
+      "name": "Hülya Ö.",
+      "rating": 5,
+      "text": "Kombi arızasında diğer servisler erteliyordu, burası aynı gün geldi.",
+      "service": "Kombi Arızası"
+    },
+    {
+      "id": 355,
+      "name": "Onur S.",
+      "rating": 5,
+      "text": "Ekip çok nazik ve saygılı. Evi tertemiz bıraktılar.",
+      "service": "Klima Montajı"
+    },
+    {
+      "id": 356,
+      "name": "Hatice Ğ.",
+      "rating": 5,
+      "text": "Kombimiz su kaybediyordu. Usta geldi sızdıran yeri buldu ve kapattı.",
+      "service": "Kombi Arızası"
+    },
+    {
+      "id": 357,
+      "name": "Tuğba T.",
+      "rating": 5,
+      "text": "Klima gaz dolumunda çok dürüst davrandılar, ne kadar dolduklarını gösterdiler.",
+      "service": "Klima Montajı"
+    },
+    {
+      "id": 358,
+      "name": "Tuncay T.",
+      "rating": 5,
+      "text": "Klimam kaçırıyordu, kompresör değişti, şimdi sorunsuz çalışıyor.",
+      "service": "Klima Arızası"
+    },
+    {
+      "id": 359,
+      "name": "Alper Ö.",
+      "rating": 5,
+      "text": "Klimadan su damlıyordu, ustalar bakı, drain hattını temizledi, sorun bitti.",
+      "service": "Klima Bakımı"
+    },
+    {
+      "id": 360,
+      "name": "Seda F.",
+      "rating": 5,
+      "text": "Ekip çok nazik ve saygılı. Evi tertemiz bıraktılar.",
+      "service": "Klima Montajı"
+    },
+    {
+      "id": 361,
+      "name": "Kübra O.",
+      "rating": 5,
+      "text": "Klima montajını çok profesyonelce yaptılar. Temiz ve düzgün iş çıkardılar.",
+      "service": "Klima Montajı"
+    },
+    {
+      "id": 362,
+      "name": "Yasin Ö.",
+      "rating": 5,
+      "text": "Klima filtrelerini temizlediler, elektrik faturam düştü. Harika!",
+      "service": "Klima Montajı"
+    },
+    {
+      "id": 363,
+      "name": "Ramazan Ş.",
+      "rating": 5,
+      "text": "Kombimiz ateşleme yapmıyordu. Arızayı buldu, parça değişti, sorun bitti.",
+      "service": "Kombi Montajı"
+    },
+    {
+      "id": 364,
+      "name": "İlknur Ğ.",
+      "rating": 5,
+      "text": "Servis çok hızlı geldi. Bekletmediler, sorunumu aynı gün çözdüler.",
+      "service": "Klima Temizliği"
+    },
+    {
+      "id": 365,
+      "name": "Canan P.",
+      "rating": 5,
+      "text": "Klima gaz dolumunda çok dürüst davrandılar, ne kadar dolduklarını gösterdiler.",
+      "service": "Klima Arızası"
+    },
+    {
+      "id": 366,
+      "name": "Mehmet J.",
+      "rating": 5,
+      "text": "Kış başında kombi bakımı yaptırdım, sezonu sorunsuz geçirdim.",
+      "service": "Kombi Bakımı"
+    },
+    {
+      "id": 367,
+      "name": "İsmail S.",
+      "rating": 5,
+      "text": "Kombi revizyonu mükemmel oldu. Sanki yeni kombim var gibi.",
+      "service": "Kombi Bakımı"
+    },
+    {
+      "id": 368,
+      "name": "Şule T.",
+      "rating": 5,
+      "text": "Ekip çok nazik ve saygılı. Evi tertemiz bıraktılar.",
+      "service": "Klima Montajı"
+    },
+    {
+      "id": 369,
+      "name": "Fatih Ç.",
+      "rating": 5,
+      "text": "Klimam kaçırıyordu, kompresör değişti, şimdi sorunsuz çalışıyor.",
+      "service": "Klima Demontajı"
+    },
+    {
+      "id": 370,
+      "name": "Fatih I.",
+      "rating": 5,
+      "text": "Yaz ortasında klimam bozuldu, acil geldiler. Çok şükür o gün çözdüler.",
+      "service": "Klima Demontajı"
+    },
+    {
+      "id": 371,
+      "name": "Uğur K.",
+      "rating": 5,
+      "text": "Klima arızasında iki farklı yerden teklif aldım, burası hem ucuz hem kaliteliydi.",
+      "service": "Klima Montajı"
+    },
+    {
+      "id": 372,
+      "name": "Ferhat G.",
+      "rating": 5,
+      "text": "Kombi montajını çok hızlı ve temiz yaptılar. Takdir ettim doğrusu.",
+      "service": "Kombi Gaz Ayarı"
+    },
+    {
+      "id": 373,
+      "name": "Orhan K.",
+      "rating": 5,
+      "text": "Klima arızasında hemen geldiler. Orijinal parça kullandılar, sorun kalmadı.",
+      "service": "Klima Demontajı"
+    },
+    {
+      "id": 374,
+      "name": "Cem Ü.",
+      "rating": 5,
+      "text": "Klimam kaçırıyordu, kompresör değişti, şimdi sorunsuz çalışıyor.",
+      "service": "Klima Montajı"
+    },
+    {
+      "id": 375,
+      "name": "Ali G.",
+      "rating": 5,
+      "text": "Annemin evindeki klimayı tamir ettirdim. Çok hızlı ve kaliteli iş.",
+      "service": "Klima Gaz Dolumu"
+    },
+    {
+      "id": 376,
+      "name": "Kemal F.",
+      "rating": 5,
+      "text": "Klimam kaçırıyordu, kompresör değişti, şimdi sorunsuz çalışıyor.",
+      "service": "Klima Gaz Dolumu"
+    },
+    {
+      "id": 377,
+      "name": "Yusuf H.",
+      "rating": 5,
+      "text": "Kombi revizyonu mükemmel oldu. Sanki yeni kombim var gibi.",
+      "service": "Kombi Arızası"
+    },
+    {
+      "id": 378,
+      "name": "Ferhat Ş.",
+      "rating": 5,
+      "text": "Kombim çok iyi çalışıyor artık. Bir dahaki bakımda da buraya başvuracağım.",
+      "service": "Kombi Gaz Ayarı"
+    },
+    {
+      "id": 379,
+      "name": "Ayşe K.",
+      "rating": 5,
+      "text": "Yaz ortasında klimam bozuldu, acil geldiler. Çok şükür o gün çözdüler.",
+      "service": "Klima Montajı"
+    },
+    {
+      "id": 380,
+      "name": "Yusuf M.",
+      "rating": 5,
+      "text": "Yıllık bakım anlaşması yaptık, çok memnunuz. Öneririm.",
+      "service": "Kombi Bakımı"
+    },
+    {
+      "id": 381,
+      "name": "Sevinç C.",
+      "rating": 5,
+      "text": "Kış başında kombi bakımı yaptırdım, sezonu sorunsuz geçirdim.",
+      "service": "Kombi Bakımı"
+    },
+    {
+      "id": 382,
+      "name": "Arif N.",
+      "rating": 5,
+      "text": "Kombimizin ısı eşanjörü temizlendi, verim arttı gözle görülür şekilde.",
+      "service": "Kombi Gaz Ayarı"
+    },
+    {
+      "id": 383,
+      "name": "Neslihan N.",
+      "rating": 5,
+      "text": "Yaz ortasında klimam bozuldu, acil geldiler. Çok şükür o gün çözdüler.",
+      "service": "Klima Temizliği"
+    },
+    {
+      "id": 384,
+      "name": "Yasin V.",
+      "rating": 5,
+      "text": "Klimam sesler çıkarıyordu, ustalar geldi sorunu buldu ve halletti. Teşekkürler.",
+      "service": "Klima Arızası"
+    },
+    {
+      "id": 385,
+      "name": "Hasan Ç.",
+      "rating": 5,
+      "text": "Klimam kaçırıyordu, kompresör değişti, şimdi sorunsuz çalışıyor.",
+      "service": "Klima Arızası"
+    },
+    {
+      "id": 386,
+      "name": "Kübra K.",
+      "rating": 5,
+      "text": "Acil kombi arızasında bile gece gelmekten çekinmediler.",
+      "service": "Kombi Bakımı"
+    },
+    {
+      "id": 387,
+      "name": "Mehmet B.",
+      "rating": 5,
+      "text": "Kombi revizyonu mükemmel oldu. Sanki yeni kombim var gibi.",
+      "service": "Kombi Arızası"
+    },
+    {
+      "id": 388,
+      "name": "Ali L.",
+      "rating": 5,
+      "text": "Gaz dolumu için aradım, aynı gün geldiler. Fiyat da gayet uygundu.",
+      "service": "Klima Demontajı"
+    },
+    {
+      "id": 389,
+      "name": "Selman U.",
+      "rating": 5,
+      "text": "Fiyatları çok uygun ve işleri kaliteli. Memnun kaldım.",
+      "service": "Klima Arızası"
+    },
+    {
+      "id": 390,
+      "name": "Alper E.",
+      "rating": 5,
+      "text": "Klimam kaçırıyordu, kompresör değişti, şimdi sorunsuz çalışıyor.",
+      "service": "Klima Arızası"
+    },
+    {
+      "id": 391,
+      "name": "Mehmet Ç.",
+      "rating": 5,
+      "text": "Kombimiz su kaybediyordu. Usta geldi sızdıran yeri buldu ve kapattı.",
+      "service": "Kombi Bakımı"
+    },
+    {
+      "id": 392,
+      "name": "Taner E.",
+      "rating": 5,
+      "text": "Ekip çok temiz çalışıyor. Geldikleri gibi gidiyorlar, iz bırakmıyorlar.",
+      "service": "Kombi Gaz Ayarı"
+    },
+    {
+      "id": 393,
+      "name": "Şule P.",
+      "rating": 5,
+      "text": "Klima montajını çok profesyonelce yaptılar. Temiz ve düzgün iş çıkardılar.",
+      "service": "Klima Arızası"
+    },
+    {
+      "id": 394,
+      "name": "Gamze J.",
+      "rating": 5,
+      "text": "Kombimiz su kaybediyordu. Usta geldi sızdıran yeri buldu ve kapattı.",
+      "service": "Kombi Arızası"
+    },
+    {
+      "id": 395,
+      "name": "Selman S.",
+      "rating": 5,
+      "text": "Ekip çok temiz çalışıyor. Geldikleri gibi gidiyorlar, iz bırakmıyorlar.",
+      "service": "Kombi Montajı"
+    },
+    {
+      "id": 396,
+      "name": "Leyla Ç.",
+      "rating": 5,
+      "text": "Ekip çok temiz çalışıyor. Geldikleri gibi gidiyorlar, iz bırakmıyorlar.",
+      "service": "Kombi Gaz Ayarı"
+    },
+    {
+      "id": 397,
+      "name": "Fatma S.",
+      "rating": 5,
+      "text": "Klima bakımını düzenli yaptırıyorum, hep aynı kalite hizmet alıyorum.",
+      "service": "Klima Bakımı"
+    },
+    {
+      "id": 398,
+      "name": "Uğur Ş.",
+      "rating": 5,
+      "text": "Kombi bakımını her yıl yaptırıyorum, her seferinde aynı özen ve kalite.",
+      "service": "Kombi Bakımı"
+    },
+    {
+      "id": 399,
+      "name": "Kaan G.",
+      "rating": 5,
+      "text": "Kombi bakım fiyatı çok uygun. Hizmet kalitesi de mükemmel.",
+      "service": "Kombi Montajı"
+    },
+    {
+      "id": 400,
+      "name": "Sevgi A.",
+      "rating": 5,
+      "text": "Kombi bakımını her yıl yaptırıyorum, her seferinde aynı özen ve kalite.",
+      "service": "Kombi Arızası"
+    },
+    {
+      "id": 401,
+      "name": "Tülay N.",
+      "rating": 5,
+      "text": "Klima arızasında hemen geldiler. Orijinal parça kullandılar, sorun kalmadı.",
+      "service": "Klima Temizliği"
+    },
+    {
+      "id": 402,
+      "name": "Murat O.",
+      "rating": 5,
+      "text": "Klima filtrelerini temizlediler, elektrik faturam düştü. Harika!",
+      "service": "Klima Demontajı"
+    },
+    {
+      "id": 403,
+      "name": "Kemal G.",
+      "rating": 5,
+      "text": "Kombi bakım fiyatı çok uygun. Hizmet kalitesi de mükemmel.",
+      "service": "Kombi Montajı"
+    },
+    {
+      "id": 404,
+      "name": "Burak Ğ.",
+      "rating": 5,
+      "text": "Klimam çalışmıyordu. Kart arızasıydı, orijinal parça taktılar, tamam oldu.",
+      "service": "Klima Montajı"
+    },
+    {
+      "id": 405,
+      "name": "Pınar I.",
+      "rating": 5,
+      "text": "Kombim çok iyi çalışıyor artık. Bir dahaki bakımda da buraya başvuracağım.",
+      "service": "Kombi Montajı"
+    },
+    {
+      "id": 406,
+      "name": "Selim A.",
+      "rating": 5,
+      "text": "Kombi montajını çok hızlı ve temiz yaptılar. Takdir ettim doğrusu.",
+      "service": "Kombi Bakımı"
+    },
+    {
+      "id": 407,
+      "name": "Nihal K.",
+      "rating": 5,
+      "text": "Kış başında kombi bakımı yaptırdım, sezonu sorunsuz geçirdim.",
+      "service": "Kombi Arızası"
+    },
+    {
+      "id": 408,
+      "name": "Murat Ç.",
+      "rating": 5,
+      "text": "Kombi bakım fiyatı çok uygun. Hizmet kalitesi de mükemmel.",
+      "service": "Kombi Montajı"
+    },
+    {
+      "id": 409,
+      "name": "Kadir G.",
+      "rating": 5,
+      "text": "Kombimizin ısı eşanjörü temizlendi, verim arttı gözle görülür şekilde.",
+      "service": "Kombi Montajı"
+    },
+    {
+      "id": 410,
+      "name": "Onur G.",
+      "rating": 5,
+      "text": "Klimam soğutmuyordu, aynı gün geldiler ve sorunu hızlıca çözdüler. Çok memnun kaldım.",
+      "service": "Klima Gaz Dolumu"
+    },
+    {
+      "id": 411,
+      "name": "Okan N.",
+      "rating": 5,
+      "text": "Kombi arızasında diğer servisler erteliyordu, burası aynı gün geldi.",
+      "service": "Kombi Bakımı"
+    },
+    {
+      "id": 412,
+      "name": "Fatih S.",
+      "rating": 5,
+      "text": "Kış başında kombi bakımı yaptırdım, sezonu sorunsuz geçirdim.",
+      "service": "Kombi Gaz Ayarı"
+    },
+    {
+      "id": 413,
+      "name": "Miray Ü.",
+      "rating": 5,
+      "text": "Klimam soğutmuyordu, aynı gün geldiler ve sorunu hızlıca çözdüler. Çok memnun kaldım.",
+      "service": "Klima Montajı"
+    },
+    {
+      "id": 414,
+      "name": "Enes Ğ.",
+      "rating": 5,
+      "text": "Klima bakımını düzenli yaptırıyorum, hep aynı kalite hizmet alıyorum.",
+      "service": "Klima Montajı"
+    },
+    {
+      "id": 415,
+      "name": "Selman Y.",
+      "rating": 5,
+      "text": "Kombimiz su kaybediyordu. Usta geldi sızdıran yeri buldu ve kapattı.",
+      "service": "Kombi Arızası"
+    },
+    {
+      "id": 416,
+      "name": "Erdal A.",
+      "rating": 5,
+      "text": "Klima filtrelerini temizlediler, elektrik faturam düştü. Harika!",
+      "service": "Klima Temizliği"
+    },
+    {
+      "id": 417,
+      "name": "Hande G.",
+      "rating": 5,
+      "text": "Servis çok hızlı geldi. Bekletmediler, sorunumu aynı gün çözdüler.",
+      "service": "Klima Gaz Dolumu"
+    },
+    {
+      "id": 418,
+      "name": "İlknur H.",
+      "rating": 5,
+      "text": "Kombi montajını zamanında ve sorunsuz tamamladılar.",
+      "service": "Kombi Arızası"
+    },
+    {
+      "id": 419,
+      "name": "Hasan T.",
+      "rating": 5,
+      "text": "Klimam soğutmuyordu, aynı gün geldiler ve sorunu hızlıca çözdüler. Çok memnun kaldım.",
+      "service": "Klima Gaz Dolumu"
+    },
+    {
+      "id": 420,
+      "name": "Tülay S.",
+      "rating": 5,
+      "text": "Klimam soğutmuyordu, aynı gün geldiler ve sorunu hızlıca çözdüler. Çok memnun kaldım.",
+      "service": "Klima Arızası"
+    },
+    {
+      "id": 421,
+      "name": "Tuğba Ğ.",
+      "rating": 5,
+      "text": "Yeni aldığım klimanın montajını yaptırdım. Çok şık ve düzgün kurulum.",
+      "service": "Klima Temizliği"
+    },
+    {
+      "id": 422,
+      "name": "Tolga S.",
+      "rating": 5,
+      "text": "Klima montajını çok profesyonelce yaptılar. Temiz ve düzgün iş çıkardılar.",
+      "service": "Klima Bakımı"
+    },
+    {
+      "id": 423,
+      "name": "Ramazan E.",
+      "rating": 5,
+      "text": "Çok hızlı ve güler yüzlü hizmet. Kesinlikle tavsiye ederim.",
+      "service": "Klima Bakımı"
+    },
+    {
+      "id": 424,
+      "name": "Sevgi E.",
+      "rating": 5,
+      "text": "Klima hiç soğutmuyordu, gaz dolumu yapıldı, şimdi buz gibi soğutuyor.",
+      "service": "Klima Bakımı"
+    },
+    {
+      "id": 425,
+      "name": "Volkan B.",
+      "rating": 5,
+      "text": "Klimam çalışmıyordu. Kart arızasıydı, orijinal parça taktılar, tamam oldu.",
+      "service": "Klima Montajı"
+    },
+    {
+      "id": 426,
+      "name": "Pınar Ü.",
+      "rating": 5,
+      "text": "Klimam çalışmıyordu. Kart arızasıydı, orijinal parça taktılar, tamam oldu.",
+      "service": "Klima Gaz Dolumu"
+    },
+    {
+      "id": 427,
+      "name": "Tülay Ü.",
+      "rating": 5,
+      "text": "Klimadan su damlıyordu, ustalar bakı, drain hattını temizledi, sorun bitti.",
+      "service": "Klima Montajı"
+    },
+    {
+      "id": 428,
+      "name": "Hasan S.",
+      "rating": 5,
+      "text": "Klimam soğutmuyordu, aynı gün geldiler ve sorunu hızlıca çözdüler. Çok memnun kaldım.",
+      "service": "Klima Arızası"
+    },
+    {
+      "id": 429,
+      "name": "Furkan H.",
+      "rating": 5,
+      "text": "Servis çok hızlı geldi. Bekletmediler, sorunumu aynı gün çözdüler.",
+      "service": "Klima Bakımı"
+    },
+    {
+      "id": 430,
+      "name": "Özlem Z.",
+      "rating": 5,
+      "text": "Kombi montajını zamanında ve sorunsuz tamamladılar.",
+      "service": "Kombi Arızası"
+    },
+    {
+      "id": 431,
+      "name": "Dilek I.",
+      "rating": 5,
+      "text": "Kombimiz su kaybediyordu. Usta geldi sızdıran yeri buldu ve kapattı.",
+      "service": "Kombi Gaz Ayarı"
+    },
+    {
+      "id": 432,
+      "name": "Şule G.",
+      "rating": 5,
+      "text": "Klima filtrelerini temizlediler, elektrik faturam düştü. Harika!",
+      "service": "Klima Bakımı"
+    },
+    {
+      "id": 433,
+      "name": "Sevgi R.",
+      "rating": 5,
+      "text": "Kombim çok iyi çalışıyor artık. Bir dahaki bakımda da buraya başvuracağım.",
+      "service": "Kombi Arızası"
+    },
+    {
+      "id": 434,
+      "name": "Doğan T.",
+      "rating": 5,
+      "text": "Montaj çok hızlı bitti. İçeriye hiçbir iz bırakmadılar, helal olsun.",
+      "service": "Klima Montajı"
+    },
+    {
+      "id": 435,
+      "name": "Ferhat M.",
+      "rating": 5,
+      "text": "Klimam soğutmuyordu, aynı gün geldiler ve sorunu hızlıca çözdüler. Çok memnun kaldım.",
+      "service": "Klima Bakımı"
+    },
+    {
+      "id": 436,
+      "name": "Gülay N.",
+      "rating": 5,
+      "text": "Klima montajını çok profesyonelce yaptılar. Temiz ve düzgün iş çıkardılar.",
+      "service": "Klima Bakımı"
+    },
+    {
+      "id": 437,
+      "name": "Aysun A.",
+      "rating": 5,
+      "text": "Klima gaz dolumunda çok dürüst davrandılar, ne kadar dolduklarını gösterdiler.",
+      "service": "Klima Arızası"
+    },
+    {
+      "id": 438,
+      "name": "Kemal S.",
+      "rating": 5,
+      "text": "Kombim arızalandı, kış ortasında mahsur kaldık. Aynı gün geldiler, ısındık.",
+      "service": "Kombi Montajı"
+    },
+    {
+      "id": 439,
+      "name": "Hüseyin A.",
+      "rating": 5,
+      "text": "Yeni aldığım klimanın montajını yaptırdım. Çok şık ve düzgün kurulum.",
+      "service": "Klima Bakımı"
+    },
+    {
+      "id": 440,
+      "name": "Hülya E.",
+      "rating": 5,
+      "text": "Klima filtrelerini temizlediler, elektrik faturam düştü. Harika!",
+      "service": "Klima Demontajı"
+    },
+    {
+      "id": 441,
+      "name": "Kadir Ş.",
+      "rating": 5,
+      "text": "Klima bakımını düzenli yaptırıyorum, hep aynı kalite hizmet alıyorum.",
+      "service": "Klima Bakımı"
+    },
+    {
+      "id": 442,
+      "name": "Doğan P.",
+      "rating": 5,
+      "text": "Kombimiz ateşleme yapmıyordu. Arızayı buldu, parça değişti, sorun bitti.",
+      "service": "Kombi Arızası"
+    },
+    {
+      "id": 443,
+      "name": "Furkan Ç.",
+      "rating": 5,
+      "text": "Kombimizin ısı eşanjörü temizlendi, verim arttı gözle görülür şekilde.",
+      "service": "Kombi Arızası"
+    },
+    {
+      "id": 444,
+      "name": "Nihal O.",
+      "rating": 5,
+      "text": "Kombi montajını çok hızlı ve temiz yaptılar. Takdir ettim doğrusu.",
+      "service": "Kombi Arızası"
+    },
+    {
+      "id": 445,
+      "name": "Tuğba I.",
+      "rating": 5,
+      "text": "Çok hızlı ve güler yüzlü hizmet. Kesinlikle tavsiye ederim.",
+      "service": "Klima Temizliği"
+    },
+    {
+      "id": 446,
+      "name": "Sevinç K.",
+      "rating": 5,
+      "text": "Klima arızasında hemen geldiler. Orijinal parça kullandılar, sorun kalmadı.",
+      "service": "Klima Gaz Dolumu"
+    },
+    {
+      "id": 447,
+      "name": "Cenk Ç.",
+      "rating": 5,
+      "text": "Fiyatları çok uygun ve işleri kaliteli. Memnun kaldım.",
+      "service": "Klima Gaz Dolumu"
+    },
+    {
+      "id": 448,
+      "name": "Aslı L.",
+      "rating": 5,
+      "text": "Ustalar çok bilgili, neyin neden bozulduğunu açıklayarak anlattılar.",
+      "service": "Kombi Arızası"
+    },
+    {
+      "id": 449,
+      "name": "Yusuf J.",
+      "rating": 5,
+      "text": "Fiyatları çok uygun ve işleri kaliteli. Memnun kaldım.",
+      "service": "Klima Demontajı"
+    },
+    {
+      "id": 450,
+      "name": "Yasin N.",
+      "rating": 5,
+      "text": "Kombim arızalandı, kış ortasında mahsur kaldık. Aynı gün geldiler, ısındık.",
+      "service": "Kombi Montajı"
+    },
+    {
+      "id": 451,
+      "name": "İlknur U.",
+      "rating": 5,
+      "text": "Ustalar çok bilgili, neyin neden bozulduğunu açıklayarak anlattılar.",
+      "service": "Kombi Arızası"
+    },
+    {
+      "id": 452,
+      "name": "Ayşe J.",
+      "rating": 5,
+      "text": "Kombimiz su kaybediyordu. Usta geldi sızdıran yeri buldu ve kapattı.",
+      "service": "Kombi Montajı"
+    },
+    {
+      "id": 453,
+      "name": "Pınar I.",
+      "rating": 5,
+      "text": "Klima hiç soğutmuyordu, gaz dolumu yapıldı, şimdi buz gibi soğutuyor.",
+      "service": "Klima Montajı"
+    },
+    {
+      "id": 454,
+      "name": "Erdal Ü.",
+      "rating": 5,
+      "text": "Klimadan su damlıyordu, ustalar bakı, drain hattını temizledi, sorun bitti.",
+      "service": "Klima Gaz Dolumu"
+    },
+    {
+      "id": 455,
+      "name": "Yasin P.",
+      "rating": 5,
+      "text": "Klima temizliğini çok özenle yaptılar. Ev tertemiz kaldı.",
+      "service": "Klima Arızası"
+    },
+    {
+      "id": 456,
+      "name": "Mustafa F.",
+      "rating": 5,
+      "text": "Klimadan su damlıyordu, ustalar bakı, drain hattını temizledi, sorun bitti.",
+      "service": "Klima Bakımı"
+    },
+    {
+      "id": 457,
+      "name": "Ferhat Ö.",
+      "rating": 5,
+      "text": "Çok hızlı ve güler yüzlü hizmet. Kesinlikle tavsiye ederim.",
+      "service": "Klima Bakımı"
+    },
+    {
+      "id": 458,
+      "name": "Filiz Ç.",
+      "rating": 5,
+      "text": "Kombi gaz ayarı çok önemliymış, farkı hemen anladım. Teşekkürler.",
+      "service": "Kombi Arızası"
+    },
+    {
+      "id": 459,
+      "name": "Melek M.",
+      "rating": 5,
+      "text": "Ustalar çok bilgili, neyin neden bozulduğunu açıklayarak anlattılar.",
+      "service": "Kombi Gaz Ayarı"
+    },
+    {
+      "id": 460,
+      "name": "Kaan O.",
+      "rating": 5,
+      "text": "Servis çok hızlı geldi. Bekletmediler, sorunumu aynı gün çözdüler.",
+      "service": "Klima Arızası"
+    },
+    {
+      "id": 461,
+      "name": "Taner Ş.",
+      "rating": 5,
+      "text": "Profesyonel ekip, işini bilen ustalar. Bir daha sorunum olursa yine arayacağım.",
+      "service": "Klima Demontajı"
+    },
+    {
+      "id": 462,
+      "name": "Elif D.",
+      "rating": 5,
+      "text": "Klima montajını çok profesyonelce yaptılar. Temiz ve düzgün iş çıkardılar.",
+      "service": "Klima Montajı"
+    },
+    {
+      "id": 463,
+      "name": "Pınar I.",
+      "rating": 5,
+      "text": "Klima arızasında iki farklı yerden teklif aldım, burası hem ucuz hem kaliteliydi.",
+      "service": "Klima Gaz Dolumu"
+    },
+    {
+      "id": 464,
+      "name": "Büşra D.",
+      "rating": 5,
+      "text": "Kış başında kombi bakımı yaptırdım, sezonu sorunsuz geçirdim.",
+      "service": "Kombi Arızası"
+    },
+    {
+      "id": 465,
+      "name": "Barış D.",
+      "rating": 5,
+      "text": "Kombi arızasında diğer servisler erteliyordu, burası aynı gün geldi.",
+      "service": "Kombi Gaz Ayarı"
+    },
+    {
+      "id": 466,
+      "name": "Gül Ö.",
+      "rating": 5,
+      "text": "Kombim çok iyi çalışıyor artık. Bir dahaki bakımda da buraya başvuracağım.",
+      "service": "Kombi Arızası"
+    },
+    {
+      "id": 467,
+      "name": "Tarık L.",
+      "rating": 5,
+      "text": "Klimam çalışmıyordu. Kart arızasıydı, orijinal parça taktılar, tamam oldu.",
+      "service": "Klima Gaz Dolumu"
+    },
+    {
+      "id": 468,
+      "name": "Barış C.",
+      "rating": 5,
+      "text": "Acil kombi arızasında bile gece gelmekten çekinmediler.",
+      "service": "Kombi Bakımı"
+    },
+    {
+      "id": 469,
+      "name": "Sevinç V.",
+      "rating": 5,
+      "text": "Kombim çok iyi çalışıyor artık. Bir dahaki bakımda da buraya başvuracağım.",
+      "service": "Kombi Arızası"
+    },
+    {
+      "id": 470,
+      "name": "Nurcan R.",
+      "rating": 5,
+      "text": "Sesli çalışıyordu klimam, bakımda fan motoru değişti, şimdi sessiz.",
+      "service": "Klima Bakımı"
+    },
+    {
+      "id": 471,
+      "name": "Büşra Ç.",
+      "rating": 5,
+      "text": "Klima kurulumu için aradım. Zamanında geldiler, işi sağlam yaptılar.",
+      "service": "Klima Bakımı"
+    },
+    {
+      "id": 472,
+      "name": "Yasin I.",
+      "rating": 5,
+      "text": "Annemin evindeki klimayı tamir ettirdim. Çok hızlı ve kaliteli iş.",
+      "service": "Klima Arızası"
+    },
+    {
+      "id": 473,
+      "name": "Hüseyin Ç.",
+      "rating": 5,
+      "text": "Kombimden ses geliyordu, ustalar baktı, hava aldı. Temizledi, sorun bitti.",
+      "service": "Kombi Arızası"
+    },
+    {
+      "id": 474,
+      "name": "Ercan Ü.",
+      "rating": 5,
+      "text": "Kombi bakım fiyatı çok uygun. Hizmet kalitesi de mükemmel.",
+      "service": "Kombi Gaz Ayarı"
+    },
+    {
+      "id": 475,
+      "name": "Şule L.",
+      "rating": 5,
+      "text": "Klimam sesler çıkarıyordu, ustalar geldi sorunu buldu ve halletti. Teşekkürler.",
+      "service": "Klima Bakımı"
+    },
+    {
+      "id": 476,
+      "name": "İsmail M.",
+      "rating": 5,
+      "text": "Fiyatları çok uygun ve işleri kaliteli. Memnun kaldım.",
+      "service": "Klima Bakımı"
+    },
+    {
+      "id": 477,
+      "name": "Fatih J.",
+      "rating": 5,
+      "text": "Montaj çok hızlı bitti. İçeriye hiçbir iz bırakmadılar, helal olsun.",
+      "service": "Klima Bakımı"
+    },
+    {
+      "id": 478,
+      "name": "İsmail F.",
+      "rating": 5,
+      "text": "Kombi bakım fiyatı çok uygun. Hizmet kalitesi de mükemmel.",
+      "service": "Kombi Arızası"
+    },
+    {
+      "id": 479,
+      "name": "Erdal M.",
+      "rating": 5,
+      "text": "Kombi bakım fiyatı çok uygun. Hizmet kalitesi de mükemmel.",
+      "service": "Kombi Bakımı"
+    },
+    {
+      "id": 480,
+      "name": "Hülya D.",
+      "rating": 5,
+      "text": "Ekip çok temiz çalışıyor. Geldikleri gibi gidiyorlar, iz bırakmıyorlar.",
+      "service": "Kombi Arızası"
+    },
+    {
+      "id": 481,
+      "name": "Dilek Ç.",
+      "rating": 5,
+      "text": "Klima arızasında hemen geldiler. Orijinal parça kullandılar, sorun kalmadı.",
+      "service": "Klima Temizliği"
+    },
+    {
+      "id": 482,
+      "name": "Ahmet A.",
+      "rating": 5,
+      "text": "Klima arızasında hemen geldiler. Orijinal parça kullandılar, sorun kalmadı.",
+      "service": "Klima Arızası"
+    },
+    {
+      "id": 483,
+      "name": "Dilek A.",
+      "rating": 5,
+      "text": "Kombimiz su kaybediyordu. Usta geldi sızdıran yeri buldu ve kapattı.",
+      "service": "Kombi Arızası"
+    },
+    {
+      "id": 484,
+      "name": "Yasemin U.",
+      "rating": 5,
+      "text": "Kombi bakımını her yıl yaptırıyorum, her seferinde aynı özen ve kalite.",
+      "service": "Kombi Bakımı"
+    },
+    {
+      "id": 485,
+      "name": "Volkan Ş.",
+      "rating": 5,
+      "text": "Kombi bakımından sonra doğalgaz faturam %20 düştü. Süper!",
+      "service": "Kombi Gaz Ayarı"
+    },
+    {
+      "id": 486,
+      "name": "Ömer N.",
+      "rating": 5,
+      "text": "Klimam sesler çıkarıyordu, ustalar geldi sorunu buldu ve halletti. Teşekkürler.",
+      "service": "Klima Temizliği"
+    },
+    {
+      "id": 487,
+      "name": "Miray J.",
+      "rating": 5,
+      "text": "Fiyatları çok uygun ve işleri kaliteli. Memnun kaldım.",
+      "service": "Klima Demontajı"
+    },
+    {
+      "id": 488,
+      "name": "Ercan P.",
+      "rating": 5,
+      "text": "Servis çok hızlı geldi. Bekletmediler, sorunumu aynı gün çözdüler.",
+      "service": "Klima Bakımı"
+    },
+    {
+      "id": 489,
+      "name": "Doğan D.",
+      "rating": 5,
+      "text": "Klimam çalışmıyordu. Kart arızasıydı, orijinal parça taktılar, tamam oldu.",
+      "service": "Klima Temizliği"
+    },
+    {
+      "id": 490,
+      "name": "Cenk Y.",
+      "rating": 5,
+      "text": "Yeni aldığım klimanın montajını yaptırdım. Çok şık ve düzgün kurulum.",
+      "service": "Klima Temizliği"
+    },
+    {
+      "id": 491,
+      "name": "Ercan R.",
+      "rating": 5,
+      "text": "Klimadan su damlıyordu, ustalar bakı, drain hattını temizledi, sorun bitti.",
+      "service": "Klima Temizliği"
+    },
+    {
+      "id": 492,
+      "name": "Enes A.",
+      "rating": 5,
+      "text": "Servis çok hızlı geldi. Bekletmediler, sorunumu aynı gün çözdüler.",
+      "service": "Klima Arızası"
+    },
+    {
+      "id": 493,
+      "name": "Neslihan Ü.",
+      "rating": 5,
+      "text": "Ekip çok nazik ve saygılı. Evi tertemiz bıraktılar.",
+      "service": "Klima Montajı"
+    },
+    {
+      "id": 494,
+      "name": "Kadir I.",
+      "rating": 5,
+      "text": "Fiyatları çok uygun ve işleri kaliteli. Memnun kaldım.",
+      "service": "Klima Demontajı"
+    },
+    {
+      "id": 495,
+      "name": "Gülay R.",
+      "rating": 5,
+      "text": "Klima filtrelerini temizlediler, elektrik faturam düştü. Harika!",
+      "service": "Klima Demontajı"
+    },
+    {
+      "id": 496,
+      "name": "Reyhan Ğ.",
+      "rating": 5,
+      "text": "Klima montajını çok profesyonelce yaptılar. Temiz ve düzgün iş çıkardılar.",
+      "service": "Klima Bakımı"
+    },
+    {
+      "id": 497,
+      "name": "Enes H.",
+      "rating": 5,
+      "text": "Klimam çalışmıyordu. Kart arızasıydı, orijinal parça taktılar, tamam oldu.",
+      "service": "Klima Temizliği"
+    },
+    {
+      "id": 498,
+      "name": "Caner H.",
+      "rating": 5,
+      "text": "Klimam çalışmıyordu. Kart arızasıydı, orijinal parça taktılar, tamam oldu.",
+      "service": "Klima Bakımı"
+    },
+    {
+      "id": 499,
+      "name": "Volkan M.",
+      "rating": 5,
+      "text": "Kombimden ses geliyordu, ustalar baktı, hava aldı. Temizledi, sorun bitti.",
+      "service": "Kombi Montajı"
+    },
+    {
+      "id": 500,
+      "name": "Gökhan T.",
+      "rating": 5,
+      "text": "Profesyonel ekip, işini bilen ustalar. Bir daha sorunum olursa yine arayacağım.",
+      "service": "Klima Demontajı"
+    }
+  ],
+  "faq": [
+    {
+      "id": 1,
+      "question": "Klima gazı ne zaman doldurulmalı?",
+      "answer": "Klimanız yeterince soğutmuyorsa veya beklenmedik şekilde kapanıyorsa gaz dolumuna ihtiyaç duyabilir. Yılda bir kez bakım yaptırmanızı öneririz."
+    },
+    {
+      "id": 2,
+      "question": "Garanti kapsamı nedir?",
+      "answer": "Kullandığımız tüm orijinal yedek parçalar üretici garantisi kapsamındadır. Ayrıca işçiliğimize 3 ay garanti veriyoruz."
+    },
+    {
+      "id": 3,
+      "question": "Köy servisiniz var mı?",
+      "answer": "Evet! Her Salı ve Cuma günü çevre köylere servis veriyoruz. Gülek, Yenice, Sofular, Atalar, Bahşiş, Yeşiltepe ve Dörtler'e hizmet götürüyoruz."
+    },
+    {
+      "id": 4,
+      "question": "Tamir öncesi fiyat öğrenebilir miyim?",
+      "answer": "Kesinlikle! Teknisyenimiz arızayı inceledikten sonra işleme başlamadan önce net fiyat bilgisi verir, onayınız olmadan işlem yapılmaz."
+    }
+  ]
+}
