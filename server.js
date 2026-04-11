@@ -4,7 +4,7 @@ const jwt = require('jsonwebtoken');
 const path = require('path');
 const PDFDocument = require('pdfkit');
 const axios = require('axios');
-const prisma = require('./prisma');
+const supabase = require('./supabase');
 
 const app = express();
 app.use(express.json());
@@ -27,16 +27,14 @@ const TABLES = {
 
 // --- Helpers ---
 async function getData(table) {
-  const record = await prisma[table].findUnique({ where: { id: 1 } });
-  return record?.data ?? null;
+  const { data, error } = await supabase.from(table).select('data').eq('id', 1).single();
+  if (error && error.code !== 'PGRST116') throw error;
+  return data?.data ?? null;
 }
 
 async function setData(table, data) {
-  await prisma[table].upsert({
-    where: { id: 1 },
-    update: { data },
-    create: { id: 1, data }
-  });
+  const { error } = await supabase.from(table).upsert({ id: 1, data });
+  if (error) throw error;
 }
 
 // read() and write() wrappers for backward compatibility with helper functions that call them
