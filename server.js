@@ -1,33 +1,50 @@
 require('dotenv').config();
 const express = require('express');
 const jwt = require('jsonwebtoken');
-const fs = require('fs');
 const path = require('path');
 const PDFDocument = require('pdfkit');
 const axios = require('axios');
+const supabase = require('./supabase');
 
 const app = express();
 app.use(express.json());
-
-// --- Dosya yolları ---
-const DATA = {
-  content:      path.join(__dirname, 'data', 'content.json'),
-  leads:        path.join(__dirname, 'data', 'leads.json'),
-  blog:         path.join(__dirname, 'data', 'blog.json'),
-  settings:     path.join(__dirname, 'data', 'settings.json'),
-  technicians:  path.join(__dirname, 'data', 'technicians.json'),
-  appointments: path.join(__dirname, 'data', 'appointments.json'),
-  reminders:    path.join(__dirname, 'data', 'reminders.json'),
-};
 
 const JWT_SECRET   = process.env.JWT_SECRET   || 'durukan-secret';
 const ADMIN_USER   = process.env.ADMIN_USERNAME || 'admin';
 const ADMIN_PASS   = process.env.ADMIN_PASSWORD || 'durukan2024';
 const PORT         = process.env.PORT          || 3000;
 
+// Table names
+const TABLES = {
+  content:      'content',
+  leads:        'leads',
+  blog:         'blog',
+  settings:     'settings',
+  technicians:  'technicians',
+  appointments: 'appointments',
+  reminders:    'reminders',
+};
+
 // --- Helpers ---
-const read  = f => JSON.parse(fs.readFileSync(DATA[f], 'utf8'));
-const write = (f, d) => fs.writeFileSync(DATA[f], JSON.stringify(d, null, 2), 'utf8');
+async function getData(table) {
+  const { data, error } = await supabase.from(table).select('data').eq('id', 1).single();
+  if (error && error.code !== 'PGRST116') throw error;
+  return data?.data ?? null;
+}
+
+async function setData(table, data) {
+  const { error } = await supabase.from(table).upsert({ id: 1, data });
+  if (error) throw error;
+}
+
+// read() and write() wrappers for backward compatibility with helper functions that call them
+async function read(table) {
+  return getData(table);
+}
+
+async function write(table, data) {
+  return setData(table, data);
+}
 
 function deepMerge(target, source) {
   const r = { ...target };
@@ -41,9 +58,10 @@ function deepMerge(target, source) {
 
 // --- Sayfa görünürlük middleware ---
 function checkPage(route) {
-  return (req, res, next) => {
+  return async (req, res, next) => {
     try {
-      const s = read('settings');
+      const s = await getData('settings');
+      if (!s) return next();
       const pageConf = (s.pages || {})[route];
       if (pageConf && pageConf.enabled === false) {
         return res.status(404).sendFile(path.join(__dirname, 'public', '404.html'));
@@ -83,24 +101,25 @@ app.get('/api/verify', auth, (req, res) => res.json({ valid: true, user: req.use
 // ═══════════════════════════════════════════
 // CONTENT
 // ═══════════════════════════════════════════
-app.get('/api/content', (req, res) => {
-  try { res.json(read('content')); }
+app.get('/api/content', async (req, res) => {
+  try { res.json(await getData('content') || {}); }
   catch { res.status(500).json({ error: 'Okunamadı' }); }
 });
 
-app.put('/api/content', auth, (req, res) => {
+app.put('/api/content', auth, async (req, res) => {
   try {
-    const updated = deepMerge(read('content'), req.body);
-    write('content', updated);
+    const existing = (await getData('content')) || {};
+    const updated = deepMerge(existing, req.body);
+    await setData('content', updated);
     res.json({ success: true, data: updated });
   } catch (e) { res.status(500).json({ error: e.message }); }
 });
 
-app.put('/api/content/:section', auth, (req, res) => {
+app.put('/api/content/:section', auth, async (req, res) => {
   try {
-    const data = read('content');
+    const data = (await getData('content')) || {};
     data[req.params.section] = req.body;
-    write('content', data);
+    await setData('content', data);
     res.json({ success: true });
   } catch (e) { res.status(500).json({ error: e.message }); }
 });
@@ -108,7 +127,7 @@ app.put('/api/content/:section', auth, (req, res) => {
 // ═══════════════════════════════════════════
 // GENERATE REVIEWS
 // ═══════════════════════════════════════════
-app.post('/api/generate-reviews', auth, (req, res) => {
+app.post('/api/generate-reviews', auth, async (req, res) => {
   try {
     const erkekIsimler = ['Ahmet','Mehmet','Mustafa','Ali','Hüseyin','İbrahim','Hasan','İsmail','Ömer','Yusuf','Murat','Emre','Burak','Serkan','Okan','Kemal','Erdal','Selman','Ramazan','Kadir','Halil','Orhan','Fatih','Tarık','Caner','Bora','Enes','Furkan','Kaan','Uğur','Volkan','Selim','Cenk','Taner','Alper','Doğan','Cem','Tolga','Barış','Sinan','Ferhat','Yasin','Onur','Gökhan','Ercan','Sedat','Levent','Arif','Suat','Tuncay'];
     const kadinIsimler = ['Fatma','Ayşe','Hatice','Zeynep','Emine','Şule','Elif','Merve','Seda','Gül','Melek','Derya','Esra','Özlem','Canan','Pınar','Tuğba','Sevgi','Neslihan','Büşra','Aslı','Gamze','Hülya','Nurcan','Reyhan','Sevinç','Tülay','Yasemin','Zeliha','Aysun','Bahar','Dilek','Filiz','Gülay','Hande','İlknur','Kübra','Leyla','Miray','Nihal'];
@@ -126,9 +145,9 @@ app.post('/api/generate-reviews', auth, (req, res) => {
       const text = hizmet.startsWith('Kombi') ? rnd(kombiYorumlar) : rnd(klimaYorumlar);
       yorumlar.push({ id: i, name: `${isim} ${soyad}`, rating: 5, text, service: hizmet });
     }
-    const content = read('content');
+    const content = (await getData('content')) || {};
     content.testimonials = yorumlar;
-    write('content', content);
+    await setData('content', content);
     res.json({ success: true, testimonials: yorumlar });
   } catch (e) { res.status(500).json({ error: e.message }); }
 });
@@ -136,24 +155,26 @@ app.post('/api/generate-reviews', auth, (req, res) => {
 // ═══════════════════════════════════════════
 // SETTINGS
 // ═══════════════════════════════════════════
-app.get('/api/settings', (req, res) => {
+app.get('/api/settings', async (req, res) => {
   try {
-    const s = read('settings');
+    const s = await getData('settings');
+    if (!s) return res.json({});
     // Analytics ID'yi public'e aç ama smtp şifrelerini gizle
     const pub = { analytics: s.analytics, seo: s.seo, geo: s.geo, features: s.features };
     res.json(pub);
   } catch { res.status(500).json({ error: 'Okunamadı' }); }
 });
 
-app.get('/api/settings/all', auth, (req, res) => {
-  try { res.json(read('settings')); }
+app.get('/api/settings/all', auth, async (req, res) => {
+  try { res.json(await getData('settings') || {}); }
   catch { res.status(500).json({ error: 'Okunamadı' }); }
 });
 
-app.put('/api/settings', auth, (req, res) => {
+app.put('/api/settings', auth, async (req, res) => {
   try {
-    const updated = deepMerge(read('settings'), req.body);
-    write('settings', updated);
+    const existing = (await getData('settings')) || {};
+    const updated = deepMerge(existing, req.body);
+    await setData('settings', updated);
     res.json({ success: true });
   } catch (e) { res.status(500).json({ error: e.message }); }
 });
@@ -163,7 +184,7 @@ app.put('/api/settings', auth, (req, res) => {
 // ═══════════════════════════════════════════
 app.post('/api/leads', async (req, res) => {
   try {
-    const leads = read('leads');
+    const leads = (await getData('leads')) || [];
     const trackCode = 'DK-' + Date.now().toString(36).toUpperCase().slice(-6);
     const lead = {
       id: Date.now(),
@@ -176,11 +197,11 @@ app.post('/api/leads', async (req, res) => {
     };
     if (!lead.name || !lead.phone) return res.status(400).json({ error: 'Ad ve telefon zorunlu' });
     leads.unshift(lead);
-    write('leads', leads);
+    await setData('leads', leads);
 
     // Hatırlatıcı ekle (6 ay sonra)
     try {
-      const reminders = read('reminders');
+      const reminders = (await getData('reminders')) || [];
       const remDate = new Date(); remDate.setMonth(remDate.getMonth() + 6);
       reminders.push({
         id: Date.now() + 1,
@@ -193,7 +214,7 @@ app.post('/api/leads', async (req, res) => {
         sent: false,
         createdAt: new Date().toISOString()
       });
-      write('reminders', reminders);
+      await setData('reminders', reminders);
     } catch {}
 
     // SMS gönder
@@ -203,9 +224,9 @@ app.post('/api/leads', async (req, res) => {
   } catch (e) { res.status(500).json({ error: e.message }); }
 });
 
-app.get('/api/leads', auth, (req, res) => {
+app.get('/api/leads', auth, async (req, res) => {
   try {
-    const leads = read('leads');
+    const leads = (await getData('leads')) || [];
     const { status, limit = 50, offset = 0 } = req.query;
     const filtered = status ? leads.filter(l => l.status === status) : leads;
     res.json({
@@ -222,22 +243,21 @@ app.get('/api/leads', auth, (req, res) => {
   } catch (e) { res.status(500).json({ error: e.message }); }
 });
 
-app.put('/api/leads/:id', auth, (req, res) => {
+app.put('/api/leads/:id', auth, async (req, res) => {
   try {
-    const leads = read('leads');
+    const leads = (await getData('leads')) || [];
     const idx = leads.findIndex(l => l.id === +req.params.id);
     if (idx === -1) return res.status(404).json({ error: 'Bulunamadı' });
     leads[idx] = { ...leads[idx], ...req.body, updatedAt: new Date().toISOString() };
-    write('leads', leads);
+    await setData('leads', leads);
     res.json({ success: true, lead: leads[idx] });
   } catch (e) { res.status(500).json({ error: e.message }); }
 });
 
-app.delete('/api/leads/:id', auth, (req, res) => {
+app.delete('/api/leads/:id', auth, async (req, res) => {
   try {
-    const leads = read('leads');
-    const filtered = leads.filter(l => l.id !== +req.params.id);
-    write('leads', filtered);
+    const leads = (await getData('leads')) || [];
+    await setData('leads', leads.filter(l => l.id !== +req.params.id));
     res.json({ success: true });
   } catch (e) { res.status(500).json({ error: e.message }); }
 });
@@ -245,9 +265,9 @@ app.delete('/api/leads/:id', auth, (req, res) => {
 // ═══════════════════════════════════════════
 // BLOG
 // ═══════════════════════════════════════════
-app.get('/api/blog', (req, res) => {
+app.get('/api/blog', async (req, res) => {
   try {
-    const posts = read('blog');
+    const posts = (await getData('blog')) || [];
     const { limit = 10, offset = 0, category, tag } = req.query;
     let filtered = posts.filter(p => p.published);
     if (category) filtered = filtered.filter(p => p.category === category);
@@ -263,23 +283,23 @@ app.get('/api/blog', (req, res) => {
   } catch { res.status(500).json({ error: 'Okunamadı' }); }
 });
 
-app.get('/api/blog/all', auth, (req, res) => {
-  try { res.json(read('blog')); }
+app.get('/api/blog/all', auth, async (req, res) => {
+  try { res.json(await getData('blog') || []); }
   catch { res.status(500).json({ error: 'Okunamadı' }); }
 });
 
-app.get('/api/blog/:slug', (req, res) => {
+app.get('/api/blog/:slug', async (req, res) => {
   try {
-    const posts = read('blog');
+    const posts = (await getData('blog')) || [];
     const post = posts.find(p => p.slug === req.params.slug && p.published);
     if (!post) return res.status(404).json({ error: 'Yazı bulunamadı' });
     res.json(post);
   } catch { res.status(500).json({ error: 'Okunamadı' }); }
 });
 
-app.post('/api/blog', auth, (req, res) => {
+app.post('/api/blog', auth, async (req, res) => {
   try {
-    const posts = read('blog');
+    const posts = (await getData('blog')) || [];
     const post = {
       id: Date.now(),
       slug: slugify(req.body.title || 'yeni-yazi'),
@@ -289,14 +309,14 @@ app.post('/api/blog', auth, (req, res) => {
       updatedAt: new Date().toISOString(),
     };
     posts.unshift(post);
-    write('blog', posts);
+    await setData('blog', posts);
     res.json({ success: true, post });
   } catch (e) { res.status(500).json({ error: e.message }); }
 });
 
-app.put('/api/blog/:id', auth, (req, res) => {
+app.put('/api/blog/:id', auth, async (req, res) => {
   try {
-    const posts = read('blog');
+    const posts = (await getData('blog')) || [];
     const idx = posts.findIndex(p => p.id === +req.params.id);
     if (idx === -1) return res.status(404).json({ error: 'Bulunamadı' });
     const wasPublished = posts[idx].published;
@@ -306,15 +326,15 @@ app.put('/api/blog/:id', auth, (req, res) => {
       updatedAt: new Date().toISOString(),
       publishedAt: (!wasPublished && req.body.published) ? new Date().toISOString() : posts[idx].publishedAt,
     };
-    write('blog', posts);
+    await setData('blog', posts);
     res.json({ success: true, post: posts[idx] });
   } catch (e) { res.status(500).json({ error: e.message }); }
 });
 
-app.delete('/api/blog/:id', auth, (req, res) => {
+app.delete('/api/blog/:id', auth, async (req, res) => {
   try {
-    const posts = read('blog');
-    write('blog', posts.filter(p => p.id !== +req.params.id));
+    const posts = (await getData('blog')) || [];
+    await setData('blog', posts.filter(p => p.id !== +req.params.id));
     res.json({ success: true });
   } catch (e) { res.status(500).json({ error: e.message }); }
 });
@@ -322,9 +342,9 @@ app.delete('/api/blog/:id', auth, (req, res) => {
 // ═══════════════════════════════════════════
 // SERVİS TAKİP
 // ═══════════════════════════════════════════
-app.get('/api/track/:code', (req, res) => {
+app.get('/api/track/:code', async (req, res) => {
   try {
-    const leads = read('leads');
+    const leads = (await getData('leads')) || [];
     const lead = leads.find(l => l.trackCode === req.params.code.toUpperCase());
     if (!lead) return res.status(404).json({ error: 'Talep bulunamadı' });
     const statusMap = {
@@ -356,35 +376,36 @@ app.get('/api/track/:code', (req, res) => {
 // ═══════════════════════════════════════════
 // TEKNİSYENLER
 // ═══════════════════════════════════════════
-app.get('/api/technicians', auth, (req, res) => {
-  try { res.json(read('technicians')); }
+app.get('/api/technicians', auth, async (req, res) => {
+  try { res.json(await getData('technicians') || []); }
   catch { res.status(500).json({ error: 'Okunamadı' }); }
 });
 
-app.post('/api/technicians', auth, (req, res) => {
+app.post('/api/technicians', auth, async (req, res) => {
   try {
-    const list = read('technicians');
+    const list = (await getData('technicians')) || [];
     const item = { id: Date.now(), ...req.body, active: true };
     list.push(item);
-    write('technicians', list);
+    await setData('technicians', list);
     res.json({ success: true, item });
   } catch (e) { res.status(500).json({ error: e.message }); }
 });
 
-app.put('/api/technicians/:id', auth, (req, res) => {
+app.put('/api/technicians/:id', auth, async (req, res) => {
   try {
-    const list = read('technicians');
+    const list = (await getData('technicians')) || [];
     const idx = list.findIndex(t => t.id === +req.params.id);
     if (idx === -1) return res.status(404).json({ error: 'Bulunamadı' });
     list[idx] = { ...list[idx], ...req.body };
-    write('technicians', list);
+    await setData('technicians', list);
     res.json({ success: true });
   } catch (e) { res.status(500).json({ error: e.message }); }
 });
 
-app.delete('/api/technicians/:id', auth, (req, res) => {
+app.delete('/api/technicians/:id', auth, async (req, res) => {
   try {
-    write('technicians', read('technicians').filter(t => t.id !== +req.params.id));
+    const list = (await getData('technicians')) || [];
+    await setData('technicians', list.filter(t => t.id !== +req.params.id));
     res.json({ success: true });
   } catch (e) { res.status(500).json({ error: e.message }); }
 });
@@ -392,33 +413,33 @@ app.delete('/api/technicians/:id', auth, (req, res) => {
 // ═══════════════════════════════════════════
 // RANDEVULAR (TAKVİM)
 // ═══════════════════════════════════════════
-app.get('/api/appointments', auth, (req, res) => {
+app.get('/api/appointments', auth, async (req, res) => {
   try {
     const { date, techId } = req.query;
-    let list = read('appointments');
+    let list = (await getData('appointments')) || [];
     if (date) list = list.filter(a => a.date === date);
     if (techId) list = list.filter(a => a.technicianId === +techId);
     res.json(list);
   } catch (e) { res.status(500).json({ error: e.message }); }
 });
 
-app.post('/api/appointments', auth, (req, res) => {
+app.post('/api/appointments', auth, async (req, res) => {
   try {
-    const list = read('appointments');
+    const list = (await getData('appointments')) || [];
     const appt = { id: Date.now(), ...req.body, createdAt: new Date().toISOString() };
     list.push(appt);
-    write('appointments', list);
+    await setData('appointments', list);
     // Lead'e randevu bilgisini ekle
     if (appt.leadId) {
       try {
-        const leads = read('leads');
+        const leads = (await getData('leads')) || [];
         const idx = leads.findIndex(l => l.id === appt.leadId);
         if (idx !== -1) {
           leads[idx].status = 'scheduled';
           leads[idx].appointmentDate = appt.date + ' ' + appt.time;
           leads[idx].technician = appt.technicianName;
           leads[idx].updatedAt = new Date().toISOString();
-          write('leads', leads);
+          await setData('leads', leads);
         }
       } catch {}
     }
@@ -426,20 +447,21 @@ app.post('/api/appointments', auth, (req, res) => {
   } catch (e) { res.status(500).json({ error: e.message }); }
 });
 
-app.put('/api/appointments/:id', auth, (req, res) => {
+app.put('/api/appointments/:id', auth, async (req, res) => {
   try {
-    const list = read('appointments');
+    const list = (await getData('appointments')) || [];
     const idx = list.findIndex(a => a.id === +req.params.id);
     if (idx === -1) return res.status(404).json({ error: 'Bulunamadı' });
     list[idx] = { ...list[idx], ...req.body };
-    write('appointments', list);
+    await setData('appointments', list);
     res.json({ success: true });
   } catch (e) { res.status(500).json({ error: e.message }); }
 });
 
-app.delete('/api/appointments/:id', auth, (req, res) => {
+app.delete('/api/appointments/:id', auth, async (req, res) => {
   try {
-    write('appointments', read('appointments').filter(a => a.id !== +req.params.id));
+    const list = (await getData('appointments')) || [];
+    await setData('appointments', list.filter(a => a.id !== +req.params.id));
     res.json({ success: true });
   } catch (e) { res.status(500).json({ error: e.message }); }
 });
@@ -447,9 +469,9 @@ app.delete('/api/appointments/:id', auth, (req, res) => {
 // ═══════════════════════════════════════════
 // HATIRLATICLAR
 // ═══════════════════════════════════════════
-app.get('/api/reminders', auth, (req, res) => {
+app.get('/api/reminders', auth, async (req, res) => {
   try {
-    const list = read('reminders');
+    const list = (await getData('reminders')) || [];
     const today = new Date().toISOString().slice(0, 10);
     const { filter } = req.query;
     let result = list;
@@ -460,47 +482,48 @@ app.get('/api/reminders', auth, (req, res) => {
   } catch (e) { res.status(500).json({ error: e.message }); }
 });
 
-app.post('/api/reminders', auth, (req, res) => {
+app.post('/api/reminders', auth, async (req, res) => {
   try {
-    const list = read('reminders');
+    const list = (await getData('reminders')) || [];
     const item = { id: Date.now(), ...req.body, sent: false, createdAt: new Date().toISOString() };
     list.push(item);
-    write('reminders', list);
+    await setData('reminders', list);
     res.json({ success: true, item });
   } catch (e) { res.status(500).json({ error: e.message }); }
 });
 
-app.put('/api/reminders/:id', auth, (req, res) => {
+app.put('/api/reminders/:id', auth, async (req, res) => {
   try {
-    const list = read('reminders');
+    const list = (await getData('reminders')) || [];
     const idx = list.findIndex(r => r.id === +req.params.id);
     if (idx === -1) return res.status(404).json({ error: 'Bulunamadı' });
     list[idx] = { ...list[idx], ...req.body };
-    write('reminders', list);
+    await setData('reminders', list);
     res.json({ success: true });
   } catch (e) { res.status(500).json({ error: e.message }); }
 });
 
 app.post('/api/reminders/:id/send', auth, async (req, res) => {
   try {
-    const list = read('reminders');
+    const list = (await getData('reminders')) || [];
     const idx = list.findIndex(r => r.id === +req.params.id);
     if (idx === -1) return res.status(404).json({ error: 'Bulunamadı' });
     const r = list[idx];
-    const content = read('content');
+    const content = (await getData('content')) || {};
     const companyName = content.company?.name || 'Durukan Klima';
     const msg = `Sayın ${r.name}, ${r.service || 'klima'} bakım zamanınız geldi! ${companyName} olarak sizi bekliyoruz. Randevu: ${content.contact?.phone || ''}`;
     await sendSmsRaw(r.phone, msg);
     list[idx].sent = true;
     list[idx].sentAt = new Date().toISOString();
-    write('reminders', list);
+    await setData('reminders', list);
     res.json({ success: true });
   } catch (e) { res.status(500).json({ error: e.message }); }
 });
 
-app.delete('/api/reminders/:id', auth, (req, res) => {
+app.delete('/api/reminders/:id', auth, async (req, res) => {
   try {
-    write('reminders', read('reminders').filter(r => r.id !== +req.params.id));
+    const list = (await getData('reminders')) || [];
+    await setData('reminders', list.filter(r => r.id !== +req.params.id));
     res.json({ success: true });
   } catch (e) { res.status(500).json({ error: e.message }); }
 });
@@ -508,12 +531,12 @@ app.delete('/api/reminders/:id', auth, (req, res) => {
 // ═══════════════════════════════════════════
 // PDF İŞ EMRİ
 // ═══════════════════════════════════════════
-app.get('/api/leads/:id/pdf', auth, (req, res) => {
+app.get('/api/leads/:id/pdf', auth, async (req, res) => {
   try {
-    const leads = read('leads');
+    const leads = (await getData('leads')) || [];
     const lead = leads.find(l => l.id === +req.params.id);
     if (!lead) return res.status(404).json({ error: 'Bulunamadı' });
-    const content = read('content');
+    const content = (await getData('content')) || {};
     const company = content.company || {};
     const contact = content.contact || {};
 
@@ -599,7 +622,7 @@ app.get('/api/leads/:id/pdf', auth, (req, res) => {
 // SMS YARDIMCILARI
 // ═══════════════════════════════════════════
 async function sendSmsRaw(phone, message) {
-  const s = read('settings');
+  const s = (await getData('settings')) || {};
   const sms = s.sms || {};
   if (!sms.enabled || !sms.netgsmUser || !sms.netgsmPass) return;
   const cleanPhone = phone.replace(/[\s\-\(\)]/g, '').replace(/^0/, '90');
@@ -608,10 +631,10 @@ async function sendSmsRaw(phone, message) {
 }
 
 async function sendSMS(lead) {
-  const s = read('settings');
+  const s = (await getData('settings')) || {};
   const sms = s.sms || {};
   if (!sms.enabled) return;
-  const content = read('content');
+  const content = (await getData('content')) || {};
   const company = content.company?.name || 'Durukan Klima';
   const phone = content.contact?.phone || '';
   if (sms.sendToCustomer) {
@@ -627,11 +650,14 @@ async function sendSMS(lead) {
 // ═══════════════════════════════════════════
 // SITEMAP & ROBOTS (SEO)
 // ═══════════════════════════════════════════
-app.get('/sitemap.xml', (req, res) => {
+app.get('/sitemap.xml', async (req, res) => {
   try {
-    const settings = read('settings');
+    const settings = (await getData('settings')) || {};
+    const content = (await getData('content')) || {};
     const base = settings.seo?.canonicalUrl || `http://localhost:${PORT}`;
-    const posts = read('blog').filter(p => p.published);
+    const posts = (content.testimonials ? (await getData('blog')) || [] : []).filter(p => p.published);
+    const blogPosts = (await getData('blog')) || [];
+    const publishedPosts = blogPosts.filter(p => p.published);
     const pages = [
       { url: '/', priority: '1.0', changefreq: 'weekly' },
       { url: '/blog', priority: '0.8', changefreq: 'daily' },
@@ -648,7 +674,7 @@ app.get('/sitemap.xml', (req, res) => {
       { url: '/#hizmetler', priority: '0.8', changefreq: 'monthly' },
       { url: '/#iletisim', priority: '0.7', changefreq: 'monthly' },
     ];
-    const blogUrls = posts.map(p => ({
+    const blogUrls = publishedPosts.map(p => ({
       url: `/blog/${p.slug}`,
       priority: '0.7',
       changefreq: 'monthly',
@@ -669,8 +695,8 @@ ${all.map(p => `  <url>
   } catch { res.status(500).send('Sitemap oluşturulamadı'); }
 });
 
-app.get('/robots.txt', (req, res) => {
-  const settings = read('settings');
+app.get('/robots.txt', async (req, res) => {
+  const settings = (await getData('settings')) || {};
   const base = settings.seo?.canonicalUrl || `http://localhost:${PORT}`;
   res.setHeader('Content-Type', 'text/plain');
   res.send(`User-agent: *\nAllow: /\nDisallow: /admin\nDisallow: /api\nSitemap: ${base}/sitemap.xml\n`);
@@ -679,9 +705,9 @@ app.get('/robots.txt', (req, res) => {
 // ═══════════════════════════════════════════
 // TESTIMONIALS API
 // ═══════════════════════════════════════════
-app.get('/api/testimonials', (req, res) => {
+app.get('/api/testimonials', async (req, res) => {
   try {
-    const content = read('content');
+    const content = (await getData('content')) || {};
     const testimonials = content.testimonials || [];
     const { limit = 50, offset = 0, filter } = req.query;
     let result = testimonials;
