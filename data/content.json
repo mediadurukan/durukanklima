@@ -3753,22 +3753,105 @@
     {
       "id": 1,
       "question": "Klima gazı ne zaman doldurulmalı?",
-      "answer": "Klimanız yeterince soğutmuyorsa veya beklenmedik şekilde kapanıyorsa gaz dolumuna ihtiyaç duyabilir. Yılda bir kez bakım yaptırmanızı öneririz."
+      "answer": "Klimanız yeterince soğutmuyorsa veya uzun süredir bakım yaptırmadıysanız, gaz dolumuna ihtiyaç duyabilirsiniz. Yılda en az bir kez bakım yaptırmanızı öneririz."
     },
     {
       "id": 2,
-      "question": "Garanti kapsamı nedir?",
-      "answer": "Kullandığımız tüm orijinal yedek parçalar üretici garantisi kapsamındadır. Ayrıca işçiliğimize 3 ay garanti veriyoruz."
+      "question": "Adana'da klima servisi kaç saat içinde geliyor?",
+      "answer": "Çukurova ve Seyhan'daki çağrılara aynı gün, çoğunlukla 2-4 saat içinde yanıt veriyoruz. Acil durumlar için WhatsApp hattımız üzerinden ulaşabilirsiniz."
     },
     {
       "id": 3,
-      "question": "Köy servisiniz var mı?",
-      "answer": "Evet! Her Salı ve Cuma günü çevre köylere servis veriyoruz. Gülek, Yenice, Sofular, Atalar, Bahşiş, Yeşiltepe ve Dörtler'e hizmet götürüyoruz."
+      "question": "Klima bakımı ne kadar sıklıkla yapılmalı?",
+      "answer": "Klima bakımı yılda en az bir kez, tercihen yaz sezonundan önce (Nisan-Mayıs) yaptırılmalıdır."
     },
     {
       "id": 4,
-      "question": "Tamir öncesi fiyat öğrenebilir miyim?",
-      "answer": "Kesinlikle! Teknisyenimiz arızayı inceledikten sonra işleme başlamadan önce net fiyat bilgisi verir, onayınız olmadan işlem yapılmaz."
+      "question": "Orijinal yedek parça kullanıyor musunuz?",
+      "answer": "Evet, sadece orijinal yedek parça kullanıyoruz. Tüm onarımlarımızda orijinal parça garantisi sunuyoruz."
+    },
+    {
+      "id": 5,
+      "question": "Klima montajı ne kadar sürer?",
+      "answer": "Standart bir split klima montajı genellikle 2-3 saat sürer."
+    },
+    {
+      "id": 6,
+      "question": "Kombi bakımı neden önemli?",
+      "answer": "Kombi bakımı hem güvenlik hem de verimlilik açısından kritiktir. Düzenli bakım ile doğalgaz tüketimi %10-15 oranında düşer."
+    },
+    {
+      "id": 7,
+      "question": "Acil servis hizmetiniz var mı?",
+      "answer": "Hafta içi 19:00-21:00 saatleri arasında WhatsApp üzerinden acil durumlar için ulaşabilirsiniz."
+    },
+    {
+      "id": 8,
+      "question": "Klima arızasında ne yapmalıyım?",
+      "answer": "Öncelikle klimanızın fişinin takılı olduğundan emin olun. Klimanız hiç çalışmıyorsa veya olağandışı sesler çıkarıyorsa, müdahale etmeyin ve hemen bizimle iletişime geçin."
+    },
+    {
+      "id": 9,
+      "question": "Fiyat teklifi almak için ne yapmalıyım?",
+      "answer": "Online teklif formumuzdan, telefonla veya WhatsApp üzerinden iletişime geçebilirsiniz."
+    },
+    {
+      "id": 10,
+      "question": "Klima neden soğutmuyor?",
+      "answer": "Soğutmama sorunu gaz kaybından, filtresel kirliliğinden veya elektronik arızalardan kaynaklanabilir. Profesyonel bir arıza tespiti ile kesin çözüm sunuyoruz."
     }
+  ],
+  "statistics": {
+    "happyCustomers": 500,
+    "yearsExperience": 10,
+    "originalParts": 100,
+    "teamSize": 5
+  },
+  "workingHours": {
+    "normal": [
+      {
+        "days": "Pazartesi – Cuma",
+        "hours": "08:00 – 19:00"
+      },
+      {
+        "days": "Cumartesi",
+        "hours": "08:00 – 17:00"
+      },
+      {
+        "days": "Pazar",
+        "hours": "Kapalı"
+      }
+    ],
+    "village": [
+      {
+        "days": "Salı",
+        "hours": "09:00 – 17:00"
+      },
+      {
+        "days": "Cuma",
+        "hours": "09:00 – 17:00"
+      }
+    ],
+    "emergency": {
+      "days": "Hafta içi",
+      "hours": "19:00 – 21:00",
+      "channel": "WhatsApp"
+    }
+  },
+  "serviceAreas": [
+    "Çukurova",
+    "Seyhan",
+    "Sarıçam",
+    "Yüreğir",
+    "Kozan",
+    "Ceyhan",
+    "İmamoğlu",
+    "Aladağ",
+    "Feke",
+    "Karaisalı",
+    "Pozantı",
+    "Saimbeyli",
+    "Tufanbeyli",
+    "Yumurtalık"
   ]
 }

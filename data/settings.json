@@ -49,7 +49,15 @@
     "floatingWhatsapp": { "title": "Sabit WhatsApp Butonu", "enabled": true },
     "navPhone": { "title": "Navbar Telefon Butonu", "enabled": true },
     "heroCallBtn": { "title": "Hero Ara Butonu", "enabled": true },
-    "whatsappButtons": { "title": "WhatsApp Butonları (Genel)", "enabled": true }
+    "whatsappButtons": { "title": "WhatsApp Butonları (Genel)", "enabled": true },
+    "btuCalculator": { "title": "BTU Hesaplama", "enabled": true },
+    "electricityCalculator": { "title": "Elektrik Tüketim Hesaplama", "enabled": true },
+    "testimonials": { "title": "Müşteri Yorumları", "enabled": true },
+    "statistics": { "title": "İstatistikler (Sayaclar)", "enabled": true },
+    "workingHours": { "title": "Çalışma Saatleri", "enabled": true },
+    "serviceArea": { "title": "Hizmet Bölgesi", "enabled": true },
+    "faq": { "title": "SSS Bölümü", "enabled": true },
+    "whyUs": { "title": "Neden Biz?", "enabled": true }
   },
   "pages": {
     "/": { "title": "Ana Sayfa", "enabled": true },
@@ -57,6 +65,8 @@
     "/teklif": { "title": "Teklif Hesaplayıcı", "enabled": true },
     "/takip": { "title": "Servis Takip", "enabled": true },
     "/blog": { "title": "Blog", "enabled": true },
+    "/btu-hesaplama": { "title": "BTU Hesaplama", "enabled": true },
+    "/elektrik-tuketim": { "title": "Elektrik Tüketim Hesaplama", "enabled": true },
     "/cukurova-klima-servisi": { "title": "Çukurova Klima Servisi", "enabled": true },
     "/seyhan-klima-servisi": { "title": "Seyhan Klima Servisi", "enabled": true },
     "/saricam-klima-servisi": { "title": "Sarıçam Klima Servisi", "enabled": true },

@@ -141,6 +141,32 @@ function applyContent(d) {
     if (daysEl) daysEl.textContent = `🚗 Tüm Adana ilçelerine aynı gün servis verilmektedir.`;
   }
 
+  // Populate village tags if element exists
+  const vTagsEl = document.getElementById('village-tags');
+  if (vTagsEl && d.serviceAreas?.length) {
+    vTagsEl.innerHTML = d.serviceAreas.map(v =>
+      '<span class="village-tag">📍 ' + v + '</span>'
+    ).join('');
+  }
+  // Update village service hours
+  if (d.workingHours) {
+    if (d.workingHours.village && d.workingHours.village[0]) {
+      const v1 = d.workingHours.village[0];
+      const v1d = document.getElementById('h-village-day1');
+      const v1t = document.getElementById('h-village-time1');
+      if (v1d) v1d.textContent = v1.days || 'Salı';
+      if (v1t) v1t.textContent = v1.hours || '09:00 – 17:00';
+    }
+    if (d.workingHours.village && d.workingHours.village[1]) {
+      const v2 = d.workingHours.village[1];
+      const v2d = document.getElementById('h-village-day2');
+      const v2t = document.getElementById('h-village-time2');
+      if (v2d) v2d.textContent = v2.days || 'Cuma';
+      if (v2t) v2t.textContent = v2.hours || '09:00 – 17:00';
+    }
+  }
+
+
   // Yorumlar — sayfalama sistemi
   if (d.testimonials?.length) {
     initReviews(d.testimonials);
@@ -520,8 +546,43 @@ async function hqfSubmit() {
 }
 
 // ── Başlat ──────────────────────────────────────
+
+// ── Animated Counters ───────────────────────
+function animateCounters() {
+  const counters = document.querySelectorAll('.counter-number');
+  if (!counters.length) return;
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const el = entry.target;
+      const target = parseInt(el.dataset.target) || 0;
+      const suffix = el.dataset.suffix || '';
+      let current = 0;
+      const step = Math.ceil(target / 60);
+      const timer = setInterval(() => {
+        current += step;
+        if (current >= target) { current = target; clearInterval(timer); }
+        el.textContent = current.toLocaleString('tr-TR') + suffix;
+      }, 25);
+      observer.unobserve(el);
+    });
+  }, { threshold: 0.5 });
+  counters.forEach(c => observer.observe(c));
+}
+
+// ── Toggle Village List ─────────────────────
+function toggleVillageList() {
+  const container = document.getElementById('village-list-container');
+  const btn = document.getElementById('toggle-village-btn');
+  if (!container) return;
+  const isVisible = container.style.display !== 'none';
+  container.style.display = isVisible ? 'none' : 'block';
+  if (btn) btn.textContent = isVisible ? 'Tüm bölgeleri gör →' : 'Bölgeleri gizle ←';
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   loadContent();
+  animateCounters();
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', e => {
       const target = document.querySelector(a.getAttribute('href'));

@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Klima BTU Hesaplama | Durukan Klima — Adana</title>
+  <meta name="description" content="Klima BTU hesaplama aracı ile odanız için doğru kapasitede klima seçin. Adana ve çevresinde uzman klima servisi." />
+  <meta name="keywords" content="btu hesaplama, klima btu, klima kapasite hesaplama, kaç btu klima" />
+  <link rel="canonical" href="https://durukanklima.com/btu-hesaplama" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <style>
+    .calc-hero {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+      color: white;
+      padding: 60px 0 80px;
+      text-align: center;
+    }
+    .calc-hero h1 { font-size: 2.2rem; font-weight: 800; margin-bottom: 12px; }
+    .calc-hero p { font-size: 1.05rem; opacity: 0.9; max-width: 600px; margin: 0 auto; }
+    .calc-container { max-width: 860px; margin: -50px auto 0; padding: 0 20px; }
+    .calc-card {
+      background: white;
+      border-radius: 18px;
+      box-shadow: 0 8px 40px rgba(26,111,168,0.12);
+      padding: 36px;
+      margin-bottom: 32px;
+    }
+    .calc-card h2 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--bg);
+    }
+    .form-row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px; }
+    .form-row-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-bottom: 20px; }
+    .form-group { margin-bottom: 0; }
+    .form-group label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+    .form-group input, .form-group select {
+      width: 100%;
+      padding: 11px 14px;
+      border: 1.5px solid var(--border);
+      border-radius: 10px;
+      font-size: 0.95rem;
+      font-family: 'Inter', sans-serif;
+      transition: border-color 0.2s;
+      background: white;
+    }
+    .form-group input:focus, .form-group select:focus {
+      outline: none;
+      border-color: var(--primary);
+    }
+    .range-hint { font-size: 0.78rem; color: var(--text-light); margin-top: 4px; display: block; }
+    .slider-group { margin-bottom: 20px; }
+    .slider-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+    .slider-header label { font-size: 0.85rem; font-weight: 600; color: var(--text); }
+    .slider-value { font-size: 1rem; font-weight: 800; color: var(--primary); }
+    .slider-desc { font-size: 0.78rem; color: var(--text-light); margin-top: 4px; }
+    input[type="range"] {
+      -webkit-appearance: none;
+      width: 100%;
+      height: 6px;
+      border-radius: 3px;
+      background: linear-gradient(to right, var(--primary) 0%, var(--primary) var(--pct, 50%), var(--border) var(--pct, 50%));
+      outline: none;
+      cursor: pointer;
+    }
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--primary);
+      border: 3px solid white;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      cursor: pointer;
+    }
+    .result-box {
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      border-radius: 16px;
+      color: white;
+      padding: 28px;
+      text-align: center;
+      margin-bottom: 24px;
+      display: none;
+    }
+    .result-box.visible { display: block; }
+    .result-btu { font-size: 3rem; font-weight: 800; line-height: 1; }
+    .result-label { font-size: 0.95rem; opacity: 0.85; margin-top: 4px; }
+    .result-range { font-size: 1.1rem; font-weight: 600; margin-top: 8px; }
+    .result-tips { margin-top: 16px; background: rgba(255,255,255,0.15); border-radius: 10px; padding: 16px; text-align: left; }
+    .result-tips h4 { font-size: 0.9rem; margin-bottom: 8px; }
+    .result-tips ul { margin: 0; padding-left: 18px; font-size: 0.85rem; }
+    .result-tips li { margin-bottom: 4px; }
+    .btn-calc {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 12px;
+      padding: 14px 32px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      transition: all 0.2s;
+      width: 100%;
+      justify-content: center;
+    }
+    .btn-calc:hover { background: var(--primary-dark); transform: translateY(-1px); }
+    .btn-reset {
+      background: none;
+      border: 1.5px solid var(--border);
+      border-radius: 10px;
+      padding: 10px 20px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      color: var(--text-light);
+      font-family: 'Inter', sans-serif;
+      margin-top: 10px;
+      transition: all 0.2s;
+    }
+    .btn-reset:hover { border-color: var(--primary); color: var(--primary); }
+    .info-section { margin-top: 40px; }
+    .info-section h3 { font-size: 1.2rem; font-weight: 700; color: var(--primary); margin-bottom: 16px; }
+    .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+    .info-card {
+      background: var(--bg);
+      border-radius: 12px;
+      padding: 20px;
+      border: 1px solid var(--border);
+    }
+    .info-card h4 { font-size: 0.95rem; font-weight: 700; margin-bottom: 6px; color: var(--primary); }
+    .info-card p { font-size: 0.85rem; color: var(--text-light); line-height: 1.5; }
+    .formula-box {
+      background: #fffbeb;
+      border: 1px solid #fcd34d;
+      border-radius: 12px;
+      padding: 20px;
+      margin: 20px 0;
+      font-size: 0.9rem;
+      color: #92400e;
+    }
+    .formula-box strong { display: block; margin-bottom: 6px; font-size: 0.95rem; }
+    @media (max-width: 768px) {
+      .form-row-2, .form-row-3 { grid-template-columns: 1fr; }
+      .calc-card { padding: 24px 20px; }
+      .result-btu { font-size: 2.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container">
+    <a href="/" class="logo">
+      <div class="logo-icon">❄️</div>
+      <span>Durukan Klima</span>
+    </a>
+    <a href="tel:05300000000" class="btn btn-primary" style="padding:10px 20px;font-size:0.9rem;">📞 Ara</a>
+  </div>
+</nav>
+
+<section class="calc-hero">
+  <div class="container">
+    <h1>❄️ Klima BTU Hesaplama</h1>
+    <p>Odanızın büyüklüğüne ve koşullarına göre kaç BTU'luk klima kullanmanız gerektiğini hesaplayın. Doğru kapasite = Doğru soğutma + Düşük fatura</p>
+  </div>
+</section>
+
+<div class="calc-container">
+  <div class="calc-card">
+    <h2>📐 Oda Bilgileri</h2>
+    <div class="form-row-2">
+      <div class="form-group">
+        <label>Oda Alanı (m²)</label>
+        <input type="number" id="calc-area" placeholder="Örn: 25" min="5" max="200" value="25" />
+        <span class="range-hint">15-200 m² arası</span>
+      </div>
+      <div class="form-group">
+        <label>Tavan Yüksekliği</label>
+        <select id="calc-ceiling">
+          <option value="2.5">Normal (2.5 m)</option>
+          <option value="2.8">Standart (2.8 m)</option>
+          <option value="3.0">Yüksek (3.0 m)</option>
+          <option value="3.5">Çok Yüksek (3.5 m)</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-row-3">
+      <div class="form-group">
+        <label>Güneş Alımı</label>
+        <select id="calc-sun">
+          <option value="1">Az (Kuzey / Gölge)</option>
+          <option value="1.15" selected>Orta (Doğu / Batı)</option>
+          <option value="1.3">Çok (Güney)</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Bölge</label>
+        <select id="calc-region">
+          <option value="1">İç Kesim (Adana)</option>
+          <option value="1.1">Kıyı</option>
+          <option value="1.05">Metropol</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Oda Tipi</label>
+        <select id="calc-roomtype">
+          <option value="1">Oturma Odası / Salon</option>
+          <option value="1.1">Ofis / Çalışma Odası</option>
+          <option value="1.2">Mutfak</option>
+          <option value="0.9">Yatak Odası</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-row-3">
+      <div class="form-group">
+        <label>Kişi Sayısı</label>
+        <select id="calc-people">
+          <option value="1">1 kişi</option>
+          <option value="2" selected>2 kişi</option>
+          <option value="3">3 kişi</option>
+          <option value="4">4 kişi</option>
+          <option value="5">5+ kişi</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Elektronik Cihaz</label>
+        <select id="calc-electronics">
+          <option value="0">Hiç yok</option>
+          <option value="150" selected>1-2 cihaz (TV, bilgisayar)</option>
+          <option value="400">3+ cihaz (sunucu, ofis ekipmanı)</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Yalıtım Kalitesi</label>
+        <select id="calc-insulation">
+          <option value="0.9">İyi (Çift cam, yalıtımlı)</option>
+          <option value="1" selected>Orta</option>
+          <option value="1.15">Zayıf (Eski bina, tek cam)</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="calc-card">
+    <h2>📊 Sonuç</h2>
+    <div class="result-box" id="result-box">
+      <div class="result-btu" id="result-btu">—</div>
+      <div class="result-label">Önerilen Minimum BTU</div>
+      <div class="result-range" id="result-range"></div>
+      <div class="result-tips" id="result-tips">
+        <h4>💡 Size Önerilerimiz</h4>
+        <ul id="result-tips-list"></ul>
+      </div>
+    </div>
+    <button class="btn-calc" onclick="calculateBtu()">⚡ BTU Hesapla</button>
+    <div style="text-align:center;">
+      <button class="btn-reset" onclick="resetCalc()">↺ Yeniden Başla</button>
+    </div>
+  </div>
+
+  <div class="info-section">
+    <h3>📚 BTU Nedir ve Nasıl Hesaplanır?</h3>
+    <div class="info-grid">
+      <div class="info-card">
+        <h4>BTU Nedir?</h4>
+        <p>BTU (British Thermal Unit), bir saatte klimanın taşıyabileceği ısı enerjisi miktarını ifade eder. Yüksek BTU = Yüksek soğutma kapasitesi.</p>
+      </div>
+      <div class="info-card">
+        <h4>Doğru Kapasite Neden Önemli?</h4>
+        <p>Düşük BTU: Klimanız yeterince soğutmaz, sürekli çalışır ve elektrik faturası artar. Yüksek BTU: Oda hızla soğur ama nem alır, rahatsızlık yaratır.</p>
+      </div>
+      <div class="info-card">
+        <h4>BTU Formülü</h4>
+        <p>Alan × Tavan × 600 = Temel ihtiyaç. Bu rakam güneş, bölge ve kişi sayısına göre çarpılır. Size en uygun sonucu yukarıdaki hesaplayıcı verir.</p>
+      </div>
+    </div>
+
+    <div class="formula-box">
+      <strong>📐 Pratik Kural:</strong>
+      Her 10 m² için yaklaşık 6.000 – 7.500 BTU arası klima tercih edilir.
+      <br />Örneğin 20 m² oda için: 12.000 – 15.000 BTU
+      <br />30 m² salon için: 18.000 – 22.500 BTU yeterlidir.
+    </div>
+
+    <div class="info-grid" style="margin-top: 16px;">
+      <div class="info-card">
+        <h4>Çok Büyük Klima Sorunu</h4>
+        <p>Kapasitesi yüksek klima odayı hızlı soğutur ama nem almaz. Bu da "soğuk ama nemli" hissettirir. İnverter klimalarda bu sorun daha az görülür.</p>
+      </div>
+      <div class="info-card">
+        <h4>A+++ İnverter Avantajı</h4>
+        <p>A+++ inverter klimalar, normal klimalara göre %40-60 daha az enerji tüketir. Yüksek başlangıç maliyeti, düşük işletme maliyeti ile kendini 2-3 yılda amorti eder.</p>
+      </div>
+    </div>
+  </div>
+
+  <div style="text-align:center;margin:40px 0 60px;">
+    <p style="font-size:1rem;color:var(--text-light);margin-bottom:16px;">Hesaplama sonucunda size en uygun klimayı seçmek için yardım ister misiniz?</p>
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+      <a href="tel:05300000000" class="btn btn-primary" style="padding:14px 28px;font-size:1rem;">📞 Hemen Ara</a>
+      <a href="/elektrik-tuketim" class="btn btn-outline" style="padding:14px 28px;font-size:1rem;">⚡ Elektrik Tasarrufu Hesapla</a>
+    </div>
+  </div>
+</div>
+
+<footer style="background:var(--primary);color:white;padding:24px 0;text-align:center;font-size:0.85rem;">
+  <p>© 2025 Durukan Klima — Adana Çukurova & Seyhan Klima Servisi</p>
+  <p style="opacity:0.7;font-size:0.78rem;margin-top:4px;">❄️ Tüm klima markalarında uzman servis • Orijinal yedek parça garantisi</p>
+</footer>
+
+<script>
+function calculateBtu() {
+  const area = parseFloat(document.getElementById('calc-area').value) || 0;
+  const ceiling = parseFloat(document.getElementById('calc-ceiling').value) || 2.5;
+  const sun = parseFloat(document.getElementById('calc-sun').value) || 1;
+  const region = parseFloat(document.getElementById('calc-region').value) || 1;
+  const roomType = parseFloat(document.getElementById('calc-roomtype').value) || 1;
+  const people = parseInt(document.getElementById('calc-people').value) || 2;
+  const electronics = parseInt(document.getElementById('calc-electronics').value) || 150;
+  const insulation = parseFloat(document.getElementById('calc-insulation').value) || 1;
+
+  if (area < 5 || area > 200) {
+    alert('Lütfen geçerli bir oda alanı girin (5-200 m²)');
+    return;
+  }
+
+  // BTU Calculation formula
+  // Base: area * ceiling height * 600 (BTU per cubic meter)
+  const baseBtu = area * ceiling * 600;
+  
+  // Apply multipliers
+  let totalBtu = baseBtu * sun * region * roomType;
+  
+  // Add heat from people (100 BTU per person above 1)
+  const extraPeople = Math.max(0, people - 1);
+  totalBtu += extraPeople * 100;
+  
+  // Add electronics heat
+  totalBtu += electronics;
+  
+  // Apply insulation factor
+  totalBtu *= insulation;
+
+  // Round to nearest 1000
+  const roundedBtu = Math.ceil(totalBtu / 1000) * 1000;
+  
+  // Show result
+  const resultBox = document.getElementById('result-box');
+  resultBox.classList.add('visible');
+  document.getElementById('result-btu').textContent = roundedBtu.toLocaleString('tr-TR') + ' BTU';
+  
+  // Range recommendation
+  const minBtu = Math.round(roundedBtu * 0.9 / 1000) * 1000;
+  const maxBtu = Math.round(roundedBtu * 1.1 / 1000) * 1000;
+  document.getElementById('result-range').textContent = `Önerilen aralık: ${minBtu.toLocaleString('tr-TR')} – ${maxBtu.toLocaleString('tr-TR')} BTU`;
+
+  // Tips based on result
+  const tipsList = document.getElementById('result-tips-list');
+  let tips = [];
+  
+  if (roundedBtu <= 9000) {
+    tips.push('9.000 BTU ve altı klimalar genellikle 10-15 m² odalar için uygundur.');
+  } else if (roundedBtu <= 12000) {
+    tips.push('12.000 BTU klimalar 15-22 m² odalar için idealdir.');
+  } else if (roundedBtu <= 18000) {
+    tips.push('18.000 BTU klimalar 22-35 m² alanlar için uygundur.');
+  } else if (roundedBtu <= 24000) {
+    tips.push('24.000 BTU klimalar 35-50 m² büyük salonlar için gereklidir.');
+  } else {
+    tips.push(`${roundedBtu.toLocaleString('tr-TR')} BTU üzeri için multiproje çözümü düşünülmelidir.`);
+    tips.push('Büyük alanlarda birden fazla klima veya merkezi sistem tercih edilebilir.');
+  }
+  
+  tips.push('A+++ enerji sınıfı inverter klima seçerek %40-60 tasarruf sağlayabilirsiniz.');
+  tips.push('Klimanızın yıllık bakımını yaptırarak performansını ve verimliliğini koruyun.');
+  
+  tipsList.innerHTML = tips.map(t => `<li>${t}</li>`).join('');
+}
+
+function resetCalc() {
+  document.getElementById('calc-area').value = '25';
+  document.getElementById('calc-ceiling').value = '2.5';
+  document.getElementById('calc-sun').value = '1.15';
+  document.getElementById('calc-region').value = '1';
+  document.getElementById('calc-roomtype').value = '1';
+  document.getElementById('calc-people').value = '2';
+  document.getElementById('calc-electronics').value = '150';
+  document.getElementById('calc-insulation').value = '1';
+  document.getElementById('result-box').classList.remove('visible');
+}
+</script>
+
+</body>
+</html>

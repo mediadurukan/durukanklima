@@ -1803,6 +1803,8 @@ function renderPageSettings() {
     '/teklif': '🧮 Teklif Hesaplayıcı',
     '/takip': '🔍 Servis Takip',
     '/blog': '📝 Blog',
+    '/btu-hesaplama': '❄️ BTU Hesaplama',
+    '/elektrik-tuketim': '⚡ Elektrik Tüketim Hesaplama',
     '/cukurova-klima-servisi': '📍 Çukurova Klima Servisi',
     '/seyhan-klima-servisi': '📍 Seyhan Klima Servisi',
     '/saricam-klima-servisi': '📍 Sarıçam Klima Servisi',
@@ -1844,11 +1846,19 @@ function renderFeatureSettings() {
   const container = document.getElementById('features-list');
   if (!container) return;
   const featureLabels = {
-    floatingPhone:    { icon: '📞', label: 'Sabit Telefon Butonu', desc: 'Ekranın köşesindeki sabit ara butonu' },
-    floatingWhatsapp: { icon: '💬', label: 'Sabit WhatsApp Butonu', desc: 'Ekranın köşesindeki sabit WhatsApp butonu' },
-    navPhone:         { icon: '📱', label: 'Navbar Telefon Butonu', desc: 'Üst menüdeki "Ara" butonu' },
-    heroCallBtn:      { icon: '☎️', label: 'Hero "Hemen Ara" Butonu', desc: 'Ana sayfanın üst bölümündeki ara butonu' },
-    whatsappButtons:  { icon: '🟢', label: 'WhatsApp Butonları (Genel)', desc: 'Sayfa içindeki tüm WhatsApp butonları' },
+    floatingPhone:     { icon: '📞', label: 'Sabit Telefon Butonu', desc: 'Ekranın köşesindeki sabit ara butonu' },
+    floatingWhatsapp:  { icon: '💬', label: 'Sabit WhatsApp Butonu', desc: 'Ekranın köşesindeki sabit WhatsApp butonu' },
+    navPhone:          { icon: '📱', label: 'Navbar Telefon Butonu', desc: 'Üst menüdeki "Ara" butonu' },
+    heroCallBtn:       { icon: '☎️', label: 'Hero "Hemen Ara" Butonu', desc: 'Ana sayfanın üst bölümündeki ara butonu' },
+    whatsappButtons:   { icon: '🟢', label: 'WhatsApp Butonları (Genel)', desc: 'Sayfa içindeki tüm WhatsApp butonları' },
+    btuCalculator:     { icon: '❄️', label: 'BTU Hesaplama', desc: 'Klima BTU hesaplama sayfası ve linkleri' },
+    electricityCalculator: { icon: '⚡', label: 'Elektrik Tüketim Hesaplama', desc: 'Elektrik tüketimi karşılaştırma sayfası' },
+    testimonials:      { icon: '⭐', label: 'Müşteri Yorumları', desc: 'Ana sayfadaki müşteri yorumları bölümü' },
+    statistics:        { icon: '📊', label: 'İstatistikler (Sayaçlar)', desc: 'Ana sayfadaki animasyonlu istatistikler' },
+    workingHours:      { icon: '🕐', label: 'Çalışma Saatleri', desc: 'Ana sayfadaki çalışma saatleri bölümü' },
+    serviceArea:       { icon: '📍', label: 'Hizmet Bölgesi', desc: 'Ana sayfadaki hizmet bölgesi listesi' },
+    faq:               { icon: '❓', label: 'SSS Bölümü', desc: 'Ana sayfadaki sık sorulan sorular' },
+    whyUs:             { icon: '✅', label: 'Neden Biz?', desc: 'Ana sayfadaki "Neden Biz" bölümü' },
   };
   container.innerHTML = Object.entries(featureLabels).map(([key, info]) => {
     const conf = featureSettingsData[key] || { enabled: true };

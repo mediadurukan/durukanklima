@@ -636,12 +636,15 @@ app.get('/sitemap.xml', (req, res) => {
       { url: '/', priority: '1.0', changefreq: 'weekly' },
       { url: '/blog', priority: '0.8', changefreq: 'daily' },
       { url: '/fiyatlar', priority: '0.9', changefreq: 'monthly' },
+      { url: '/btu-hesaplama', priority: '0.8', changefreq: 'monthly' },
+      { url: '/elektrik-tuketim', priority: '0.8', changefreq: 'monthly' },
       { url: '/cukurova-klima-servisi', priority: '0.9', changefreq: 'monthly' },
       { url: '/seyhan-klima-servisi', priority: '0.9', changefreq: 'monthly' },
       { url: '/saricam-klima-servisi', priority: '0.8', changefreq: 'monthly' },
       { url: '/yuregir-klima-servisi', priority: '0.8', changefreq: 'monthly' },
       { url: '/kozan-klima-servisi', priority: '0.7', changefreq: 'monthly' },
       { url: '/ceyhan-klima-servisi', priority: '0.7', changefreq: 'monthly' },
+      { url: '/imamoglu-klima-servisi', priority: '0.7', changefreq: 'monthly' },
       { url: '/#hizmetler', priority: '0.8', changefreq: 'monthly' },
       { url: '/#iletisim', priority: '0.7', changefreq: 'monthly' },
     ];
@@ -672,6 +675,28 @@ app.get('/robots.txt', (req, res) => {
   res.setHeader('Content-Type', 'text/plain');
   res.send(`User-agent: *\nAllow: /\nDisallow: /admin\nDisallow: /api\nSitemap: ${base}/sitemap.xml\n`);
 });
+
+// ═══════════════════════════════════════════
+// TESTIMONIALS API
+// ═══════════════════════════════════════════
+app.get('/api/testimonials', (req, res) => {
+  try {
+    const content = read('content');
+    const testimonials = content.testimonials || [];
+    const { limit = 50, offset = 0, filter } = req.query;
+    let result = testimonials;
+    if (filter === 'klima') result = result.filter(t => t.service && !t.service.startsWith('Kombi'));
+    if (filter === 'kombi') result = result.filter(t => t.service && t.service.startsWith('Kombi'));
+    res.json({ total: result.length, testimonials: result.slice(+offset, +offset + +limit) });
+  } catch (e) { res.status(500).json({ error: e.message }); }
+});
+
+// ═══════════════════════════════════════════
+// BTU & ELECTRICITY CALCULATOR PAGES
+// ═══════════════════════════════════════════
+app.get('/btu-hesaplama', checkPage('/btu-hesaplama'), (req, res) => res.sendFile(path.join(__dirname, 'public', 'blog', 'klima-btu-hesaplama.html')));
+app.get('/elektrik-tuketim', checkPage('/elektrik-tuketim'), (req, res) => res.sendFile(path.join(__dirname, 'public', 'blog', 'klima-elektrik-tuketim-hesaplama.html')));
+
 
 // ═══════════════════════════════════════════
 // SAYFA YÖNLENDIRMELERI
