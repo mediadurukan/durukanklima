@@ -90,6 +90,37 @@ img { max-width: 100%; }
 
 .nav-links a:hover { background: var(--bg); color: var(--primary); }
 
+.nav-tools {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tool-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--primary);
+  background: rgba(26, 111, 168, 0.08);
+  border: 1px solid rgba(26, 111, 168, 0.2);
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.tool-btn:hover {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+.tool-btn span {
+  font-size: 1rem;
+}
+
 .nav-calc-btn {
   background: linear-gradient(135deg, var(--primary), var(--accent)) !important;
   color: white !important;
@@ -1164,7 +1195,7 @@ footer {
 
 /* ===== MOBILE ===== */
 @media (max-width: 768px) {
-  .nav-links, .nav-phone { display: none; }
+  .nav-links, .nav-phone, .nav-tools { display: none; }
   .hamburger { display: flex; }
 
   .nav-links.open {
@@ -1178,6 +1209,12 @@ footer {
     padding: 16px;
     border-bottom: 1px solid var(--border);
     box-shadow: var(--shadow);
+  }
+
+  .nav-links.open .tool-btn {
+    display: flex;
+    margin-top: 8px;
+    justify-content: center;
   }
 
   .hero { padding: 60px 0 50px; }
@@ -1429,6 +1466,7 @@ footer {
   .stats-counter-grid { grid-template-columns: repeat(2, 1fr); }
   .why-grid { grid-template-columns: repeat(2, 1fr); }
   .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
+  .nav-tools { display: none; }
 }
 @media (max-width: 768px) {
   .stats-counter-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
