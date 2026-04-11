@@ -14,17 +14,6 @@ const ADMIN_USER   = process.env.ADMIN_USERNAME || 'admin';
 const ADMIN_PASS   = process.env.ADMIN_PASSWORD || 'durukan2024';
 const PORT         = process.env.PORT          || 3000;
 
-// Table names
-const TABLES = {
-  content:      'content',
-  leads:        'leads',
-  blog:         'blog',
-  settings:     'settings',
-  technicians:  'technicians',
-  appointments: 'appointments',
-  reminders:    'reminders',
-};
-
 // Table names (case-sensitive for Supabase)
 const TABLES = {
   content:      'Content',
