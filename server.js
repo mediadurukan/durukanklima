@@ -25,15 +25,28 @@ const TABLES = {
   reminders:    'reminders',
 };
 
+// Table names (case-sensitive for Supabase)
+const TABLES = {
+  content:      'Content',
+  leads:        'Lead',
+  blog:         'Blog',
+  settings:     'Settings',
+  technicians:  'Technician',
+  appointments: 'Appointment',
+  reminders:    'Reminder',
+};
+
 // --- Helpers ---
 async function getData(table) {
-  const { data, error } = await supabase.from(table).select('data').eq('id', 1).single();
+  const actualTable = TABLES[table] || table;
+  const { data, error } = await supabase.from(actualTable).select('data').eq('id', 1).single();
   if (error && error.code !== 'PGRST116') throw error;
   return data?.data ?? null;
 }
 
 async function setData(table, data) {
-  const { error } = await supabase.from(table).upsert({ id: 1, data });
+  const actualTable = TABLES[table] || table;
+  const { error } = await supabase.from(actualTable).upsert({ id: 1, data });
   if (error) throw error;
 }
 
