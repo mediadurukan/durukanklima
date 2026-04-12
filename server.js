@@ -16,24 +16,18 @@ const PORT         = process.env.PORT          || 3000;
 
 // --- Helpers ---
 async function getData(table) {
-  try {
-    const data = await redis.get(table);
-    console.log('getData', table, data ? 'OK' : 'NULL');
-    return data || null;
-  } catch(e) {
-    console.error('getData error:', e.message);
-    throw e;
+  const data = await redis.get(table);
+  if (!data) return null;
+  // Data may be string (JSON) or already-parsed object
+  if (typeof data === 'string') {
+    try { return JSON.parse(data); }
+      catch { return null; }
   }
+  return data;
 }
 
 async function setData(table, data) {
-  try {
-    await redis.set(table, data);
-    console.log('setData', table, 'OK');
-  } catch(e) {
-    console.error('setData error:', e.message);
-    throw e;
-  }
+  await redis.set(table, data);
 }
 
 // read() and write() wrappers for backward compatibility with helper functions that call them

@@ -1,14 +1,28 @@
 require('dotenv').config({ path: '/root/.openclaw/workspace/durukanklima/.env' });
-const { Redis } = require('@upstash/redis');
-const redis = new Redis({
-  url: process.env.UPSTASH_REDIS_REST_URL,
-  token: process.env.UPSTASH_REDIS_REST_TOKEN,
-});
+const redis = require('./redis');
 
-redis.get('content').then(r => {
-  console.log('Content exists:', r ? 'YES' : 'NO');
-  if (r) {
-    const parsed = JSON.parse(r);
-    console.log('Keys:', Object.keys(parsed).join(', '));
+async function test() {
+  console.log('Testing Upstash Redis...');
+  
+  try {
+    const pong = await redis.ping();
+    console.log('Ping:', pong);
+  } catch(e) {
+    console.error('Ping error:', e.message);
   }
-}).catch(e => console.error('Error:', e.message));
+  
+  try {
+    const data = await redis.get('content');
+    console.log('Content type:', typeof data);
+    if (data) {
+      const parsed = typeof data === 'string' ? JSON.parse(data) : data;
+      console.log('Content keys:', Object.keys(parsed).join(', '));
+    } else {
+      console.log('Content is null/empty');
+    }
+  } catch(e) {
+    console.error('Get error:', e.message);
+  }
+}
+
+test();

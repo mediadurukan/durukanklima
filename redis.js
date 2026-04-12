@@ -1,21 +1,32 @@
-const { Redis } = require('@upstash/redis');
+// Simple Upstash Redis REST API client
+const UPSTASH_URL = process.env.UPSTASH_REDIS_REST_URL;
+const UPSTASH_TOKEN = process.env.UPSTASH_REDIS_REST_TOKEN;
 
-// Lazily create client to ensure env vars are loaded
-let _redis = null;
-
-function getClient() {
-  if (!_redis) {
-    console.log('UPSTASH_REDIS_REST_URL:', process.env.UPSTASH_REDIS_REST_URL ? 'SET' : 'NOT SET');
-    console.log('UPSTASH_REDIS_REST_TOKEN:', process.env.UPSTASH_REDIS_REST_TOKEN ? 'SET' : 'NOT SET');
-    _redis = new Redis({
-      url: process.env.UPSTASH_REDIS_REST_URL,
-      token: process.env.UPSTASH_REDIS_REST_TOKEN,
-    });
+async function redisCommand(command, ...args) {
+  const body = JSON.stringify([command, ...args]);
+  
+  const response = await fetch(`${UPSTASH_URL}`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${UPSTASH_TOKEN}`
+    },
+    body
+  });
+  
+  if (!response.ok) {
+    throw new Error(`Redis error: ${response.status}`);
   }
-  return _redis;
+  
+  const result = await response.json();
+  if (result.error) {
+    throw new Error(result.error);
+  }
+  return result.result;
 }
 
 module.exports = {
-  get: (...args) => getClient().get(...args),
-  set: (...args) => getClient().set(...args),
+  get: (key) => redisCommand('GET', key),
+  set: (key, value) => redisCommand('SET', key, typeof value === 'string' ? value : JSON.stringify(value)),
+  ping: () => redisCommand('PING'),
 };
