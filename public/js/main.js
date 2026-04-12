@@ -72,7 +72,7 @@ function applyContent(d) {
   const wpMsg = encodeURIComponent('Merhaba, Durukan Klima hizmetleri hakkında bilgi almak istiyorum.');
   const wp = `${wpBase}?text=${wpMsg}`;
 
-  ['nav-call-btn','hero-call-btn','contact-call-btn','float-phone'].forEach(id => setHref(id, tel));
+  ['nav-call-btn','nav-call-btn-mobile','hero-call-btn','contact-call-btn','float-phone'].forEach(id => setHref(id, tel));
   ['hero-wp-btn','hours-wp-btn','contact-wp-btn','contact-wp-link','float-wp','footer-wp'].forEach(id => setHref(id, wp));
 
   // Çalışma saatleri canlı badge
@@ -609,9 +609,14 @@ function toggleVillageList() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Language toggle init
+  // Language toggle init - desktop
   const langContainer = document.getElementById('lang-toggle-container');
   if (langContainer) langContainer.innerHTML = createLangToggle();
+  
+  // Language toggle init - mobile
+  const langContainerMobile = document.getElementById('lang-toggle-container-mobile');
+  if (langContainerMobile) langContainerMobile.innerHTML = createLangToggle();
+  
   updateLangToggleUI();
   
   loadContent();
