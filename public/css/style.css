@@ -717,7 +717,7 @@ section { padding: 80px 0; }
 .testimonial-card {
   background: var(--bg);
   border-radius: var(--radius);
-  padding: 24px;
+  padding: 30px;
   border: 1px solid var(--border);
 }
 
@@ -1317,7 +1317,7 @@ footer {
 .why-card {
   background: white;
   border-radius: 16px;
-  padding: 24px;
+  padding: 30px;
   text-align: center;
   border: 1.5px solid var(--border);
   transition: all 0.25s;
@@ -1415,7 +1415,7 @@ footer {
 .testimonial-card {
   background: white;
   border-radius: 14px;
-  padding: 24px;
+  padding: 30px;
   border: 1.5px solid var(--border);
   transition: all 0.25s;
 }
@@ -1662,9 +1662,9 @@ footer {
     left: 0;
     right: 0;
     bottom: auto;
-    max-height: 85vh;
+    max-height: 90vh;
     background: white;
-    padding: 24px;
+    padding: 30px;
     border-bottom: 4px solid var(--primary);
     box-shadow: 0 8px 32px rgba(0,0,0,0.15);
     z-index: 999;
@@ -1681,7 +1681,7 @@ footer {
   }
   
   .nav-links li a {
-    font-size: 1.2rem !important;
+    font-size: 1.3rem !important;
     padding: 18px 0 !important;
     font-weight: 600 !important;
   }
