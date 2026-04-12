@@ -16,13 +16,24 @@ const PORT         = process.env.PORT          || 3000;
 
 // --- Helpers ---
 async function getData(table) {
-  const data = await redis.get(table);
-  // Upstash returns already-parsed JSON, or null if not found
-  return data || null;
+  try {
+    const data = await redis.get(table);
+    console.log('getData', table, data ? 'OK' : 'NULL');
+    return data || null;
+  } catch(e) {
+    console.error('getData error:', e.message);
+    throw e;
+  }
 }
 
 async function setData(table, data) {
-  await redis.set(table, data);
+  try {
+    await redis.set(table, data);
+    console.log('setData', table, 'OK');
+  } catch(e) {
+    console.error('setData error:', e.message);
+    throw e;
+  }
 }
 
 // read() and write() wrappers for backward compatibility with helper functions that call them
