@@ -627,3 +627,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+// ── Mobile Menu Toggle ──────────────────────
+function toggleMenu() {
+  const nav = document.getElementById('nav-links');
+  const hamburger = document.getElementById('hamburger');
+  if (!nav) return;
+  nav.classList.toggle('open');
+  if (hamburger) hamburger.classList.toggle('active');
+}
