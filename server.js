@@ -756,10 +756,13 @@ function slugify(text) {
     .replace(/-+/g, '-').replace(/^-|-$/g, '');
 }
 
-app.listen(PORT, () => {
-  console.log(`✅ Durukan Klima sunucusu başlatıldı`);
-  console.log(`🌐 Site:     http://localhost:${PORT}`);
-  console.log(`📝 Blog:     http://localhost:${PORT}/blog`);
-  console.log(`🔐 Admin:    http://localhost:${PORT}/admin`);
-  console.log(`🗺️  Sitemap:  http://localhost:${PORT}/sitemap.xml`);
-});
+// Vercel serverless - export app directly
+module.exports = app;
+
+// Local development
+if (process.env.NODE_ENV !== 'production') {
+  app.listen(PORT, () => {
+    console.log(`✅ Durukan Klima sunucusu başlatıldı`);
+    console.log(`🌐 Site:     http://localhost:${PORT}`);
+  });
+}
