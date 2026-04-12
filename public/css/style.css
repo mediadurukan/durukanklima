@@ -1970,3 +1970,12 @@ footer {
     z-index: 9999 !important;
   }
 }
+
+/* ===== MOBILE VISIBLE TOOLS ===== */
+@media (max-width: 768px) {
+  .desktop-only { display: none !important; }
+  .mobile-only { display: block !important; }
+  .nav-tools { display: flex !important; gap: 8px; }
+  .nav-tools .tool-btn { padding: 8px 12px !important; font-size: 0.85rem !important; }
+  .nav-phone { display: none !important; }
+}
