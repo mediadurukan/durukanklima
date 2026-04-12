@@ -1782,3 +1782,102 @@ footer {
   .navbar .container { padding: 0 8px; }
   .logo span { display: none; }
 }
+
+/* ===== DESKTOP NAVBAR FIXES ===== */
+@media (min-width: 769px) {
+  .nav-tools {
+    display: flex !important;
+    align-items: center;
+    gap: 6px;
+  }
+  
+  .nav-phone {
+    display: flex !important;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .nav-phone .btn {
+    padding: 6px 10px !important;
+    font-size: 0.78rem !important;
+    border-radius: 8px !important;
+  }
+  
+  .nav-phone .btn span {
+    font-size: 0.85rem !important;
+  }
+  
+  .nav-tools .tool-btn {
+    padding: 6px 10px !important;
+    font-size: 0.78rem !important;
+  }
+  
+  .nav-tools .tool-btn span {
+    font-size: 0.9rem !important;
+  }
+  
+  #mobile-menu-items { display: none !important; }
+}
+
+/* ===== MOBILE MENU ITEMS ===== */
+@media (max-width: 768px) {
+  #mobile-menu-items {
+    display: none !important;
+  }
+  
+  .nav-links li.mobile-tools,
+  .nav-links li.mobile-phone,
+  .nav-links li.mobile-lang {
+    display: flex;
+  }
+  
+  .nav-links li.mobile-tools {
+    flex-direction: column;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  
+  .nav-links li.mobile-phone {
+    padding: 12px 0;
+  }
+  
+  .nav-links li.mobile-lang {
+    padding: 12px 0;
+    justify-content: center;
+  }
+  
+  .nav-links li.mobile-tools .tool-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 12px;
+    margin: 4px 0;
+  }
+  
+  .nav-links li.mobile-phone .btn {
+    width: 100%;
+    justify-content: center;
+    padding: 14px;
+  }
+}
+
+/* ===== MOBILE ONLY ITEMS ===== */
+@media (min-width: 769px) {
+  .mobile-only { display: none !important; }
+}
+
+@media (max-width: 768px) {
+  .mobile-only { display: block; }
+  .mobile-only .tool-btn,
+  .mobile-only .btn {
+    width: 100%;
+    justify-content: center;
+    padding: 14px;
+    margin: 4px 0;
+    font-size: 1rem;
+  }
+  .mobile-only #lang-toggle-container-mobile {
+    display: flex;
+    justify-content: center;
+    padding: 8px 0;
+  }
+}

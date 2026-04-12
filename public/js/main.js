@@ -79,6 +79,7 @@ function applyContent(d) {
   updateBusinessStatus(contact.hours);
 
   setText('nav-phone', contact.phone);
+  setText('nav-phone-mobile', contact.phone);
   setText('contact-phone-link', contact.phone);
   setHref('contact-phone-link', tel);
   setHref('footer-phone', tel);

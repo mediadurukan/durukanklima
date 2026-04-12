@@ -144,19 +144,31 @@
       <li><a href="/teklif">Teklif Al</a></li>
       <li><a href="/blog">Blog</a></li>
       <li><a href="#iletisim">İletişim</a></li>
-      <!-- Mobile only items -->
-      <li class="mobile-tools">
+      <!-- Mobile-only items (hidden on desktop) -->
+      <li class="mobile-only">
         <a href="/btu-hesaplama" class="tool-btn">🧮 BTU Hesapla</a>
+      </li>
+      <li class="mobile-only">
         <a href="/elektrik-tuketim" class="tool-btn">⚡ Elektrik Hesapla</a>
       </li>
-      <li class="mobile-phone">
-        <a href="#" id="nav-call-btn-mobile" class="btn btn-primary">📞 <span>Ara</span></a>
+      <li class="mobile-only">
+        <a href="#" id="nav-call-btn-mobile" class="btn btn-primary">📞 <span id="nav-phone-mobile">Ara</span></a>
       </li>
-      <li class="mobile-lang">
+      <li class="mobile-only">
         <div id="lang-toggle-container-mobile"></div>
       </li>
     </ul>
+    <div class="nav-tools">
+      <a href="/btu-hesaplama" class="tool-btn"><span>🧮</span> BTU</a>
+      <a href="/elektrik-tuketim" class="tool-btn"><span>⚡</span> Elektrik</a>
+    </div>
+    <div class="nav-phone">
+      <div id="lang-toggle-container"></div>
+      <a href="#" id="nav-call-btn" class="btn btn-primary">📞 <span id="nav-phone">Ara</span></a>
+    </div>
     <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
       <span></span><span></span><span></span>
     </div>
   </div>
