@@ -106,19 +106,25 @@ function applyContent(d) {
   // Hizmetler
   const svcEl = document.getElementById('services-grid');
   if (svcEl && d.services) {
-    svcEl.innerHTML = d.services.map(s =>
-      `<div class="service-card" itemscope itemtype="https://schema.org/Service">
-        <div class="service-icon">${s.icon}</div>
-        <h3 itemprop="name">${s.title}</h3>
-        <p itemprop="description">${s.description}</p>
-        ${s.details ? `<ul class="service-details">${s.details.map(x => `<li>${x}</li>`).join('')}</ul>` : ''}
-      </div>`).join('');
+    svcEl.innerHTML = d.services.map(s => {
+      const name = typeof s.name === 'object' ? (s.name.tr || s.name.en || s.title || 'Servis') : (s.title || 'Servis');
+      const desc = s.shortDesc ? (typeof s.shortDesc === 'object' ? (s.shortDesc.tr || s.shortDesc.en || s.description || '') : (s.description || '')) : (s.description || '');
+      const icon = s.icon || '❄️';
+      return `<div class="service-card" itemscope itemtype="https://schema.org/Service">
+        <div class="service-icon">${icon}</div>
+        <h3 itemprop="name">${name}</h3>
+        <p itemprop="description">${desc}</p>
+      </div>`;
+    }).join('');
   }
 
   // Footer hizmetler
   const fsvcEl = document.getElementById('footer-services');
   if (fsvcEl && d.services) {
-    fsvcEl.innerHTML = d.services.map(s => `<li><a href="#hizmetler">${s.title}</a></li>`).join('');
+    fsvcEl.innerHTML = d.services.map(s => {
+      const name = typeof s.name === 'object' ? (s.name.tr || s.name.en || s.title || 'Servis') : (s.title || 'Servis');
+      return `<li><a href="#hizmetler">${name}</a></li>`;
+    }).join('');
   }
 
   // Markalar
