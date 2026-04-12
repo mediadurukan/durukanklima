@@ -140,6 +140,15 @@ img { max-width: 100%; }
   gap: 8px;
 }
 
+.nav-phone .btn {
+  padding: 7px 12px;
+  font-size: 0.8rem;
+}
+
+.nav-phone .btn span {
+  font-size: 0.9rem;
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
