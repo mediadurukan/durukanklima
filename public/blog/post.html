@@ -204,7 +204,7 @@ function renderRelated(posts) {
   if (!posts.length) { el.closest('section').style.display = 'none'; return; }
   el.innerHTML = posts.map(p => `
     <a href="/blog/${p.slug}" class="blog-card" style="text-decoration:none;">
-      <div class="blog-card-img">${icon(p.category)}</div>
+      <div class="blog-card-img" style="background-image:url('${p.image || ''}'); background-size:cover; background-position:center;"></div>
       <div class="blog-card-body">
         <span class="blog-category">${p.category || 'Blog'}</span>
         <h3>${p.title}</h3>
