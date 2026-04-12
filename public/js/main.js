@@ -367,9 +367,7 @@ function toggleFaq(i) {
   if (!open) item.classList.add('open');
 }
 
-function toggleMenu() {
-  document.getElementById('nav-links').classList.toggle('open');
-}
+
 
 function formatDate(iso) {
   if (!iso) return '';
