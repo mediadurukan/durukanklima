@@ -2,18 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "server.js",
+      "src": "test-minimal.js",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/server.js"
+      "dest": "/test-minimal.js"
     }
-  ],
-  "env": {
-    "SUPABASE_URL": "https://ncwemhjhlpkrgygcsqxo.supabase.co",
-    "SUPABASE_SERVICE_KEY": "REPLACE_WITH_YOUR_SERVICE_ROLE_KEY"
-  }
+  ]
 }
