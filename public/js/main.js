@@ -1,9 +1,37 @@
 // Durukan Klima — Ana Site JS
 // İçerik API'den çekilir, Schema.org ve Analytics dinamik yüklenir
 
+// ── Language Support ──────────────────────────────────────
+let currentLang = localStorage.getItem('dl_lang') || 'tr';
+
+function getLang() { return currentLang; }
+
+function setLang(lang) {
+  currentLang = lang;
+  localStorage.setItem('dl_lang', lang);
+  loadContent();
+  updateLangToggleUI();
+}
+
+function updateLangToggleUI() {
+  document.querySelectorAll('.lang-toggle-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.lang === currentLang);
+  });
+}
+
+function createLangToggle() {
+  return '<div class="lang-toggle" style="display:inline-flex;align-items:center;gap:2px;background:#f0f0f0;border-radius:20px;padding:2px;margin-left:8px;">' +
+    '<button class="lang-toggle-btn" data-lang="tr" onclick="setLang(\'tr\')" style="border:none;background:transparent;cursor:pointer;padding:4px 10px;border-radius:18px;font-size:12px;font-weight:600;' +
+    (currentLang === 'tr' ? 'background:#1a6fa8;color:white;' : 'color:#555;') + '">TR</button>' +
+    '<button class="lang-toggle-btn" data-lang="en" onclick="setLang(\'en\')" style="border:none;background:transparent;cursor:pointer;padding:4px 10px;border-radius:18px;font-size:12px;font-weight:600;' +
+    (currentLang === 'en' ? 'background:#1a6fa8;color:white;' : 'color:#555;') + '">EN</button>' +
+    '</div>';
+}
+
 async function loadContent() {
+  const langParam = currentLang === 'en' ? '?lang=en' : '';
   const [contentRes, settingsRes, blogRes] = await Promise.allSettled([
-    fetch('/api/content').then(r => r.json()),
+    fetch('/api/content' + langParam).then(r => r.json()),
     fetch('/api/settings').then(r => r.json()),
     fetch('/api/blog?limit=3').then(r => r.json()),
   ]);

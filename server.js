@@ -105,7 +105,31 @@ app.get('/api/verify', auth, (req, res) => res.json({ valid: true, user: req.use
 // CONTENT
 // ═══════════════════════════════════════════
 app.get('/api/content', async (req, res) => {
-  try { res.json(await getData('content') || {}); }
+  try {
+    const lang = req.query.lang === 'en' ? 'en' : 'tr';
+    const data = await getData('content') || {};
+    // If bilingual content exists, extract the requested language
+    if (lang === 'en' && data._bilingual) {
+      const out = {};
+      for (const [key, val] of Object.entries(data)) {
+        if (key === '_bilingual') continue;
+        if (val && typeof val === 'object' && !Array.isArray(val)) {
+          out[key] = {};
+          for (const [k, v] of Object.entries(val)) {
+            if (v && typeof v === 'object' && 'tr' in v && 'en' in v) {
+              out[key][k] = v[lang] ?? v.tr ?? v;
+            } else {
+              out[key][k] = v;
+            }
+          }
+        } else {
+          out[key] = val;
+        }
+      }
+      return res.json(out);
+    }
+    res.json(data);
+  }
   catch { res.status(500).json({ error: 'Okunamadı' }); }
 });
 
