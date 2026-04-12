@@ -1,13 +1,13 @@
 const https = require('https');
 
-const UPSTASH_URL = process.env.UPSTASH_REDIS_REST_URL;
-const UPSTASH_TOKEN = process.env.UPSTASH_REDIS_REST_TOKEN;
+const KV_URL = process.env.KV_REST_API_URL;
+const KV_TOKEN = process.env.KV_REST_API_TOKEN;
 
 function redisCommand(command, ...args) {
   return new Promise((resolve, reject) => {
     const body = JSON.stringify([command, ...args]);
     
-    const url = new URL(UPSTASH_URL);
+    const url = new URL(KV_URL);
     const options = {
       hostname: url.hostname,
       port: 443,
@@ -15,7 +15,7 @@ function redisCommand(command, ...args) {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${UPSTASH_TOKEN}`,
+        'Authorization': `Bearer ${KV_TOKEN}`,
         'Content-Length': Buffer.byteLength(body)
       }
     };
