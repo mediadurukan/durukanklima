@@ -1658,7 +1658,7 @@ footer {
     display: none;
     flex-direction: column;
     position: fixed;
-    top: 56px;
+    top: 0;
     left: 0;
     right: 0;
     bottom: 0;
@@ -1921,7 +1921,7 @@ footer {
     display: flex !important;
     flex-direction: column;
     position: fixed;
-    top: 56px;
+    top: 0;
     left: 0;
     right: 0;
     bottom: 0;
