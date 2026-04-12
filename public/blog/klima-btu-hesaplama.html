@@ -287,7 +287,7 @@
       </div>
       <div class="info-card">
         <h4>BTU Formülü</h4>
-        <p>Alan (m²) × 400 BTU = Temel ihtiyaç. Bu rakam tavan yüksekliği, güneş, bölge ve kişi sayısına göre ayarlanır. EnergyStar standartlarına göre doğru hesaplama.</p>
+        <p>Alan (m²) × 450 BTU = Temel ihtiyaç (Adana bölgesi). Kişi başı +600 BTU eklenir. Türk klima sektörü standartlarına uygun hesaplama.</p>
       </div>
     </div>
 
@@ -340,29 +340,29 @@ function calculateBtu() {
     return;
   }
 
-  // BTU Calculation formula - Research validated
-  // Base: area (m²) × 400 BTU/m² for standard 2.5m ceiling
-  // This gives approximately 25 BTU per sq ft (EnergyStar standard)
-  const baseBtu = area * 400;
+  // BTU Calculation formula - Turkish standard (Toshiba, Arçelik, İklimSA Adana)
+  // Adana bölgesi için: 450 BTU/m² (sıcak iklim)
+  // Kişi başı: 600 BTU (Türk standartı)
+  const baseBtu = area * 450;
   
   // Adjust for ceiling height (deviation from 2.5m standard)
   const ceilingFactor = ceiling / 2.5;
   let totalBtu = baseBtu * ceilingFactor;
   
-  // Apply multipliers (sun exposure, region climate, room type)
-  // Sun: 1.0 (shaded) to 1.30 (full sun)
-  // Region: 1.0 (moderate) to 1.20 (hot climate like Adana)
-  // Room type: 1.0 (bedroom) to 1.30 (kitchen)
+  // Apply multipliers
+  // Sun: 1.0 (gölgeli) to 1.30 (doğrudan güneş)
+  // Region: 1.0 (ılıman) to 1.20 (Adana gibi sıcak bölge)
+  // Room type: 1.0 (yatak odası) to 1.30 (mutfak)
   totalBtu *= sun * region * roomType;
   
-  // Add heat from people (150 BTU per person above 1)
+  // Add heat from people (600 BTU per person above 1 - Turkish standard)
   const extraPeople = Math.max(0, people - 1);
-  totalBtu += extraPeople * 150;
+  totalBtu += extraPeople * 600;
   
   // Add electronics heat (each major device adds ~100 BTU)
   totalBtu += electronics;
   
-  // Apply insulation factor (0.8 = poor, 1.0 = good, 1.2 = excellent)
+  // Apply insulation factor (0.8 = kötü, 1.0 = normal, 1.2 = çok iyi)
   totalBtu *= insulation;
 
   // Round to nearest 1000
