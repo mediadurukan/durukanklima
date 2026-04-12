@@ -9,6 +9,16 @@ const redis = require('./redis');
 const app = express();
 app.use(express.json());
 
+// Test endpoint
+app.get('/api/test', (req, res) => {
+  res.json({ 
+    status: 'ok',
+    redisUrl: process.env.UPSTASH_REDIS_REST_URL ? 'SET' : 'NOT SET',
+    redisToken: process.env.UPSTASH_REDIS_REST_TOKEN ? 'SET' : 'NOT SET',
+    nodeEnv: process.env.NODE_ENV
+  });
+});
+
 const JWT_SECRET   = process.env.JWT_SECRET   || 'durukan-secret';
 const ADMIN_USER   = process.env.ADMIN_USERNAME || 'admin';
 const ADMIN_PASS   = process.env.ADMIN_PASSWORD || 'durukan2024';
