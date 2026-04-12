@@ -294,16 +294,23 @@ app.delete('/api/leads/:id', auth, async (req, res) => {
 // ═══════════════════════════════════════════
 app.get('/api/blog', async (req, res) => {
   try {
+    const lang = req.query.lang === 'en' ? 'en' : 'tr';
     const posts = (await getData('blog')) || [];
     const { limit = 10, offset = 0, category, tag } = req.query;
     let filtered = posts.filter(p => p.published);
-    if (category) filtered = filtered.filter(p => p.category === category);
+    if (category) filtered = filtered.filter(p => {
+      const cat = typeof p.category === 'object' ? p.category[lang] || p.category.tr : p.category;
+      return cat === category;
+    });
     if (tag) filtered = filtered.filter(p => p.tags?.includes(tag));
     res.json({
       total: filtered.length,
       posts: filtered.slice(+offset, +offset + +limit).map(p => ({
-        id: p.id, slug: p.slug, title: p.title, excerpt: p.excerpt,
-        category: p.category, tags: p.tags, publishedAt: p.publishedAt,
+        id: p.id, slug: p.slug,
+        title: typeof p.title === 'object' ? (p.title[lang] || p.title.tr || '') : p.title,
+        excerpt: typeof p.excerpt === 'object' ? (p.excerpt[lang] || p.excerpt.tr || '') : p.excerpt,
+        category: typeof p.category === 'object' ? (p.category[lang] || p.category.tr || '') : p.category,
+        tags: p.tags, publishedAt: p.publishedAt,
         author: p.author, image: p.image
       }))
     });
@@ -317,9 +324,18 @@ app.get('/api/blog/all', auth, async (req, res) => {
 
 app.get('/api/blog/:slug', async (req, res) => {
   try {
+    const lang = req.query.lang === 'en' ? 'en' : 'tr';
     const posts = (await getData('blog')) || [];
-    const post = posts.find(p => p.slug === req.params.slug && p.published);
-    if (!post) return res.status(404).json({ error: 'Yazı bulunamadı' });
+    const raw = posts.find(p => p.slug === req.params.slug && p.published);
+    if (!raw) return res.status(404).json({ error: 'Yazı bulunamadı' });
+    // Flatten TR/EN content fields
+    const post = {
+      ...raw,
+      title: typeof raw.title === 'object' ? (raw.title[lang] || raw.title.tr || '') : raw.title,
+      excerpt: typeof raw.excerpt === 'object' ? (raw.excerpt[lang] || raw.excerpt.tr || '') : raw.excerpt,
+      content: typeof raw.content === 'object' ? (raw.content[lang] || raw.content.tr || '') : raw.content,
+      category: typeof raw.category === 'object' ? (raw.category[lang] || raw.category.tr || '') : raw.category,
+    };
     res.json(post);
   } catch { res.status(500).json({ error: 'Okunamadı' }); }
 });
