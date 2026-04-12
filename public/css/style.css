@@ -35,7 +35,7 @@ img { max-width: 100%; }
 }
 
 /* ===== NAVBAR ===== */
-.navbar {
+.navbar { position: relative;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -1211,7 +1211,7 @@ footer {
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 68px;
+    top: 60px;
     left: 0;
     right: 0;
     background: white;
@@ -1603,7 +1603,7 @@ footer {
 
 /* ===== FIXED MOBILE NAVBAR ===== */
 @media (max-width: 768px) {
-  .navbar {
+  .navbar { position: relative;
     position: sticky;
     top: 0;
     z-index: 1000;
