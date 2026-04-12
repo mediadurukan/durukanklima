@@ -4,11 +4,7 @@ const jwt = require('jsonwebtoken');
 const path = require('path');
 const PDFDocument = require('pdfkit');
 const axios = require('axios');
-const supabase = require('./supabase');
-
-// DEBUG: log env vars (remove in production)
-console.log('SUPABASE_URL:', process.env.SUPABASE_URL ? 'SET' : 'NOT SET');
-console.log('SUPABASE_SERVICE_KEY:', process.env.SUPABASE_SERVICE_KEY ? 'SET' : 'NOT SET');
+const redis = require('./redis');
 
 const app = express();
 app.use(express.json());
@@ -18,29 +14,14 @@ const ADMIN_USER   = process.env.ADMIN_USERNAME || 'admin';
 const ADMIN_PASS   = process.env.ADMIN_PASSWORD || 'durukan2024';
 const PORT         = process.env.PORT          || 3000;
 
-// Table names (case-sensitive for Supabase)
-const TABLES = {
-  content:      'Content',
-  leads:        'Lead',
-  blog:         'Blog',
-  settings:     'Settings',
-  technicians:  'Technician',
-  appointments: 'Appointment',
-  reminders:    'Reminder',
-};
-
 // --- Helpers ---
 async function getData(table) {
-  const actualTable = TABLES[table] || table;
-  const { data, error } = await supabase.from(actualTable).select('data').eq('id', 1).single();
-  if (error && error.code !== 'PGRST116') throw error;
-  return data?.data ?? null;
+  const data = await redis.get(table);
+  return data ? JSON.parse(data) : null;
 }
 
 async function setData(table, data) {
-  const actualTable = TABLES[table] || table;
-  const { error } = await supabase.from(actualTable).upsert({ id: 1, data });
-  if (error) throw error;
+  await redis.set(table, JSON.stringify(data));
 }
 
 // read() and write() wrappers for backward compatibility with helper functions that call them
