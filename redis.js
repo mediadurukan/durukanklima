@@ -1,12 +1,17 @@
 const https = require('https');
 
-const KV_URL = process.env.KV_REST_API_URL;
-const KV_TOKEN = process.env.KV_REST_API_TOKEN;
+// Try multiple environment variable names
+const KV_URL = process.env.KV_REST_API_URL || process.env.KV_URL || process.env.REDIS_URL;
+const KV_TOKEN = process.env.KV_REST_API_TOKEN || process.env.KV_REST_API_READ_ONLY_TOKEN;
 
 function redisCommand(command, ...args) {
   return new Promise((resolve, reject) => {
-    const body = JSON.stringify([command, ...args]);
+    if (!KV_URL || !KV_TOKEN) {
+      reject(new Error(`KV not configured: URL=${!!KV_URL}, TOKEN=${!!KV_TOKEN}`));
+      return;
+    }
     
+    const body = JSON.stringify([command, ...args]);
     const url = new URL(KV_URL);
     const options = {
       hostname: url.hostname,
