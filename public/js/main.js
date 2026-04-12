@@ -609,6 +609,11 @@ function toggleVillageList() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  // Language toggle init
+  const langContainer = document.getElementById('lang-toggle-container');
+  if (langContainer) langContainer.innerHTML = createLangToggle();
+  updateLangToggleUI();
+  
   loadContent();
   animateCounters();
   document.querySelectorAll('a[href^="#"]').forEach(a => {

@@ -41,7 +41,10 @@
       <li><a href="/blog" style="color:var(--primary);">Blog</a></li>
       <li><a href="/#iletisim">İletişim</a></li>
     </ul>
-    <div class="nav-phone"><a href="#" id="nav-call" class="btn btn-primary">📞 Ara</a></div>
+    <div class="nav-phone" style="display:flex;align-items:center;gap:10px;">
+      <div id="lang-toggle-container"></div>
+      <a href="#" id="nav-call" class="btn btn-primary">📞 Ara</a>
+    </div>
     <div class="hamburger" onclick="document.getElementById('nav-links').classList.toggle('open')">
       <span></span><span></span><span></span>
     </div>
