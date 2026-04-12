@@ -59,7 +59,7 @@
 </div>
 
 <!-- Post Hero -->
-<section class="post-hero">
+<section class="post-hero" id="post-hero">
   <div class="container">
     <span class="hero-badge" id="post-category">Blog</span>
     <h1 id="post-heading" style="font-size:clamp(1.6rem,4vw,2.4rem);font-weight:800;margin:14px 0 0;line-height:1.25;"></h1>
@@ -163,6 +163,11 @@ function applyPost(p) {
   document.getElementById('breadcrumb-title').textContent = p.title;
 
   // Hero
+  const hero = document.getElementById('post-hero');
+  if (p.image) {
+    hero.style.backgroundImage = `url('${p.image}')`;
+    hero.classList.add('has-image');
+  }
   document.getElementById('post-category').textContent = p.category || 'Blog';
   document.getElementById('post-heading').textContent = p.title;
   document.getElementById('post-author').textContent = `✍️ ${p.author || 'Durukan Klima'}`;
@@ -242,3 +247,8 @@ init();
 </script>
 </body>
 </html>
+<style>
+.post-hero.has-image { background-size: cover; background-position: center; background-repeat: no-repeat; }
+.post-hero.has-image::before { content:''; position:absolute; inset:0; background:linear-gradient(135deg,rgba(15,58,92,0.85),rgba(26,111,168,0.7)); }
+.post-hero.has-image > * { position: relative; z-index: 1; }
+</style>
