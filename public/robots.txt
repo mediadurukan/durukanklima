@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+
+# Sitemap
+Sitemap: https://www.durukanklima.net/sitemap.xml
+
+# Crawl-delay (opsiyonel, Google botu yavaşlatma)
+Crawl-delay: 1

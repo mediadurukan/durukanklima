@@ -236,6 +236,29 @@ function applySettings(s) {
     }
   }
 
+  // Logo ve Favicon
+  if (s.logo) {
+    const headerLogo = document.getElementById('header-logo');
+    if (headerLogo) {
+      headerLogo.innerHTML = '<img src="' + s.logo + '" style="width:42px;height:42px;object-fit:contain;border-radius:6px;background:transparent;" />';
+      headerLogo.style.background = 'transparent';
+    }
+    const footerLogo = document.getElementById('footer-logo');
+    if (footerLogo) {
+      footerLogo.innerHTML = '<img src="' + s.logo + '" style="width:42px;height:42px;object-fit:contain;border-radius:6px;background:transparent;" />';
+      footerLogo.style.background = 'transparent';
+    }
+  }
+  if (s.favicon) {
+    let favicon = document.querySelector('link[rel="icon"]');
+    if (!favicon) {
+      favicon = document.createElement('link');
+      favicon.rel = 'icon';
+      document.head.appendChild(favicon);
+    }
+    favicon.href = s.favicon;
+  }
+
   // GEO meta
   if (s.geo) {
     setMetaN('geo.placename', `${s.geo.city}, ${s.geo.region}`);

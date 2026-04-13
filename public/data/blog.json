@@ -4,839 +4,1500 @@
     "slug": "klima-bakiminin-onemi-nedir",
     "slugEn": "klima-bakiminin-onemi-nedir-en",
     "category": {
-      "tr": "Bakım & Servis",
-      "en": "Bakım & Servis"
+      "tr": {
+        "tr": "Bakım & Servis",
+        "en": "Bakım & Servis"
+      },
+      "en": {
+        "tr": "Bakım & Servis",
+        "en": "Bakım & Servis"
+      }
     },
     "title": {
-      "tr": "Klima Bakımının Önemi: Neden Her Yıl Yapılmalı?",
-      "en": "Klima Bakımının Önemi: Neden Her Yıl Yapılmalı?"
+      "tr": {
+        "tr": "Klima Bakımının Önemi: Neden Her Yıl Yapılmalı?",
+        "en": "Klima Bakımının Önemi: Neden Her Yıl Yapılmalı?"
+      },
+      "en": {
+        "tr": "Klima Bakımının Önemi: Neden Her Yıl Yapılmalı?",
+        "en": "Klima Bakımının Önemi: Neden Her Yıl Yapılmalı?"
+      }
     },
     "excerpt": {
-      "tr": "Düzenli klima bakımı sadece performansı artırmakla kalmaz, aynı zamanda sağlığınızı korur ve enerji tasarrufu sağlar.",
-      "en": "Düzenli klima bakımı sadece performansı artırmakla kalmaz, aynı zamanda sağlığınızı korur ve enerji tasarrufu sağlar."
+      "tr": {
+        "tr": "Düzenli klima bakımı sadece performansı artırmakla kalmaz, aynı zamanda sağlığınızı korur ve enerji tasarrufu sağlar.",
+        "en": "Düzenli klima bakımı sadece performansı artırmakla kalmaz, aynı zamanda sağlığınızı korur ve enerji tasarrufu sağlar."
+      },
+      "en": {
+        "tr": "Düzenli klima bakımı sadece performansı artırmakla kalmaz, aynı zamanda sağlığınızı korur ve enerji tasarrufu sağlar.",
+        "en": "Düzenli klima bakımı sadece performansı artırmakla kalmaz, aynı zamanda sağlığınızı korur ve enerji tasarrufu sağlar."
+      }
     },
     "content": {
-      "tr": "## Neden Klima Bakımı Yaptırmalısınız?\n\nKlima bakımı, cihazınızın uzun ömürlü olması ve verimli çalışması için kritik bir öneme sahiptir.\n\n### 1. Enerji Tasarrufu\nKirli filtreler klimanın daha fazla çalışmasına neden olur. Bakımı yapılan bir klima %15'e varan tasarruf sağlayabilir.\n\n### 2. Sağlıklı Hava Kalitesi\nBakımsız klimalarda biriken toz, küf ve bakteriler solunum yolu hastalıklarına yol açabilir.\n\n### 3. Cihaz Ömrünü Uzatma\nKompresör gibi ana parçaların ömrü düzenli bakımla iki katına çıkabilir.",
-      "en": "## Neden Klima Bakımı Yaptırmalısınız?\n\nKlima bakımı, cihazınızın uzun ömürlü olması ve verimli çalışması için kritik bir öneme sahiptir.\n\n### 1. Enerji Tasarrufu\nKirli filtreler klimanın daha fazla çalışmasına neden olur. Bakımı yapılan bir klima %15'e varan tasarruf sağlayabilir.\n\n### 2. Sağlıklı Hava Kalitesi\nBakımsız klimalarda biriken toz, küf ve bakteriler solunum yolu hastalıklarına yol açabilir.\n\n### 3. Cihaz Ömrünü Uzatma\nKompresör gibi ana parçaların ömrü düzenli bakımla iki katına çıkabilir."
+      "tr": {
+        "tr": "## Neden Klima Bakımı Yaptırmalısınız?\n\nKlima bakımı, cihazınızın uzun ömürlü olması ve verimli çalışması için kritik bir öneme sahiptir.\n\n### 1. Enerji Tasarrufu\nKirli filtreler klimanın daha fazla çalışmasına neden olur. Bakımı yapılan bir klima %15'e varan tasarruf sağlayabilir.\n\n### 2. Sağlıklı Hava Kalitesi\nBakımsız klimalarda biriken toz, küf ve bakteriler solunum yolu hastalıklarına yol açabilir.\n\n### 3. Cihaz Ömrünü Uzatma\nKompresör gibi ana parçaların ömrü düzenli bakımla iki katına çıkabilir.",
+        "en": "## Neden Klima Bakımı Yaptırmalısınız?\n\nKlima bakımı, cihazınızın uzun ömürlü olması ve verimli çalışması için kritik bir öneme sahiptir.\n\n### 1. Enerji Tasarrufu\nKirli filtreler klimanın daha fazla çalışmasına neden olur. Bakımı yapılan bir klima %15'e varan tasarruf sağlayabilir.\n\n### 2. Sağlıklı Hava Kalitesi\nBakımsız klimalarda biriken toz, küf ve bakteriler solunum yolu hastalıklarına yol açabilir.\n\n### 3. Cihaz Ömrünü Uzatma\nKompresör gibi ana parçaların ömrü düzenli bakımla iki katına çıkabilir."
+      },
+      "en": {
+        "tr": "## Neden Klima Bakımı Yaptırmalısınız?\n\nKlima bakımı, cihazınızın uzun ömürlü olması ve verimli çalışması için kritik bir öneme sahiptir.\n\n### 1. Enerji Tasarrufu\nKirli filtreler klimanın daha fazla çalışmasına neden olur. Bakımı yapılan bir klima %15'e varan tasarruf sağlayabilir.\n\n### 2. Sağlıklı Hava Kalitesi\nBakımsız klimalarda biriken toz, küf ve bakteriler solunum yolu hastalıklarına yol açabilir.\n\n### 3. Cihaz Ömrünü Uzatma\nKompresör gibi ana parçaların ömrü düzenli bakımla iki katına çıkabilir.",
+        "en": "## Neden Klima Bakımı Yaptırmalısınız?\n\nKlima bakımı, cihazınızın uzun ömürlü olması ve verimli çalışması için kritik bir öneme sahiptir.\n\n### 1. Enerji Tasarrufu\nKirli filtreler klimanın daha fazla çalışmasına neden olur. Bakımı yapılan bir klima %15'e varan tasarruf sağlayabilir.\n\n### 2. Sağlıklı Hava Kalitesi\nBakımsız klimalarda biriken toz, küf ve bakteriler solunum yolu hastalıklarına yol açabilir.\n\n### 3. Cihaz Ömrünü Uzatma\nKompresör gibi ana parçaların ömrü düzenli bakımla iki katına çıkabilir."
+      }
     },
-    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Air_Condition_Unit_Interior_View_USA.jpg",
+    "coverImage": "/uploads/blog/klima-bakim-onemi.jpg",
     "metaTitle": {
-      "tr": "Klima Bakımının Önemi: Sağlık ve Tasarruf | Durukan Klima",
-      "en": "Klima Bakımının Önemi: Sağlık ve Tasarruf | Durukan Klima"
+      "tr": {
+        "tr": "Klima Bakımının Önemi: Neden Her Yıl Yapılmalı?",
+        "en": "Klima Bakımının Önemi: Neden Her Yıl Yapılmalı?"
+      },
+      "en": {
+        "tr": "Klima Bakımının Önemi: Neden Her Yıl Yapılmalı?",
+        "en": "Klima Bakımının Önemi: Neden Her Yıl Yapılmalı?"
+      }
     },
     "metaDescription": {
-      "tr": "Klima bakımı neden önemli?",
-      "en": "Klima bakımı neden önemli?"
+      "tr": "",
+      "en": ""
     },
     "publishedAt": "2025-01-15",
     "readTime": {
       "tr": "7 dk",
       "en": "7 min"
-    },
-    "published": true,
-    "imageCredit": "Stilfehler",
-    "imageSource": "Wikimedia Commons"
+    }
   },
   {
     "id": "2",
     "slug": "klima-montaji-nerede-yapilmali-yer-secimi",
     "slugEn": "klima-montaji-nerede-yapilmali-yer-secimi-en",
     "category": {
-      "tr": "Montaj Rehberi",
-      "en": "Montaj Rehberi"
+      "tr": {
+        "tr": "Montaj Rehberi",
+        "en": "Montaj Rehberi"
+      },
+      "en": {
+        "tr": "Montaj Rehberi",
+        "en": "Montaj Rehberi"
+      }
     },
     "title": {
-      "tr": "Klima Montajında Yer Seçimi: En Verimli Konum Neresi?",
-      "en": "Klima Montajında Yer Seçimi: En Verimli Konum Neresi?"
+      "tr": {
+        "tr": "Klima Montajında Yer Seçimi: En Verimli Konum Neresi?",
+        "en": "Klima Montajında Yer Seçimi: En Verimli Konum Neresi?"
+      },
+      "en": {
+        "tr": "Klima Montajında Yer Seçimi: En Verimli Konum Neresi?",
+        "en": "Klima Montajında Yer Seçimi: En Verimli Konum Neresi?"
+      }
     },
     "excerpt": {
-      "tr": "Klimanızı yanlış yere monte etmek verimi %30 düşürebilir.",
-      "en": "Klimanızı yanlış yere monte etmek verimi %30 düşürebilir."
+      "tr": {
+        "tr": "Klimanızı yanlış yere monte etmek verimi %30 düşürebilir.",
+        "en": "Klimanızı yanlış yere monte etmek verimi %30 düşürebilir."
+      },
+      "en": {
+        "tr": "Klimanızı yanlış yere monte etmek verimi %30 düşürebilir.",
+        "en": "Klimanızı yanlış yere monte etmek verimi %30 düşürebilir."
+      }
     },
     "content": {
-      "tr": "## İdeal Klima Konumu\n\n1. Doğrudan Hava Akışı: Havayı doğrudan yatağınıza üfleyen konumlardan kaçının.\n2. Engelsiz Yol: Önünde perde veya mobilya bulunan yerler hava sirkülasyonunu bozar.\n3. Yükseklik: Soğuk hava çöktüğü için klima yerden 2.1-2.4 metre yükseklikte olmalıdır.",
-      "en": "## İdeal Klima Konumu\n\n1. Doğrudan Hava Akışı: Havayı doğrudan yatağınıza üfleyen konumlardan kaçının.\n2. Engelsiz Yol: Önünde perde veya mobilya bulunan yerler hava sirkülasyonunu bozar.\n3. Yükseklik: Soğuk hava çöktüğü için klima yerden 2.1-2.4 metre yükseklikte olmalıdır."
+      "tr": {
+        "tr": "## İdeal Klima Konumu\n\n1. Doğrudan Hava Akışı: Havayı doğrudan yatağınıza üfleyen konumlardan kaçının.\n2. Engelsiz Yol: Önünde perde veya mobilya bulunan yerler hava sirkülasyonunu bozar.\n3. Yükseklik: Soğuk hava çöktüğü için klima yerden 2.1-2.4 metre yükseklikte olmalıdır.",
+        "en": "## İdeal Klima Konumu\n\n1. Doğrudan Hava Akışı: Havayı doğrudan yatağınıza üfleyen konumlardan kaçının.\n2. Engelsiz Yol: Önünde perde veya mobilya bulunan yerler hava sirkülasyonunu bozar.\n3. Yükseklik: Soğuk hava çöktüğü için klima yerden 2.1-2.4 metre yükseklikte olmalıdır."
+      },
+      "en": {
+        "tr": "## İdeal Klima Konumu\n\n1. Doğrudan Hava Akışı: Havayı doğrudan yatağınıza üfleyen konumlardan kaçının.\n2. Engelsiz Yol: Önünde perde veya mobilya bulunan yerler hava sirkülasyonunu bozar.\n3. Yükseklik: Soğuk hava çöktüğü için klima yerden 2.1-2.4 metre yükseklikte olmalıdır.",
+        "en": "## İdeal Klima Konumu\n\n1. Doğrudan Hava Akışı: Havayı doğrudan yatağınıza üfleyen konumlardan kaçının.\n2. Engelsiz Yol: Önünde perde veya mobilya bulunan yerler hava sirkülasyonunu bozar.\n3. Yükseklik: Soğuk hava çöktüğü için klima yerden 2.1-2.4 metre yükseklikte olmalıdır."
+      }
     },
-    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Single-room_AC_unit-external.jpg/800px-Single-room_AC_unit-external.jpg",
+    "coverImage": "/uploads/blog/klima-montaj.jpg",
     "metaTitle": {
-      "tr": "Klima Montajında Yer Seçimi | Durukan Klima",
-      "en": "Klima Montajında Yer Seçimi | Durukan Klima"
+      "tr": {
+        "tr": "Klima Montajında Yer Seçimi: En Verimli Konum Neresi?",
+        "en": "Klima Montajında Yer Seçimi: En Verimli Konum Neresi?"
+      },
+      "en": {
+        "tr": "Klima Montajında Yer Seçimi: En Verimli Konum Neresi?",
+        "en": "Klima Montajında Yer Seçimi: En Verimli Konum Neresi?"
+      }
     },
     "metaDescription": {
-      "tr": "Klima nereye takılmalı?",
-      "en": "Klima nereye takılmalı?"
+      "tr": "",
+      "en": ""
     },
     "publishedAt": "2025-01-28",
     "readTime": {
       "tr": "7 dk",
       "en": "7 min"
-    },
-    "published": true,
-    "imageCredit": "William Hamblin",
-    "imageSource": "Wikimedia Commons"
+    }
   },
   {
     "id": "3",
     "slug": "klima-arizasi-belirtileri-ne-zaman-servis-cagirmali",
     "slugEn": "klima-arizasi-belirtileri-ne-zaman-servis-cagirmali-en",
     "category": {
-      "tr": "Arıza & Onarım",
-      "en": "Arıza & Onarım"
+      "tr": {
+        "tr": "Arıza & Onarım",
+        "en": "Arıza & Onarım"
+      },
+      "en": {
+        "tr": "Arıza & Onarım",
+        "en": "Arıza & Onarım"
+      }
     },
     "title": {
-      "tr": "Klima Arızası Belirtileri: Ne Zaman Teknik Servis Çağırmalı?",
-      "en": "Klima Arızası Belirtileri: Ne Zaman Teknik Servis Çağırmalı?"
+      "tr": {
+        "tr": "Klima Arızası Belirtileri: Ne Zaman Teknik Servis Çağırmalı?",
+        "en": "Klima Arızası Belirtileri: Ne Zaman Teknik Servis Çağırmalı?"
+      },
+      "en": {
+        "tr": "Klima Arızası Belirtileri: Ne Zaman Teknik Servis Çağırmalı?",
+        "en": "Klima Arızası Belirtileri: Ne Zaman Teknik Servis Çağırmalı?"
+      }
     },
     "excerpt": {
-      "tr": "Klimanızdan gelen tuhaf sesler veya kötü kokular büyük bir arızanın habercisi olabilir.",
-      "en": "Klimanızdan gelen tuhaf sesler veya kötü kokular büyük bir arızanın habercisi olabilir."
+      "tr": {
+        "tr": "Klimanızdan gelen tuhaf sesler veya kötü kokular büyük bir arızanın habercisi olabilir.",
+        "en": "Klimanızdan gelen tuhaf sesler veya kötü kokular büyük bir arızanın habercisi olabilir."
+      },
+      "en": {
+        "tr": "Klimanızdan gelen tuhaf sesler veya kötü kokular büyük bir arızanın habercisi olabilir.",
+        "en": "Klimanızdan gelen tuhaf sesler veya kötü kokular büyük bir arızanın habercisi olabilir."
+      }
     },
     "content": {
-      "tr": "## Müdahale Gerektiren Kritik Belirtiler\n\n1. Yetersiz Soğutma: Hava üflüyor ancak ortam değişmiyorsa gaz kaçağı olabilir.\n2. Olağandışı Sesler: Fan motoru veya gevşek parça habercisi olabilir.\n3. Sızıntı: İç üniteden su damlaması drenaj hattı tıkanıklığı belirtisidir.",
-      "en": "## Müdahale Gerektiren Kritik Belirtiler\n\n1. Yetersiz Soğutma: Hava üflüyor ancak ortam değişmiyorsa gaz kaçağı olabilir.\n2. Olağandışı Sesler: Fan motoru veya gevşek parça habercisi olabilir.\n3. Sızıntı: İç üniteden su damlaması drenaj hattı tıkanıklığı belirtisidir."
+      "tr": {
+        "tr": "## Müdahale Gerektiren Kritik Belirtiler\n\n1. Yetersiz Soğutma: Hava üflüyor ancak ortam değişmiyorsa gaz kaçağı olabilir.\n2. Olağandışı Sesler: Fan motoru veya gevşek parça habercisi olabilir.\n3. Sızıntı: İç üniteden su damlaması drenaj hattı tıkanıklığı belirtisidir.",
+        "en": "## Müdahale Gerektiren Kritik Belirtiler\n\n1. Yetersiz Soğutma: Hava üflüyor ancak ortam değişmiyorsa gaz kaçağı olabilir.\n2. Olağandışı Sesler: Fan motoru veya gevşek parça habercisi olabilir.\n3. Sızıntı: İç üniteden su damlaması drenaj hattı tıkanıklığı belirtisidir."
+      },
+      "en": {
+        "tr": "## Müdahale Gerektiren Kritik Belirtiler\n\n1. Yetersiz Soğutma: Hava üflüyor ancak ortam değişmiyorsa gaz kaçağı olabilir.\n2. Olağandışı Sesler: Fan motoru veya gevşek parça habercisi olabilir.\n3. Sızıntı: İç üniteden su damlaması drenaj hattı tıkanıklığı belirtisidir.",
+        "en": "## Müdahale Gerektiren Kritik Belirtiler\n\n1. Yetersiz Soğutma: Hava üflüyor ancak ortam değişmiyorsa gaz kaçağı olabilir.\n2. Olağandışı Sesler: Fan motoru veya gevşek parça habercisi olabilir.\n3. Sızıntı: İç üniteden su damlaması drenaj hattı tıkanıklığı belirtisidir."
+      }
     },
-    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Air_conditioner_repair%2C_Nigeria.jpg",
+    "coverImage": "/uploads/blog/klima-ariza-belirtileri.jpg",
     "metaTitle": {
-      "tr": "Klima Arıza Belirtileri | Durukan Klima",
-      "en": "Klima Arıza Belirtileri | Durukan Klima"
+      "tr": {
+        "tr": "Klima Arızası Belirtileri: Ne Zaman Teknik Servis Çağırmalı?",
+        "en": "Klima Arızası Belirtileri: Ne Zaman Teknik Servis Çağırmalı?"
+      },
+      "en": {
+        "tr": "Klima Arızası Belirtileri: Ne Zaman Teknik Servis Çağırmalı?",
+        "en": "Klima Arızası Belirtileri: Ne Zaman Teknik Servis Çağırmalı?"
+      }
     },
     "metaDescription": {
-      "tr": "Klima arıza belirtileri",
-      "en": "Klima arıza belirtileri"
+      "tr": "",
+      "en": ""
     },
     "publishedAt": "2025-02-10",
     "readTime": {
       "tr": "7 dk",
       "en": "7 min"
-    },
-    "published": true,
-    "imageCredit": "Adeboy10",
-    "imageSource": "Wikimedia Commons"
+    }
   },
   {
     "id": "4",
     "slug": "enerji-tasarrufu-icin-klima-kullanim-ipuclari",
     "slugEn": "enerji-tasarrufu-icin-klima-kullanim-ipuclari-en",
     "category": {
-      "tr": "Enerji Tasarrufu",
-      "en": "Enerji Tasarrufu"
+      "tr": {
+        "tr": "Enerji Tasarrufu",
+        "en": "Enerji Tasarrufu"
+      },
+      "en": {
+        "tr": "Enerji Tasarrufu",
+        "en": "Enerji Tasarrufu"
+      }
     },
     "title": {
-      "tr": "Klimayı Ekonomik Kullanmanın Yolları: Faturayı %40 Düşürün",
-      "en": "Klimayı Ekonomik Kullanmanın Yolları: Faturayı %40 Düşürün"
+      "tr": {
+        "tr": "Klimayı Ekonomik Kullanmanın Yolları: Faturayı %40 Düşürün",
+        "en": "Klimayı Ekonomik Kullanmanın Yolları: Faturayı %40 Düşürün"
+      },
+      "en": {
+        "tr": "Klimayı Ekonomik Kullanmanın Yolları: Faturayı %40 Düşürün",
+        "en": "Klimayı Ekonomik Kullanmanın Yolları: Faturayı %40 Düşürün"
+      }
     },
     "excerpt": {
-      "tr": "Klima faturanızdan korkmayın! Doğru kullanım alışkanlıkları ile hem serin kalın hem de paradan tasarruf edin.",
-      "en": "Klima faturanızdan korkmayın! Doğru kullanım alışkanlıkları ile hem serin kalın hem de paradan tasarruf edin."
+      "tr": {
+        "tr": "Klima faturanızdan korkmayın! Doğru kullanım alışkanlıkları ile hem serin kalın hem de paradan tasarruf edin.",
+        "en": "Klima faturanızdan korkmayın! Doğru kullanım alışkanlıkları ile hem serin kalın hem de paradan tasarruf edin."
+      },
+      "en": {
+        "tr": "Klima faturanızdan korkmayın! Doğru kullanım alışkanlıkları ile hem serin kalın hem de paradan tasarruf edin.",
+        "en": "Klima faturanızdan korkmayın! Doğru kullanım alışkanlıkları ile hem serin kalın hem de paradan tasarruf edin."
+      }
     },
     "content": {
-      "tr": "## Faturayı Düşüren Kullanım Stratejileri\n\n1. Sıcaklık Dengesi: 24-25°C derecede çalıştırmak enerji tüketimini azaltır.\n2. Kapat-Aç Yapmayın: Inverter klimalar sabit sıcaklıkta daha az yakar.\n3. İzolasyon: Kapı ve pencerelerin kapalı olduğundan emin olun.",
-      "en": "## Faturayı Düşüren Kullanım Stratejileri\n\n1. Sıcaklık Dengesi: 24-25°C derecede çalıştırmak enerji tüketimini azaltır.\n2. Kapat-Aç Yapmayın: Inverter klimalar sabit sıcaklıkta daha az yakar.\n3. İzolasyon: Kapı ve pencerelerin kapalı olduğundan emin olun."
+      "tr": {
+        "tr": "## Faturayı Düşüren Kullanım Stratejileri\n\n1. Sıcaklık Dengesi: 24-25°C derecede çalıştırmak enerji tüketimini azaltır.\n2. Kapat-Aç Yapmayın: Inverter klimalar sabit sıcaklıkta daha az yakar.\n3. İzolasyon: Kapı ve pencerelerin kapalı olduğundan emin olun.",
+        "en": "## Faturayı Düşüren Kullanım Stratejileri\n\n1. Sıcaklık Dengesi: 24-25°C derecede çalıştırmak enerji tüketimini azaltır.\n2. Kapat-Aç Yapmayın: Inverter klimalar sabit sıcaklıkta daha az yakar.\n3. İzolasyon: Kapı ve pencerelerin kapalı olduğundan emin olun."
+      },
+      "en": {
+        "tr": "## Faturayı Düşüren Kullanım Stratejileri\n\n1. Sıcaklık Dengesi: 24-25°C derecede çalıştırmak enerji tüketimini azaltır.\n2. Kapat-Aç Yapmayın: Inverter klimalar sabit sıcaklıkta daha az yakar.\n3. İzolasyon: Kapı ve pencerelerin kapalı olduğundan emin olun.",
+        "en": "## Faturayı Düşüren Kullanım Stratejileri\n\n1. Sıcaklık Dengesi: 24-25°C derecede çalıştırmak enerji tüketimini azaltır.\n2. Kapat-Aç Yapmayın: Inverter klimalar sabit sıcaklıkta daha az yakar.\n3. İzolasyon: Kapı ve pencerelerin kapalı olduğundan emin olun."
+      }
     },
-    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/5/51/Refrigerants%28Coolants%29.png",
+    "coverImage": "/uploads/blog/enerji-tasarruf-ipuclari.jpg",
     "metaTitle": {
-      "tr": "Klimada Enerji Tasarrufu | Durukan Klima",
-      "en": "Klimada Enerji Tasarrufu | Durukan Klima"
+      "tr": {
+        "tr": "Klimayı Ekonomik Kullanmanın Yolları: Faturayı %40 Düşürün",
+        "en": "Klimayı Ekonomik Kullanmanın Yolları: Faturayı %40 Düşürün"
+      },
+      "en": {
+        "tr": "Klimayı Ekonomik Kullanmanın Yolları: Faturayı %40 Düşürün",
+        "en": "Klimayı Ekonomik Kullanmanın Yolları: Faturayı %40 Düşürün"
+      }
     },
     "metaDescription": {
-      "tr": "Klima faturası nasıl düşürülür?",
-      "en": "Klima faturası nasıl düşürülür?"
+      "tr": "",
+      "en": ""
     },
     "publishedAt": "2025-02-22",
     "readTime": {
       "tr": "7 dk",
       "en": "7 min"
-    },
-    "published": true,
-    "imageCredit": "Evergreen@@",
-    "imageSource": "Wikimedia Commons"
+    }
   },
   {
     "id": "5",
     "slug": "klima-turu-secimi-split-multi-vrf",
     "slugEn": "klima-turu-secimi-split-multi-vrf-en",
     "category": {
-      "tr": "Satın Alma Rehberi",
-      "en": "Satın Alma Rehberi"
+      "tr": {
+        "tr": "Satın Alma Rehberi",
+        "en": "Satın Alma Rehberi"
+      },
+      "en": {
+        "tr": "Satın Alma Rehberi",
+        "en": "Satın Alma Rehberi"
+      }
     },
     "title": {
-      "tr": "Hangi Klimayı Almalıyım? Split, Multi ve VRF Farkları",
-      "en": "Hangi Klimayı Almalıyım? Split, Multi ve VRF Farkları"
+      "tr": {
+        "tr": "Hangi Klimayı Almalıyım? Split, Multi ve VRF Farkları",
+        "en": "Hangi Klimayı Almalıyım? Split, Multi ve VRF Farkları"
+      },
+      "en": {
+        "tr": "Hangi Klimayı Almalıyım? Split, Multi ve VRF Farkları",
+        "en": "Hangi Klimayı Almalıyım? Split, Multi ve VRF Farkları"
+      }
     },
     "excerpt": {
-      "tr": "Ev veya iş yeriniz için en uygun klima sistemi hangisi?",
-      "en": "Ev veya iş yeriniz için en uygun klima sistemi hangisi?"
+      "tr": {
+        "tr": "Ev veya iş yeriniz için en uygun klima sistemi hangisi?",
+        "en": "Ev veya iş yeriniz için en uygun klima sistemi hangisi?"
+      },
+      "en": {
+        "tr": "Ev veya iş yeriniz için en uygun klima sistemi hangisi?",
+        "en": "Ev veya iş yeriniz için en uygun klima sistemi hangisi?"
+      }
     },
     "content": {
-      "tr": "## Klima Sistemlerini Karşılaştıralım\n\n- Split Klimalar: Tek bir oda için ideal.\n- Multi Split: Tek bir dış üniteye birden fazla iç ünite bağlanabilir.\n- VRF Sistemleri: Büyük yapılar için merkezi iklimlendirme.",
-      "en": "## Klima Sistemlerini Karşılaştıralım\n\n- Split Klimalar: Tek bir oda için ideal.\n- Multi Split: Tek bir dış üniteye birden fazla iç ünite bağlanabilir.\n- VRF Sistemleri: Büyük yapılar için merkezi iklimlendirme."
+      "tr": {
+        "tr": "## Klima Sistemlerini Karşılaştıralım\n\n- Split Klimalar: Tek bir oda için ideal.\n- Multi Split: Tek bir dış üniteye birden fazla iç ünite bağlanabilir.\n- VRF Sistemleri: Büyük yapılar için merkezi iklimlendirme.",
+        "en": "## Klima Sistemlerini Karşılaştıralım\n\n- Split Klimalar: Tek bir oda için ideal.\n- Multi Split: Tek bir dış üniteye birden fazla iç ünite bağlanabilir.\n- VRF Sistemleri: Büyük yapılar için merkezi iklimlendirme."
+      },
+      "en": {
+        "tr": "## Klima Sistemlerini Karşılaştıralım\n\n- Split Klimalar: Tek bir oda için ideal.\n- Multi Split: Tek bir dış üniteye birden fazla iç ünite bağlanabilir.\n- VRF Sistemleri: Büyük yapılar için merkezi iklimlendirme.",
+        "en": "## Klima Sistemlerini Karşılaştıralım\n\n- Split Klimalar: Tek bir oda için ideal.\n- Multi Split: Tek bir dış üniteye birden fazla iç ünite bağlanabilir.\n- VRF Sistemleri: Büyük yapılar için merkezi iklimlendirme."
+      }
     },
-    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Single-room_AC_unit-external.jpg/800px-Single-room_AC_unit-external.jpg",
+    "coverImage": "/uploads/blog/klima-turleri.jpg",
     "metaTitle": {
-      "tr": "Klima Türleri: Split vs Multi vs VRF | Durukan Klima",
-      "en": "Klima Türleri: Split vs Multi vs VRF | Durukan Klima"
+      "tr": {
+        "tr": "Hangi Klimayı Almalıyım? Split, Multi ve VRF Farkları",
+        "en": "Hangi Klimayı Almalıyım? Split, Multi ve VRF Farkları"
+      },
+      "en": {
+        "tr": "Hangi Klimayı Almalıyım? Split, Multi ve VRF Farkları",
+        "en": "Hangi Klimayı Almalıyım? Split, Multi ve VRF Farkları"
+      }
     },
     "metaDescription": {
-      "tr": "Klima türleri arasındaki farklar",
-      "en": "Klima türleri arasındaki farklar"
+      "tr": "",
+      "en": ""
     },
     "publishedAt": "2025-03-05",
     "readTime": {
       "tr": "7 dk",
       "en": "7 min"
-    },
-    "published": true,
-    "imageCredit": "William Hamblin",
-    "imageSource": "Wikimedia Commons"
+    }
   },
   {
     "id": "6",
     "slug": "kis-aylarinda-klima-ile-isinma-rehberi",
     "slugEn": "kis-aylarinda-klima-ile-isinma-rehberi-en",
     "category": {
-      "tr": "Enerji Tasarrufu",
-      "en": "Enerji Tasarrufu"
+      "tr": {
+        "tr": "Enerji Tasarrufu",
+        "en": "Enerji Tasarrufu"
+      },
+      "en": {
+        "tr": "Enerji Tasarrufu",
+        "en": "Enerji Tasarrufu"
+      }
     },
     "title": {
-      "tr": "Kışın Klima ile Isınma: Püf Noktaları ve Maliyetler",
-      "en": "Kışın Klima ile Isınma: Püf Noktaları ve Maliyetler"
+      "tr": {
+        "tr": "Kışın Klima ile Isınma: Püf Noktaları ve Maliyetler",
+        "en": "Kışın Klima ile Isınma: Püf Noktaları ve Maliyetler"
+      },
+      "en": {
+        "tr": "Kışın Klima ile Isınma: Püf Noktaları ve Maliyetler",
+        "en": "Kışın Klima ile Isınma: Püf Noktaları ve Maliyetler"
+      }
     },
     "excerpt": {
-      "tr": "Klima ile ısınmak doğalgazdan daha mı ekonomik?",
-      "en": "Klima ile ısınmak doğalgazdan daha mı ekonomik?"
+      "tr": {
+        "tr": "Klima ile ısınmak doğalgazdan daha mı ekonomik?",
+        "en": "Klima ile ısınmak doğalgazdan daha mı ekonomik?"
+      },
+      "en": {
+        "tr": "Klima ile ısınmak doğalgazdan daha mı ekonomik?",
+        "en": "Klima ile ısınmak doğalgazdan daha mı ekonomik?"
+      }
     },
     "content": {
-      "tr": "## Inverter Teknolojisi ile Kışın Isınma\n\nYeni nesil klimalar havadan ısı çekerek ortamı ısıtır.\n\n- Flapları aşağı yöne ayarlayın.\n- Dış ünitenin kar altında kalmadığından emin olun.",
-      "en": "## Inverter Teknolojisi ile Kışın Isınma\n\nYeni nesil klimalar havadan ısı çekerek ortamı ısıtır.\n\n- Flapları aşağı yöne ayarlayın.\n- Dış ünitenin kar altında kalmadığından emin olun."
+      "tr": {
+        "tr": "## Inverter Teknolojisi ile Kışın Isınma\n\nYeni nesil klimalar havadan ısı çekerek ortamı ısıtır.\n\n- Flapları aşağı yöne ayarlayın.\n- Dış ünitenin kar altında kalmadığından emin olun.",
+        "en": "## Inverter Teknolojisi ile Kışın Isınma\n\nYeni nesil klimalar havadan ısı çekerek ortamı ısıtır.\n\n- Flapları aşağı yöne ayarlayın.\n- Dış ünitenin kar altında kalmadığından emin olun."
+      },
+      "en": {
+        "tr": "## Inverter Teknolojisi ile Kışın Isınma\n\nYeni nesil klimalar havadan ısı çekerek ortamı ısıtır.\n\n- Flapları aşağı yöne ayarlayın.\n- Dış ünitenin kar altında kalmadığından emin olun.",
+        "en": "## Inverter Teknolojisi ile Kışın Isınma\n\nYeni nesil klimalar havadan ısı çekerek ortamı ısıtır.\n\n- Flapları aşağı yöne ayarlayın.\n- Dış ünitenin kar altında kalmadığından emin olun."
+      }
     },
-    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Heating_boiler.jpg/800px-Heating_boiler.jpg",
+    "coverImage": "/uploads/blog/kis-isinma.jpg",
     "metaTitle": {
-      "tr": "Kışın Klima ile Isınma | Durukan Klima",
-      "en": "Kışın Klima ile Isınma | Durukan Klima"
+      "tr": {
+        "tr": "Kışın Klima ile Isınma: Püf Noktaları ve Maliyetler",
+        "en": "Kışın Klima ile Isınma: Püf Noktaları ve Maliyetler"
+      },
+      "en": {
+        "tr": "Kışın Klima ile Isınma: Püf Noktaları ve Maliyetler",
+        "en": "Kışın Klima ile Isınma: Püf Noktaları ve Maliyetler"
+      }
     },
     "metaDescription": {
-      "tr": "Kışın klima ile ısınma",
-      "en": "Kışın klima ile ısınma"
+      "tr": "",
+      "en": ""
     },
     "publishedAt": "2025-03-28",
     "readTime": {
       "tr": "7 dk",
       "en": "7 min"
-    },
-    "published": true,
-    "imageCredit": "MoistMc",
-    "imageSource": "Wikimedia Commons"
+    }
   },
   {
     "id": "7",
-    "slug": "klima-gazı-dolumu-ne-zaman-yapılmalı",
-    "slugEn": "klima-gazı-dolumu-ne-zaman-yapılmalı-en",
+    "slug": "klima-gazi-dolumu-ne-zaman-yapilmali",
+    "slugEn": "klima-gazi-dolumu-ne-zaman-yapilmali-en",
     "category": {
-      "tr": "Arıza & Onarım",
-      "en": "Arıza & Onarım"
+      "tr": {
+        "tr": "Arıza & Onarım",
+        "en": "Arıza & Onarım"
+      },
+      "en": {
+        "tr": "Arıza & Onarım",
+        "en": "Arıza & Onarım"
+      }
     },
     "title": {
-      "tr": "Klima Gazı Dolumu Ne Zaman Yapılmalı?",
-      "en": "Klima Gazı Dolumu Ne Zaman Yapılmalı?"
+      "tr": {
+        "tr": "Klima Gazı Dolumu Ne Zaman Yapılmalı?",
+        "en": "Klima Gazı Dolumu Ne Zaman Yapılmalı?"
+      },
+      "en": {
+        "tr": "Klima Gazı Dolumu Ne Zaman Yapılmalı?",
+        "en": "Klima Gazı Dolumu Ne Zaman Yapılmalı?"
+      }
     },
     "excerpt": {
-      "tr": "Klimanızın gazı biter mi? Eksilmesi durumunda ne olur?",
-      "en": "Klimanızın gazı biter mi? Eksilmesi durumunda ne olur?"
+      "tr": {
+        "tr": "Klimanızın gazı biter mi? Eksilmesi durumunda ne olur?",
+        "en": "Klimanızın gazı biter mi? Eksilmesi durumunda ne olur?"
+      },
+      "en": {
+        "tr": "Klimanızın gazı biter mi? Eksilmesi durumunda ne olur?",
+        "en": "Klimanızın gazı biter mi? Eksilmesi durumunda ne olur?"
+      }
     },
     "content": {
-      "tr": "## Klima Gazı Biter mi?\n\nKapalı devre bir sistem olan klimada gaz normal şartlarda bitmez. Ancak sızıntılardan gaz eksilebilir.\n\n- Üfleme yetersiz\n- Bakır boru buzlanma\n- Kompresörün sürekli çalışması",
-      "en": "## Klima Gazı Biter mi?\n\nKapalı devre bir sistem olan klimada gaz normal şartlarda bitmez. Ancak sızıntılardan gaz eksilebilir.\n\n- Üfleme yetersiz\n- Bakır boru buzlanma\n- Kompresörün sürekli çalışması"
+      "tr": {
+        "tr": "## Klima Gazı Biter mi?\n\nKapalı devre bir sistem olan klimada gaz normal şartlarda bitmez. Ancak sızıntılardan gaz eksilebilir.\n\n- Üfleme yetersiz\n- Bakır boru buzlanma\n- Kompresörün sürekli çalışması",
+        "en": "## Klima Gazı Biter mi?\n\nKapalı devre bir sistem olan klimada gaz normal şartlarda bitmez. Ancak sızıntılardan gaz eksilebilir.\n\n- Üfleme yetersiz\n- Bakır boru buzlanma\n- Kompresörün sürekli çalışması"
+      },
+      "en": {
+        "tr": "## Klima Gazı Biter mi?\n\nKapalı devre bir sistem olan klimada gaz normal şartlarda bitmez. Ancak sızıntılardan gaz eksilebilir.\n\n- Üfleme yetersiz\n- Bakır boru buzlanma\n- Kompresörün sürekli çalışması",
+        "en": "## Klima Gazı Biter mi?\n\nKapalı devre bir sistem olan klimada gaz normal şartlarda bitmez. Ancak sızıntılardan gaz eksilebilir.\n\n- Üfleme yetersiz\n- Bakır boru buzlanma\n- Kompresörün sürekli çalışması"
+      }
     },
-    "coverImage": "https://picsum.photos/seed/ac-gas-refill-7/800/400",
+    "coverImage": "/uploads/blog/klima-gaz-dolumu.jpg",
     "metaTitle": {
-      "tr": "Klima Gaz Dolumu | Durukan Klima",
-      "en": "Klima Gaz Dolumu | Durukan Klima"
+      "tr": {
+        "tr": "Klima Gazı Dolumu Ne Zaman Yapılmalı?",
+        "en": "Klima Gazı Dolumu Ne Zaman Yapılmalı?"
+      },
+      "en": {
+        "tr": "Klima Gazı Dolumu Ne Zaman Yapılmalı?",
+        "en": "Klima Gazı Dolumu Ne Zaman Yapılmalı?"
+      }
     },
     "metaDescription": {
-      "tr": "Klima gaz dolumu ne zaman yapılır?",
-      "en": "Klima gaz dolumu ne zaman yapılır?"
+      "tr": "",
+      "en": ""
     },
     "publishedAt": "2025-04-10",
     "readTime": {
       "tr": "7 dk",
       "en": "7 min"
-    },
-    "published": true
+    }
   },
   {
     "id": "8",
     "slug": "klima-koku-apiyor-nedenleri-ve-cozumleri",
     "slugEn": "klima-koku-apiyor-nedenleri-ve-cozumleri-en",
     "category": {
-      "tr": "Sağlık & Hijyen",
-      "en": "Sağlık & Hijyen"
+      "tr": {
+        "tr": "Sağlık & Hijyen",
+        "en": "Sağlık & Hijyen"
+      },
+      "en": {
+        "tr": "Sağlık & Hijyen",
+        "en": "Sağlık & Hijyen"
+      }
     },
     "title": {
-      "tr": "Klimadan Gelen Kötü Koku Nasıl Giderilir?",
-      "en": "Klimadan Gelen Kötü Koku Nasıl Giderilir?"
+      "tr": {
+        "tr": "Klimadan Gelen Kötü Koku Nasıl Giderilir?",
+        "en": "Klimadan Gelen Kötü Koku Nasıl Giderilir?"
+      },
+      "en": {
+        "tr": "Klimadan Gelen Kötü Koku Nasıl Giderilir?",
+        "en": "Klimadan Gelen Kötü Koku Nasıl Giderilir?"
+      }
     },
     "excerpt": {
-      "tr": "Rutubet veya küf kokusunun nedenlerini ve çözümlerini derledik.",
-      "en": "Rutubet veya küf kokusunun nedenlerini ve çözümlerini derledik."
+      "tr": {
+        "tr": "Rutubet veya küf kokusunun nedenlerini ve çözümlerini derledik.",
+        "en": "Rutubet veya küf kokusunun nedenlerini ve çözümlerini derledik."
+      },
+      "en": {
+        "tr": "Rutubet veya küf kokusunun nedenlerini ve çözümlerini derledik.",
+        "en": "Rutubet veya küf kokusunun nedenlerini ve çözümlerini derledik."
+      }
     },
     "content": {
-      "tr": "## Kötü Kokunun Kaynağı\n\nGenellikle iç ünitede biriken bakteriler ve durgun su kokuya neden olur.\n\n- Filtreleri temizleyin.\n- Klima dezenfektan spreyleri kullanın.\n- Drenaj hattının tıkalı olmadığından emin olun.",
-      "en": "## Kötü Kokunun Kaynağı\n\nGenellikle iç ünitede biriken bakteriler ve durgun su kokuya neden olur.\n\n- Filtreleri temizleyin.\n- Klima dezenfektan spreyleri kullanın.\n- Drenaj hattının tıkalı olmadığından emin olun."
+      "tr": {
+        "tr": "## Kötü Kokunun Kaynağı\n\nGenellikle iç ünitede biriken bakteriler ve durgun su kokuya neden olur.\n\n- Filtreleri temizleyin.\n- Klima dezenfektan spreyleri kullanın.\n- Drenaj hattının tıkalı olmadığından emin olun.",
+        "en": "## Kötü Kokunun Kaynağı\n\nGenellikle iç ünitede biriken bakteriler ve durgun su kokuya neden olur.\n\n- Filtreleri temizleyin.\n- Klima dezenfektan spreyleri kullanın.\n- Drenaj hattının tıkalı olmadığından emin olun."
+      },
+      "en": {
+        "tr": "## Kötü Kokunun Kaynağı\n\nGenellikle iç ünitede biriken bakteriler ve durgun su kokuya neden olur.\n\n- Filtreleri temizleyin.\n- Klima dezenfektan spreyleri kullanın.\n- Drenaj hattının tıkalı olmadığından emin olun.",
+        "en": "## Kötü Kokunun Kaynağı\n\nGenellikle iç ünitede biriken bakteriler ve durgun su kokuya neden olur.\n\n- Filtreleri temizleyin.\n- Klima dezenfektan spreyleri kullanın.\n- Drenaj hattının tıkalı olmadığından emin olun."
+      }
     },
-    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Air_Condition_Unit_Interior_View_USA.jpg",
+    "coverImage": "/uploads/blog/klima-koku.jpg",
     "metaTitle": {
-      "tr": "Klima Koku Giderme | Durukan Klima",
-      "en": "Klima Koku Giderme | Durukan Klima"
+      "tr": {
+        "tr": "Klimadan Gelen Kötü Koku Nasıl Giderilir?",
+        "en": "Klimadan Gelen Kötü Koku Nasıl Giderilir?"
+      },
+      "en": {
+        "tr": "Klimadan Gelen Kötü Koku Nasıl Giderilir?",
+        "en": "Klimadan Gelen Kötü Koku Nasıl Giderilir?"
+      }
     },
     "metaDescription": {
-      "tr": "Klima neden koku yapar?",
-      "en": "Klima neden koku yapar?"
+      "tr": "",
+      "en": ""
     },
     "publishedAt": "2025-04-25",
     "readTime": {
       "tr": "7 dk",
       "en": "7 min"
-    },
-    "published": true,
-    "imageCredit": "Stilfehler",
-    "imageSource": "Wikimedia Commons"
+    }
   },
   {
     "id": "9",
     "slug": "klima-filtresi-temizligi-nasil-yapilir",
     "slugEn": "klima-filtresi-temizligi-nasil-yapilir-en",
     "category": {
-      "tr": "Bakım & Servis",
-      "en": "Bakım & Servis"
+      "tr": {
+        "tr": "Bakım & Servis",
+        "en": "Bakım & Servis"
+      },
+      "en": {
+        "tr": "Bakım & Servis",
+        "en": "Bakım & Servis"
+      }
     },
     "title": {
-      "tr": "Klima Filtresi Temizliği Nasıl Yapılır?",
-      "en": "Klima Filtresi Temizliği Nasıl Yapılır?"
+      "tr": {
+        "tr": "Klima Filtresi Temizliği Nasıl Yapılır?",
+        "en": "Klima Filtresi Temizliği Nasıl Yapılır?"
+      },
+      "en": {
+        "tr": "Klima Filtresi Temizliği Nasıl Yapılır?",
+        "en": "Klima Filtresi Temizliği Nasıl Yapılır?"
+      }
     },
     "excerpt": {
-      "tr": "Klima filtresini düzenli temizlemek hem cihazın ömrünü uzatır hem de hava kalitesini artırır.",
-      "en": "Klima filtresini düzenli temizlemek hem cihazın ömrünü uzatır hem de hava kalitesini artırır."
+      "tr": {
+        "tr": "Klima filtresini düzenli temizlemek hem cihazın ömrünü uzatır hem de hava kalitesini artırır.",
+        "en": "Klima filtresini düzenli temizlemek hem cihazın ömrünü uzatır hem de hava kalitesini artırır."
+      },
+      "en": {
+        "tr": "Klima filtresini düzenli temizlemek hem cihazın ömrünü uzatır hem de hava kalitesini artırır.",
+        "en": "Klima filtresini düzenli temizlemek hem cihazın ömrünü uzatır hem de hava kalitesini artırır."
+      }
     },
     "content": {
-      "tr": "## Filtre Temizliği\n\n1. Klimayı kapatın.\n2. Ön kapağı açın.\n3. Filtreleri çıkarın.\n4. Ilık suyla yıkayın.\n5. Gölgede kurutun ve geri takın.",
-      "en": "## Filtre Temizliği\n\n1. Klimayı kapatın.\n2. Ön kapağı açın.\n3. Filtreleri çıkarın.\n4. Ilık suyla yıkayın.\n5. Gölgede kurutun ve geri takın."
+      "tr": {
+        "tr": "## Filtre Temizliği\n\n1. Klimayı kapatın.\n2. Ön kapağı açın.\n3. Filtreleri çıkarın.\n4. Ilık suyla yıkayın.\n5. Gölgede kurutun ve geri takın.",
+        "en": "## Filtre Temizliği\n\n1. Klimayı kapatın.\n2. Ön kapağı açın.\n3. Filtreleri çıkarın.\n4. Ilık suyla yıkayın.\n5. Gölgede kurutun ve geri takın."
+      },
+      "en": {
+        "tr": "## Filtre Temizliği\n\n1. Klimayı kapatın.\n2. Ön kapağı açın.\n3. Filtreleri çıkarın.\n4. Ilık suyla yıkayın.\n5. Gölgede kurutun ve geri takın.",
+        "en": "## Filtre Temizliği\n\n1. Klimayı kapatın.\n2. Ön kapağı açın.\n3. Filtreleri çıkarın.\n4. Ilık suyla yıkayın.\n5. Gölgede kurutun ve geri takın."
+      }
     },
-    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Air_Condition_Unit_Interior_View_USA.jpg",
+    "coverImage": "/uploads/blog/klima-filtre-temizligi.jpg",
     "metaTitle": {
-      "tr": "Klima Filtresi Temizliği | Durukan Klima",
-      "en": "Klima Filtresi Temizliği | Durukan Klima"
+      "tr": {
+        "tr": "Klima Filtresi Temizliği Nasıl Yapılır?",
+        "en": "Klima Filtresi Temizliği Nasıl Yapılır?"
+      },
+      "en": {
+        "tr": "Klima Filtresi Temizliği Nasıl Yapılır?",
+        "en": "Klima Filtresi Temizliği Nasıl Yapılır?"
+      }
     },
     "metaDescription": {
-      "tr": "Klima filtresi nasıl temizlenir?",
-      "en": "Klima filtresi nasıl temizlenir?"
+      "tr": "",
+      "en": ""
     },
     "publishedAt": "2025-04-05",
     "readTime": {
       "tr": "7 dk",
       "en": "7 min"
-    },
-    "published": true,
-    "imageCredit": "Stilfehler",
-    "imageSource": "Wikimedia Commons"
+    }
   },
   {
     "id": "10",
     "slug": "klima-omru-ne-kadar-ne-zaman-degistirilmeli",
     "slugEn": "klima-omru-ne-kadar-ne-zaman-degistirilmeli-en",
     "category": {
-      "tr": "Satın Alma Rehberi",
-      "en": "Satın Alma Rehberi"
+      "tr": {
+        "tr": "Satın Alma Rehberi",
+        "en": "Satın Alma Rehberi"
+      },
+      "en": {
+        "tr": "Satın Alma Rehberi",
+        "en": "Satın Alma Rehberi"
+      }
     },
     "title": {
-      "tr": "Klima Ömrü Ne Kadar? Yenisini Almak mı, Onartmak mı?",
-      "en": "Klima Ömrü Ne Kadar? Yenisini Almak mı, Onartmak mı?"
+      "tr": {
+        "tr": "Klima Ömrü Ne Kadar? Yenisini Almak mı, Onartmak mı?",
+        "en": "Klima Ömrü Ne Kadar? Yenisini Almak mı, Onartmak mı?"
+      },
+      "en": {
+        "tr": "Klima Ömrü Ne Kadar? Yenisini Almak mı, Onartmak mı?",
+        "en": "Klima Ömrü Ne Kadar? Yenisini Almak mı, Onartmak mı?"
+      }
     },
     "excerpt": {
-      "tr": "Klimanız kaç yıl dayanır?",
-      "en": "Klimanız kaç yıl dayanır?"
+      "tr": {
+        "tr": "Klimanız kaç yıl dayanır?",
+        "en": "Klimanız kaç yıl dayanır?"
+      },
+      "en": {
+        "tr": "Klimanız kaç yıl dayanır?",
+        "en": "Klimanız kaç yıl dayanır?"
+      }
     },
     "content": {
-      "tr": "## Klima Kaç Yıl Dayanır?\n\nDüzgün bakım yapıldığında kaliteli bir split klima 12-15 yıl kullanılabilir.\n\n## Onarım mı, Yeni Alım mı?\n\nTamir maliyeti cihazın değerinin %50'sini aşıyorsa yeni alma düşünülmeli.",
-      "en": "## Klima Kaç Yıl Dayanır?\n\nDüzgün bakım yapıldığında kaliteli bir split klima 12-15 yıl kullanılabilir.\n\n## Onarım mı, Yeni Alım mı?\n\nTamir maliyeti cihazın değerinin %50'sini aşıyorsa yeni alma düşünülmeli."
+      "tr": {
+        "tr": "## Klima Kaç Yıl Dayanır?\n\nDüzgün bakım yapıldığında kaliteli bir split klima 12-15 yıl kullanılabilir.\n\n## Onarım mı, Yeni Alım mı?\n\nTamir maliyeti cihazın değerinin %50'sini aşıyorsa yeni alma düşünülmeli.",
+        "en": "## Klima Kaç Yıl Dayanır?\n\nDüzgün bakım yapıldığında kaliteli bir split klima 12-15 yıl kullanılabilir.\n\n## Onarım mı, Yeni Alım mı?\n\nTamir maliyeti cihazın değerinin %50'sini aşıyorsa yeni alma düşünülmeli."
+      },
+      "en": {
+        "tr": "## Klima Kaç Yıl Dayanır?\n\nDüzgün bakım yapıldığında kaliteli bir split klima 12-15 yıl kullanılabilir.\n\n## Onarım mı, Yeni Alım mı?\n\nTamir maliyeti cihazın değerinin %50'sini aşıyorsa yeni alma düşünülmeli.",
+        "en": "## Klima Kaç Yıl Dayanır?\n\nDüzgün bakım yapıldığında kaliteli bir split klima 12-15 yıl kullanılabilir.\n\n## Onarım mı, Yeni Alım mı?\n\nTamir maliyeti cihazın değerinin %50'sini aşıyorsa yeni alma düşünülmeli."
+      }
     },
-    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Single-room_AC_unit-external.jpg/800px-Single-room_AC_unit-external.jpg",
+    "coverImage": "/uploads/blog/klima-omru.jpg",
     "metaTitle": {
-      "tr": "Klima Ömrü | Durukan Klima",
-      "en": "Klima Ömrü | Durukan Klima"
+      "tr": {
+        "tr": "Klima Ömrü Ne Kadar? Yenisini Almak mı, Onartmak mı?",
+        "en": "Klima Ömrü Ne Kadar? Yenisini Almak mı, Onartmak mı?"
+      },
+      "en": {
+        "tr": "Klima Ömrü Ne Kadar? Yenisini Almak mı, Onartmak mı?",
+        "en": "Klima Ömrü Ne Kadar? Yenisini Almak mı, Onartmak mı?"
+      }
     },
     "metaDescription": {
-      "tr": "Klima ömrü ne kadardır?",
-      "en": "Klima ömrü ne kadardır?"
+      "tr": "",
+      "en": ""
     },
     "publishedAt": "2025-04-20",
     "readTime": {
       "tr": "7 dk",
       "en": "7 min"
-    },
-    "published": true,
-    "imageCredit": "William Hamblin",
-    "imageSource": "Wikimedia Commons"
+    }
   },
   {
     "id": "11",
     "slug": "klima-ariza-kodlari-ve-cozumleri-tam-liste",
     "slugEn": "klima-ariza-kodlari-ve-cozumleri-tam-liste-en",
     "category": {
-      "tr": "Arıza & Onarım",
-      "en": "Arıza & Onarım"
+      "tr": {
+        "tr": "Arıza & Onarım",
+        "en": "Arıza & Onarım"
+      },
+      "en": {
+        "tr": "Arıza & Onarım",
+        "en": "Arıza & Onarım"
+      }
     },
     "title": {
-      "tr": "Klima Arıza Kodları ve Çözümleri: 10+ Marka Tam Liste (2025)",
-      "en": "Klima Arıza Kodları ve Çözümleri: 10+ Marka Tam Liste (2025)"
+      "tr": {
+        "tr": "Klima Arıza Kodları ve Çözümleri: 10+ Marka Tam Liste (2025)",
+        "en": "Klima Arıza Kodları ve Çözümleri: 10+ Marka Tam Liste (2025)"
+      },
+      "en": {
+        "tr": "Klima Arıza Kodları ve Çözümleri: 10+ Marka Tam Liste (2025)",
+        "en": "Klima Arıza Kodları ve Çözümleri: 10+ Marka Tam Liste (2025)"
+      }
     },
     "excerpt": {
-      "tr": "Samsung, Daikin, LG, Arçelik, Vestel ve daha fazla marka için 200'den fazla arıza kodu.",
-      "en": "Samsung, Daikin, LG, Arçelik, Vestel ve daha fazla marka için 200'den fazla arıza kodu."
+      "tr": {
+        "tr": "Samsung, Daikin, LG, Arçelik, Vestel ve daha fazla marka için 200'den fazla arıza kodu.",
+        "en": "Samsung, Daikin, LG, Arçelik, Vestel ve daha fazla marka için 200'den fazla arıza kodu."
+      },
+      "en": {
+        "tr": "Samsung, Daikin, LG, Arçelik, Vestel ve daha fazla marka için 200'den fazla arıza kodu.",
+        "en": "Samsung, Daikin, LG, Arçelik, Vestel ve daha fazla marka için 200'den fazla arıza kodu."
+      }
     },
     "content": {
-      "tr": "## Klima Arıza Kodları\n\nModern klimalar arıza kodları gösterir. 200+ kod ve çözüm.",
-      "en": "## Klima Arıza Kodları\n\nModern klimalar arıza kodları gösterir. 200+ kod ve çözüm."
+      "tr": {
+        "tr": "## Klima Arıza Kodları\n\nModern klimalar arıza kodları gösterir. 200+ kod ve çözüm.",
+        "en": "## Klima Arıza Kodları\n\nModern klimalar arıza kodları gösterir. 200+ kod ve çözüm."
+      },
+      "en": {
+        "tr": "## Klima Arıza Kodları\n\nModern klimalar arıza kodları gösterir. 200+ kod ve çözüm.",
+        "en": "## Klima Arıza Kodları\n\nModern klimalar arıza kodları gösterir. 200+ kod ve çözüm."
+      }
     },
-    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Air_conditioner_repair%2C_Nigeria.jpg",
+    "coverImage": "/uploads/blog/klima-ariza-kodlari.jpg",
     "metaTitle": {
-      "tr": "Klima Arıza Kodları | Durukan Klima",
-      "en": "Klima Arıza Kodları | Durukan Klima"
+      "tr": {
+        "tr": "Klima Arıza Kodları ve Çözümleri: 10+ Marka Tam Liste (2025)",
+        "en": "Klima Arıza Kodları ve Çözümleri: 10+ Marka Tam Liste (2025)"
+      },
+      "en": {
+        "tr": "Klima Arıza Kodları ve Çözümleri: 10+ Marka Tam Liste (2025)",
+        "en": "Klima Arıza Kodları ve Çözümleri: 10+ Marka Tam Liste (2025)"
+      }
     },
     "metaDescription": {
-      "tr": "Klima arıza kodları",
-      "en": "Klima arıza kodları"
+      "tr": "",
+      "en": ""
     },
     "publishedAt": "2025-05-02",
     "readTime": {
       "tr": "7 dk",
       "en": "7 min"
-    },
-    "published": true,
-    "imageCredit": "Adeboy10",
-    "imageSource": "Wikimedia Commons"
+    }
   },
   {
     "id": "12",
     "slug": "bakimsiz-klima-sagliga-etkileri",
     "slugEn": "bakimsiz-klima-sagliga-etkileri-en",
     "category": {
-      "tr": "Sağlık & Hijyen",
-      "en": "Sağlık & Hijyen"
+      "tr": {
+        "tr": "Sağlık & Hijyen",
+        "en": "Sağlık & Hijyen"
+      },
+      "en": {
+        "tr": "Sağlık & Hijyen",
+        "en": "Sağlık & Hijyen"
+      }
     },
     "title": {
-      "tr": "Bakımsız Klimanın Sağlığınıza Zararları",
-      "en": "Bakımsız Klimanın Sağlığınıza Zararları"
+      "tr": {
+        "tr": "Bakımsız Klimanın Sağlığınıza Zararları",
+        "en": "Bakımsız Klimanın Sağlığınıza Zararları"
+      },
+      "en": {
+        "tr": "Bakımsız Klimanın Sağlığınıza Zararları",
+        "en": "Bakımsız Klimanın Sağlığınıza Zararları"
+      }
     },
     "excerpt": {
-      "tr": "Bakımsız klima; alerji, astım ve enfeksiyon riskini artırır.",
-      "en": "Bakımsız klima; alerji, astım ve enfeksiyon riskini artırır."
+      "tr": {
+        "tr": "Bakımsız klima; alerji, astım ve enfeksiyon riskini artırır.",
+        "en": "Bakımsız klima; alerji, astım ve enfeksiyon riskini artırır."
+      },
+      "en": {
+        "tr": "Bakımsız klima; alerji, astım ve enfeksiyon riskini artırır.",
+        "en": "Bakımsız klima; alerji, astım ve enfeksiyon riskini artırır."
+      }
     },
     "content": {
-      "tr": "## Klimanız Sizi Hasta Ediyor Olabilir\n\nBakımsız klimalarda bakteri, mantar ve akar üreyerek iç mekan havasını kirletir.\n\n## Sağlık Sorunları\n\n1. Alerjik Reaksiyonlar\n2. Astım Atakları\n3. Solunum Yolu Enfeksiyonları",
-      "en": "## Klimanız Sizi Hasta Ediyor Olabilir\n\nBakımsız klimalarda bakteri, mantar ve akar üreyerek iç mekan havasını kirletir.\n\n## Sağlık Sorunları\n\n1. Alerjik Reaksiyonlar\n2. Astım Atakları\n3. Solunum Yolu Enfeksiyonları"
+      "tr": {
+        "tr": "## Klimanız Sizi Hasta Ediyor Olabilir\n\nBakımsız klimalarda bakteri, mantar ve akar üreyerek iç mekan havasını kirletir.\n\n## Sağlık Sorunları\n\n1. Alerjik Reaksiyonlar\n2. Astım Atakları\n3. Solunum Yolu Enfeksiyonları",
+        "en": "## Klimanız Sizi Hasta Ediyor Olabilir\n\nBakımsız klimalarda bakteri, mantar ve akar üreyerek iç mekan havasını kirletir.\n\n## Sağlık Sorunları\n\n1. Alerjik Reaksiyonlar\n2. Astım Atakları\n3. Solunum Yolu Enfeksiyonları"
+      },
+      "en": {
+        "tr": "## Klimanız Sizi Hasta Ediyor Olabilir\n\nBakımsız klimalarda bakteri, mantar ve akar üreyerek iç mekan havasını kirletir.\n\n## Sağlık Sorunları\n\n1. Alerjik Reaksiyonlar\n2. Astım Atakları\n3. Solunum Yolu Enfeksiyonları",
+        "en": "## Klimanız Sizi Hasta Ediyor Olabilir\n\nBakımsız klimalarda bakteri, mantar ve akar üreyerek iç mekan havasını kirletir.\n\n## Sağlık Sorunları\n\n1. Alerjik Reaksiyonlar\n2. Astım Atakları\n3. Solunum Yolu Enfeksiyonları"
+      }
     },
-    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Air_Condition_Unit_Interior_View_USA.jpg",
+    "coverImage": "/uploads/blog/bakimsiz-klima-sagliga-etkileri.jpg",
     "metaTitle": {
-      "tr": "Bakımsız Klimanın Sağlığa Zararları | Durukan Klima",
-      "en": "Bakımsız Klimanın Sağlığa Zararları | Durukan Klima"
+      "tr": {
+        "tr": "Bakımsız Klimanın Sağlığınıza Zararları",
+        "en": "Bakımsız Klimanın Sağlığınıza Zararları"
+      },
+      "en": {
+        "tr": "Bakımsız Klimanın Sağlığınıza Zararları",
+        "en": "Bakımsız Klimanın Sağlığınıza Zararları"
+      }
     },
     "metaDescription": {
-      "tr": "Bakımsız klima sağlık sorunları",
-      "en": "Bakımsız klima sağlık sorunları"
+      "tr": "",
+      "en": ""
     },
     "publishedAt": "2025-05-15",
     "readTime": {
       "tr": "7 dk",
       "en": "7 min"
-    },
-    "published": true,
-    "imageCredit": "Stilfehler",
-    "imageSource": "Wikimedia Commons"
+    }
   },
   {
     "id": "13",
     "slug": "klima-sesi-gurultusu-nedenleri",
     "slugEn": "klima-sesi-gurultusu-nedenleri-en",
     "category": {
-      "tr": "Arıza & Onarım",
-      "en": "Arıza & Onarım"
+      "tr": {
+        "tr": "Arıza & Onarım",
+        "en": "Arıza & Onarım"
+      },
+      "en": {
+        "tr": "Arıza & Onarım",
+        "en": "Arıza & Onarım"
+      }
     },
     "title": {
-      "tr": "Klimadan Gelen Sesler: Tırıltı, Vızıltı ve Gürültü",
-      "en": "Klimadan Gelen Sesler: Tırıltı, Vızıltı ve Gürültü"
+      "tr": {
+        "tr": "Klimadan Gelen Sesler: Tırıltı, Vızıltı ve Gürültü",
+        "en": "Klimadan Gelen Sesler: Tırıltı, Vızıltı ve Gürültü"
+      },
+      "en": {
+        "tr": "Klimadan Gelen Sesler: Tırıltı, Vızıltı ve Gürültü",
+        "en": "Klimadan Gelen Sesler: Tırıltı, Vızıltı ve Gürültü"
+      }
     },
     "excerpt": {
-      "tr": "Klimanızdan gelen olağan dışı sesler önemli bir sorunun habercisi olabilir.",
-      "en": "Klimanızdan gelen olağan dışı sesler önemli bir sorunun habercisi olabilir."
+      "tr": {
+        "tr": "Klimanızdan gelen olağan dışı sesler önemli bir sorunun habercisi olabilir.",
+        "en": "Klimanızdan gelen olağan dışı sesler önemli bir sorunun habercisi olabilir."
+      },
+      "en": {
+        "tr": "Klimanızdan gelen olağan dışı sesler önemli bir sorunun habercisi olabilir.",
+        "en": "Klimanızdan gelen olağan dışı sesler önemli bir sorunun habercisi olabilir."
+      }
     },
     "content": {
-      "tr": "## Ses Türleri\n\n- Tırıltı: Gevşek parça\n- Vızıltı: Elektrik sorunu\n- Çıtırtı: Genleşme (normal)\n\n## Ne Yapmalı?\n\nSesleri ihmal etmeyin, servisi arayın.",
-      "en": "## Ses Türleri\n\n- Tırıltı: Gevşek parça\n- Vızıltı: Elektrik sorunu\n- Çıtırtı: Genleşme (normal)\n\n## Ne Yapmalı?\n\nSesleri ihmal etmeyin, servisi arayın."
+      "tr": {
+        "tr": "## Ses Türleri\n\n- Tırıltı: Gevşek parça\n- Vızıltı: Elektrik sorunu\n- Çıtırtı: Genleşme (normal)\n\n## Ne Yapmalı?\n\nSesleri ihmal etmeyin, servisi arayın.",
+        "en": "## Ses Türleri\n\n- Tırıltı: Gevşek parça\n- Vızıltı: Elektrik sorunu\n- Çıtırtı: Genleşme (normal)\n\n## Ne Yapmalı?\n\nSesleri ihmal etmeyin, servisi arayın."
+      },
+      "en": {
+        "tr": "## Ses Türleri\n\n- Tırıltı: Gevşek parça\n- Vızıltı: Elektrik sorunu\n- Çıtırtı: Genleşme (normal)\n\n## Ne Yapmalı?\n\nSesleri ihmal etmeyin, servisi arayın.",
+        "en": "## Ses Türleri\n\n- Tırıltı: Gevşek parça\n- Vızıltı: Elektrik sorunu\n- Çıtırtı: Genleşme (normal)\n\n## Ne Yapmalı?\n\nSesleri ihmal etmeyin, servisi arayın."
+      }
     },
-    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Single-room_AC_unit-external.jpg/800px-Single-room_AC_unit-external.jpg",
+    "coverImage": "/uploads/blog/klima-sesi-gurultusu.jpg",
     "metaTitle": {
-      "tr": "Klima Sesleri | Durukan Klima",
-      "en": "Klima Sesleri | Durukan Klima"
+      "tr": {
+        "tr": "Klimadan Gelen Sesler: Tırıltı, Vızıltı ve Gürültü",
+        "en": "Klimadan Gelen Sesler: Tırıltı, Vızıltı ve Gürültü"
+      },
+      "en": {
+        "tr": "Klimadan Gelen Sesler: Tırıltı, Vızıltı ve Gürültü",
+        "en": "Klimadan Gelen Sesler: Tırıltı, Vızıltı ve Gürültü"
+      }
     },
     "metaDescription": {
-      "tr": "Klima sesleri neden olur?",
-      "en": "Klima sesleri neden olur?"
+      "tr": "",
+      "en": ""
     },
     "publishedAt": "2025-06-01",
     "readTime": {
       "tr": "7 dk",
       "en": "7 min"
-    },
-    "published": true,
-    "imageCredit": "William Hamblin",
-    "imageSource": "Wikimedia Commons"
+    }
   },
   {
     "id": "14",
     "slug": "kis-oncesi-klima-hazirlik",
     "slugEn": "kis-oncesi-klima-hazirlik-en",
     "category": {
-      "tr": "Bakım & Servis",
-      "en": "Bakım & Servis"
+      "tr": {
+        "tr": "Bakım & Servis",
+        "en": "Bakım & Servis"
+      },
+      "en": {
+        "tr": "Bakım & Servis",
+        "en": "Bakım & Servis"
+      }
     },
     "title": {
-      "tr": "Kış Öncesi Klima Bakımı: 8 Adım",
-      "en": "Kış Öncesi Klima Bakımı: 8 Adım"
+      "tr": {
+        "tr": "Kış Öncesi Klima Bakımı: 8 Adım",
+        "en": "Kış Öncesi Klima Bakımı: 8 Adım"
+      },
+      "en": {
+        "tr": "Kış Öncesi Klima Bakımı: 8 Adım",
+        "en": "Kış Öncesi Klima Bakımı: 8 Adım"
+      }
     },
     "excerpt": {
-      "tr": "Kışa girmeden önce klimanızı doğru hazırlamak ısıtma verimliliğini artırır.",
-      "en": "Kışa girmeden önce klimanızı doğru hazırlamak ısıtma verimliliğini artırır."
+      "tr": {
+        "tr": "Kışa girmeden önce klimanızı doğru hazırlamak ısıtma verimliliğini artırır.",
+        "en": "Kışa girmeden önce klimanızı doğru hazırlamak ısıtma verimliliğini artırır."
+      },
+      "en": {
+        "tr": "Kışa girmeden önce klimanızı doğru hazırlamak ısıtma verimliliğini artırır.",
+        "en": "Kışa girmeden önce klimanızı doğru hazırlamak ısıtma verimliliğini artırır."
+      }
     },
     "content": {
-      "tr": "## 8 Adımlı Liste\n\n1. Filtre temizliği\n2. Isıtma testi\n3. Dış ünite kontrolü\n4. Gaz seviyesi kontrolü\n5. Drenaj hattı temizliği\n6. Kumanda pilleri\n7. Izolasyon kontrolü\n8. Profesyonel bakım",
-      "en": "## 8 Adımlı Liste\n\n1. Filtre temizliği\n2. Isıtma testi\n3. Dış ünite kontrolü\n4. Gaz seviyesi kontrolü\n5. Drenaj hattı temizliği\n6. Kumanda pilleri\n7. Izolasyon kontrolü\n8. Profesyonel bakım"
+      "tr": {
+        "tr": "## 8 Adımlı Liste\n\n1. Filtre temizliği\n2. Isıtma testi\n3. Dış ünite kontrolü\n4. Gaz seviyesi kontrolü\n5. Drenaj hattı temizliği\n6. Kumanda pilleri\n7. Izolasyon kontrolü\n8. Profesyonel bakım",
+        "en": "## 8 Adımlı Liste\n\n1. Filtre temizliği\n2. Isıtma testi\n3. Dış ünite kontrolü\n4. Gaz seviyesi kontrolü\n5. Drenaj hattı temizliği\n6. Kumanda pilleri\n7. Izolasyon kontrolü\n8. Profesyonel bakım"
+      },
+      "en": {
+        "tr": "## 8 Adımlı Liste\n\n1. Filtre temizliği\n2. Isıtma testi\n3. Dış ünite kontrolü\n4. Gaz seviyesi kontrolü\n5. Drenaj hattı temizliği\n6. Kumanda pilleri\n7. Izolasyon kontrolü\n8. Profesyonel bakım",
+        "en": "## 8 Adımlı Liste\n\n1. Filtre temizliği\n2. Isıtma testi\n3. Dış ünite kontrolü\n4. Gaz seviyesi kontrolü\n5. Drenaj hattı temizliği\n6. Kumanda pilleri\n7. Izolasyon kontrolü\n8. Profesyonel bakım"
+      }
     },
-    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Heating_boiler.jpg/800px-Heating_boiler.jpg",
+    "coverImage": "/uploads/blog/kis-oncesi-klima-hazirlik.jpg",
     "metaTitle": {
-      "tr": "Kış Öncesi Klima Bakımı | Durukan Klima",
-      "en": "Kış Öncesi Klima Bakımı | Durukan Klima"
+      "tr": {
+        "tr": "Kış Öncesi Klima Bakımı: 8 Adım",
+        "en": "Kış Öncesi Klima Bakımı: 8 Adım"
+      },
+      "en": {
+        "tr": "Kış Öncesi Klima Bakımı: 8 Adım",
+        "en": "Kış Öncesi Klima Bakımı: 8 Adım"
+      }
     },
     "metaDescription": {
-      "tr": "Kış için klima hazırlığı",
-      "en": "Kış için klima hazırlığı"
+      "tr": "",
+      "en": ""
     },
     "publishedAt": "2025-10-05",
     "readTime": {
       "tr": "7 dk",
       "en": "7 min"
-    },
-    "published": true,
-    "imageCredit": "MoistMc",
-    "imageSource": "Wikimedia Commons"
+    }
   },
   {
     "id": "15",
     "slug": "sahte-servis-nasil-anlasilir",
     "slugEn": "sahte-servis-nasil-anlasilir-en",
     "category": {
-      "tr": "Tüketici Rehberi",
-      "en": "Tüketici Rehberi"
+      "tr": {
+        "tr": "Tüketici Rehberi",
+        "en": "Tüketici Rehberi"
+      },
+      "en": {
+        "tr": "Tüketici Rehberi",
+        "en": "Tüketici Rehberi"
+      }
     },
     "title": {
-      "tr": "Sahte Klima Servisi Nasıl Anlaşılır?",
-      "en": "Sahte Klima Servisi Nasıl Anlaşılır?"
+      "tr": {
+        "tr": "Sahte Klima Servisi Nasıl Anlaşılır?",
+        "en": "Sahte Klima Servisi Nasıl Anlaşılır?"
+      },
+      "en": {
+        "tr": "Sahte Klima Servisi Nasıl Anlaşılır?",
+        "en": "Sahte Klima Servisi Nasıl Anlaşılır?"
+      }
     },
     "excerpt": {
-      "tr": "Her yıl binlerce kişi sahte klima servisi mağduru oluyor.",
-      "en": "Her yıl binlerce kişi sahte klima servisi mağduru oluyor."
+      "tr": {
+        "tr": "Her yıl binlerce kişi sahte klima servisi mağduru oluyor.",
+        "en": "Her yıl binlerce kişi sahte klima servisi mağduru oluyor."
+      },
+      "en": {
+        "tr": "Her yıl binlerce kişi sahte klima servisi mağduru oluyor.",
+        "en": "Her yıl binlerce kişi sahte klima servisi mağduru oluyor."
+      }
     },
     "content": {
-      "tr": "## Dikkat Edin\n\n1. Çok düşük fiyat vaadi\n2. Belge göstermeme\n3. Fatura vermeme\n4. Referanssız çalışma\n\n## Nasıl Korunursunuz?\n\n- Servis belgesi isteyin\n- Fatura alın\n- İnternet yorumlarını kontrol edin",
-      "en": "## Dikkat Edin\n\n1. Çok düşük fiyat vaadi\n2. Belge göstermeme\n3. Fatura vermeme\n4. Referanssız çalışma\n\n## Nasıl Korunursunuz?\n\n- Servis belgesi isteyin\n- Fatura alın\n- İnternet yorumlarını kontrol edin"
+      "tr": {
+        "tr": "## Dikkat Edin\n\n1. Çok düşük fiyat vaadi\n2. Belge göstermeme\n3. Fatura vermeme\n4. Referanssız çalışma\n\n## Nasıl Korunursunuz?\n\n- Servis belgesi isteyin\n- Fatura alın\n- İnternet yorumlarını kontrol edin",
+        "en": "## Dikkat Edin\n\n1. Çok düşük fiyat vaadi\n2. Belge göstermeme\n3. Fatura vermeme\n4. Referanssız çalışma\n\n## Nasıl Korunursunuz?\n\n- Servis belgesi isteyin\n- Fatura alın\n- İnternet yorumlarını kontrol edin"
+      },
+      "en": {
+        "tr": "## Dikkat Edin\n\n1. Çok düşük fiyat vaadi\n2. Belge göstermeme\n3. Fatura vermeme\n4. Referanssız çalışma\n\n## Nasıl Korunursunuz?\n\n- Servis belgesi isteyin\n- Fatura alın\n- İnternet yorumlarını kontrol edin",
+        "en": "## Dikkat Edin\n\n1. Çok düşük fiyat vaadi\n2. Belge göstermeme\n3. Fatura vermeme\n4. Referanssız çalışma\n\n## Nasıl Korunursunuz?\n\n- Servis belgesi isteyin\n- Fatura alın\n- İnternet yorumlarını kontrol edin"
+      }
     },
-    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Air_conditioner_repair%2C_Nigeria.jpg",
+    "coverImage": "/uploads/blog/sahte-servis-anlama.jpg",
     "metaTitle": {
-      "tr": "Sahte Klima Servisi | Durukan Klima",
-      "en": "Sahte Klima Servisi | Durukan Klima"
+      "tr": {
+        "tr": "Sahte Klima Servisi Nasıl Anlaşılır?",
+        "en": "Sahte Klima Servisi Nasıl Anlaşılır?"
+      },
+      "en": {
+        "tr": "Sahte Klima Servisi Nasıl Anlaşılır?",
+        "en": "Sahte Klima Servisi Nasıl Anlaşılır?"
+      }
     },
     "metaDescription": {
-      "tr": "Güvenilir servis nasıl seçilir?",
-      "en": "Güvenilir servis nasıl seçilir?"
+      "tr": "",
+      "en": ""
     },
     "publishedAt": "2025-06-20",
     "readTime": {
       "tr": "7 dk",
       "en": "7 min"
-    },
-    "published": true,
-    "imageCredit": "Adeboy10",
-    "imageSource": "Wikimedia Commons"
+    }
   },
   {
     "id": "16",
     "slug": "klima-bakim-zamani-geldi-mi",
     "slugEn": "klima-bakim-zamani-geldi-mi-en",
     "category": {
-      "tr": "Bakım & Servis",
-      "en": "Bakım & Servis"
+      "tr": {
+        "tr": "Bakım & Servis",
+        "en": "Bakım & Servis"
+      },
+      "en": {
+        "tr": "Bakım & Servis",
+        "en": "Bakım & Servis"
+      }
     },
     "title": {
-      "tr": "Klima Bakım Zamanı Geldi mi? 7 İşaret",
-      "en": "Klima Bakım Zamanı Geldi mi? 7 İşaret"
+      "tr": {
+        "tr": "Klima Bakım Zamanı Geldi mi? 7 İşaret",
+        "en": "Klima Bakım Zamanı Geldi mi? 7 İşaret"
+      },
+      "en": {
+        "tr": "Klima Bakım Zamanı Geldi mi? 7 İşaret",
+        "en": "Klima Bakım Zamanı Geldi mi? 7 İşaret"
+      }
     },
     "excerpt": {
-      "tr": "Klimanızın verdiği 7 kritik işareti anlattık.",
-      "en": "Klimanızın verdiği 7 kritik işareti anlattık."
+      "tr": {
+        "tr": "Klimanızın verdiği 7 kritik işareti anlattık.",
+        "en": "Klimanızın verdiği 7 kritik işareti anlattık."
+      },
+      "en": {
+        "tr": "Klimanızın verdiği 7 kritik işareti anlattık.",
+        "en": "Klimanızın verdiği 7 kritik işareti anlattık."
+      }
     },
     "content": {
-      "tr": "## 7 İşaret\n\n1. Soğutma azaldı\n2. Kötü koku geliyor\n3. Su sızıntısı var\n4. Fazla ses yapıyor\n5. Elektrik faturası arttı\n6. Klimadan garip sesler\n7. 1 yıldan fazla bakımsız",
-      "en": "## 7 İşaret\n\n1. Soğutma azaldı\n2. Kötü koku geliyor\n3. Su sızıntısı var\n4. Fazla ses yapıyor\n5. Elektrik faturası arttı\n6. Klimadan garip sesler\n7. 1 yıldan fazla bakımsız"
+      "tr": {
+        "tr": "## 7 İşaret\n\n1. Soğutma azaldı\n2. Kötü koku geliyor\n3. Su sızıntısı var\n4. Fazla ses yapıyor\n5. Elektrik faturası arttı\n6. Klimadan garip sesler\n7. 1 yıldan fazla bakımsız",
+        "en": "## 7 İşaret\n\n1. Soğutma azaldı\n2. Kötü koku geliyor\n3. Su sızıntısı var\n4. Fazla ses yapıyor\n5. Elektrik faturası arttı\n6. Klimadan garip sesler\n7. 1 yıldan fazla bakımsız"
+      },
+      "en": {
+        "tr": "## 7 İşaret\n\n1. Soğutma azaldı\n2. Kötü koku geliyor\n3. Su sızıntısı var\n4. Fazla ses yapıyor\n5. Elektrik faturası arttı\n6. Klimadan garip sesler\n7. 1 yıldan fazla bakımsız",
+        "en": "## 7 İşaret\n\n1. Soğutma azaldı\n2. Kötü koku geliyor\n3. Su sızıntısı var\n4. Fazla ses yapıyor\n5. Elektrik faturası arttı\n6. Klimadan garip sesler\n7. 1 yıldan fazla bakımsız"
+      }
     },
-    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Air_Condition_Unit_Interior_View_USA.jpg",
+    "coverImage": "/uploads/blog/klima-bakim-zamani.png",
     "metaTitle": {
-      "tr": "Klima Bakım Zamanı mı? | Durukan Klima",
-      "en": "Klima Bakım Zamanı mı? | Durukan Klima"
+      "tr": {
+        "tr": "Klima Bakım Zamanı Geldi mi? 7 İşaret",
+        "en": "Klima Bakım Zamanı Geldi mi? 7 İşaret"
+      },
+      "en": {
+        "tr": "Klima Bakım Zamanı Geldi mi? 7 İşaret",
+        "en": "Klima Bakım Zamanı Geldi mi? 7 İşaret"
+      }
     },
     "metaDescription": {
-      "tr": "Klima bakım zamanı nasıl anlaşılır?",
-      "en": "Klima bakım zamanı nasıl anlaşılır?"
+      "tr": "",
+      "en": ""
     },
     "publishedAt": "2025-07-10",
     "readTime": {
       "tr": "7 dk",
       "en": "7 min"
-    },
-    "published": true,
-    "imageCredit": "Stilfehler",
-    "imageSource": "Wikimedia Commons"
+    }
   },
   {
     "id": "17",
     "slug": "klimanin-bebeklere-ve-cocuklara-etkisi",
     "slugEn": "klimanin-bebeklere-ve-cocuklara-etkisi-en",
     "category": {
-      "tr": "Sağlık & Hijyen",
-      "en": "Sağlık & Hijyen"
+      "tr": {
+        "tr": "Sağlık & Hijyen",
+        "en": "Sağlık & Hijyen"
+      },
+      "en": {
+        "tr": "Sağlık & Hijyen",
+        "en": "Sağlık & Hijyen"
+      }
     },
     "title": {
-      "tr": "Klimanın Bebeklere ve Çocuklara Etkisi",
-      "en": "Klimanın Bebeklere ve Çocuklara Etkisi"
+      "tr": {
+        "tr": "Klimanın Bebeklere ve Çocuklara Etkisi",
+        "en": "Klimanın Bebeklere ve Çocuklara Etkisi"
+      },
+      "en": {
+        "tr": "Klimanın Bebeklere ve Çocuklara Etkisi",
+        "en": "Klimanın Bebeklere ve Çocuklara Etkisi"
+      }
     },
     "excerpt": {
-      "tr": "Bebekli evlerde klima kullanımı hakkında bilmeniz gerekenler.",
-      "en": "Bebekli evlerde klima kullanımı hakkında bilmeniz gerekenler."
+      "tr": {
+        "tr": "Bebekli evlerde klima kullanımı hakkında bilmeniz gerekenler.",
+        "en": "Bebekli evlerde klima kullanımı hakkında bilmeniz gerekenler."
+      },
+      "en": {
+        "tr": "Bebekli evlerde klima kullanımı hakkında bilmeniz gerekenler.",
+        "en": "Bebekli evlerde klima kullanımı hakkında bilmeniz gerekenler."
+      }
     },
     "content": {
-      "tr": "## Bebekler İçin Öneriler\n\n1. Sıcaklık 24-25 derece\n2. Direkt üfleme yapmayın\n3. Nem dengesini koruyun\n4. Hava cirkulasyonunu sağlayın\n\n## Nelere Dikkat Edilmeli?\n\n- Termostatı kontrol edin\n- Kıyafet seçimine dikkat edin",
-      "en": "## Bebekler İçin Öneriler\n\n1. Sıcaklık 24-25 derece\n2. Direkt üfleme yapmayın\n3. Nem dengesini koruyun\n4. Hava cirkulasyonunu sağlayın\n\n## Nelere Dikkat Edilmeli?\n\n- Termostatı kontrol edin\n- Kıyafet seçimine dikkat edin"
+      "tr": {
+        "tr": "## Bebekler İçin Öneriler\n\n1. Sıcaklık 24-25 derece\n2. Direkt üfleme yapmayın\n3. Nem dengesini koruyun\n4. Hava cirkulasyonunu sağlayın\n\n## Nelere Dikkat Edilmeli?\n\n- Termostatı kontrol edin\n- Kıyafet seçimine dikkat edin",
+        "en": "## Bebekler İçin Öneriler\n\n1. Sıcaklık 24-25 derece\n2. Direkt üfleme yapmayın\n3. Nem dengesini koruyun\n4. Hava cirkulasyonunu sağlayın\n\n## Nelere Dikkat Edilmeli?\n\n- Termostatı kontrol edin\n- Kıyafet seçimine dikkat edin"
+      },
+      "en": {
+        "tr": "## Bebekler İçin Öneriler\n\n1. Sıcaklık 24-25 derece\n2. Direkt üfleme yapmayın\n3. Nem dengesini koruyun\n4. Hava cirkulasyonunu sağlayın\n\n## Nelere Dikkat Edilmeli?\n\n- Termostatı kontrol edin\n- Kıyafet seçimine dikkat edin",
+        "en": "## Bebekler İçin Öneriler\n\n1. Sıcaklık 24-25 derece\n2. Direkt üfleme yapmayın\n3. Nem dengesini koruyun\n4. Hava cirkulasyonunu sağlayın\n\n## Nelere Dikkat Edilmeli?\n\n- Termostatı kontrol edin\n- Kıyafet seçimine dikkat edin"
+      }
     },
-    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Single-room_AC_unit-external.jpg/800px-Single-room_AC_unit-external.jpg",
+    "coverImage": "/uploads/blog/klima-bebek-cocuk-etkisi.jpg",
     "metaTitle": {
-      "tr": "Bebekler İçin Klima | Durukan Klima",
-      "en": "Bebekler İçin Klima | Durukan Klima"
+      "tr": {
+        "tr": "Klimanın Bebeklere ve Çocuklara Etkisi",
+        "en": "Klimanın Bebeklere ve Çocuklara Etkisi"
+      },
+      "en": {
+        "tr": "Klimanın Bebeklere ve Çocuklara Etkisi",
+        "en": "Klimanın Bebeklere ve Çocuklara Etkisi"
+      }
     },
     "metaDescription": {
-      "tr": "Bebekler için klima kullanımı",
-      "en": "Bebekler için klima kullanımı"
+      "tr": "",
+      "en": ""
     },
     "publishedAt": "2025-08-05",
     "readTime": {
       "tr": "7 dk",
       "en": "7 min"
-    },
-    "published": true,
-    "imageCredit": "William Hamblin",
-    "imageSource": "Wikimedia Commons"
+    }
   },
   {
     "id": "18",
     "slug": "klima-elektrik-tuketimi-hesaplama",
     "slugEn": "klima-elektrik-tuketimi-hesaplama-en",
     "category": {
-      "tr": "Enerji Tasarrufu",
-      "en": "Enerji Tasarrufu"
+      "tr": {
+        "tr": "Enerji Tasarrufu",
+        "en": "Enerji Tasarrufu"
+      },
+      "en": {
+        "tr": "Enerji Tasarrufu",
+        "en": "Enerji Tasarrufu"
+      }
     },
     "title": {
-      "tr": "Klima Ne Kadar Yakar? Elektrik Tüketimi Hesaplama",
-      "en": "Klima Ne Kadar Yakar? Elektrik Tüketimi Hesaplama"
+      "tr": {
+        "tr": "Klima Ne Kadar Yakar? Elektrik Tüketimi Hesaplama",
+        "en": "Klima Ne Kadar Yakar? Elektrik Tüketimi Hesaplama"
+      },
+      "en": {
+        "tr": "Klima Ne Kadar Yakar? Elektrik Tüketimi Hesaplama",
+        "en": "Klima Ne Kadar Yakar? Elektrik Tüketimi Hesaplama"
+      }
     },
     "excerpt": {
-      "tr": "Klimanızın aylık faturanıza etkisini nasıl hesaplarsınız?",
-      "en": "Klimanızın aylık faturanıza etkisini nasıl hesaplarsınız?"
+      "tr": {
+        "tr": "Klimanızın aylık faturanıza etkisini nasıl hesaplarsınız?",
+        "en": "Klimanızın aylık faturanıza etkisini nasıl hesaplarsınız?"
+      },
+      "en": {
+        "tr": "Klimanızın aylık faturanıza etkisini nasıl hesaplarsınız?",
+        "en": "Klimanızın aylık faturanıza etkisini nasıl hesaplarsınız?"
+      }
     },
     "content": {
-      "tr": "## Hesaplama\n\nOrtalama 1.0 BTU klima saatte ~1kW tüketir.\n\n## İpuçları\n\n- Inverter modeller daha tasarrufludur\n- A++ enerji sınıfı tercih edin\n- Doğru BTU seçimi yapın",
-      "en": "## Hesaplama\n\nOrtalama 1.0 BTU klima saatte ~1kW tüketir.\n\n## İpuçları\n\n- Inverter modeller daha tasarrufludur\n- A++ enerji sınıfı tercih edin\n- Doğru BTU seçimi yapın"
+      "tr": {
+        "tr": "## Hesaplama\n\nOrtalama 1.0 BTU klima saatte ~1kW tüketir.\n\n## İpuçları\n\n- Inverter modeller daha tasarrufludur\n- A++ enerji sınıfı tercih edin\n- Doğru BTU seçimi yapın",
+        "en": "## Hesaplama\n\nOrtalama 1.0 BTU klima saatte ~1kW tüketir.\n\n## İpuçları\n\n- Inverter modeller daha tasarrufludur\n- A++ enerji sınıfı tercih edin\n- Doğru BTU seçimi yapın"
+      },
+      "en": {
+        "tr": "## Hesaplama\n\nOrtalama 1.0 BTU klima saatte ~1kW tüketir.\n\n## İpuçları\n\n- Inverter modeller daha tasarrufludur\n- A++ enerji sınıfı tercih edin\n- Doğru BTU seçimi yapın",
+        "en": "## Hesaplama\n\nOrtalama 1.0 BTU klima saatte ~1kW tüketir.\n\n## İpuçları\n\n- Inverter modeller daha tasarrufludur\n- A++ enerji sınıfı tercih edin\n- Doğru BTU seçimi yapın"
+      }
     },
-    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/ae/f0/India_-_Kolkata_electricity_meters_-_3832.jpg",
+    "coverImage": "/uploads/blog/klima-elektrik-hesaplama.jpg",
     "metaTitle": {
-      "tr": "Klima Elektrik Tüketimi | Durukan Klima",
-      "en": "Klima Elektrik Tüketimi | Durukan Klima"
+      "tr": {
+        "tr": "Klima Ne Kadar Yakar? Elektrik Tüketimi Hesaplama",
+        "en": "Klima Ne Kadar Yakar? Elektrik Tüketimi Hesaplama"
+      },
+      "en": {
+        "tr": "Klima Ne Kadar Yakar? Elektrik Tüketimi Hesaplama",
+        "en": "Klima Ne Kadar Yakar? Elektrik Tüketimi Hesaplama"
+      }
     },
     "metaDescription": {
-      "tr": "Klima ne kadar elektrik yakar?",
-      "en": "Klima ne kadar elektrik yakar?"
+      "tr": "",
+      "en": ""
     },
     "publishedAt": "2025-08-15",
     "readTime": {
       "tr": "7 dk",
       "en": "7 min"
-    },
-    "published": true,
-    "imageCredit": "Julian Nyac",
-    "imageSource": "Wikimedia Commons"
+    }
   },
   {
     "id": "19",
     "slug": "yillik-klima-bakim-sozlesmesinin-avantajlari",
     "slugEn": "yillik-klima-bakim-sozlesmesinin-avantajlari-en",
     "category": {
-      "tr": "Bakım & Servis",
-      "en": "Bakım & Servis"
+      "tr": {
+        "tr": "Bakım & Servis",
+        "en": "Bakım & Servis"
+      },
+      "en": {
+        "tr": "Bakım & Servis",
+        "en": "Bakım & Servis"
+      }
     },
     "title": {
-      "tr": "Yıllık Klima Bakım Sözleşmesi Mantıklı mı?",
-      "en": "Yıllık Klima Bakım Sözleşmesi Mantıklı mı?"
+      "tr": {
+        "tr": "Yıllık Klima Bakım Sözleşmesi Mantıklı mı?",
+        "en": "Yıllık Klima Bakım Sözleşmesi Mantıklı mı?"
+      },
+      "en": {
+        "tr": "Yıllık Klima Bakım Sözleşmesi Mantıklı mı?",
+        "en": "Yıllık Klima Bakım Sözleşmesi Mantıklı mı?"
+      }
     },
     "excerpt": {
-      "tr": "Yıllık sözleşmelerin avantajları neler?",
-      "en": "Yıllık sözleşmelerin avantajları neler?"
+      "tr": {
+        "tr": "Yıllık sözleşmelerin avantajları neler?",
+        "en": "Yıllık sözleşmelerin avantajları neler?"
+      },
+      "en": {
+        "tr": "Yıllık sözleşmelerin avantajları neler?",
+        "en": "Yıllık sözleşmelerin avantajları neler?"
+      }
     },
     "content": {
-      "tr": "## Avantajlar\n\n1. Servis önceliği\n2. Daha uygun fiyat\n3. Düzenli bakım garantisi\n4. Acil durumlarda hızlı müdahale\n\n## Kimler İçin Uygun?\n\n- İş yerleri için\n- Apartman yönetimleri için\n- Birden fazla kliması olanlar için",
-      "en": "## Avantajlar\n\n1. Servis önceliği\n2. Daha uygun fiyat\n3. Düzenli bakım garantisi\n4. Acil durumlarda hızlı müdahale\n\n## Kimler İçin Uygun?\n\n- İş yerleri için\n- Apartman yönetimleri için\n- Birden fazla kliması olanlar için"
+      "tr": {
+        "tr": "## Avantajlar\n\n1. Servis önceliği\n2. Daha uygun fiyat\n3. Düzenli bakım garantisi\n4. Acil durumlarda hızlı müdahale\n\n## Kimler İçin Uygun?\n\n- İş yerleri için\n- Apartman yönetimleri için\n- Birden fazla kliması olanlar için",
+        "en": "## Avantajlar\n\n1. Servis önceliği\n2. Daha uygun fiyat\n3. Düzenli bakım garantisi\n4. Acil durumlarda hızlı müdahale\n\n## Kimler İçin Uygun?\n\n- İş yerleri için\n- Apartman yönetimleri için\n- Birden fazla kliması olanlar için"
+      },
+      "en": {
+        "tr": "## Avantajlar\n\n1. Servis önceliği\n2. Daha uygun fiyat\n3. Düzenli bakım garantisi\n4. Acil durumlarda hızlı müdahale\n\n## Kimler İçin Uygun?\n\n- İş yerleri için\n- Apartman yönetimleri için\n- Birden fazla kliması olanlar için",
+        "en": "## Avantajlar\n\n1. Servis önceliği\n2. Daha uygun fiyat\n3. Düzenli bakım garantisi\n4. Acil durumlarda hızlı müdahale\n\n## Kimler İçin Uygun?\n\n- İş yerleri için\n- Apartman yönetimleri için\n- Birden fazla kliması olanlar için"
+      }
     },
-    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Air_Condition_Unit_Interior_View_USA.jpg",
+    "coverImage": "/uploads/blog/klima-sozlesme.jpg",
     "metaTitle": {
-      "tr": "Klima Bakım Sözleşmesi | Durukan Klima",
-      "en": "Klima Bakım Sözleşmesi | Durukan Klima"
+      "tr": {
+        "tr": "Yıllık Klima Bakım Sözleşmesi Mantıklı mı?",
+        "en": "Yıllık Klima Bakım Sözleşmesi Mantıklı mı?"
+      },
+      "en": {
+        "tr": "Yıllık Klima Bakım Sözleşmesi Mantıklı mı?",
+        "en": "Yıllık Klima Bakım Sözleşmesi Mantıklı mı?"
+      }
     },
     "metaDescription": {
-      "tr": "Yıllık bakım sözleşmesi avantajları",
-      "en": "Yıllık bakım sözleşmesi avantajları"
+      "tr": "",
+      "en": ""
     },
     "publishedAt": "2025-09-01",
     "readTime": {
       "tr": "7 dk",
       "en": "7 min"
-    },
-    "published": true,
-    "imageCredit": "Stilfehler",
-    "imageSource": "Wikimedia Commons"
+    }
   },
   {
     "id": "20",
     "slug": "vrf-sistemleri-nedir-nerede-kullanilir",
     "slugEn": "vrf-sistemleri-nedir-nerede-kullanilir-en",
     "category": {
-      "tr": "Teknik Bilgiler",
-      "en": "Teknik Bilgiler"
+      "tr": {
+        "tr": "Teknik Bilgiler",
+        "en": "Teknik Bilgiler"
+      },
+      "en": {
+        "tr": "Teknik Bilgiler",
+        "en": "Teknik Bilgiler"
+      }
     },
     "title": {
-      "tr": "VRF Sistemleri: Merkezi İklimlendirme Rehberi",
-      "en": "VRF Sistemleri: Merkezi İklimlendirme Rehberi"
+      "tr": {
+        "tr": "VRF Sistemleri: Merkezi İklimlendirme Rehberi",
+        "en": "VRF Sistemleri: Merkezi İklimlendirme Rehberi"
+      },
+      "en": {
+        "tr": "VRF Sistemleri: Merkezi İklimlendirme Rehberi",
+        "en": "VRF Sistemleri: Merkezi İklimlendirme Rehberi"
+      }
     },
     "excerpt": {
-      "tr": "Büyük binalar ve ofisler için VRF sistemleri.",
-      "en": "Büyük binalar ve ofisler için VRF sistemleri."
+      "tr": {
+        "tr": "Büyük binalar ve ofisler için VRF sistemleri.",
+        "en": "Büyük binalar ve ofisler için VRF sistemleri."
+      },
+      "en": {
+        "tr": "Büyük binalar ve ofisler için VRF sistemleri.",
+        "en": "Büyük binalar ve ofisler için VRF sistemleri."
+      }
     },
     "content": {
-      "tr": "## VRF Nedir?\n\nVariable Refrigerant Flow - Merkezi sistem iklimlendirme teknolojisidir.\n\n## Avantajları\n\n- Yüksek verimlilik\n- Esneklik\n- Düşük işletme maliyeti\n- Bireysel kontrol imkanı",
-      "en": "## VRF Nedir?\n\nVariable Refrigerant Flow - Merkezi sistem iklimlendirme teknolojisidir.\n\n## Avantajları\n\n- Yüksek verimlilik\n- Esneklik\n- Düşük işletme maliyeti\n- Bireysel kontrol imkanı"
+      "tr": {
+        "tr": "## VRF Nedir?\n\nVariable Refrigerant Flow - Merkezi sistem iklimlendirme teknolojisidir.\n\n## Avantajları\n\n- Yüksek verimlilik\n- Esneklik\n- Düşük işletme maliyeti\n- Bireysel kontrol imkanı",
+        "en": "## VRF Nedir?\n\nVariable Refrigerant Flow - Merkezi sistem iklimlendirme teknolojisidir.\n\n## Avantajları\n\n- Yüksek verimlilik\n- Esneklik\n- Düşük işletme maliyeti\n- Bireysel kontrol imkanı"
+      },
+      "en": {
+        "tr": "## VRF Nedir?\n\nVariable Refrigerant Flow - Merkezi sistem iklimlendirme teknolojisidir.\n\n## Avantajları\n\n- Yüksek verimlilik\n- Esneklik\n- Düşük işletme maliyeti\n- Bireysel kontrol imkanı",
+        "en": "## VRF Nedir?\n\nVariable Refrigerant Flow - Merkezi sistem iklimlendirme teknolojisidir.\n\n## Avantajları\n\n- Yüksek verimlilik\n- Esneklik\n- Düşük işletme maliyeti\n- Bireysel kontrol imkanı"
+      }
     },
-    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Single-room_AC_unit-external.jpg/800px-Single-room_AC_unit-external.jpg",
+    "coverImage": "/uploads/blog/vrf-sistemleri.jpg",
     "metaTitle": {
-      "tr": "VRF Sistemleri | Durukan Klima",
-      "en": "VRF Sistemleri | Durukan Klima"
+      "tr": {
+        "tr": "VRF Sistemleri: Merkezi İklimlendirme Rehberi",
+        "en": "VRF Sistemleri: Merkezi İklimlendirme Rehberi"
+      },
+      "en": {
+        "tr": "VRF Sistemleri: Merkezi İklimlendirme Rehberi",
+        "en": "VRF Sistemleri: Merkezi İklimlendirme Rehberi"
+      }
     },
     "metaDescription": {
-      "tr": "VRF merkezi iklimlendirme",
-      "en": "VRF merkezi iklimlendirme"
+      "tr": "",
+      "en": ""
     },
     "publishedAt": "2025-09-15",
     "readTime": {
       "tr": "7 dk",
       "en": "7 min"
-    },
-    "published": true,
-    "imageCredit": "William Hamblin",
-    "imageSource": "Wikimedia Commons"
+    }
   },
   {
     "id": "21",
     "slug": "klima-montajinda-vakumlama-onemi",
     "slugEn": "klima-montajinda-vakumlama-onemi-en",
     "category": {
-      "tr": "Teknik Bilgiler",
-      "en": "Teknik Bilgiler"
+      "tr": {
+        "tr": "Teknik Bilgiler",
+        "en": "Teknik Bilgiler"
+      },
+      "en": {
+        "tr": "Teknik Bilgiler",
+        "en": "Teknik Bilgiler"
+      }
     },
     "title": {
-      "tr": "Klima Montajında Vakumlama Neden Önemlidir?",
-      "en": "Klima Montajında Vakumlama Neden Önemlidir?"
+      "tr": {
+        "tr": "Klima Montajında Vakumlama Neden Önemlidir?",
+        "en": "Klima Montajında Vakumlama Neden Önemlidir?"
+      },
+      "en": {
+        "tr": "Klima Montajında Vakumlama Neden Önemlidir?",
+        "en": "Klima Montajında Vakumlama Neden Önemlidir?"
+      }
     },
     "excerpt": {
-      "tr": "Montajın en kritik adımı: Vakumlama.",
-      "en": "Montajın en kritik adımı: Vakumlama."
+      "tr": {
+        "tr": "Montajın en kritik adımı: Vakumlama.",
+        "en": "Montajın en kritik adımı: Vakumlama."
+      },
+      "en": {
+        "tr": "Montajın en kritik adımı: Vakumlama.",
+        "en": "Montajın en kritik adımı: Vakumlama."
+      }
     },
     "content": {
-      "tr": "## Vakumlama Nedir?\n\nSistemi nem ve havadan arındırma işlemidir.\n\n## Neden Önemli?\n\n- Nem korozyona neden olur\n- Hava gaz kaçağına neden olabilir\n- Cihaz ömrünü kısaltır\n\n## Sonuç\n\nProfesyonel montaj şart.",
-      "en": "## Vakumlama Nedir?\n\nSistemi nem ve havadan arındırma işlemidir.\n\n## Neden Önemli?\n\n- Nem korozyona neden olur\n- Hava gaz kaçağına neden olabilir\n- Cihaz ömrünü kısaltır\n\n## Sonuç\n\nProfesyonel montaj şart."
+      "tr": {
+        "tr": "## Vakumlama Nedir?\n\nSistemi nem ve havadan arındırma işlemidir.\n\n## Neden Önemli?\n\n- Nem korozyona neden olur\n- Hava gaz kaçağına neden olabilir\n- Cihaz ömrünü kısaltır\n\n## Sonuç\n\nProfesyonel montaj şart.",
+        "en": "## Vakumlama Nedir?\n\nSistemi nem ve havadan arındırma işlemidir.\n\n## Neden Önemli?\n\n- Nem korozyona neden olur\n- Hava gaz kaçağına neden olabilir\n- Cihaz ömrünü kısaltır\n\n## Sonuç\n\nProfesyonel montaj şart."
+      },
+      "en": {
+        "tr": "## Vakumlama Nedir?\n\nSistemi nem ve havadan arındırma işlemidir.\n\n## Neden Önemli?\n\n- Nem korozyona neden olur\n- Hava gaz kaçağına neden olabilir\n- Cihaz ömrünü kısaltır\n\n## Sonuç\n\nProfesyonel montaj şart.",
+        "en": "## Vakumlama Nedir?\n\nSistemi nem ve havadan arındırma işlemidir.\n\n## Neden Önemli?\n\n- Nem korozyona neden olur\n- Hava gaz kaçağına neden olabilir\n- Cihaz ömrünü kısaltır\n\n## Sonuç\n\nProfesyonel montaj şart."
+      }
     },
-    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Single-room_AC_unit-external.jpg/800px-Single-room_AC_unit-external.jpg",
+    "coverImage": "/uploads/blog/klima-vakumlama.jpg",
     "metaTitle": {
-      "tr": "Klima Vakumlama | Durukan Klima",
-      "en": "Klima Vakumlama | Durukan Klima"
+      "tr": {
+        "tr": "Klima Montajında Vakumlama Neden Önemlidir?",
+        "en": "Klima Montajında Vakumlama Neden Önemlidir?"
+      },
+      "en": {
+        "tr": "Klima Montajında Vakumlama Neden Önemlidir?",
+        "en": "Klima Montajında Vakumlama Neden Önemlidir?"
+      }
     },
     "metaDescription": {
-      "tr": "Montajda vakumlamanın önemi",
-      "en": "Montajda vakumlamanın önemi"
+      "tr": "",
+      "en": ""
     },
     "publishedAt": "2025-09-28",
     "readTime": {
       "tr": "7 dk",
       "en": "7 min"
-    },
-    "published": true,
-    "imageCredit": "William Hamblin",
-    "imageSource": "Wikimedia Commons"
+    }
   },
   {
     "id": "22",
     "slug": "adana-yaz-sicaginda-klima-kullanimi",
     "slugEn": "adana-yaz-sicaginda-klima-kullanimi-en",
     "category": {
-      "tr": "Enerji Tasarrufu",
-      "en": "Enerji Tasarrufu"
+      "tr": {
+        "tr": "Enerji Tasarrufu",
+        "en": "Enerji Tasarrufu"
+      },
+      "en": {
+        "tr": "Enerji Tasarrufu",
+        "en": "Enerji Tasarrufu"
+      }
     },
     "title": {
-      "tr": "Adana Yaz Sıcağında Klima Kullanımı: Serin Kalırken Fatura Kontrolü",
-      "en": "Adana Yaz Sıcağında Klima Kullanımı: Serin Kalırken Fatura Kontrolü"
+      "tr": {
+        "tr": "Adana Yaz Sıcağında Klima Kullanımı: Serin Kalırken Fatura Kontrolü",
+        "en": "Adana Yaz Sıcağında Klima Kullanımı: Serin Kalırken Fatura Kontrolü"
+      },
+      "en": {
+        "tr": "Adana Yaz Sıcağında Klima Kullanımı: Serin Kalırken Fatura Kontrolü",
+        "en": "Adana Yaz Sıcağında Klima Kullanımı: Serin Kalırken Fatura Kontrolü"
+      }
     },
     "excerpt": {
-      "tr": "Adana'da yaz aylarında klima kullanırken hem serin kalmak hem de enerji tasarrufu yapmak mümkün. İşte uzmanından ipuçları.",
-      "en": "Adana'da yaz aylarında klima kullanırken hem serin kalmak hem de enerji tasarrufu yapmak mümkün. İşte uzmanından ipuçları."
+      "tr": {
+        "tr": "Adana'da yaz aylarında klima kullanırken hem serin kalmak hem de enerji tasarrufu yapmak mümkün. İşte uzmanından ipuçları.",
+        "en": "Adana'da yaz aylarında klima kullanırken hem serin kalmak hem de enerji tasarrufu yapmak mümkün. İşte uzmanından ipuçları."
+      },
+      "en": {
+        "tr": "Adana'da yaz aylarında klima kullanırken hem serin kalmak hem de enerji tasarrufu yapmak mümkün. İşte uzmanından ipuçları.",
+        "en": "Adana'da yaz aylarında klima kullanırken hem serin kalmak hem de enerji tasarrufu yapmak mümkün. İşte uzmanından ipuçları."
+      }
     },
     "content": {
-      "tr": "## Adana'da Yaz Ayları: Klima Kaçınılmaz Oldu\n\nAdana'da yaz ayları oldukça sıcak geçiyor. Haziran ile Eylül arasında hava sıcaklığı gölgede bile 35-40 dereceye kadar çıkabiliyor. Bu durum klima kullanımını zorunlu kılıyor.\n\n## Doğru Klima Kullanımı ile Tasarruf Etmenin Yolları\n\n### 1. Doğru Sıcaklık Ayarı Yapın\nKlimayı 24-26°C arasında tutmak idealdir. Her 1°C daha düşük ayar, yaklaşık %7 daha fazla enerji tüketimi demektir. Adana'nın sıcaklarında bile 24-25°C yeterli konfor sağlar.\n\n### 2. Zamanlayıcı Kullanın\nGece uyurken veya evde yokken klimayı sürekli açık bırakmayın. Zamanlayıcı ile belirli saatlerde çalışacak şekilde ayarlayın.\n\n### 3. Evi Önceden Soğutun\nKlimayı günün en sıcak saatlerinde (12:00-16:00) yoğun kullanmak yerine, sabah erken saatlerde çalıştırıp evi serin tutmak daha verimlidir.\n\n### 4. Kapı ve Pencereleri Kontrol Edin\nKlima çalışırken pencerelerin ve kapıların kapalı olduğundan emin olun. Ayrıca güneşlik kullanmak binanın ısınmasını azaltır.\n\n### 5. Düzenli Bakım Yaptırın\nTozlu ve kirli filtreler klimanın verimini düşürür. Yılda en az iki kez filtre temizliği ve bakım yaptırın.\n\n## Adana İçin Özel İpuçları\n\nAdana'nın nemli ikliminde 'hissedilen sıcaklık' gerçek sıcaklıktan daha yüksek olabilir. Bu nedenle nem kontrolü de önemlidir. Klimanızın nem alma modunu kullanmak daha konforlu bir ortam sağlayabilir.\n\n## Sonuç\n\nDoğru klima kullanımı ile hem serin kalabilir hem de elektrik faturanızı kontrol altında tutabilirsiniz. Unutmayın: En verimli klima, düzenli bakımı yapılmış olan klimalardır.",
-      "en": "## Adana'da Yaz Ayları: Klima Kaçınılmaz Oldu\n\nAdana'da yaz ayları oldukça sıcak geçiyor. Haziran ile Eylül arasında hava sıcaklığı gölgede bile 35-40 dereceye kadar çıkabiliyor. Bu durum klima kullanımını zorunlu kılıyor.\n\n## Doğru Klima Kullanımı ile Tasarruf Etmenin Yolları\n\n### 1. Doğru Sıcaklık Ayarı Yapın\nKlimayı 24-26°C arasında tutmak idealdir. Her 1°C daha düşük ayar, yaklaşık %7 daha fazla enerji tüketimi demektir. Adana'nın sıcaklarında bile 24-25°C yeterli konfor sağlar.\n\n### 2. Zamanlayıcı Kullanın\nGece uyurken veya evde yokken klimayı sürekli açık bırakmayın. Zamanlayıcı ile belirli saatlerde çalışacak şekilde ayarlayın.\n\n### 3. Evi Önceden Soğutun\nKlimayı günün en sıcak saatlerinde (12:00-16:00) yoğun kullanmak yerine, sabah erken saatlerde çalıştırıp evi serin tutmak daha verimlidir.\n\n### 4. Kapı ve Pencereleri Kontrol Edin\nKlima çalışırken pencerelerin ve kapıların kapalı olduğundan emin olun. Ayrıca güneşlik kullanmak binanın ısınmasını azaltır.\n\n### 5. Düzenli Bakım Yaptırın\nTozlu ve kirli filtreler klimanın verimini düşürür. Yılda en az iki kez filtre temizliği ve bakım yaptırın.\n\n## Adana İçin Özel İpuçları\n\nAdana'nın nemli ikliminde 'hissedilen sıcaklık' gerçek sıcaklıktan daha yüksek olabilir. Bu nedenle nem kontrolü de önemlidir. Klimanızın nem alma modunu kullanmak daha konforlu bir ortam sağlayabilir.\n\n## Sonuç\n\nDoğru klima kullanımı ile hem serin kalabilir hem de elektrik faturanızı kontrol altında tutabilirsiniz. Unutmayın: En verimli klima, düzenli bakımı yapılmış olan klimalardır."
+      "tr": {
+        "tr": "## Adana'da Yaz Ayları: Klima Kaçınılmaz Oldu\n\nAdana'da yaz ayları oldukça sıcak geçiyor. Haziran ile Eylül arasında hava sıcaklığı gölgede bile 35-40 dereceye kadar çıkabiliyor. Bu durum klima kullanımını zorunlu kılıyor.\n\n## Doğru Klima Kullanımı ile Tasarruf Etmenin Yolları\n\n### 1. Doğru Sıcaklık Ayarı Yapın\nKlimayı 24-26°C arasında tutmak idealdir. Her 1°C daha düşük ayar, yaklaşık %7 daha fazla enerji tüketimi demektir. Adana'nın sıcaklarında bile 24-25°C yeterli konfor sağlar.\n\n### 2. Zamanlayıcı Kullanın\nGece uyurken veya evde yokken klimayı sürekli açık bırakmayın. Zamanlayıcı ile belirli saatlerde çalışacak şekilde ayarlayın.\n\n### 3. Evi Önceden Soğutun\nKlimayı günün en sıcak saatlerinde (12:00-16:00) yoğun kullanmak yerine, sabah erken saatlerde çalıştırıp evi serin tutmak daha verimlidir.\n\n### 4. Kapı ve Pencereleri Kontrol Edin\nKlima çalışırken pencerelerin ve kapıların kapalı olduğundan emin olun. Ayrıca güneşlik kullanmak binanın ısınmasını azaltır.\n\n### 5. Düzenli Bakım Yaptırın\nTozlu ve kirli filtreler klimanın verimini düşürür. Yılda en az iki kez filtre temizliği ve bakım yaptırın.\n\n## Adana İçin Özel İpuçları\n\nAdana'nın nemli ikliminde 'hissedilen sıcaklık' gerçek sıcaklıktan daha yüksek olabilir. Bu nedenle nem kontrolü de önemlidir. Klimanızın nem alma modunu kullanmak daha konforlu bir ortam sağlayabilir.\n\n## Sonuç\n\nDoğru klima kullanımı ile hem serin kalabilir hem de elektrik faturanızı kontrol altında tutabilirsiniz. Unutmayın: En verimli klima, düzenli bakımı yapılmış olan klimalardır.",
+        "en": "## Adana'da Yaz Ayları: Klima Kaçınılmaz Oldu\n\nAdana'da yaz ayları oldukça sıcak geçiyor. Haziran ile Eylül arasında hava sıcaklığı gölgede bile 35-40 dereceye kadar çıkabiliyor. Bu durum klima kullanımını zorunlu kılıyor.\n\n## Doğru Klima Kullanımı ile Tasarruf Etmenin Yolları\n\n### 1. Doğru Sıcaklık Ayarı Yapın\nKlimayı 24-26°C arasında tutmak idealdir. Her 1°C daha düşük ayar, yaklaşık %7 daha fazla enerji tüketimi demektir. Adana'nın sıcaklarında bile 24-25°C yeterli konfor sağlar.\n\n### 2. Zamanlayıcı Kullanın\nGece uyurken veya evde yokken klimayı sürekli açık bırakmayın. Zamanlayıcı ile belirli saatlerde çalışacak şekilde ayarlayın.\n\n### 3. Evi Önceden Soğutun\nKlimayı günün en sıcak saatlerinde (12:00-16:00) yoğun kullanmak yerine, sabah erken saatlerde çalıştırıp evi serin tutmak daha verimlidir.\n\n### 4. Kapı ve Pencereleri Kontrol Edin\nKlima çalışırken pencerelerin ve kapıların kapalı olduğundan emin olun. Ayrıca güneşlik kullanmak binanın ısınmasını azaltır.\n\n### 5. Düzenli Bakım Yaptırın\nTozlu ve kirli filtreler klimanın verimini düşürür. Yılda en az iki kez filtre temizliği ve bakım yaptırın.\n\n## Adana İçin Özel İpuçları\n\nAdana'nın nemli ikliminde 'hissedilen sıcaklık' gerçek sıcaklıktan daha yüksek olabilir. Bu nedenle nem kontrolü de önemlidir. Klimanızın nem alma modunu kullanmak daha konforlu bir ortam sağlayabilir.\n\n## Sonuç\n\nDoğru klima kullanımı ile hem serin kalabilir hem de elektrik faturanızı kontrol altında tutabilirsiniz. Unutmayın: En verimli klima, düzenli bakımı yapılmış olan klimalardır."
+      },
+      "en": {
+        "tr": "## Adana'da Yaz Ayları: Klima Kaçınılmaz Oldu\n\nAdana'da yaz ayları oldukça sıcak geçiyor. Haziran ile Eylül arasında hava sıcaklığı gölgede bile 35-40 dereceye kadar çıkabiliyor. Bu durum klima kullanımını zorunlu kılıyor.\n\n## Doğru Klima Kullanımı ile Tasarruf Etmenin Yolları\n\n### 1. Doğru Sıcaklık Ayarı Yapın\nKlimayı 24-26°C arasında tutmak idealdir. Her 1°C daha düşük ayar, yaklaşık %7 daha fazla enerji tüketimi demektir. Adana'nın sıcaklarında bile 24-25°C yeterli konfor sağlar.\n\n### 2. Zamanlayıcı Kullanın\nGece uyurken veya evde yokken klimayı sürekli açık bırakmayın. Zamanlayıcı ile belirli saatlerde çalışacak şekilde ayarlayın.\n\n### 3. Evi Önceden Soğutun\nKlimayı günün en sıcak saatlerinde (12:00-16:00) yoğun kullanmak yerine, sabah erken saatlerde çalıştırıp evi serin tutmak daha verimlidir.\n\n### 4. Kapı ve Pencereleri Kontrol Edin\nKlima çalışırken pencerelerin ve kapıların kapalı olduğundan emin olun. Ayrıca güneşlik kullanmak binanın ısınmasını azaltır.\n\n### 5. Düzenli Bakım Yaptırın\nTozlu ve kirli filtreler klimanın verimini düşürür. Yılda en az iki kez filtre temizliği ve bakım yaptırın.\n\n## Adana İçin Özel İpuçları\n\nAdana'nın nemli ikliminde 'hissedilen sıcaklık' gerçek sıcaklıktan daha yüksek olabilir. Bu nedenle nem kontrolü de önemlidir. Klimanızın nem alma modunu kullanmak daha konforlu bir ortam sağlayabilir.\n\n## Sonuç\n\nDoğru klima kullanımı ile hem serin kalabilir hem de elektrik faturanızı kontrol altında tutabilirsiniz. Unutmayın: En verimli klima, düzenli bakımı yapılmış olan klimalardır.",
+        "en": "## Adana'da Yaz Ayları: Klima Kaçınılmaz Oldu\n\nAdana'da yaz ayları oldukça sıcak geçiyor. Haziran ile Eylül arasında hava sıcaklığı gölgede bile 35-40 dereceye kadar çıkabiliyor. Bu durum klima kullanımını zorunlu kılıyor.\n\n## Doğru Klima Kullanımı ile Tasarruf Etmenin Yolları\n\n### 1. Doğru Sıcaklık Ayarı Yapın\nKlimayı 24-26°C arasında tutmak idealdir. Her 1°C daha düşük ayar, yaklaşık %7 daha fazla enerji tüketimi demektir. Adana'nın sıcaklarında bile 24-25°C yeterli konfor sağlar.\n\n### 2. Zamanlayıcı Kullanın\nGece uyurken veya evde yokken klimayı sürekli açık bırakmayın. Zamanlayıcı ile belirli saatlerde çalışacak şekilde ayarlayın.\n\n### 3. Evi Önceden Soğutun\nKlimayı günün en sıcak saatlerinde (12:00-16:00) yoğun kullanmak yerine, sabah erken saatlerde çalıştırıp evi serin tutmak daha verimlidir.\n\n### 4. Kapı ve Pencereleri Kontrol Edin\nKlima çalışırken pencerelerin ve kapıların kapalı olduğundan emin olun. Ayrıca güneşlik kullanmak binanın ısınmasını azaltır.\n\n### 5. Düzenli Bakım Yaptırın\nTozlu ve kirli filtreler klimanın verimini düşürür. Yılda en az iki kez filtre temizliği ve bakım yaptırın.\n\n## Adana İçin Özel İpuçları\n\nAdana'nın nemli ikliminde 'hissedilen sıcaklık' gerçek sıcaklıktan daha yüksek olabilir. Bu nedenle nem kontrolü de önemlidir. Klimanızın nem alma modunu kullanmak daha konforlu bir ortam sağlayabilir.\n\n## Sonuç\n\nDoğru klima kullanımı ile hem serin kalabilir hem de elektrik faturanızı kontrol altında tutabilirsiniz. Unutmayın: En verimli klima, düzenli bakımı yapılmış olan klimalardır."
+      }
     },
-    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Single-room_AC_unit-external.jpg/800px-Single-room_AC_unit-external.jpg",
+    "coverImage": "/uploads/blog/adana-yaz-sicagi.jpg",
     "metaTitle": {
-      "tr": "Adana Yaz Sıcağında Klima Kullanımı | Durukan Klima",
-      "en": "Adana Yaz Sıcağında Klima Kullanımı | Durukan Klima"
+      "tr": {
+        "tr": "Adana Yaz Sıcağında Klima Kullanımı: Serin Kalırken Fatura Kontrolü",
+        "en": "Adana Yaz Sıcağında Klima Kullanımı: Serin Kalırken Fatura Kontrolü"
+      },
+      "en": {
+        "tr": "Adana Yaz Sıcağında Klima Kullanımı: Serin Kalırken Fatura Kontrolü",
+        "en": "Adana Yaz Sıcağında Klima Kullanımı: Serin Kalırken Fatura Kontrolü"
+      }
     },
     "metaDescription": {
-      "tr": "Adana'da yaz aylarında klima kullanırken enerji tasarrufu ipuçları.",
-      "en": "Adana'da yaz aylarında klima kullanırken enerji tasarrufu ipuçları."
+      "tr": "",
+      "en": ""
     },
     "publishedAt": "2026-04-12",
     "readTime": {
       "tr": "7 dk",
       "en": "7 min"
-    },
-    "published": true,
-    "imageCredit": "William Hamblin",
-    "imageSource": "Wikimedia Commons"
+    }
   },
   {
     "id": "23",
     "slug": "kombi-kullaniminda-tasarruf-23",
     "slugEn": "kombi-kullaniminda-tasarruf-23-en",
+    "category": {
+      "tr": {
+        "tr": "Kombi & Isıtma",
+        "en": "Kombi & Isıtma"
+      },
+      "en": {
+        "tr": "Kombi & Isıtma",
+        "en": "Kombi & Isıtma"
+      }
+    },
+    "title": {
+      "tr": {
+        "tr": "Kombi Kullanımında %30 Tasarruf Etmenin Yolları",
+        "en": "Kombi Kullanımında %30 Tasarruf Etmenin Yolları"
+      },
+      "en": {
+        "tr": "Kombi Kullanımında %30 Tasarruf Etmenin Yolları",
+        "en": "Kombi Kullanımında %30 Tasarruf Etmenin Yolları"
+      }
+    },
+    "excerpt": {
+      "tr": {
+        "tr": "Kış aylarında doğalgaz faturanız kabarıyor mu? Kombiyi doğru kullanarak tasarruf edebilirsiniz.",
+        "en": "Kış aylarında doğalgaz faturanız kabarıyor mu? Kombiyi doğru kullanarak tasarruf edebilirsiniz."
+      },
+      "en": {
+        "tr": "Kış aylarında doğalgaz faturanız kabarıyor mu? Kombiyi doğru kullanarak tasarruf edebilirsiniz.",
+        "en": "Kış aylarında doğalgaz faturanız kabarıyor mu? Kombiyi doğru kullanarak tasarruf edebilirsiniz."
+      }
+    },
+    "content": {
+      "tr": {
+        "tr": "## Kombi Faturanızı Düşürmenin Etkili Yolları\n\nKış aylarında kombi kullanımı ev bütçesinde önemli bir kalem oluşturuyor. Ancak doğru kullanım yöntemleriyle doğalgaz faturanızda %30'a varan tasarruf sağlamak mümkün.\n\n### 1. Doğru Sıcaklık Ayarı\nKombiyi 50-55°C arasında tutmak idealidir. Her 1°C artış yaklaşık %6-7 daha fazla gaz tüketimi demek. Evde kimse yokken 30°C'e düşürmek tasarruf sağlar.\n\n### 2. Zamanlayıcı Kullanın\nKombiyi sürekli çalıştırmak yerine, günün belirli saatlerinde çalışacak şekilde programlayın. Gece uyurken 30°C, gündüz evdeyken 50°C idealdir.\n\n### 3. Radyatör Vanalarını Kontrol Edin\nKullanılmayan odaların radyatör vanalarını kapatın. Böylece ısınması gereken alan azalır ve kombi daha verimli çalışır.\n\n### 4. Pencereleri ve Kapıları Kontrol Edin\nKışın pencerelerden ve kapılardan ısı kaybı %25-30'u bulabilir. Pencere ve kapıların izolasyonunu kontrol edin.\n\n### 5. Radyatör Arkalarına Yalıtım\nRadyatörlerin arkasına alüminyum folyo veya özel yalıtım panelleri yerleştirmek, ısının duvara değil odaya yönelmesini sağlar.\n\n### 6. Yıllık Bakım Yaptırın\nBakımsız kombi verimi düşer. Yılda bir kez profesyonel bakım, kombinin optimum verimlilikle çalışmasını sağlar.\n\n## Sonuç\nKüçük değişiklikler büyük tasarruf demek. Bugünden başlayarak bu ipuçlarını uygulayın ve faturanızda farkı görün!",
+        "en": "## Kombi Faturanızı Düşürmenin Etkili Yolları\n\nKış aylarında kombi kullanımı ev bütçesinde önemli bir kalem oluşturuyor. Ancak doğru kullanım yöntemleriyle doğalgaz faturanızda %30'a varan tasarruf sağlamak mümkün.\n\n### 1. Doğru Sıcaklık Ayarı\nKombiyi 50-55°C arasında tutmak idealidir. Her 1°C artış yaklaşık %6-7 daha fazla gaz tüketimi demek. Evde kimse yokken 30°C'e düşürmek tasarruf sağlar.\n\n### 2. Zamanlayıcı Kullanın\nKombiyi sürekli çalıştırmak yerine, günün belirli saatlerinde çalışacak şekilde programlayın. Gece uyurken 30°C, gündüz evdeyken 50°C idealdir.\n\n### 3. Radyatör Vanalarını Kontrol Edin\nKullanılmayan odaların radyatör vanalarını kapatın. Böylece ısınması gereken alan azalır ve kombi daha verimli çalışır.\n\n### 4. Pencereleri ve Kapıları Kontrol Edin\nKışın pencerelerden ve kapılardan ısı kaybı %25-30'u bulabilir. Pencere ve kapıların izolasyonunu kontrol edin.\n\n### 5. Radyatör Arkalarına Yalıtım\nRadyatörlerin arkasına alüminyum folyo veya özel yalıtım panelleri yerleştirmek, ısının duvara değil odaya yönelmesini sağlar.\n\n### 6. Yıllık Bakım Yaptırın\nBakımsız kombi verimi düşer. Yılda bir kez profesyonel bakım, kombinin optimum verimlilikle çalışmasını sağlar.\n\n## Sonuç\nKüçük değişiklikler büyük tasarruf demek. Bugünden başlayarak bu ipuçlarını uygulayın ve faturanızda farkı görün!"
+      },
+      "en": {
+        "tr": "## Kombi Faturanızı Düşürmenin Etkili Yolları\n\nKış aylarında kombi kullanımı ev bütçesinde önemli bir kalem oluşturuyor. Ancak doğru kullanım yöntemleriyle doğalgaz faturanızda %30'a varan tasarruf sağlamak mümkün.\n\n### 1. Doğru Sıcaklık Ayarı\nKombiyi 50-55°C arasında tutmak idealidir. Her 1°C artış yaklaşık %6-7 daha fazla gaz tüketimi demek. Evde kimse yokken 30°C'e düşürmek tasarruf sağlar.\n\n### 2. Zamanlayıcı Kullanın\nKombiyi sürekli çalıştırmak yerine, günün belirli saatlerinde çalışacak şekilde programlayın. Gece uyurken 30°C, gündüz evdeyken 50°C idealdir.\n\n### 3. Radyatör Vanalarını Kontrol Edin\nKullanılmayan odaların radyatör vanalarını kapatın. Böylece ısınması gereken alan azalır ve kombi daha verimli çalışır.\n\n### 4. Pencereleri ve Kapıları Kontrol Edin\nKışın pencerelerden ve kapılardan ısı kaybı %25-30'u bulabilir. Pencere ve kapıların izolasyonunu kontrol edin.\n\n### 5. Radyatör Arkalarına Yalıtım\nRadyatörlerin arkasına alüminyum folyo veya özel yalıtım panelleri yerleştirmek, ısının duvara değil odaya yönelmesini sağlar.\n\n### 6. Yıllık Bakım Yaptırın\nBakımsız kombi verimi düşer. Yılda bir kez profesyonel bakım, kombinin optimum verimlilikle çalışmasını sağlar.\n\n## Sonuç\nKüçük değişiklikler büyük tasarruf demek. Bugünden başlayarak bu ipuçlarını uygulayın ve faturanızda farkı görün!",
+        "en": "## Kombi Faturanızı Düşürmenin Etkili Yolları\n\nKış aylarında kombi kullanımı ev bütçesinde önemli bir kalem oluşturuyor. Ancak doğru kullanım yöntemleriyle doğalgaz faturanızda %30'a varan tasarruf sağlamak mümkün.\n\n### 1. Doğru Sıcaklık Ayarı\nKombiyi 50-55°C arasında tutmak idealidir. Her 1°C artış yaklaşık %6-7 daha fazla gaz tüketimi demek. Evde kimse yokken 30°C'e düşürmek tasarruf sağlar.\n\n### 2. Zamanlayıcı Kullanın\nKombiyi sürekli çalıştırmak yerine, günün belirli saatlerinde çalışacak şekilde programlayın. Gece uyurken 30°C, gündüz evdeyken 50°C idealdir.\n\n### 3. Radyatör Vanalarını Kontrol Edin\nKullanılmayan odaların radyatör vanalarını kapatın. Böylece ısınması gereken alan azalır ve kombi daha verimli çalışır.\n\n### 4. Pencereleri ve Kapıları Kontrol Edin\nKışın pencerelerden ve kapılardan ısı kaybı %25-30'u bulabilir. Pencere ve kapıların izolasyonunu kontrol edin.\n\n### 5. Radyatör Arkalarına Yalıtım\nRadyatörlerin arkasına alüminyum folyo veya özel yalıtım panelleri yerleştirmek, ısının duvara değil odaya yönelmesini sağlar.\n\n### 6. Yıllık Bakım Yaptırın\nBakımsız kombi verimi düşer. Yılda bir kez profesyonel bakım, kombinin optimum verimlilikle çalışmasını sağlar.\n\n## Sonuç\nKüçük değişiklikler büyük tasarruf demek. Bugünden başlayarak bu ipuçlarını uygulayın ve faturanızda farkı görün!"
+      }
+    },
+    "coverImage": "/uploads/blog/kombi-tasarruf.jpg",
+    "metaTitle": {
+      "tr": {
+        "tr": "Kombi Kullanımında %30 Tasarruf Etmenin Yolları",
+        "en": "Kombi Kullanımında %30 Tasarruf Etmenin Yolları"
+      },
+      "en": {
+        "tr": "Kombi Kullanımında %30 Tasarruf Etmenin Yolları",
+        "en": "Kombi Kullanımında %30 Tasarruf Etmenin Yolları"
+      }
+    },
+    "metaDescription": {
+      "tr": "",
+      "en": ""
+    },
+    "publishedAt": "2026-04-13",
+    "readTime": {
+      "tr": "7 dk",
+      "en": "7 min"
+    }
+  },
+  {
+    "id": "24",
+    "slug": "kombi-kullaniminda-tasarruf-24",
+    "slugEn": "kombi-kullaniminda-tasarruf-24-en",
     "category": {
       "tr": "Kombi & Isıtma",
       "en": "Kombi & Isıtma"
@@ -853,7 +1514,7 @@
       "tr": "## Kombi Faturanızı Düşürmenin Etkili Yolları\n\nKış aylarında kombi kullanımı ev bütçesinde önemli bir kalem oluşturuyor. Ancak doğru kullanım yöntemleriyle doğalgaz faturanızda %30'a varan tasarruf sağlamak mümkün.\n\n### 1. Doğru Sıcaklık Ayarı\nKombiyi 50-55°C arasında tutmak idealidir. Her 1°C artış yaklaşık %6-7 daha fazla gaz tüketimi demek. Evde kimse yokken 30°C'e düşürmek tasarruf sağlar.\n\n### 2. Zamanlayıcı Kullanın\nKombiyi sürekli çalıştırmak yerine, günün belirli saatlerinde çalışacak şekilde programlayın. Gece uyurken 30°C, gündüz evdeyken 50°C idealdir.\n\n### 3. Radyatör Vanalarını Kontrol Edin\nKullanılmayan odaların radyatör vanalarını kapatın. Böylece ısınması gereken alan azalır ve kombi daha verimli çalışır.\n\n### 4. Pencereleri ve Kapıları Kontrol Edin\nKışın pencerelerden ve kapılardan ısı kaybı %25-30'u bulabilir. Pencere ve kapıların izolasyonunu kontrol edin.\n\n### 5. Radyatör Arkalarına Yalıtım\nRadyatörlerin arkasına alüminyum folyo veya özel yalıtım panelleri yerleştirmek, ısının duvara değil odaya yönelmesini sağlar.\n\n### 6. Yıllık Bakım Yaptırın\nBakımsız kombi verimi düşer. Yılda bir kez profesyonel bakım, kombinin optimum verimlilikle çalışmasını sağlar.\n\n## Sonuç\nKüçük değişiklikler büyük tasarruf demek. Bugünden başlayarak bu ipuçlarını uygulayın ve faturanızda farkı görün!",
       "en": "## Kombi Faturanızı Düşürmenin Etkili Yolları\n\nKış aylarında kombi kullanımı ev bütçesinde önemli bir kalem oluşturuyor. Ancak doğru kullanım yöntemleriyle doğalgaz faturanızda %30'a varan tasarruf sağlamak mümkün.\n\n### 1. Doğru Sıcaklık Ayarı\nKombiyi 50-55°C arasında tutmak idealidir. Her 1°C artış yaklaşık %6-7 daha fazla gaz tüketimi demek. Evde kimse yokken 30°C'e düşürmek tasarruf sağlar.\n\n### 2. Zamanlayıcı Kullanın\nKombiyi sürekli çalıştırmak yerine, günün belirli saatlerinde çalışacak şekilde programlayın. Gece uyurken 30°C, gündüz evdeyken 50°C idealdir.\n\n### 3. Radyatör Vanalarını Kontrol Edin\nKullanılmayan odaların radyatör vanalarını kapatın. Böylece ısınması gereken alan azalır ve kombi daha verimli çalışır.\n\n### 4. Pencereleri ve Kapıları Kontrol Edin\nKışın pencerelerden ve kapılardan ısı kaybı %25-30'u bulabilir. Pencere ve kapıların izolasyonunu kontrol edin.\n\n### 5. Radyatör Arkalarına Yalıtım\nRadyatörlerin arkasına alüminyum folyo veya özel yalıtım panelleri yerleştirmek, ısının duvara değil odaya yönelmesini sağlar.\n\n### 6. Yıllık Bakım Yaptırın\nBakımsız kombi verimi düşer. Yılda bir kez profesyonel bakım, kombinin optimum verimlilikle çalışmasını sağlar.\n\n## Sonuç\nKüçük değişiklikler büyük tasarruf demek. Bugünden başlayarak bu ipuçlarını uygulayın ve faturanızda farkı görün!"
     },
-    "coverImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Heating_boiler.jpg/800px-Heating_boiler.jpg",
+    "coverImage": "https://picsum.photos/seed/kombi-tasarruf-24/800/400",
     "metaTitle": {
       "tr": "Kombi Kullanımında Tasarruf Yolları | Durukan Klima",
       "en": "Kombi Kullanımında Tasarruf Yolları | Durukan Klima"
@@ -862,13 +1523,10 @@
       "tr": "Kışın doğalgaz faturanızı düşürmenin etkili yolları.",
       "en": "Kışın doğalgaz faturanızı düşürmenin etkili yolları."
     },
-    "publishedAt": "2026-04-13",
+    "publishedAt": "2026-04-14",
     "readTime": {
       "tr": "7 dk",
       "en": "7 min"
-    },
-    "published": true,
-    "imageCredit": "MoistMc",
-    "imageSource": "Wikimedia Commons"
+    }
   }
 ]

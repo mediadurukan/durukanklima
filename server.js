@@ -187,7 +187,7 @@ app.get('/api/settings', async (req, res) => {
     const s = await getData('settings');
     if (!s) return res.json({});
     // Analytics ID'yi public'e aç ama smtp şifrelerini gizle
-    const pub = { analytics: s.analytics, seo: s.seo, geo: s.geo, features: s.features };
+    const pub = { analytics: s.analytics, seo: s.seo, geo: s.geo, features: s.features, logo: s.logo, favicon: s.favicon };
     res.json(pub);
   } catch { res.status(500).json({ error: 'Okunamadı' }); }
 });
@@ -203,6 +203,33 @@ app.put('/api/settings', auth, async (req, res) => {
     const updated = deepMerge(existing, req.body);
     await setData('settings', updated);
     res.json({ success: true });
+  } catch (e) { res.status(500).json({ error: e.message }); }
+});
+
+// Logo upload - Redis'e base64 olarak kaydet
+app.post('/api/upload/logo', auth, async (req, res) => {
+  try {
+    const settings = (await getData('settings')) || {};
+    const { fileData } = req.body || {};
+    if (!fileData) return res.status(400).json({ error: 'Dosya verisi yok' });
+    
+    // Base64 data'yı Redis'e kaydet (data URL olarak)
+    settings.logo = fileData;
+    await setData('settings', settings);
+    res.json({ success: true, url: fileData });
+  } catch (e) { res.status(500).json({ error: e.message }); }
+});
+
+// Favicon upload - Redis'e base64 olarak kaydet
+app.post('/api/upload/favicon', auth, async (req, res) => {
+  try {
+    const settings = (await getData('settings')) || {};
+    const { fileData } = req.body || {};
+    if (!fileData) return res.status(400).json({ error: 'Dosya verisi yok' });
+    
+    settings.favicon = fileData;
+    await setData('settings', settings);
+    res.json({ success: true, url: fileData });
   } catch (e) { res.status(500).json({ error: e.message }); }
 });
 
