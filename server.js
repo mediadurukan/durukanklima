@@ -334,11 +334,11 @@ app.get('/api/blog', async (req, res) => {
       total: filtered.length,
       posts: filtered.slice(+offset, +offset + +limit).map(p => ({
         id: p.id, slug: p.slug,
-        title: typeof p.title === 'object' ? (p.title[lang] || p.title.tr || '') : p.title,
-        excerpt: typeof p.excerpt === 'object' ? (p.excerpt[lang] || p.excerpt.tr || '') : p.excerpt,
-        category: typeof p.category === 'object' ? (p.category[lang] || p.category.tr || '') : p.category,
+        title: getLocalized(p.title, lang),
+        excerpt: getLocalized(p.excerpt, lang),
+        category: getLocalized(p.category, lang),
         tags: p.tags, publishedAt: p.publishedAt,
-        author: p.author, image: p.image
+        author: p.author, image: p.coverImage || p.image
       }))
     });
   } catch { res.status(500).json({ error: 'Okunamadı' }); }
@@ -355,13 +355,15 @@ app.get('/api/blog/:slug', async (req, res) => {
     const posts = (await getData('blog')) || [];
     const raw = posts.find(p => p.slug === req.params.slug && p.published);
     if (!raw) return res.status(404).json({ error: 'Yazı bulunamadı' });
-    // Flatten TR/EN content fields
+    // Flatten TR/EN content fields using getLocalized
     const post = {
       ...raw,
-      title: typeof raw.title === 'object' ? (raw.title[lang] || raw.title.tr || '') : raw.title,
-      excerpt: typeof raw.excerpt === 'object' ? (raw.excerpt[lang] || raw.excerpt.tr || '') : raw.excerpt,
-      content: typeof raw.content === 'object' ? (raw.content[lang] || raw.content.tr || '') : raw.content,
-      category: typeof raw.category === 'object' ? (raw.category[lang] || raw.category.tr || '') : raw.category,
+      title: getLocalized(raw.title, lang),
+      excerpt: getLocalized(raw.excerpt, lang),
+      content: getLocalized(raw.content, lang),
+      category: getLocalized(raw.category, lang),
+      metaTitle: getLocalized(raw.metaTitle, lang),
+      metaDescription: getLocalized(raw.metaDescription, lang),
     };
     res.json(post);
   } catch { res.status(500).json({ error: 'Okunamadı' }); }
@@ -821,6 +823,17 @@ function slugify(text) {
     .replace(/[ı]/g, 'i').replace(/[ö]/g, 'o').replace(/[ç]/g, 'c')
     .replace(/[^a-z0-9-]/g, '')
     .replace(/-+/g, '-').replace(/^-|-$/g, '');
+}
+
+function getLocalized(obj, lang = 'tr') {
+  if (!obj) return '';
+  if (typeof obj === 'string') return obj;
+  // Triple nested: { tr: { tr: '', en: '' }, en: { tr: '', en: '' } }
+  if (obj.tr && typeof obj.tr === 'object') {
+    return obj.tr[lang] || obj.tr.tr || obj.tr.en || '';
+  }
+  // Double nested: { tr: '', en: '' }
+  return obj[lang] || obj.tr || '';
 }
 
 // Vercel serverless - export app directly

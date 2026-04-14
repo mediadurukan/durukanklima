@@ -13,9 +13,9 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.durukanklima.net/hizmetler</loc>
+    <loc>https://www.durukanklima.net/fiyatlar</loc>
     <lastmod>2026-04-13</lastmod>
-    <changefreq>weekly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
@@ -30,17 +30,19 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  
+  <!-- İlçe Sayfaları -->
   <url>
     <loc>https://www.durukanklima.net/cukurova-klima-servisi</loc>
     <lastmod>2026-04-13</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.durukanklima.net/seyhan-klima-servisi</loc>
     <lastmod>2026-04-13</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.durukanklima.net/saricam-klima-servisi</loc>
@@ -54,6 +56,8 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+  
+  <!-- Long-tail Anahtar Kelimeler - Blog -->
   <url>
     <loc>https://www.durukanklima.net/blog/klima-bakim-onemi-nedir</loc>
     <lastmod>2026-04-13</lastmod>
@@ -61,33 +65,69 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.durukanklima.net/blog/klima-montaji-nerede-yapilmali-yer-secimi</loc>
+    <loc>https://www.durukanklima.net/blog/adana-klima-montaj-fiyatlari-2026</loc>
     <lastmod>2026-04-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.durukanklima.net/blog/klima-arizasi-belirtileri-ne-zaman-servis-cagirmali</loc>
+    <loc>https://www.durukanklima.net/blog/cukurova-klima-servisi-nereden-alinir</loc>
     <lastmod>2026-04-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.durukanklima.net/blog/enerji-tasarrufu-icin-klima-kullanim-ipuclari</loc>
+    <loc>https://www.durukanklima.net/blog/seyhan-klima-bakimi-en-iyi- servis</loc>
     <lastmod>2026-04-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.durukanklima.net/blog/klima-turu-secimi-split-multi-vrf</loc>
+    <loc>https://www.durukanklima.net/blog/adana-klima-ariza-en-sik-gorulen-sorunlar</loc>
     <lastmod>2026-04-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.durukanklima.net/blog/adana-yaz-sicaginda-klima-kullanimi</loc>
+    <loc>https://www.durukanklima.net/blog/klima-gaz-dolumu-ne-kadar-surer</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.durukanklima.net/blog/kombi-bakim-neden-onemli</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.durukanklima.net/blog/adana-klima-servis-secimi</loc>
     <lastmod>2026-04-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.durukanklima.net/blog/klima-montaj-surekli-yanlis-yapiliyor</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.durukanklima.net/blog/inverter-klima-nedir-avantajlari</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.durukanklima.net/blog/klima-kullanim-hatalari-enerji-zarari</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.durukanklima.net/blog/adana-kisin-klima-isitma-maliyeti</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>

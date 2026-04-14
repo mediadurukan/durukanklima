@@ -230,6 +230,9 @@
     <div class="nav-item" onclick="showPanel('panel-sayfalar')">
       <span class="nav-icon">🔘</span> Sayfa Yönetimi
     </div>
+    <div class="nav-item" onclick="showPanel('panel-sayfaduzenle')">
+      <span class="nav-icon">📝</span> İçerik Düzenle
+    </div>
     <div class="nav-item" onclick="showPanel('panel-ayarlar')">
       <span class="nav-icon">⚙️</span> Ayarlar & SEO
     </div>
@@ -347,6 +350,48 @@
         </div>
         <div style="margin-top:24px;padding-top:18px;border-top:1px solid var(--border);">
           <button class="btn btn-primary" onclick="savePageSettings()" style="width:100%;">💾 Değişiklikleri Kaydet</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- PANEL: SAYFA DÜZENLE -->
+    <div class="panel" id="panel-sayfaduzenle">
+      <div class="panel-title">📝 Sayfa İçerik Düzenleyici</div>
+      <div class="panel-desc">Ana sayfa ve diğer sayfaların içeriklerini düzenleyin.</div>
+      
+      <div class="card" style="padding:24px;margin-bottom:20px;">
+        <div style="font-weight:700;font-size:1rem;margin-bottom:16px;">📄 Düzenlenecek Sayfa</div>
+        <select id="page-select" onchange="loadPageContent()" style="width:100%;padding:12px;border:1px solid var(--border);border-radius:8px;font-size:0.95rem;margin-bottom:16px;background:var(--bg);color:var(--text);">
+          <option value="hero">Ana Sayfa - Hero (Üst Banner)</option>
+          <option value="hizmet">Hizmetler Bölümü</option>
+          <option value="neden">Neden Biz Bölümü</option>
+          <option value="footer">Alt Bilgi (Footer)</option>
+          <option value="bakim">Klima Bakımı İçerik</option>
+          <option value="montaj">Klima Montajı İçerik</option>
+          <option value="ariza">Klima Arızası İçerik</option>
+          <option value="kombi">Kombi Servisi İçerik</option>
+        </select>
+        
+        <div style="font-weight:600;font-size:0.9rem;margin-bottom:8px;">Başlık:</div>
+        <input type="text" id="section-title" placeholder="Bölüm başlığı" style="width:100%;padding:12px;border:1px solid var(--border);border-radius:8px;font-size:0.95rem;margin-bottom:16px;" />
+        
+        <div style="font-weight:600;font-size:0.9rem;margin-bottom:8px;">İçerik (HTML destekler):</div>
+        <textarea id="section-content" rows="8" placeholder="İçerik..." style="width:100%;padding:12px;border:1px solid var(--border);border-radius:8px;font-size:0.9rem;resize:vertical;margin-bottom:16px;background:var(--bg);color:var(--text);"></textarea>
+        
+        <div style="font-weight:600;font-size:0.9rem;margin-bottom:8px;">Açıklama (Kısa):</div>
+        <input type="text" id="section-excerpt" placeholder="Kısa açıklama" style="width:100%;padding:12px;border:1px solid var(--border);border-radius:8px;font-size:0.95rem;margin-bottom:16px;" />
+        
+        <button class="btn btn-primary" onclick="savePageSection()" style="width:100%;">💾 Kaydet</button>
+        <div id="page-save-status" style="margin-top:12px;text-align:center;font-size:0.85rem;"></div>
+      </div>
+      
+      <div class="card" style="padding:20px;">
+        <div style="font-weight:700;font-size:0.95rem;margin-bottom:12px;">⚡ Hızlı İçerik</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+          <button class="btn btn-outline" onclick="setQuickContent('hero', 'Ana Sayfa Hero')" style="padding:10px;font-size:0.85rem;">🏠 Hero</button>
+          <button class="btn btn-outline" onclick="setQuickContent('hizmet', 'Hizmetler')" style="padding:10px;font-size:0.85rem;">🔧 Hizmetler</button>
+          <button class="btn btn-outline" onclick="setQuickContent('neden', 'Neden Biz')" style="padding:10px;font-size:0.85rem;">⭐ Neden Biz</button>
+          <button class="btn btn-outline" onclick="setQuickContent('bakim', 'Bakım')" style="padding:10px;font-size:0.85rem;">🧹 Klima Bakım</button>
         </div>
       </div>
     </div>
@@ -1980,6 +2025,82 @@ async function savePageSettings() {
     });
     showToast('Ayarlar kaydedildi ✅');
   } catch (e) { showToast('Kaydedilemedi', 'error'); }
+}
+
+// ═══════════════════════ SAYFA DÜZENLEYİCİ ═══════════════════════
+const pageContentData = {};
+
+const pageTemplates = {
+  hero: { title: 'Ana Sayfa Hero', content: '<h2>Adana Klima & Kombi Servisi</h2><p>Profesyonel teknik servis, aynı gün hizmet, orijinal parça garantisi</p>', excerpt: 'Adana\'nın güvenilir klima servisi' },
+  hizmet: { title: 'Hizmetlerimiz', content: '<h3>Klima Servisi</h3><p>Klima montaj, bakım, arıza ve gaz dolumu hizmetleri</p><h3>Kombi Servisi</h3><p>Kombi bakım, arıza ve montaj hizmetleri</p>', excerpt: 'Klima ve kombi teknik servis hizmetleri' },
+  neden: { title: 'Neden Bizi Tercih Etmelisiniz?', content: '<ul><li>✓ Aynı gün servis garantisi</li><li>✓ Orijinal yedek parça</li><li>✓ Deneyimli teknisyenler</li><li>✓ Uygun fiyat</li></ul>', excerpt: 'Güvenilir ve hızlı klima servisi' },
+  bakim: { title: 'Klima Bakımı', content: '<p>Klima bakımı cihazınızın ömrünü uzatır ve enerji tasarrufu sağlar.</p><ul><li>Filtre temizliği</li><li>Gaz kontrolü</li><li>Elektrik bağlantı kontrolü</li></ul>', excerpt: 'Klima bakımı hizmeti' },
+  montaj: { title: 'Klima Montajı', content: '<p>Profesyonel klima montajı yapıyoruz.</p><ul><li>Hızlı ve temiz montaj</li><li>Vakumlama dahil</li><li>Garanti belgesi</li></ul>', excerpt: 'Klima montajı hizmeti' },
+  ariza: { title: 'Klima Arızası', content: '<p>Klima arızalarında uzman teknik destek sağlıyoruz.</p><ul><li>Aynı gün tespit</li><li>Uygun fiyat onarım</li><li>Parça garantisi</li></ul>', excerpt: 'Klima arıza tespit ve onarım' },
+  kombi: { title: 'Kombi Servisi', content: '<p>Kombi bakım ve onarım hizmetleri.</p><ul><li>Yıllık bakım</li><li>Arıza tespit</li><li>Parça değişimi</li></ul>', excerpt: 'Kombi teknik servis' },
+  footer: { title: 'Alt Bilgi', content: '<p>© 2026 Durukan Klima - Adana Klima & Kombi Servisi</p><p>Çukurova, Seyhan, Sarıçam, Yüreğir</p>', excerpt: 'Footer içeriği' }
+};
+
+function setQuickContent(key, name) {
+  document.getElementById('page-select').value = key;
+  loadPageContent();
+}
+
+async function loadPageContent() {
+  const key = document.getElementById('page-select').value;
+  const titleEl = document.getElementById('section-title');
+  const contentEl = document.getElementById('section-content');
+  const excerptEl = document.getElementById('section-excerpt');
+  
+  // Template varsayılanını göster
+  const tpl = pageTemplates[key] || { title: '', content: '', excerpt: '' };
+  titleEl.value = tpl.title || '';
+  contentEl.value = tpl.content || '';
+  excerptEl.value = tpl.excerpt || '';
+  
+  // Kayıtlı içeriği yükle
+  try {
+    const res = await fetch('/api/content', { headers: headers() });
+    const data = await res.json();
+    if (data[key]) {
+      titleEl.value = data[key].title || titleEl.value;
+      contentEl.value = data[key].content || contentEl.value;
+      excerptEl.value = data[key].excerpt || excerptEl.value;
+    }
+  } catch (e) {
+    console.log('Content yüklenemedi, template kullanılacak');
+  }
+}
+
+async function savePageSection() {
+  const key = document.getElementById('page-select').value;
+  const title = document.getElementById('section-title').value;
+  const content = document.getElementById('section-content').value;
+  const excerpt = document.getElementById('section-excerpt').value;
+  const statusEl = document.getElementById('page-save-status');
+  
+  statusEl.textContent = 'Kaydediliyor...';
+  statusEl.style.color = 'var(--text-light)';
+  
+  try {
+    const res = await fetch(`/api/content/${key}`, {
+      method: 'PUT',
+      headers: { ...headers(), 'Content-Type': 'application/json' },
+      body: JSON.stringify({ title, content, excerpt })
+    });
+    
+    if (res.ok) {
+      statusEl.textContent = 'Kaydedildi! ✅';
+      statusEl.style.color = '#22c55e';
+      setTimeout(() => { statusEl.textContent = ''; }, 3000);
+    } else {
+      statusEl.textContent = 'Hata oluştu ❌';
+      statusEl.style.color = '#ef4444';
+    }
+  } catch (e) {
+    statusEl.textContent = 'Bağlantı hatası ❌';
+    statusEl.style.color = '#ef4444';
+  }
 }
 
 // ═══════════════════════ INIT ═══════════════════════
