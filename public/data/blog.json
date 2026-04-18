@@ -3758,5 +3758,40 @@
       "tr": "7 dk",
       "en": "7 min"
     }
+  },
+  {
+    "id": "40",
+    "slug": "kombi-kullaniminda-tasarruf-40",
+    "slugEn": "kombi-kullaniminda-tasarruf-40-en",
+    "category": {
+      "tr": "Kombi & Isıtma",
+      "en": "Kombi & Isıtma"
+    },
+    "title": {
+      "tr": "Kombi Kullanımında %30 Tasarruf Etmenin Yolları",
+      "en": "Kombi Kullanımında %30 Tasarruf Etmenin Yolları"
+    },
+    "excerpt": {
+      "tr": "Kış aylarında doğalgaz faturanız kabarıyor mu? Kombiyi doğru kullanarak tasarruf edebilirsiniz.",
+      "en": "Kış aylarında doğalgaz faturanız kabarıyor mu? Kombiyi doğru kullanarak tasarruf edebilirsiniz."
+    },
+    "content": {
+      "tr": "## Kombi Faturanızı Düşürmenin Etkili Yolları\n\nKış aylarında kombi kullanımı ev bütçesinde önemli bir kalem oluşturuyor. Ancak doğru kullanım yöntemleriyle doğalgaz faturanızda %30'a varan tasarruf sağlamak mümkün.\n\n### 1. Doğru Sıcaklık Ayarı\nKombiyi 50-55°C arasında tutmak idealidir. Her 1°C artış yaklaşık %6-7 daha fazla gaz tüketimi demek. Evde kimse yokken 30°C'e düşürmek tasarruf sağlar.\n\n### 2. Zamanlayıcı Kullanın\nKombiyi sürekli çalıştırmak yerine, günün belirli saatlerinde çalışacak şekilde programlayın. Gece uyurken 30°C, gündüz evdeyken 50°C idealdir.\n\n### 3. Radyatör Vanalarını Kontrol Edin\nKullanılmayan odaların radyatör vanalarını kapatın. Böylece ısınması gereken alan azalır ve kombi daha verimli çalışır.\n\n### 4. Pencereleri ve Kapıları Kontrol Edin\nKışın pencerelerden ve kapılardan ısı kaybı %25-30'u bulabilir. Pencere ve kapıların izolasyonunu kontrol edin.\n\n### 5. Radyatör Arkalarına Yalıtım\nRadyatörlerin arkasına alüminyum folyo veya özel yalıtım panelleri yerleştirmek, ısının duvara değil odaya yönelmesini sağlar.\n\n### 6. Yıllık Bakım Yaptırın\nBakımsız kombi verimi düşer. Yılda bir kez profesyonel bakım, kombinin optimum verimlilikle çalışmasını sağlar.\n\n## Sonuç\nKüçük değişiklikler büyük tasarruf demek. Bugünden başlayarak bu ipuçlarını uygulayın ve faturanızda farkı görün!",
+      "en": "## Kombi Faturanızı Düşürmenin Etkili Yolları\n\nKış aylarında kombi kullanımı ev bütçesinde önemli bir kalem oluşturuyor. Ancak doğru kullanım yöntemleriyle doğalgaz faturanızda %30'a varan tasarruf sağlamak mümkün.\n\n### 1. Doğru Sıcaklık Ayarı\nKombiyi 50-55°C arasında tutmak idealidir. Her 1°C artış yaklaşık %6-7 daha fazla gaz tüketimi demek. Evde kimse yokken 30°C'e düşürmek tasarruf sağlar.\n\n### 2. Zamanlayıcı Kullanın\nKombiyi sürekli çalıştırmak yerine, günün belirli saatlerinde çalışacak şekilde programlayın. Gece uyurken 30°C, gündüz evdeyken 50°C idealdir.\n\n### 3. Radyatör Vanalarını Kontrol Edin\nKullanılmayan odaların radyatör vanalarını kapatın. Böylece ısınması gereken alan azalır ve kombi daha verimli çalışır.\n\n### 4. Pencereleri ve Kapıları Kontrol Edin\nKışın pencerelerden ve kapılardan ısı kaybı %25-30'u bulabilir. Pencere ve kapıların izolasyonunu kontrol edin.\n\n### 5. Radyatör Arkalarına Yalıtım\nRadyatörlerin arkasına alüminyum folyo veya özel yalıtım panelleri yerleştirmek, ısının duvara değil odaya yönelmesini sağlar.\n\n### 6. Yıllık Bakım Yaptırın\nBakımsız kombi verimi düşer. Yılda bir kez profesyonel bakım, kombinin optimum verimlilikle çalışmasını sağlar.\n\n## Sonuç\nKüçük değişiklikler büyük tasarruf demek. Bugünden başlayarak bu ipuçlarını uygulayın ve faturanızda farkı görün!"
+    },
+    "coverImage": "https://picsum.photos/seed/kombi-tasarruf-40/800/400",
+    "metaTitle": {
+      "tr": "Kombi Kullanımında Tasarruf Yolları | Durukan Klima",
+      "en": "Kombi Kullanımında Tasarruf Yolları | Durukan Klima"
+    },
+    "metaDescription": {
+      "tr": "Kışın doğalgaz faturanızı düşürmenin etkili yolları.",
+      "en": "Kışın doğalgaz faturanızı düşürmenin etkili yolları."
+    },
+    "publishedAt": "2026-04-19",
+    "readTime": {
+      "tr": "7 dk",
+      "en": "7 min"
+    }
   }
 ]
